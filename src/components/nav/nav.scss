@@ -1,0 +1,37 @@
+.home-nav {
+    padding: 22px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: rgba(#ffffff, 0.9);
+
+    &.scrolled {
+        background-color: #ffffff;
+    }
+
+    > ul {
+        list-style: none;
+        padding-inline-start: 0;
+        margin: 0;
+        display: flex;
+
+        > li {
+            font-family: "Montserrat", sans-serif;
+            font-size: 17px;
+            line-height: 20px;
+            font-weight: 400;
+            letter-spacing: 0;
+            //color: #e8390e;
+            color: #707070;
+
+            > div {
+                &:not(:last-child) {
+                    padding-right: 90px;
+                }
+            }
+        }
+    }
+}

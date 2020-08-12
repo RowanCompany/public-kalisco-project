@@ -25,3 +25,4 @@ yarn-error.log*
 # Tool ignores
 .idea
 .vscode
+debug.log
