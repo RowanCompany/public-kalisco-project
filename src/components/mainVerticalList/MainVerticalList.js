@@ -23,8 +23,17 @@ function MainVerticalList() {
             spaceBetween={0}
             speed={650}
         >
-            <SwiperSlide>
-                <div className="first-main-banner-bg-wrapper"></div>
+            <SwiperSlide role="banner">
+                <div className="first-main-banner-bg-wrapper">
+                    <div className="first-main-banner-title-wrapper">
+                        <h1 className="first-main-banner-title">
+                            맛을 아는 사람들 캘리스코
+                        </h1>
+                        <p className="first-main-banner-sub-title">
+                            우리는 맛을 압니다.
+                        </p>
+                    </div>
+                </div>
                 <div className="wh-100">
                     <img
                         src={firstBanner}
