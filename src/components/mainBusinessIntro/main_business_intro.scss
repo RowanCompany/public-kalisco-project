@@ -1,0 +1,95 @@
+.main-business-intro-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .intro-title {
+        font-family: "RyuGHbatang", serif;
+        color: #ffffff;
+        text-align: center;
+        font-size: 38px;
+        font-weight: 400;
+        letter-spacing: 0;
+        text-shadow: 0px 3px 6px #00000029;
+        padding-top: calc(240px - 10vh);
+        padding-bottom: 60px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main-business-intro-card-list {
+        flex-grow: 1;
+        padding-bottom: 130px;
+
+        .main-business-intro-card-wrapper {
+            padding-left: calc(90px - 0.7vw);
+            padding-right: calc(90px - 0.7vw);
+            //padding-bottom: 130px;
+            //align-self: flex-start;
+            //height: calc(100% - 220px - 60px);
+
+            .main-business-intro-card {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                border: 1px solid rgba($color: #ffffff, $alpha: 0.75);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-family: "RyuGHbatang", serif;
+                font-size: 36px;
+                line-height: 72px;
+                color: #ffffff;
+                letter-spacing: -0.72px;
+
+                > .main-business-intro-transition-wrapper {
+                    text-align: center;
+                    transition: opacity 650ms;
+                    opacity: 0;
+
+                    &.enter {
+                        display: block;
+                    }
+
+                    &.enter-done {
+                        opacity: 1;
+                    }
+
+                    &.exit {
+                        display: none;
+                    }
+
+                    &.exit-done {
+                        opacity: 0;
+                    }
+
+                    .intro-main-paragraph {
+                        font-size: 30px;
+                        //line-height:
+                        letter-spacing: -0.6px;
+                        font-weight: 400;
+                        line-height: normal;
+                        display: inline-block;
+                        word-break: keep-all;
+                    }
+
+                    .intro-sub-paragraph {
+                        font-size: 20px;
+                        font-weight: 400;
+                        letter-spacing: -0.4px;
+                        line-height: normal;
+                        display: inline-block;
+                        word-break: keep-all;
+                    }
+                }
+
+                .main-business-intro-icon-wrapper {
+                    padding-bottom: 68px;
+                }
+            }
+        }
+    }
+}
