@@ -1,8 +1,13 @@
-//import React, { useState } from "react";
 import React from "react";
 import SwiperCore, { Mousewheel, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import firstBanner from "../../static/images/main-banner-1.png";
+import introFirst from "../../static/images/intro-1.png";
+import introSecond from "../../static/images/intro-2.png";
+import introThrid from "../../static/images/intro-3.png";
+import hrImage from "../../static/images/hr.png";
+import kaliscoFamilyText from "../../static/images/kalisco-family-text.png";
+import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
 
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -22,9 +27,17 @@ function MainVerticalList() {
             loop={false}
             spaceBetween={0}
             speed={650}
+            breakpoints={{
+                0: {
+                    allowTouchMove: true,
+                },
+                992: {
+                    allowTouchMove: false,
+                },
+            }}
         >
             <SwiperSlide role="banner">
-                <div className="first-main-banner-bg-wrapper">
+                <div className="main-bg-wrapper">
                     <div className="first-main-banner-title-wrapper">
                         <h1 className="first-main-banner-title">
                             맛을 아는 사람들 캘리스코
@@ -42,6 +55,64 @@ function MainVerticalList() {
                     />
                 </div>
             </SwiperSlide>
+            <SwiperSlide>
+                <div className="main-bg-wrapper">
+                    <MainBusinessIntro />
+                </div>
+                <div className="main-business-intro-img-wrapper">
+                    <div>
+                        <div className="wh-100">
+                            <img
+                                src={introFirst}
+                                alt="First intro"
+                                className="img-fill"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="wh-100">
+                            <img
+                                src={introSecond}
+                                alt="Second intro"
+                                className="img-fill"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="wh-100">
+                            <img
+                                src={introThrid}
+                                alt="Thrid intro"
+                                className="img-fill"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="main-bg-wrapper">
+                    <div className="first-main-banner-title-wrapper">
+                        <div className="kalisco-membership-title-wrapper">
+                            <img
+                                src={kaliscoFamilyText}
+                                alt="kalisco family text"
+                            />
+                        </div>
+                        <div className="kalisco-membership-paragraph">
+                            맛을 아는 당신을 위해 캘리스코가 준비한 선물.
+                        </div>
+                        <div className="vertical-hr membership-hr" />
+                        {/* TODO: Link to React Route Link */}
+                        <a href="#" className="kalisco-button">
+                            캘리스코 멤버십 신청하기
+                        </a>
+                    </div>
+                </div>
+                <div className="wh-100">
+                    <img src={hrImage} alt="hr Banner" className="img-fill" />
+                </div>
+            </SwiperSlide>
+            {/* TODO: Scroll navigator 추가해야 됨 */}
         </Swiper>
     );
 }
