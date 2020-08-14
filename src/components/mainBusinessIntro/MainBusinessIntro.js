@@ -121,10 +121,6 @@ function MainBusinessIntro() {
                         onMouseOver={() => setThirdInfoHovered(true)}
                         onMouseLeave={() => setThirdInfoHovered(false)}
                     >
-                        {/* <div className="main-business-intro-icon-wrapper">
-                            <img src={Research} alt="Research icon" />
-                        </div>
-                        <div>건강연구</div> */}
                         <CSSTransition
                             in={!thirdInfoHovered}
                             timeout={200}
