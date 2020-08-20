@@ -6,6 +6,9 @@ import introFirst from "../../static/images/intro-1.png";
 import introSecond from "../../static/images/intro-2.png";
 import introThrid from "../../static/images/intro-3.png";
 import hrImage from "../../static/images/hr.png";
+import brandImage from "../../static/images/brand.png";
+import sabotonLogo from "../../static/svg/logo-saboten.svg";
+import hibarinLogo from "../../static/svg/logo-hibarin.svg";
 import kaliscoFamilyText from "../../static/images/kalisco-family-text.png";
 import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
 
@@ -110,6 +113,27 @@ function MainVerticalList() {
                 </div>
                 <div className="wh-100">
                     <img src={hrImage} alt="hr Banner" className="img-fill" />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="main-bg-wrapper">
+                    <div className="brand-list-wrapper">
+                        <div className="brand-circle-wrapper">
+                            <div className="brand-logo-wrapper">
+                                <img src={sabotonLogo} alt="saboten logo" />
+                            </div>
+                            <div className="brand-title">사보텐</div>
+                        </div>
+                        <div className="brand-circle-wrapper">
+                            <div className="brand-logo-wrapper">
+                                <img src={hibarinLogo} alt="hibarin logo" />
+                            </div>
+                            <div className="brand-title">히바린</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="wh-100">
+                    <img src={brandImage} alt="brand bg" className="img-fill" />
                 </div>
             </SwiperSlide>
             {/* TODO: Scroll navigator 추가해야 됨 */}
