@@ -10,6 +10,12 @@ function MainBusinessIntro() {
     const [firstInfoHovered, setFirstInfoHovered] = useState(false);
     const [secondInfoHovered, setSecondInfoHovered] = useState(false);
     const [thirdInfoHovered, setThirdInfoHovered] = useState(false);
+    const nodeRefFirst = React.useRef(null);
+    const nodeRefSecond = React.useRef(null);
+    const nodeRefThird = React.useRef(null);
+    const nodeRef4th = React.useRef(null);
+    const nodeRef5th = React.useRef(null);
+    const nodeRef6th = React.useRef(null);
 
     return (
         <div className="main-business-intro-wrapper">
@@ -26,8 +32,12 @@ function MainBusinessIntro() {
                             timeout={200}
                             appear={true}
                             unmountOnExit={true}
+                            nodeRef={nodeRefFirst}
                         >
-                            <div className="main-business-intro-transition-wrapper">
+                            <div
+                                className="main-business-intro-transition-wrapper"
+                                ref={nodeRefFirst}
+                            >
                                 <div className="main-business-intro-icon-wrapper">
                                     <img
                                         src={Dish}
@@ -43,8 +53,12 @@ function MainBusinessIntro() {
                             timeout={200}
                             appear={true}
                             unmountOnExit={true}
+                            nodeRef={nodeRefSecond}
                         >
-                            <div className="main-business-intro-transition-wrapper">
+                            <div
+                                className="main-business-intro-transition-wrapper"
+                                ref={nodeRefSecond}
+                            >
                                 <div>외식사업</div>
                                 <div>
                                     <span className="intro-main-paragraph">
@@ -78,8 +92,12 @@ function MainBusinessIntro() {
                             timeout={200}
                             appear={true}
                             unmountOnExit={true}
+                            nodeRef={nodeRefThird}
                         >
-                            <div className="main-business-intro-transition-wrapper">
+                            <div
+                                className="main-business-intro-transition-wrapper"
+                                ref={nodeRefThird}
+                            >
                                 <div className="main-business-intro-icon-wrapper">
                                     <img
                                         src={Market}
@@ -95,8 +113,12 @@ function MainBusinessIntro() {
                             timeout={200}
                             appear={true}
                             unmountOnExit={true}
+                            nodeRef={nodeRef4th}
                         >
-                            <div className="main-business-intro-transition-wrapper">
+                            <div
+                                className="main-business-intro-transition-wrapper"
+                                ref={nodeRef4th}
+                            >
                                 <div>가정간편식</div>
                                 <div>
                                     <span className="intro-main-paragraph">
@@ -126,8 +148,12 @@ function MainBusinessIntro() {
                             timeout={200}
                             appear={true}
                             unmountOnExit={true}
+                            nodeRef={nodeRef5th}
                         >
-                            <div className="main-business-intro-transition-wrapper">
+                            <div
+                                className="main-business-intro-transition-wrapper"
+                                ref={nodeRef5th}
+                            >
                                 <div className="main-business-intro-icon-wrapper">
                                     <img
                                         src={Research}
@@ -143,8 +169,12 @@ function MainBusinessIntro() {
                             timeout={200}
                             appear={true}
                             unmountOnExit={true}
+                            nodeRef={nodeRef6th}
                         >
-                            <div className="main-business-intro-transition-wrapper">
+                            <div
+                                className="main-business-intro-transition-wrapper"
+                                ref={nodeRef6th}
+                            >
                                 <div>건강연구</div>
                                 <div>
                                     <span className="intro-main-paragraph">
