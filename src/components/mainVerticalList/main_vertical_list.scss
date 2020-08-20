@@ -112,6 +112,26 @@
             opacity: 0.5;
         }
     }
+
+    .product-intro-title {
+        font-family: "RyuGHbatang", serif;
+        margin-bottom: 48px;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        font-size: 50px;
+        line-height: 64px;
+        text-shadow: 0px 3px 6px #00000052;
+        text-align: center;
+    }
+
+    .product-intro-paragraph {
+        font-family: "RyuGHbatang", serif;
+        text-align: center;
+        color: #ffffff;
+        letter-spacing: 0;
+        font-size: 30px;
+        line-height: 32px;
+    }
 }
 
 .main-business-intro-img-wrapper {

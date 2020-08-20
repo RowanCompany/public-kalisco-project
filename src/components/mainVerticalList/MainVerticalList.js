@@ -9,6 +9,7 @@ import hrImage from "../../static/images/hr.png";
 import brandImage from "../../static/images/brand.png";
 import sabotonLogo from "../../static/svg/logo-saboten.svg";
 import hibarinLogo from "../../static/svg/logo-hibarin.svg";
+import productIntroImage from "../../static/images/product-intro.png";
 import kaliscoFamilyText from "../../static/images/kalisco-family-text.png";
 import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
 
@@ -134,6 +135,28 @@ function MainVerticalList() {
                 </div>
                 <div className="wh-100">
                     <img src={brandImage} alt="brand bg" className="img-fill" />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="main-bg-wrapper">
+                    <div className="first-main-banner-title-wrapper">
+                        <div className="product-intro-title">
+                            제품소개
+                        </div>
+                        <div className="product-intro-paragraph">레스토랑에서 먹던 그 맛 그대로-</div>
+                        <div className="vertical-hr membership-hr" />
+                        {/* TODO: Link to React Route Link */}
+                        <a href="#" className="kalisco-button">
+                            홈메이드 제품 보러가기
+                        </a>
+                    </div>
+                </div>
+                <div className="wh-100">
+                    <img
+                        src={productIntroImage}
+                        alt="product introduction Banner"
+                        className="img-fill"
+                    />
                 </div>
             </SwiperSlide>
             {/* TODO: Scroll navigator 추가해야 됨 */}
