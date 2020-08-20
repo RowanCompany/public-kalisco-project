@@ -9,6 +9,9 @@ import hrImage from "../../static/images/hr.png";
 import brandImage from "../../static/images/brand.png";
 import sabotonLogo from "../../static/svg/logo-saboten.svg";
 import hibarinLogo from "../../static/svg/logo-hibarin.svg";
+import tacobellLogo from "../../static/svg/logo-tacobell.svg";
+import centralkcLogo from "../../static/svg/logo-centralkc.svg";
+import banjooLogo from "../../static/images/logo-banjoo.png";
 import productIntroImage from "../../static/images/product-intro.png";
 import kaliscoFamilyText from "../../static/images/kalisco-family-text.png";
 import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
@@ -119,17 +122,38 @@ function MainVerticalList() {
             <SwiperSlide>
                 <div className="main-bg-wrapper">
                     <div className="brand-list-wrapper">
-                        <div className="brand-circle-wrapper">
+                        <div className="brand-circle-wrapper saboten">
                             <div className="brand-logo-wrapper">
                                 <img src={sabotonLogo} alt="saboten logo" />
                             </div>
                             <div className="brand-title">사보텐</div>
                         </div>
-                        <div className="brand-circle-wrapper">
+                        <div className="brand-circle-wrapper hibarin">
                             <div className="brand-logo-wrapper">
                                 <img src={hibarinLogo} alt="hibarin logo" />
                             </div>
                             <div className="brand-title">히바린</div>
+                        </div>
+                        <div className="brand-circle-wrapper tacobell">
+                            <div className="brand-logo-wrapper">
+                                <img src={tacobellLogo} alt="taco bell logo" />
+                            </div>
+                            <div className="brand-title">타코벨</div>
+                        </div>
+                        <div className="brand-circle-wrapper centralkc">
+                            <div className="brand-logo-wrapper">
+                                <img
+                                    src={centralkcLogo}
+                                    alt="central kitchen logo"
+                                />
+                            </div>
+                            <div className="brand-title">센트럴키친</div>
+                        </div>
+                        <div className="brand-circle-wrapper banjoo">
+                            <div className="brand-logo-wrapper">
+                                <img src={banjooLogo} alt="banjoo logo" />
+                            </div>
+                            <div className="brand-title">반주</div>
                         </div>
                     </div>
                 </div>
@@ -140,10 +164,10 @@ function MainVerticalList() {
             <SwiperSlide>
                 <div className="main-bg-wrapper">
                     <div className="first-main-banner-title-wrapper">
-                        <div className="product-intro-title">
-                            제품소개
+                        <div className="product-intro-title">제품소개</div>
+                        <div className="product-intro-paragraph">
+                            레스토랑에서 먹던 그 맛 그대로-
                         </div>
-                        <div className="product-intro-paragraph">레스토랑에서 먹던 그 맛 그대로-</div>
                         <div className="vertical-hr membership-hr" />
                         {/* TODO: Link to React Route Link */}
                         <a href="#" className="kalisco-button">

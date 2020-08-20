@@ -177,7 +177,21 @@
         &:hover {
             //background: #517E71 0 0 no-repeat padding-box;
             box-shadow: 5px 5px 32px #00000052;
-            background-color: rgba($color: #517e71, $alpha: 0.85);
+            &.saboten {
+                background-color: rgba($color: #e8390e, $alpha: 0.5);
+            }
+            &.hibarin {
+                background-color: rgba($color: #517e71, $alpha: 0.8);
+            }
+            &.tacobell {
+                background-color: rgba($color: #480f72, $alpha: 0.5);
+            }
+            &.centralkc {
+                background-color: rgba($color: #2f2f2f, $alpha: 0.5);
+            }
+            &.banjoo {
+                background-color: rgba($color: #bc711f, $alpha: 0.5);
+            }
         }
 
         .brand-logo-wrapper {
