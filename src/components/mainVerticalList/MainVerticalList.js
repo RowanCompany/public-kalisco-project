@@ -14,6 +14,8 @@ import centralkcLogo from "../../static/svg/logo-centralkc.svg";
 import banjooLogo from "../../static/images/logo-banjoo.png";
 import productIntroImage from "../../static/images/product-intro.png";
 import kaliscoFamilyText from "../../static/images/kalisco-family-text.png";
+import joinUsImage from "../../static/images/joinus.png";
+import joinUsTextImage from "../../static/images/join-us-text.png";
 import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
 
 import "swiper/swiper.scss";
@@ -179,6 +181,33 @@ function MainVerticalList() {
                     <img
                         src={productIntroImage}
                         alt="product introduction Banner"
+                        className="img-fill"
+                    />
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                <div className="main-bg-wrapper">
+                    <div className="first-main-banner-title-wrapper">
+                        <div style={{ marginBottom: "48px" }}>
+                            <img
+                                src={joinUsTextImage}
+                                alt="Join Us text logo"
+                            />
+                        </div>
+                        <div className="product-intro-paragraph">
+                            맛을 아는 사람들은 모이세요.
+                        </div>
+                        <div className="vertical-hr membership-hr" />
+                        {/* TODO: Link to React Route Link */}
+                        <a href="#" className="kalisco-button">
+                            교육 / 복지 바로가기
+                        </a>
+                    </div>
+                </div>
+                <div className="wh-100">
+                    <img
+                        src={joinUsImage}
+                        alt="Join Us banner"
                         className="img-fill"
                     />
                 </div>
