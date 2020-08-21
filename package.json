@@ -15,16 +15,13 @@
         "react-router-dom": "^5.2.0",
         "react-scripts": "^3.4.3",
         "react-transition-group": "^4.4.1",
-        "swiper": "^6.1.1"
+        "swiper": "^6.1.2"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
     },
     "browserslist": {
         "production": [
@@ -39,5 +36,8 @@
             "last 1 safari version",
             "IE >= 10"
         ]
-    }
+    },
+    "main": "src/index.js",
+    "repository": "https://github.com/rowan-dev/kalisco-front-end.git",
+    "author": "Subin Lee <chandar@rowan.kr>"
 }
