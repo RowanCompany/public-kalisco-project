@@ -22,7 +22,6 @@ import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "./main_vertical_list.scss";
 
-// TODO: 맨 처음 배너가 다시 노출될 때 배너 컴포넌트를 처음 인덱스로 돌려놔야 함
 function MainVerticalList() {
     SwiperCore.use([Mousewheel, Pagination]);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -46,6 +45,7 @@ function MainVerticalList() {
                         allowTouchMove: false,
                     },
                 }}
+                className="swiper-container-vertical"
             >
                 <SwiperSlide role="banner">
                     <MainBanner verticalIndex={activeIndex} />

@@ -1,6 +1,5 @@
-.swiperWrapper {
-    display: flex;
-    flex-direction: column;
+.swiper-container-vertical > .swiper-wrapper {
+    flex-direction: column !important;
 }
 
 .swiper-container {
