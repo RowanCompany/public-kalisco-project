@@ -1,4 +1,4 @@
-.swiper-wrapper {
+.swiperWrapper {
     display: flex;
     flex-direction: column;
 }
@@ -107,6 +107,10 @@
 
         &.membership-hr {
             max-height: 213px;
+
+            @media screen and (max-height: 768px) {
+                max-height: 100px;
+            }
             flex-grow: 1;
             margin: 45px 0;
             opacity: 0.5;

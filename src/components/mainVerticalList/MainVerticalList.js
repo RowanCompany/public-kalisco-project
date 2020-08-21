@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SwiperCore, { Mousewheel, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import introFirst from "../../static/images/intro-1.png";
@@ -22,15 +22,16 @@ import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "./main_vertical_list.scss";
 
+// TODO: 맨 처음 배너가 다시 노출될 때 배너 컴포넌트를 처음 인덱스로 돌려놔야 함
 function MainVerticalList() {
     SwiperCore.use([Mousewheel, Pagination]);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
         <>
             <Swiper
                 slidesPerView={1}
-                //onSlideChange={setActiveIndex}
-                //onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                 direction="vertical"
                 mousewheel
                 pagination={{ clickable: true }}
@@ -47,7 +48,7 @@ function MainVerticalList() {
                 }}
             >
                 <SwiperSlide role="banner">
-                    <MainBanner />
+                    <MainBanner verticalIndex={activeIndex} />
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="main-bg-wrapper">
@@ -97,7 +98,7 @@ function MainVerticalList() {
                             </div>
                             <div className="vertical-hr membership-hr" />
                             {/* TODO: Link to React Route Link */}
-                            <a href="#" className="kalisco-button">
+                            <a href="" className="kalisco-button">
                                 캘리스코 멤버십 신청하기
                             </a>
                         </div>
@@ -168,7 +169,7 @@ function MainVerticalList() {
                             </div>
                             <div className="vertical-hr membership-hr" />
                             {/* TODO: Link to React Route Link */}
-                            <a href="#" className="kalisco-button">
+                            <a href="" className="kalisco-button">
                                 홈메이드 제품 보러가기
                             </a>
                         </div>
@@ -195,7 +196,7 @@ function MainVerticalList() {
                             </div>
                             <div className="vertical-hr membership-hr" />
                             {/* TODO: Link to React Route Link */}
-                            <a href="#" className="kalisco-button">
+                            <a href="" className="kalisco-button">
                                 교육 / 복지 바로가기
                             </a>
                         </div>

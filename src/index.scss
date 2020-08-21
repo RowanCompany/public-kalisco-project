@@ -12,6 +12,10 @@ body {
     position: relative;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .align-self-center {
     align-self: center;
 }
@@ -63,7 +67,7 @@ body {
     display: flex;
     flex-wrap: wrap;
 
-    >.col {
+    > .col {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
