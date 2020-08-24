@@ -97,7 +97,7 @@ function MainBanner(props) {
                         <div className={styles.subBannerHoverList}>
                             <div
                                 className={styles.subBannerHoverElement}
-                                onMouseOver={() => setWholesomenessState(true)}
+                                onMouseEnter={() => setWholesomenessState(true)}
                                 onMouseLeave={() =>
                                     setWholesomenessState(false)
                                 }
@@ -200,7 +200,7 @@ function MainBanner(props) {
                             <div className={styles.subBannerDot} />
                             <div
                                 className={styles.subBannerHoverElement}
-                                onMouseOver={() => setSincerenessState(true)}
+                                onMouseEnter={() => setSincerenessState(true)}
                                 onMouseLeave={() => setSincerenessState(false)}
                             >
                                 <div>
@@ -302,7 +302,7 @@ function MainBanner(props) {
                             <div className={styles.subBannerDot} />
                             <div
                                 className={styles.subBannerHoverElement}
-                                onMouseOver={() => setTogethernewssState(true)}
+                                onMouseEnter={() => setTogethernewssState(true)}
                                 onMouseLeave={() =>
                                     setTogethernewssState(false)
                                 }
