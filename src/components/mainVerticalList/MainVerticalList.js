@@ -15,6 +15,8 @@ import productIntroImage from "../../static/images/product-intro.png";
 import kaliscoFamilyText from "../../static/images/kalisco-family-text.png";
 import joinUsImage from "../../static/images/joinus.png";
 import joinUsTextImage from "../../static/images/join-us-text.png";
+import beyondTasteApronImage from "../../static/images/beyond-taste-apron.png";
+import beyondTasteText from "../../static/images/beyond-taste.png";
 import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
 import MainBanner from "../mainBanner/MainBanner";
 
@@ -209,7 +211,29 @@ function MainVerticalList() {
                         />
                     </div>
                 </SwiperSlide>
-
+                <SwiperSlide>
+                    <div className="main-bg-wrapper">
+                        <div className="first-main-banner-title-wrapper">
+                            <div style={{ marginBottom: "46px" }}>
+                                <img
+                                    src={beyondTasteText}
+                                    alt="Beyond taste text"
+                                />
+                            </div>
+                            <div className="product-intro-paragraph">
+                                20년간 최고의 맛을 지켜온 외식 전문 기업의
+                                자부심
+                            </div>
+                        </div>
+                    </div>
+                    <div className="wh-100">
+                        <img
+                            src={beyondTasteApronImage}
+                            alt="Beyond taste banner"
+                            className="img-fill"
+                        />
+                    </div>
+                </SwiperSlide>
                 {/* TODO: Scroll navigator 추가해야 됨 */}
             </Swiper>
             {/* <div>hi13</div> */}
