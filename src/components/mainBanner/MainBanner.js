@@ -187,7 +187,7 @@ function MainBanner(props) {
                                             </div>
                                             <img
                                                 src={identityFirstImage}
-                                                alt="identity first image"
+                                                alt="identity first"
                                                 className="w-100"
                                                 style={{
                                                     verticalAlign: "bottom",
