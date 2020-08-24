@@ -114,6 +114,17 @@
             margin: 45px 0;
             opacity: 0.5;
         }
+
+        &.sub-banner-hr {
+            max-height: 200px;
+
+            @media screen and (max-height: 768px) {
+                max-height: 100px;
+            }
+            flex-grow: 1;
+            margin: 32px 0;
+            opacity: 0.5;
+        }
     }
 
     .product-intro-title {
