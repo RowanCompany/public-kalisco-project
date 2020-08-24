@@ -19,6 +19,7 @@ import beyondTasteApronImage from "../../static/images/beyond-taste-apron.png";
 import beyondTasteText from "../../static/images/beyond-taste.png";
 import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
 import MainBanner from "../mainBanner/MainBanner";
+import footerLogo from "../../static/svg/logo-header-wh.svg";
 
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -234,9 +235,48 @@ function MainVerticalList() {
                         />
                     </div>
                 </SwiperSlide>
+                <SwiperSlide>
+                    <div className="main-footer-wrapper">
+                        <div className="main-footer-info-wrapper">
+                            <div className="container">
+                                
+                            </div>
+                        </div>
+                        <footer className="footer">
+                            <div className="footer-logo-wrapper">
+                                <img src={footerLogo} alt="footer logo" />
+                            </div>
+                            <div style={{ paddingRight: "3%" }}>
+                                <div className="d-flex">
+                                    <div style={{ paddingRight: "0.5rem" }}>
+                                        개인정보 처리방침
+                                    </div>
+                                    <div className="sitemap-text">Sitemap</div>
+                                </div>
+                                <div style={{ paddingBottom: "30px" }}>
+                                    서울특별시 강남구 강남대로 382 아워홈빌딩
+                                    2층 (우) 06232
+                                </div>
+                                <div>
+                                    COPYRIGHT © 2019 KALISCO. ALL RIGHTS
+                                    RESERVED.
+                                </div>
+                            </div>
+                            <div style={{ paddingRight: "5%" }}>
+                                <div>입점제안 및 가맹문의</div>
+                                <div>llimun@kalisco.co.kr</div>
+                            </div>
+                            <div>
+                                <div>
+                                    Easy to cook(편의식) 상품구입 및 특판문의
+                                </div>
+                                <div>Bongkyun.chin@kalisco.co.kr</div>
+                            </div>
+                        </footer>
+                    </div>
+                </SwiperSlide>
                 {/* TODO: Scroll navigator 추가해야 됨 */}
             </Swiper>
-            {/* <div>hi13</div> */}
         </>
     );
 }
