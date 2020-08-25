@@ -1,4 +1,4 @@
-.home-nav {
+.homeNav {
     padding: 22px 40px;
     position: fixed;
     top: 0;
@@ -12,13 +12,13 @@
         background-color: #ffffff;
     }
 
-    > ul {
+    >ul {
         list-style: none;
         padding-inline-start: 0;
         margin: 0;
         display: flex;
 
-        > li {
+        >li {
             font-family: "Montserrat", sans-serif;
             font-size: 17px;
             line-height: 20px;
@@ -27,10 +27,21 @@
             //color: #e8390e;
             color: #707070;
 
-            > div {
+            >div {
                 &:not(:last-child) {
                     padding-right: 90px;
                 }
+            }
+
+            .navLink {
+                font-family: "Montserrat", sans-serif;
+                font-size: 17px;
+                line-height: 20px;
+                font-weight: 400;
+                letter-spacing: 0;
+                //color: #e8390e;
+                color: #707070;
+                text-decoration: none;
             }
         }
     }
