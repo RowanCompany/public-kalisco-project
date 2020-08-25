@@ -1,0 +1,72 @@
+.aboutTextWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .aboutTextTitle {
+        font-size: 32px;
+        color: #2F2F2F;
+        text-align: center;
+        letter-spacing: 0;
+        font-family: "RyuGHbatang", serif;
+        margin: 0;
+
+        .emphasis {
+            display: inline-block;
+            color: #E8390E;
+            font-weight: 700;
+        }
+    }
+
+    .aboutTextParagraph {
+        font-size: 20px;
+        color: #2F2F2F;
+        text-align: center;
+        letter-spacing: 0;
+        font-family: "RyuGHbatang", serif;
+        margin: 0;
+
+        .emphasis {
+            display: inline-block;
+            color: #E8390E;
+            font-weight: 700;
+        }
+    }
+}
+
+.gridWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .gridColumn {
+        max-width: 50%;
+        flex-basis: 50%;
+        position: relative;
+
+        .gridBackgroundWrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+
+            .gridText {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "RyuGHbatang", serif;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                text-shadow: 0px 3px 6px #00000029;
+                font-size: 33px;
+            }
+        }
+    }
+}

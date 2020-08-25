@@ -42,6 +42,11 @@
                 //color: #e8390e;
                 color: #707070;
                 text-decoration: none;
+                transition: color 200ms;
+
+                &:hover {
+                    color: #e8390e;
+                }
 
                 &.active {
                     font-weight: 700;
