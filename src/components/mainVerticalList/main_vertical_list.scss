@@ -1,4 +1,4 @@
-.swiper-container-vertical > .swiper-wrapper {
+.swiper-container-vertical>.swiper-wrapper {
     flex-direction: column !important;
 }
 
@@ -55,7 +55,7 @@
     height: 100%;
     background-color: rgba(#000000, 0.65);
 
-    > .first-main-banner-title-wrapper {
+    >.first-main-banner-title-wrapper {
         width: 100%;
         height: 100%;
         position: relative;
@@ -64,7 +64,7 @@
         justify-content: center;
         flex-direction: column;
 
-        > .first-main-banner-title {
+        >.first-main-banner-title {
             font-family: "RyuGHbatang", serif;
             color: #ffffff;
             font-size: 55px;
@@ -73,7 +73,7 @@
             margin-bottom: 40px;
         }
 
-        > .first-main-banner-sub-title {
+        >.first-main-banner-sub-title {
             font-family: "RyuGHbatang", serif;
             color: #ffffff;
             font-weight: 400;
@@ -110,6 +110,7 @@
             @media screen and (max-height: 768px) {
                 max-height: 100px;
             }
+
             flex-grow: 1;
             margin: 45px 0;
             opacity: 0.5;
@@ -121,6 +122,7 @@
             @media screen and (max-height: 768px) {
                 max-height: 100px;
             }
+
             flex-grow: 1;
             margin: 32px 0;
             opacity: 0.5;
@@ -154,7 +156,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    > div {
+    >div {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
@@ -191,18 +193,23 @@
         &:hover {
             //background: #517E71 0 0 no-repeat padding-box;
             box-shadow: 5px 5px 32px #00000052;
+
             &.saboten {
                 background-color: rgba($color: #e8390e, $alpha: 0.5);
             }
+
             &.hibarin {
                 background-color: rgba($color: #517e71, $alpha: 0.8);
             }
+
             &.tacobell {
                 background-color: rgba($color: #480f72, $alpha: 0.5);
             }
+
             &.centralkc {
                 background-color: rgba($color: #2f2f2f, $alpha: 0.5);
             }
+
             &.banjoo {
                 background-color: rgba($color: #bc711f, $alpha: 0.5);
             }
@@ -212,7 +219,7 @@
             padding: 16px 0;
             display: inline-block;
 
-            > img {
+            >img {
                 width: 100%;
             }
         }
@@ -241,5 +248,47 @@
         width: 100%;
         height: 100%;
         flex-grow: 1;
+        display: flex;
+        align-items: center;
+
+        .main-footer-circle {
+            position: relative;
+            border-radius: 50%;
+            border: 1px solid rgba($color: #ffffff, $alpha: 0.77);
+            letter-spacing: -0.36px;
+            color: #ffffff;
+            font-family: "RyuGHbatang", serif;
+            text-align: center;
+            font-size: 18px;
+            transition: background-color 250ms, box-shadow 250ms;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                float: left;
+                padding-top: 100%;
+            }
+
+            &:hover {
+                border: 1px solid #ffffff;
+                box-shadow: 0px 3px 6px #00000029;
+                color: #2f2f2f;
+                background-color: rgba($color: #ffffff, $alpha: 0.77);
+            }
+
+            .content {
+                float: left;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            &:not(:last-child) {
+                margin-right: 44px;
+            }
+        }
     }
 }
