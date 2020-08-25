@@ -1,9 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../static/svg/logo-header-or.svg";
 import styles from "./nav.module.scss";
 
-function nav() {
+// TODO: About Hover 메뉴 만들어야 함
+function Nav() {
+    const location = useLocation();
+    const currentPathRef = useRef(location.pathname);
+
     return (
         <nav className={styles.homeNav}>
             <ul>
@@ -15,7 +19,14 @@ function nav() {
                 {/* TODO: 2단 메뉴 구성해야 함 */}
                 <li className="mx-auto d-flex align-self-center">
                     <div>
-                        <Link to="/about" className={styles.navLink}>
+                        <Link
+                            to="/about"
+                            className={`${styles.navLink} ${
+                                currentPathRef.current === "/about"
+                                    ? styles.active
+                                    : ""
+                            }`}
+                        >
                             About
                         </Link>
                     </div>
@@ -32,4 +43,4 @@ function nav() {
     );
 }
 
-export default nav;
+export default Nav;
