@@ -32,12 +32,24 @@ function Nav() {
                     </div>
                     <div>Brand</div>
                     <div>Product</div>
+                    <div>
+                        <Link
+                            to="/supports"
+                            className={`${styles.navLink} ${
+                                currentPathRef.current.includes("supports")
+                                    ? styles.active
+                                    : ""
+                            }`}
+                        >
+                            Support
+                        </Link>
+                    </div>
                     <div>HR</div>
                     <div>Recruit</div>
                 </li>
-                <li>
+                {/* <li>
                     <div>고객소통</div>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
