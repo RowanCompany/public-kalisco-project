@@ -6,7 +6,13 @@ function SupportDetailContent() {
     return (
         <>
             <SupportBanner />
-            <div className={styles.tempDetailContent}></div>
+            <div className={styles.tempDetailContent}>
+                <div className={styles.tempDetailButtonWrapper}>
+                    <button type="button" className={styles.tempDetailButton}>
+                        조회하기
+                    </button>
+                </div>
+            </div>
         </>
     );
 }

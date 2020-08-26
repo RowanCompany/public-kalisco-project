@@ -60,4 +60,32 @@
     height: 440px;
     position: relative;
     background-color: #ffffff;
+
+    .tempDetailButtonWrapper {
+        position: absolute;
+        right: 48px;
+        bottom: 52px;
+
+        .tempDetailButton {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #e8390e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 13px;
+            font-family: "Montserrat", sans-serif;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
 }
