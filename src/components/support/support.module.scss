@@ -1,0 +1,63 @@
+.supportDetailBackgroundWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.67);
+
+    .supportDetailLayoutWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .supportDetailTitle {
+            margin-top: auto;
+            margin-bottom: 80px;
+        }
+
+        .supportDetailMenuList {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0 0 12px 0;
+            margin: 0;
+
+            > .supportDetailMenu {
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+
+                .supportDetailMenuLink {
+                    display: inline-block;
+                    padding: 16px 34px;
+                    color: rgba($color: #ffffff, $alpha: 0.5);
+                    text-decoration: none;
+                    border-bottom: 3px solid transparent;
+
+                    &:hover {
+                        color: rgba($color: #ffffff, $alpha: 0.8);
+                        border-bottom: 3px solid
+                            rgba($color: #ffffff, $alpha: 0.8);
+                    }
+
+                    &.active {
+                        color: #ffffff;
+                        border-bottom: 3px solid #ffffff;
+
+                        &:hover {
+                            color: #ffffff;
+                            border-bottom: 3px solid #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tempDetailContent {
+    height: 440px;
+    position: relative;
+    background-color: #ffffff;
+}

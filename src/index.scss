@@ -41,6 +41,11 @@ img {
     margin-right: auto;
 }
 
+.my-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .w-100 {
     width: 100%;
 }
@@ -75,7 +80,7 @@ img {
     display: flex;
     flex-wrap: wrap;
 
-    >.col {
+    > .col {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;

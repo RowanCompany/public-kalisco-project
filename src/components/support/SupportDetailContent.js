@@ -1,20 +1,12 @@
 import React from "react";
-import SupportDetailBannerImage from "../../static/images/support-detail-img-mar-Support.png";
+import SupportBanner from "./SupportBanner";
+import styles from "./support.module.scss";
 
 function SupportDetailContent() {
     return (
         <>
-            <div>hi</div>
-            <div className="position-relative">
-                <div></div>
-                <div>
-                    <img
-                        src={SupportDetailBannerImage}
-                        alt="Support Detail Banner"
-                        className="img-fill"
-                    />
-                </div>
-            </div>
+            <SupportBanner />
+            <div className={styles.tempDetailContent}></div>
         </>
     );
 }
