@@ -16,6 +16,7 @@ function SupportBanner() {
                         <ul className={styles.supportDetailMenuList}>
                             <li className={styles.supportDetailMenu}>
                                 <Link
+                                    to={"/supports/membership"}
                                     className={`${styles.supportDetailMenuLink} ${styles.active}`}
                                 >
                                     멤버십
