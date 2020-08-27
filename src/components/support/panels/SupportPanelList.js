@@ -1,32 +1,36 @@
 import React from "react";
 import SupportPanel from "./SupportPanel";
 import { panelListWrapper } from "./panel.module.scss";
+import iconMembership from "../../../static/svg/icon-membership.svg";
+import iconCreditCard from "../../../static/svg/icon-credit-card.svg";
+import iconKakao from "../../../static/svg/icon-kakao.svg";
+import iconEventPromotion from "../../../static/svg/icon-event-promotion.svg";
+import iconGiftCard from "../../../static/svg/icon-giftcard.svg";
 
-// TODO: Support 패널 데이터 넣어야 하고 Iteration 해야 함
 function SupportPanelList() {
     const data = [
         {
-            icon: "test",
+            icon: iconMembership,
             text: "멤버십",
             link: "/supports/membership",
         },
         {
-            icon: "test",
+            icon: iconCreditCard,
             text: "제휴카드",
             link: "/supports/membership",
         },
         {
-            icon: "test",
+            icon: iconKakao,
             text: "카카오톡 친구",
             link: "/supports/membership",
         },
         {
-            icon: "test",
+            icon: iconEventPromotion,
             text: "이벤트&프로모션",
             link: "/supports/membership",
         },
         {
-            icon: "test",
+            icon: iconGiftCard,
             text: "상품권",
             link: "/supports/membership",
         },
