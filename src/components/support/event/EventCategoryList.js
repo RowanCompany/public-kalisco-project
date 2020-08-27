@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CategoryButton from "../../categoryButton/CategoryButton";
+import { eventCategoryListWrapper } from "./event.module.scss";
 
 function EventCategoryList() {
     const data = [
@@ -35,7 +36,7 @@ function EventCategoryList() {
     const [type, setType] = useState("all");
 
     return (
-        <div className="text-center">
+        <div className={eventCategoryListWrapper}>
             {data.map((d, i) => (
                 <CategoryButton
                     key={i}
