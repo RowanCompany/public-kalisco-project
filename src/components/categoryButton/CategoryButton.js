@@ -1,17 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import styles from "./category_button.module.scss";
 
-function CategoryButton({ link, isActive, text }) {
+function CategoryButton({ isActive, text }) {
+    
     return (
-        <Link
-            to={link}
+        <button
+            type="button"
             className={`${styles.categoryButton} ${
                 isActive ? styles.active : ""
             }`}
         >
             {text}
-        </Link>
+        </button>
     );
 }
 

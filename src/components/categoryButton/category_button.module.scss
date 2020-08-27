@@ -1,6 +1,6 @@
 .categoryButton {
     background-color: transparent;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #dddddd;
     border-radius: 30px;
     min-width: 122px;
     padding: 16px 24px;
@@ -8,10 +8,26 @@
     color: #707070;
     text-align: center;
     display: inline-block;
+    cursor: pointer;
+    transition: all 250ms;
+
+    &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
+        border: 1px solid rgba($color: #e8390e, $alpha: 0.8);
+        color: rgba($color: #e8390e, $alpha: 0.8);
+    }
 
     &.active {
         background-color: #ffffff;
-        border: 1px solid #E8390E;
-        color: #E8390E;
+        border: 1px solid #e8390e;
+        color: #e8390e;
+    }
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:focus {
+        outline: none;
     }
 }

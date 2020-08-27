@@ -17,12 +17,12 @@ function SupportPanelList() {
         {
             icon: iconCreditCard,
             text: "제휴카드",
-            link: "/supports/membership",
+            link: "/supports/partnership",
         },
         {
             icon: iconKakao,
             text: "카카오톡 친구",
-            link: "/supports/membership",
+            link: "/supports/kakaotalk-friends",
         },
         {
             icon: iconEventPromotion,
@@ -32,7 +32,7 @@ function SupportPanelList() {
         {
             icon: iconGiftCard,
             text: "상품권",
-            link: "/supports/membership",
+            link: "/supports/giveaway",
         },
     ];
     return (
