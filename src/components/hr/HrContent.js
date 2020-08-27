@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import HrBanner from "./HrBanner";
+import Talent from "./Talent";
 
 function HrContent() {
     const { subject } = useParams();
@@ -12,10 +13,11 @@ function HrContent() {
     );
 }
 
+// TODO: Redirect component 추가해야 함
 function HrCaseRenderer({ subject }) {
     switch (subject) {
         case "talent":
-            return <div>hi</div>;
+            return <Talent />;
         case "education":
             return <div>hi</div>;
         case "welfare":

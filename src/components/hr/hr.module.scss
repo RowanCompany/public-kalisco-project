@@ -55,15 +55,27 @@
     }
 }
 
-.supportListWrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.67);
+.talentFirstSection {
+    padding-top: 84px;
+    padding-bottom: 153px;
+    background-color: #ffffff;
 
-    .supportTextWrapper {
-        padding-top: 190px;
+    .titleWrapper {
         text-align: center;
-        padding-bottom: 150px;
+        padding-bottom: 132px;
+    }
+
+    .gridWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .imageWrapper {
+            height: 120px;
+            padding-bottom: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
