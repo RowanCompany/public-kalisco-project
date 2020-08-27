@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./category_button.module.scss";
 
-function CategoryButton({ isActive, text }) {
-    
+function CategoryButton(props) {
+    const { text, type, parentType } = props;
     return (
         <button
             type="button"
             className={`${styles.categoryButton} ${
-                isActive ? styles.active : ""
+                type === parentType ? styles.active : ""
             }`}
+            onClick={props.clickEvent}
         >
             {text}
         </button>

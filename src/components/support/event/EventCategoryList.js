@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CategoryButton from "../../categoryButton/CategoryButton";
 
 function EventCategoryList() {
@@ -32,10 +32,17 @@ function EventCategoryList() {
             type: "kalisco",
         },
     ];
+    const [type, setType] = useState("all");
+
     return (
         <div className="text-center">
             {data.map((d, i) => (
-                <CategoryButton key={i} {...d} />
+                <CategoryButton
+                    key={i}
+                    {...d}
+                    parentType={type}
+                    clickEvent={() => setType(d.type)}
+                />
             ))}
         </div>
     );
