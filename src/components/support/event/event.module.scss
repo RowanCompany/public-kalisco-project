@@ -86,3 +86,75 @@
         }
     }
 }
+
+.eventDetailWrapper {
+    max-width: 914px;
+    margin: 0 auto;
+
+    .eventDetailTitle {
+        font-size: 24px;
+        letter-spacing: 0px;
+        color: #2f2f2f;
+        font-family: "RyuGHbatang", serif;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    .eventDetailDate {
+        font-family: "RyuGHbatang", serif;
+        font-size: 16px;
+        letter-spacing: 0px;
+        color: #707070;
+    }
+
+    .eventDetailNavigatorWrapper {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dddddd;
+
+        .eventDetailNavigator {
+            display: flex;
+
+            &.disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .eventDetailContentWrapper {
+        padding-top: 40px;
+        padding-bottom: 56px;
+    }
+
+    .eventDetailPostNavigatorWrapper {
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+
+        .eventDetailPostNavigator {
+            display: flex;
+            padding: 26px 14px;
+            align-items: center;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            .eventDetailPostNavigatorText {
+                letter-spacing: 0px;
+                color: #707070;
+                font-size: 14px;
+                font-weight: 400;
+                padding-left: 11px;
+            }
+
+            .eventDetailPostNavigatorTitle {
+                padding-left: 48px;
+                letter-spacing: 0px;
+                color: #707070;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}

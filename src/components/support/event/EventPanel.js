@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./event.module.scss";
 import EventPanelImage from "../../../static/images/img-event-saboten-1.png";
+import { useRouteMatch } from "react-router-dom";
 
 // TODO: 데이터 연동해야 함
 function EventPanel() {
+    const match = useRouteMatch();
     return (
-        <Link to="" className={styles.eventLinkWrapper}>
+        <Link to={`${match.url}/1`} className={styles.eventLinkWrapper}>
             <div>
                 <div>
                     <img
