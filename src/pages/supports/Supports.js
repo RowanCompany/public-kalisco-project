@@ -12,7 +12,7 @@ function Supports() {
             <Nav />
             <Switch>
                 <Route
-                    path={`${match.path}/membership`}
+                    path={`${match.path}/:subject`}
                     component={SupportDetailContent}
                 />
                 <Route path={match.path} component={SupportContent} />

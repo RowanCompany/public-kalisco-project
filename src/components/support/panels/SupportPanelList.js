@@ -27,7 +27,7 @@ function SupportPanelList() {
         {
             icon: iconEventPromotion,
             text: "이벤트&프로모션",
-            link: "/supports/membership",
+            link: "/supports/events",
         },
         {
             icon: iconGiftCard,
