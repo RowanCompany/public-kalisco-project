@@ -1,0 +1,69 @@
+.backgroundWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .layoutWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .title {
+            margin-top: auto;
+            margin-bottom: 80px;
+        }
+
+        .menuList {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0 0 12px 0;
+            margin: 0;
+
+            > .menu {
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+
+                .menuLink {
+                    display: inline-block;
+                    padding: 16px 34px;
+                    color: rgba($color: #ffffff, $alpha: 0.5);
+                    text-decoration: none;
+                    border-bottom: 3px solid transparent;
+
+                    &:hover {
+                        color: rgba($color: #ffffff, $alpha: 0.8);
+                        border-bottom: 3px solid
+                            rgba($color: #ffffff, $alpha: 0.8);
+                    }
+
+                    &.active {
+                        color: #ffffff;
+                        border-bottom: 3px solid #ffffff;
+
+                        &:hover {
+                            color: #ffffff;
+                            border-bottom: 3px solid #ffffff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.supportListWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.67);
+
+    .supportTextWrapper {
+        padding-top: 190px;
+        text-align: center;
+        padding-bottom: 150px;
+    }
+}

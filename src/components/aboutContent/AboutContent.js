@@ -3,6 +3,7 @@ import styles from "./about_content.module.scss";
 import marStoneImage from "../../static/images/img-mar-stone.png";
 import aboutFirstImage from "../../static/images/about-2.png";
 import aboutSecondImage from "../../static/images/about-1.png";
+import { Link } from "react-router-dom";
 
 function AboutContent() {
     return (
@@ -28,18 +29,20 @@ function AboutContent() {
                 </div>
             </div>
             <div className={styles.gridWrapper}>
-                <div className={styles.gridColumn}>
-                    <div className={styles.gridBackgroundWrapper}>
-                        <div className={styles.gridText}>기업 연혁</div>
-                    </div>
+                <Link to="/about/history" className={styles.gridColumn}>
                     <div>
-                        <img
-                            src={aboutFirstImage}
-                            alt="about first"
-                            className="img-fill"
-                        />
+                        <div className={styles.gridBackgroundWrapper}>
+                            <div className={styles.gridText}>기업 연혁</div>
+                        </div>
+                        <div>
+                            <img
+                                src={aboutFirstImage}
+                                alt="about first"
+                                className="img-fill"
+                            />
+                        </div>
                     </div>
-                </div>
+                </Link>
                 <div className={styles.gridColumn}>
                     <div className={styles.gridBackgroundWrapper}>
                         <div className={styles.gridText}>사업 소개</div>
