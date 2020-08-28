@@ -164,3 +164,142 @@
         }
     }
 }
+
+.educationSection {
+    background-color: #F4F4F4;
+    position: relative;
+    // background-image: url("../../static/svg/hr-section1-text-bg.svg");
+    // background-position: center center;
+    // background-repeat: no-repeat no-repeat;
+    padding-top: 84px;
+    padding-bottom: 50px;
+
+    .educationSubTitle {
+        color: #2f2f2f;
+        letter-spacing: 0;
+        text-align: center;
+        font-family: "RyuGHbatang", serif;
+        font-size: 20px;
+        padding-bottom: 40px;
+    }
+
+    .educationContainer {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #ffffff;
+        padding: 90px 105px;
+        position: relative;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 576px) {
+            max-width: 100%;
+        }
+
+        @media screen and (min-width: 576px) {
+            max-width: 540px;
+        }
+
+        @media screen and (min-width: 768px) {
+            max-width: 720px;
+        }
+
+        @media screen and (min-width: 992px) {
+            max-width: 960px;
+        }
+
+        @media screen and (min-width: 1140px) {
+            max-width: 1140px;
+        }
+
+        .educationContainerImageWrapper {
+            position: absolute;
+            bottom: -32px;
+            left: -100px;
+        }
+
+        /* autoprefixer grid: autoplace */
+        .educationFlexWrapper {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+
+            .educationTrainingImageWrapper {
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
+            .eudcationTrainingTitle {
+                font-family: "RyuGHbatang", serif;
+                font-size: 22px;
+                font-weight: 700;
+                letter-spacing: 0;
+                color: #2f2f2f;
+                text-align: center;
+            }
+
+            .eudcationTrainingParagraph {
+                font-size: 18px;
+                letter-spacing: 0;
+                color: #2f2f2f;
+                font-family: "RyuGHbatang", serif;
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
+            .educationTrainingDescription {
+                font-size: 18px;
+                letter-spacing: 0;
+                color: #2f2f2f;
+                font-family: "RyuGHbatang", serif;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.welfareFirstSection {
+    padding: 100px 0;
+    background-color: #f4f4f4;
+
+    .systemTitle {
+        font-size: 40px;
+        text-align: center;
+        font-family: "RyuGHbatang", serif;
+        padding-bottom: 32px;
+    }
+
+    .systemParagraph {
+        text-align: center;
+        letter-spacing: 0px;
+        color: #2F2F2F;
+        font-size: 20px;
+        font-family: "RyuGHbatang", serif;
+        padding-bottom: 100px;
+    }
+
+    .systemPanelWrapper {
+        display: flex;
+        justify-content: center;
+
+        .systemPanel {
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 20px;
+
+            &.systemFirstPanel {
+                margin-right: 30px;
+                padding: 60px 87px 60px 30px;
+            }
+
+            &.systemSecondPanel {
+                padding: 60px 39px 60px 30px;
+            }
+        }
+    }
+}
+
+.welfareSecondSection {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
