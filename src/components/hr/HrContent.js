@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import HrBanner from "./HrBanner";
 import Talent from "./Talent";
+import Education from "./Education";
+import Welfare from "./Welfare";
 
 function HrContent() {
     const { subject } = useParams();
@@ -19,11 +21,11 @@ function HrCaseRenderer({ subject }) {
         case "talent":
             return <Talent />;
         case "education":
-            return <div>hi</div>;
+            return <Education />;
         case "welfare":
-            return <div>hi</div>;
+            return <Welfare />;
         default:
-            return <></>;
+            return <React.Fragment />;
     }
 }
 

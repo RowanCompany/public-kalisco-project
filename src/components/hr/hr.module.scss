@@ -168,9 +168,6 @@
 .educationSection {
     background-color: #F4F4F4;
     position: relative;
-    // background-image: url("../../static/svg/hr-section1-text-bg.svg");
-    // background-position: center center;
-    // background-repeat: no-repeat no-repeat;
     padding-top: 84px;
     padding-bottom: 50px;
 
@@ -265,9 +262,6 @@
     background-color: #f4f4f4;
 
     .systemTitle {
-        font-size: 40px;
-        text-align: center;
-        font-family: "RyuGHbatang", serif;
         padding-bottom: 32px;
     }
 
@@ -287,14 +281,63 @@
         .systemPanel {
             background: #FFFFFF 0% 0% no-repeat padding-box;
             border-radius: 20px;
+            box-sizing: border-box;
 
             &.systemFirstPanel {
                 margin-right: 30px;
-                padding: 60px 87px 60px 30px;
+                padding: 60px 0;
+                min-width: 456px;
             }
 
             &.systemSecondPanel {
-                padding: 60px 39px 60px 30px;
+                padding: 60px 0;
+                min-width: 539px;
+            }
+
+            .systenPanelDot {
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background-color: #E8390E;
+                margin: 0 auto;
+                margin-bottom: 11px;
+            }
+
+            .systemTitleWrapper {
+                text-align: center;
+                padding-bottom: 60px;
+            }
+
+            .systemPanelContainer {
+                padding: 0 30px;
+
+                .systemPanelFlexWrapper {
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 20px;
+
+                    .systemTitleButton {
+                        min-width: 99px;
+                        border-radius: 18px;
+                        border: 1px solid #dddddd;
+                        padding: 9px;
+                        padding-top: 12px;
+                        text-align: center;
+                        background-color: #ffffff;
+                        font-size: 16px;
+                        letter-spacing: 0;
+                        color: #2f2f2f;
+                        font-family: "RyuGHbatang", serif;
+                        margin-right: 30px;
+                    }
+
+                    .systemDescription {
+                        font-family: "RyuGHbatang", serif;
+                        color: #2f2f2f;
+                        letter-spacing: 0;
+                        font-size: 16px;
+                    }
+                }
             }
         }
     }
@@ -303,4 +346,81 @@
 .welfareSecondSection {
     padding: 100px 0;
     background-color: #ffffff;
+
+    .systemTitle {
+        padding-bottom: 100px;
+    }
+
+    /* autoprefixer grid: autoplace */
+    .systemFlowWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 21px;
+        padding-bottom: 100px;
+
+        .systemStepArrowWrapper {
+            padding-top: 38px;
+        }
+
+        .systemStepWrapper {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .systemFlowCircle {
+            width: 185px;
+            height: 185px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #dddddd;
+            border-radius: 50%;
+            font-family: "RyuGHbatang", serif;
+            font-size: 18px;
+            color: #2f2f2f;
+            font-weight: bold;
+
+            .systemCircleIconWrapper {
+                padding-bottom: 20px;
+            }
+        }
+
+    }
+
+    .contact {
+        text-align: center;
+        padding-bottom: 60px;
+        color: #2f2f2f;
+        font-family: "RyuGHbatang", serif;
+        font-size: 16px;
+    }
+
+    .kaliscoButton {
+        padding: 21px 54px 18px;
+        background-color: rgba($color: #e8390e, $alpha: 0.9);
+        box-shadow: 0px 3px 0px #00000029;
+        border-radius: 8px;
+        font-family: "RyuGHbatang", serif;
+        font-size: 18px;
+        line-height: 26px;
+        color: rgba($color: #ffffff, $alpha: 0.8);
+        letter-spacing: -0.36px;
+        text-decoration: none;
+        display: inline-block;
+        min-width: 240px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+.welfareFirstSection,
+.welfareSecondSection {
+    .systemTitle {
+        font-size: 40px;
+        text-align: center;
+        font-family: "RyuGHbatang", serif;
+    }
 }
