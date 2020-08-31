@@ -7,7 +7,6 @@ import HibarinLanding from "../../components/brand/HibrainLanding";
 // component={AboutHistory}
 function Brand() {
     const match = useRouteMatch();
-    console.log(match);
     return (
         <>
             <Nav />
