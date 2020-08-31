@@ -185,6 +185,7 @@
         align-items: center;
         justify-content: center;
         transition: background-color 250ms, box-shadow 250ms;
+        text-decoration: none;
 
         &:not(:last-child) {
             margin-right: 50px;

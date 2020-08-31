@@ -22,7 +22,8 @@ function Nav() {
                         <Link
                             to="/about"
                             className={`${styles.navLink} ${
-                                currentPathRef.current === "/about"
+                                currentPathRef.current === "/about" ||
+                                currentPathRef.current === "/about/history"
                                     ? styles.active
                                     : ""
                             }`}

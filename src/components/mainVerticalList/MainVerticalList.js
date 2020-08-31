@@ -28,6 +28,7 @@ import Footer from "../Footer";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "./main_vertical_list.scss";
+import { Link } from "react-router-dom";
 
 function MainVerticalList() {
     SwiperCore.use([Mousewheel, Pagination]);
@@ -119,20 +120,24 @@ function MainVerticalList() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
+                    {/* TODO: 링크 추가해야 함 */}
                     <div className="main-bg-wrapper">
                         <div className="brand-list-wrapper">
-                            <div className="brand-circle-wrapper saboten">
+                            <Link className="d-inline-block brand-circle-wrapper saboten">
                                 <div className="brand-logo-wrapper">
                                     <img src={sabotonLogo} alt="saboten logo" />
                                 </div>
                                 <div className="brand-title">사보텐</div>
-                            </div>
-                            <div className="brand-circle-wrapper hibarin">
+                            </Link>
+                            <Link
+                                className="d-inline-block brand-circle-wrapper hibarin"
+                                to="/brand/hibarin"
+                            >
                                 <div className="brand-logo-wrapper">
                                     <img src={hibarinLogo} alt="hibarin logo" />
                                 </div>
                                 <div className="brand-title">히바린</div>
-                            </div>
+                            </Link>
                             <div className="brand-circle-wrapper tacobell">
                                 <div className="brand-logo-wrapper">
                                     <img
