@@ -6,7 +6,7 @@ import hibarinBannerImage from "../../static/images/img-hibarin-mainback.png";
 import hibarinLogo from "../../static/svg/hibarin-logo-header-w.svg";
 import bannerTitleImage from "../../static/images/katsu-and-lounge-text.png";
 
-function HibarinBanner() {
+function HibarinLanding() {
     SwiperCore.use([Pagination]);
     return (
         <Swiper>
@@ -33,4 +33,4 @@ function HibarinBanner() {
     );
 }
 
-export default HibarinBanner;
+export default HibarinLanding;
