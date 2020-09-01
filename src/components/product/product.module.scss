@@ -337,6 +337,15 @@
 .sauceDetailFristSection {
     padding-top: 80px;
     position: relative;
+
+    .sauceDetailTextWrapper {
+        align-self: center;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 .navigatorWrapper {
