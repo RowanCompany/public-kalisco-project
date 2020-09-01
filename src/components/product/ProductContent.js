@@ -1,6 +1,12 @@
 import React from "react";
 import ProductBanner from "./ProductBanner";
-import { useParams, useRouteMatch, Switch, Route } from "react-router-dom";
+import {
+    useParams,
+    useRouteMatch,
+    Switch,
+    Route,
+    Redirect,
+} from "react-router-dom";
 import ProductHomemade from "./ProductHomemade";
 import ProductDetailContent from "./ProductDetailContent";
 
@@ -28,9 +34,9 @@ function ProductCaseRenderer({ subject }) {
         case "homemade":
             return <ProductHomemade />;
         case "my-own-recipe":
-            return <div>hi</div>;
+            return <Redirect to="/products/homemade" />;
         default:
-            return <React.Fragment />;
+            return <Redirect to="/products/homemade" />;
     }
 }
 

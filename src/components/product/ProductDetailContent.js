@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import ProductKatsu from "./ProductKatsu";
+import ProductSauce from "./ProductSauce";
 
 function ProductDetailContent() {
     const { content } = useParams();
@@ -12,7 +13,7 @@ function ProductDetailCaseRenderer({ content }) {
         case "katsu":
             return <ProductKatsu content={content} />;
         case "sauce":
-            return <div>hi</div>;
+            return <ProductSauce content={content} />;
         default:
             return <React.Fragment />;
     }

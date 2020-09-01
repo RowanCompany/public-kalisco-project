@@ -3,16 +3,23 @@ import styles from "./product.module.scss";
 import { Link } from "react-router-dom";
 
 function ProductDetailNavigator({ content }) {
+    const isContentKatsu = content === "katsu";
+    const isContentSauce = content === "sauce";
+    const themeStyle = isContentKatsu
+        ? styles.darkThemeNavigator
+        : isContentSauce
+        ? styles.lightThemeNavigator
+        : "";
+    const darkThemeActiveStyle = styles.darkThemeNavActive;
+    const lightThemeActiveStyle = styles.lightThemeNavActive;
     return (
         <nav>
             <ul className={styles.navigatorWrapper}>
                 <li>
                     <Link
                         to="/products/homemade/katsu"
-                        className={`${styles.navigator} ${
-                            styles.darkThemeNavigator
-                        } ${
-                            content === "katsu" ? styles.darkThemeNavActive : ""
+                        className={`${styles.navigator} ${themeStyle} ${
+                            isContentKatsu && darkThemeActiveStyle
                         }`}
                     >
                         Katsu
@@ -21,10 +28,8 @@ function ProductDetailNavigator({ content }) {
                 <li>
                     <Link
                         to="/products/homemade/sauce"
-                        className={`${styles.navigator} ${
-                            styles.darkThemeNavigator
-                        } ${
-                            content === "sauce" ? styles.darkThemeNavActive : ""
+                        className={`${styles.navigator} ${themeStyle} ${
+                            isContentSauce && lightThemeActiveStyle
                         }`}
                     >
                         Sauce
