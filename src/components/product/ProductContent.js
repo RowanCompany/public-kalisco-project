@@ -1,14 +1,24 @@
 import React from "react";
 import ProductBanner from "./ProductBanner";
-import { useParams } from "react-router-dom";
+import { useParams, useRouteMatch, Switch, Route } from "react-router-dom";
 import ProductHomemade from "./ProductHomemade";
+import ProductDetailContent from "./ProductDetailContent";
 
 function ProductContent() {
     const { subject } = useParams();
+    const match = useRouteMatch();
     return (
         <>
             <ProductBanner subject={subject} />
-            <ProductCaseRenderer subject={subject} />
+            <Switch>
+                <Route
+                    path={`${match.path}/:content`}
+                    component={ProductDetailContent}
+                />
+                <Route path={match.path}>
+                    <ProductCaseRenderer subject={subject} />
+                </Route>
+            </Switch>
         </>
     );
 }

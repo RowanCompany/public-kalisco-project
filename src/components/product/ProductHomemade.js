@@ -88,7 +88,10 @@ function ProductHomemade() {
                             <br />
                             사보텐만의 노하우와 기술을 담아냈습니다.
                             <div style={{ paddingTop: "70px" }}>
-                                <Link className={styles.homemadeButton}>
+                                <Link
+                                    className={styles.homemadeButton}
+                                    to="/products/homemade/katsu"
+                                >
                                     돈카츠 제품 보러가기
                                 </Link>
                             </div>
@@ -128,7 +131,10 @@ function ProductHomemade() {
                             <br />
                             고퀄리티의 다양한 소스를 즐겨보세요!
                             <div style={{ paddingTop: "70px" }}>
-                                <Link className={styles.homemadeButton}>
+                                <Link
+                                    className={styles.homemadeButton}
+                                    to="/products/homemade/sauce"
+                                >
                                     소스 제품 보러가기
                                 </Link>
                             </div>
