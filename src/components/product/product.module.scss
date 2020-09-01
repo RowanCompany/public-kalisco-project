@@ -334,6 +334,11 @@
     }
 }
 
+.sauceDetailFristSection {
+    padding-top: 80px;
+    position: relative;
+}
+
 .navigatorWrapper {
     display: flex;
     justify-content: center;
@@ -379,6 +384,36 @@
 
         &:not(:last-child) {
             margin-right: 30px;
+        }
+    }
+}
+
+.sauceNavigatorWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 106px 0;
+    list-style: none;
+
+    >li {
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .sauceNavigator {
+            font-size: 16px;
+            letter-spacing: 0;
+            color: #707070;
+            padding: 0 30px 6px;
+            border-bottom: 1px solid transparent;
+            text-decoration: none;
+
+            &.sauceNavigatorActive {
+                color: #E8390E;
+                font-weight: bold;
+                border-bottom: 2px solid #E8390E;
+            }
         }
     }
 }

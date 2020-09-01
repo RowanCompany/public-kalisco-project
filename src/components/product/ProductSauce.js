@@ -21,22 +21,26 @@ import { Link } from "react-router-dom";
 
 function ProductSauce({ content }) {
     const [clickedSauce, setClickedSauce] = useState("spicy-cream");
-    // TODO: 링크 추가해야 함
     const sauceImageData = {
         "spicy-cream": {
             image: sauceTop51Image,
+            link: "/products/homemade/sauce/spicy-creem",
         },
         "spring-onion": {
             image: sauceTop52Image,
+            link: "/products/homemade/sauce/green-onion",
         },
         tonkatsu: {
             image: sauceTop53Image,
+            link: "/products/homemade/sauce/donkatsu",
         },
         sesame: {
             image: sauceTop54Image,
+            link: "/products/homemade/sauce/sesame",
         },
         citron: {
             image: sauceTop55Image,
+            link: "/products/homemade/sauce/citron",
         },
     };
 
@@ -196,16 +200,23 @@ function ProductSauce({ content }) {
                         유자소스
                     </button>
                 </div>
-                {/* TODO: 링크 추가해야 함 */}
                 <div className="container">
-                    <img
-                        src={
+                    <Link
+                        className="d-inline-block"
+                        to={
                             !!sauceImageData[clickedSauce] &&
-                            sauceImageData[clickedSauce]["image"]
+                            sauceImageData[clickedSauce]["link"]
                         }
-                        alt="Sauce"
-                        className="img-fluid"
-                    />
+                    >
+                        <img
+                            src={
+                                !!sauceImageData[clickedSauce] &&
+                                sauceImageData[clickedSauce]["image"]
+                            }
+                            alt="Sauce"
+                            className="img-fluid"
+                        />
+                    </Link>
                 </div>
             </section>
             <section className={styles.sauceThirdSection}>
@@ -222,7 +233,10 @@ function ProductSauce({ content }) {
                         <b>‘사보텐 커리 소스’</b>
                     </div>
                     <div>
-                        <Link className={styles.sourceThirdLink}>
+                        <Link
+                            className={styles.sourceThirdLink}
+                            to="/products/homemade/sauce/curry"
+                        >
                             커리소스 보러가기 &gt;
                         </Link>
                     </div>

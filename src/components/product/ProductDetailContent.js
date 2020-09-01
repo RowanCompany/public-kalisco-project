@@ -1,21 +1,40 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import {
+    useParams,
+    useRouteMatch,
+    Switch,
+    Route,
+    Redirect,
+} from "react-router-dom";
 import ProductKatsu from "./ProductKatsu";
 import ProductSauce from "./ProductSauce";
+import ProductSauceDetail from "./ProductSauceDetail";
 
 function ProductDetailContent() {
     const { content } = useParams();
-    return <ProductDetailCaseRenderer content={content} />;
+    const match = useRouteMatch();
+    return <ProductDetailCaseRenderer content={content} match={match} />;
 }
 
-function ProductDetailCaseRenderer({ content }) {
+function ProductDetailCaseRenderer({ content, match }) {
     switch (content) {
         case "katsu":
             return <ProductKatsu content={content} />;
         case "sauce":
-            return <ProductSauce content={content} />;
+            return (
+                <>
+                    <Switch>
+                        <Route path={`${match.path}/:sauce`}>
+                            <ProductSauceDetail content={content} />
+                        </Route>
+                        <Route path={match.path}>
+                            <ProductSauce content={content} />
+                        </Route>
+                    </Switch>
+                </>
+            );
         default:
-            return <React.Fragment />;
+            return <Redirect to="/products/homemade/katsu" />;
     }
 }
 
