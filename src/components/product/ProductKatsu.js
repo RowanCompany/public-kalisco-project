@@ -8,7 +8,7 @@ function ProductKatsu({ content }) {
         <section className={styles.katsuSection}>
             <ProductDetailNavigator content={content} />
             <div className="text-center">
-                <img src={katsuImage} alt="Katsu Image" className="img-fluid" />
+                <img src={katsuImage} alt="Katsu" className="img-fluid" />
             </div>
         </section>
     );
