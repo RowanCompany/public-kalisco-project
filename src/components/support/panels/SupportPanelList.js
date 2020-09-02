@@ -15,6 +15,11 @@ function SupportPanelList() {
             link: "/supports/membership",
         },
         {
+            icon: iconGiftCard,
+            text: "상품권",
+            link: "/supports/giveaway",
+        },
+        {
             icon: iconCreditCard,
             text: "제휴카드",
             link: "/supports/partnership",
@@ -28,11 +33,6 @@ function SupportPanelList() {
             icon: iconEventPromotion,
             text: "이벤트&프로모션",
             link: "/supports/events",
-        },
-        {
-            icon: iconGiftCard,
-            text: "상품권",
-            link: "/supports/giveaway",
         },
     ];
     return (
