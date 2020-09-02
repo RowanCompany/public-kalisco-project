@@ -5,9 +5,9 @@ import Supports from "./pages/supports/Supports";
 import HR from "./pages/hr/HR";
 import Brand from "./pages/brand/Brand";
 import Product from "./pages/product/Product";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-// TODO: Suspense 도입 고려, Nested Route 처리해야 함
+// TODO: Suspense 도입 고려
 function App() {
     return (
         <BrowserRouter>
@@ -18,6 +18,9 @@ function App() {
                 <Route path="/hr" component={HR} />
                 <Route path="/brand" component={Brand} />
                 <Route path="/products" component={Product} />
+                <Route>
+                    <Redirect to="/" />
+                </Route>
             </Switch>
         </BrowserRouter>
     );
