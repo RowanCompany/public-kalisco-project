@@ -126,7 +126,7 @@ function ProductSauce({ content }) {
                                 ? styles.sauceSecondNavigatorActive
                                 : ""
                         }`}
-                        onClick={() => setClickedSauce("spicy-cream")}
+                        onMouseEnter={() => setClickedSauce("spicy-cream")}
                     >
                         <img
                             src={iconChili}
@@ -142,7 +142,7 @@ function ProductSauce({ content }) {
                                 ? styles.sauceSecondNavigatorActive
                                 : ""
                         }`}
-                        onClick={() => setClickedSauce("spring-onion")}
+                        onMouseEnter={() => setClickedSauce("spring-onion")}
                     >
                         <img
                             src={iconSpringOnion}
@@ -158,7 +158,7 @@ function ProductSauce({ content }) {
                                 ? styles.sauceSecondNavigatorActive
                                 : ""
                         }`}
-                        onClick={() => setClickedSauce("tonkatsu")}
+                        onMouseEnter={() => setClickedSauce("tonkatsu")}
                     >
                         <img
                             src={iconSteak}
@@ -174,7 +174,7 @@ function ProductSauce({ content }) {
                                 ? styles.sauceSecondNavigatorActive
                                 : ""
                         }`}
-                        onClick={() => setClickedSauce("sesame")}
+                        onMouseEnter={() => setClickedSauce("sesame")}
                     >
                         <img
                             src={iconSesameSecond}
@@ -190,7 +190,7 @@ function ProductSauce({ content }) {
                                 ? styles.sauceSecondNavigatorActive
                                 : ""
                         }`}
-                        onClick={() => setClickedSauce("citron")}
+                        onMouseEnter={() => setClickedSauce("citron")}
                     >
                         <img
                             src={iconTangerine}
