@@ -1,11 +1,11 @@
 import React from "react";
 import HibarinBanner from "./HibarinBanner";
-import { useParams } from "react-router-dom";
+import { useParams, Redirect } from "react-router-dom";
 import Footer from "../Footer";
 import HibarinStory from "./HibarinStory";
 import HibarinStore from "./HibarinStore";
+import HibarinMenu from "./HibarinMenu";
 
-// TODO: CaseRenderer 만들어야 함
 function HibarinContent() {
     const { subject } = useParams();
     return (
@@ -17,21 +17,20 @@ function HibarinContent() {
     );
 }
 
-// TODO: Redirect 컴포넌트 추가해야 함
 function HibarinCaseRenderer({ subject }) {
     switch (subject) {
         case "story":
             return <HibarinStory />;
         case "menu":
-            return <div>hi</div>;
+            return <HibarinMenu />;
         case "gift-card":
-            return <div>hi</div>;
+            return <Redirect to="/brand/hibarin/story" />;
         case "store":
             return <HibarinStore />;
         case "news-and-events":
-            return <div>hi</div>;
+            return <Redirect to="/brand/hibarin/story" />;
         default:
-            return <React.Fragment />;
+            return <Redirect to="/brand/hibarin/story" />;
     }
 }
 
