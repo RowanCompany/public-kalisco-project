@@ -3,6 +3,7 @@ import HibarinBanner from "./HibarinBanner";
 import { useParams } from "react-router-dom";
 import Footer from "../Footer";
 import HibarinStory from "./HibarinStory";
+import HibarinStore from "./HibarinStore";
 
 // TODO: CaseRenderer 만들어야 함
 function HibarinContent() {
@@ -26,7 +27,7 @@ function HibarinCaseRenderer({ subject }) {
         case "gift-card":
             return <div>hi</div>;
         case "store":
-            return <div>hi</div>;
+            return <HibarinStore />;
         case "news-and-events":
             return <div>hi</div>;
         default:

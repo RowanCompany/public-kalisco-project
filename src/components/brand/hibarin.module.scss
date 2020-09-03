@@ -32,3 +32,87 @@
         }
     }
 }
+
+.storeSection {
+    padding: 80px 0;
+    background-color: #ffffff;
+    position: relative;
+
+    .titleTextWrapper {
+        text-align: center;
+        padding-bottom: 80px;
+    }
+
+    .storeImageWrapper {
+        margin-bottom: 80px;
+    }
+
+    .storeTextWrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .storeTextTitle {
+            font-size: 28px;
+            font-family: "RyuGHbatang", serif;
+            letter-spacing: 0;
+            color: #ffffff;
+            padding-bottom: 30px;
+        }
+
+        .storeTextDescription {
+            font-size: 16px;
+            font-family: "RyuGHbatang", serif;
+            letter-spacing: 0;
+            color: #ffffff;
+            line-height: 22px;
+        }
+    }
+
+    .storeMapWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .storeMarkerWrapper {
+            padding-bottom: 30px;
+        }
+
+        .storeMapTitle {
+            font-family: "RyuGHbatang", serif;
+            font-size: 28px;
+            letter-spacing: 0;
+            color: #2F2F2F;
+            padding-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .storeMapDescription {
+            font-family: "RyuGHbatang", serif;
+            font-size: 20px;
+            color: #2f2f2f;
+            letter-spacing: 0;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+.kaliscoButton {
+    padding: 21px 54px 18px;
+    background-color: rgba($color: #e8390e, $alpha: 0.9);
+    box-shadow: 0px 3px 0px #00000029;
+    border-radius: 8px;
+    font-family: "RyuGHbatang", serif;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba($color: #ffffff, $alpha: 0.8);
+    letter-spacing: -0.36px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 240px;
+    box-sizing: border-box;
+    text-align: center;
+}
