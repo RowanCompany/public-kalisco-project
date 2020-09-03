@@ -33,6 +33,43 @@
     }
 }
 
+.menuFirstSection {
+    padding: 80px 0;
+    position: relative;
+    background-color: #ffffff;
+
+    .menuTitleTextWrapper {
+        text-align: center;
+        padding-bottom: 80px;
+    }
+}
+
+.menuSwiper {
+    height: auto;
+}
+
+.menuListSection {
+    padding: 100px 0 160px;
+
+    &.katsuSection {
+        background-color: #FFE4C7;
+    }
+
+    &.donburiSection {
+        background-color: #DED8CE;
+    }
+
+    &.noodleSection {
+        background-color: #D5E3DF;
+    }
+
+    &.sideSection {
+        background-color: #EAD3CD;
+    }
+
+    
+}
+
 .storeSection {
     padding: 80px 0;
     background-color: #ffffff;
