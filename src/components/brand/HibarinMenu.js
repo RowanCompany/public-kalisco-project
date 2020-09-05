@@ -19,7 +19,7 @@ import "swiper/components/navigation/navigation.scss";
 import "./swiper_menu.scss";
 import { Link } from "react-router-dom";
 
-function HibarinMenu() {
+function HibarinMenu({ subject }) {
     SwiperCore.use([Navigation]);
     const [menu, setMenu] = useState("katsu");
     const menuData = {
@@ -130,6 +130,7 @@ function HibarinMenu() {
                             <Link
                                 onMouseEnter={() => setMenu("katsu")}
                                 className={styles.menuListLinkWrapper}
+                                to={`/brand/hibarin/${subject}/katsu`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
@@ -148,6 +149,7 @@ function HibarinMenu() {
                             <Link
                                 onMouseEnter={() => setMenu("donburi")}
                                 className={styles.menuListLinkWrapper}
+                                to={`/brand/hibarin/${subject}/donburi`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
@@ -166,6 +168,7 @@ function HibarinMenu() {
                             <Link
                                 onMouseEnter={() => setMenu("noodle")}
                                 className={styles.menuListLinkWrapper}
+                                to={`/brand/hibarin/${subject}/noodle`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
@@ -184,6 +187,7 @@ function HibarinMenu() {
                             <Link
                                 onMouseEnter={() => setMenu("side")}
                                 className={styles.menuListLinkWrapper}
+                                to={`/brand/hibarin/${subject}/side`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${

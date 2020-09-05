@@ -3,6 +3,7 @@ import Nav from "../../components/nav/Nav";
 import { Route, Switch, useRouteMatch, Redirect } from "react-router-dom";
 import HibarinLanding from "../../components/brand/HibrainLanding";
 import HibarinContent from "../../components/brand/HibarinContent";
+import HibarinMenuContent from "../../components/brand/HibarinMenuContent";
 
 function Brand() {
     const match = useRouteMatch();
@@ -10,6 +11,10 @@ function Brand() {
         <>
             <Nav />
             <Switch>
+                <Route
+                    path={`${match.path}/hibarin/:subject/:menu`}
+                    component={HibarinMenuContent}
+                />
                 <Route
                     path={`${match.path}/hibarin/:subject`}
                     component={HibarinContent}

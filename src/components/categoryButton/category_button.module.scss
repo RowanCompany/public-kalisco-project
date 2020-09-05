@@ -10,6 +10,7 @@
     display: inline-block;
     cursor: pointer;
     transition: all 250ms;
+    text-decoration: none;
 
     &:hover {
         background-color: rgba($color: #ffffff, $alpha: 0.8);

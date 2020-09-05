@@ -22,7 +22,7 @@ function HibarinCaseRenderer({ subject }) {
         case "story":
             return <HibarinStory />;
         case "menu":
-            return <HibarinMenu />;
+            return <HibarinMenu subject={subject} />;
         case "gift-card":
             return <Redirect to="/brand/hibarin/story" />;
         case "store":
