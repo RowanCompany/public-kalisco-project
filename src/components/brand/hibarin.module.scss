@@ -1,277 +1,282 @@
 .storyFlexWrapper {
+  align-self: center;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .storySpaceWrapper {
+    padding-left: 170px;
+
+    .storyTitle {
+      font-size: 20px;
+      letter-spacing: 0;
+      color: #707070;
+      font-family: "RyuGHbatang", serif;
+      line-height: 29px;
+    }
+
+    .storyVerticalHr {
+      width: 1px;
+      height: 200px;
+      border-right: 2px solid #517e71;
+      margin: 20px 0;
+    }
+
+    .storyDescription {
+      letter-spacing: 0;
+      color: #707070;
+      font-family: "RyuGHbatang", serif;
+      font-size: 18px;
+      line-height: 29px;
+    }
+  }
+}
+
+.menuFirstSection {
+  padding: 80px 0;
+  position: relative;
+  background-color: #ffffff;
+
+  .menuTitleTextWrapper {
+    text-align: center;
+    padding-bottom: 80px;
+  }
+}
+
+.menuSwiper {
+  height: auto;
+}
+
+.menuListSection {
+  padding: 100px 0 160px;
+
+  .MenuListFlexWrapper {
+    display: flex;
+    margin-bottom: 58px;
+  }
+
+  .menuBorderLine {
     align-self: center;
-    text-align: left;
+    min-height: 1px;
+
+    &.katsuBorderLine,
+    &.noodleBorderLine {
+      width: 80%;
+      max-width: 540px;
+      margin-right: 38px;
+    }
+
+    &.donburiBorderLine,
+    &.sideBorderLine {
+      width: 85%;
+      max-width: 617px;
+      margin-right: 40px;
+    }
+  }
+
+  .menuListTitle {
+    font-size: 40px;
+    line-height: 64px;
+    color: #ffffff;
+    letter-spacing: 1.2px;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 600;
+
+    &.menuListTitleActive {
+      &::after {
+        content: " ";
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        margin-left: 5px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &.katsuSection {
+    background-color: #ffe4c7;
+
+    .katsuBorderLine {
+      border-top: 1px solid #bc711f;
+    }
+
+    .menuListTitleActive {
+      color: #ad5c03;
+
+      &::after {
+        background-color: #bc711f;
+      }
+    }
+  }
+
+  &.donburiSection {
+    background-color: #ded8ce;
+
+    .donburiBorderLine {
+      border-top: 1px solid #bc9b69;
+    }
+
+    .menuListTitleActive {
+      color: #bc9b69;
+
+      &::after {
+        background-color: #bc9b69;
+      }
+    }
+  }
+
+  &.noodleSection {
+    background-color: #d5e3df;
+
+    .noodleBorderLine {
+      border-top: 1px solid #517e71;
+    }
+
+    .menuListTitleActive {
+      color: #517e71;
+
+      &::after {
+        background-color: #517e71;
+      }
+    }
+  }
+
+  &.sideSection {
+    background-color: #ead3cd;
+
+    .sideBorderLine {
+      border-top: 1px solid #d86245;
+    }
+
+    .menuListTitleActive {
+      color: #e8390e;
+
+      &::after {
+        background-color: #e8390e;
+      }
+    }
+  }
+
+  .menuListLinkWrapper {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .menuListTitleWrapper {
+    padding-bottom: 145px;
+    text-align: center;
+  }
+
+  .menuListGridWrapper {
+    align-items: center;
+  }
+}
+
+.menuDetailSection {
+  padding-top: 50px;
+  padding-bottom: 83px;
+  position: relative;
+  background-color: #ffffff;
+
+  .categoryButtonListWrapper {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* autoprefixer grid: autoplace */
+  .menuDetailPanelWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+  }
+}
+
+.storeSection {
+  padding: 80px 0;
+  background-color: #ffffff;
+  position: relative;
+
+  .titleTextWrapper {
+    text-align: center;
+    padding-bottom: 80px;
+  }
+
+  .storeImageWrapper {
+    margin-bottom: 80px;
+  }
+
+  .storeTextWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
-    .storySpaceWrapper {
-        padding-left: 170px;
-
-        .storyTitle {
-            font-size: 20px;
-            letter-spacing: 0;
-            color: #707070;
-            font-family: "RyuGHbatang", serif;
-            line-height: 29px;
-        }
-
-        .storyVerticalHr {
-            width: 1px;
-            height: 200px;
-            border-right: 2px solid #517E71;
-            margin: 20px 0;
-        }
-
-        .storyDescription {
-            letter-spacing: 0;
-            color: #707070;
-            font-family: "RyuGHbatang", serif;
-            font-size: 18px;
-            line-height: 29px;
-        }
-    }
-}
-
-.menuFirstSection {
-    padding: 80px 0;
-    position: relative;
-    background-color: #ffffff;
-
-    .menuTitleTextWrapper {
-        text-align: center;
-        padding-bottom: 80px;
-    }
-}
-
-.menuSwiper {
-    height: auto;
-}
-
-.menuListSection {
-    padding: 100px 0 160px;
-
-    .MenuListFlexWrapper {
-        display: flex;
-        margin-bottom: 58px;
+    .storeTextTitle {
+      font-size: 28px;
+      font-family: "RyuGHbatang", serif;
+      letter-spacing: 0;
+      color: #ffffff;
+      padding-bottom: 30px;
     }
 
-    .menuBorderLine {
-        align-self: center;
-        min-height: 1px;
+    .storeTextDescription {
+      font-size: 16px;
+      font-family: "RyuGHbatang", serif;
+      letter-spacing: 0;
+      color: #ffffff;
+      line-height: 22px;
+    }
+  }
 
-        &.katsuBorderLine,
-        &.noodleBorderLine {
-            width: 80%;
-            max-width: 540px;
-            margin-right: 38px;
-        }
+  .storeMapWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        &.donburiBorderLine,
-        &.sideBorderLine {
-            width: 85%;
-            max-width: 617px;
-            margin-right: 40px;
-        }
+    .storeMarkerWrapper {
+      padding-bottom: 30px;
     }
 
-    .menuListTitle {
-        font-size: 40px;
-        line-height: 64px;
-        color: #ffffff;
-        letter-spacing: 1.2px;
-        font-family: "Montserrat", sans-serif;
-        display: flex;
-        align-items: center;
-        position: relative;
-        font-weight: 600;
-
-        &.menuListTitleActive {
-            &::after {
-                content: " ";
-                width: 8px;
-                height: 8px;
-                border-radius: 100%;
-                margin-left: 5px;
-                margin-bottom: 16px;
-                ;
-            }
-        }
+    .storeMapTitle {
+      font-family: "RyuGHbatang", serif;
+      font-size: 28px;
+      letter-spacing: 0;
+      color: #2f2f2f;
+      padding-bottom: 40px;
+      font-weight: bold;
     }
 
-    &.katsuSection {
-        background-color: #FFE4C7;
-
-        .katsuBorderLine {
-            border-top: 1px solid #BC711F;
-        }
-
-        .menuListTitleActive {
-            color: #AD5C03;
-
-            &::after {
-                background-color: #BC711F;
-            }
-        }
+    .storeMapDescription {
+      font-family: "RyuGHbatang", serif;
+      font-size: 20px;
+      color: #2f2f2f;
+      letter-spacing: 0;
+      padding-bottom: 40px;
     }
-
-    &.donburiSection {
-        background-color: #DED8CE;
-
-        .donburiBorderLine {
-            border-top: 1px solid #BC9B69;
-        }
-
-        .menuListTitleActive {
-            color: #BC9B69;
-
-            &::after {
-                background-color: #BC9B69;
-            }
-        }
-    }
-
-    &.noodleSection {
-        background-color: #D5E3DF;
-
-        .noodleBorderLine {
-            border-top: 1px solid #517E71;
-        }
-
-        .menuListTitleActive {
-            color: #517E71;
-
-            &::after {
-                background-color: #517E71;
-            }
-        }
-    }
-
-    &.sideSection {
-        background-color: #EAD3CD;
-
-        .sideBorderLine {
-            border-top: 1px solid #D86245;
-        }
-
-        .menuListTitleActive {
-            color: #E8390E;
-
-            &::after {
-                background-color: #E8390E;
-            }
-        }
-    }
-
-    .menuListLinkWrapper {
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .menuListTitleWrapper {
-        padding-bottom: 145px;
-        text-align: center;
-    }
-
-    .menuListGridWrapper {
-        align-items: center;
-    }
-}
-
-.menuDetailSection {
-    padding-top: 50px;
-    padding-bottom: 83px;
-    position: relative;
-    background-color: #ffffff;
-
-
-    .categoryButtonListWrapper {
-        margin-bottom: 50px;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-.storeSection {
-    padding: 80px 0;
-    background-color: #ffffff;
-    position: relative;
-
-    .titleTextWrapper {
-        text-align: center;
-        padding-bottom: 80px;
-    }
-
-    .storeImageWrapper {
-        margin-bottom: 80px;
-    }
-
-    .storeTextWrapper {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-        .storeTextTitle {
-            font-size: 28px;
-            font-family: "RyuGHbatang", serif;
-            letter-spacing: 0;
-            color: #ffffff;
-            padding-bottom: 30px;
-        }
-
-        .storeTextDescription {
-            font-size: 16px;
-            font-family: "RyuGHbatang", serif;
-            letter-spacing: 0;
-            color: #ffffff;
-            line-height: 22px;
-        }
-    }
-
-    .storeMapWrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .storeMarkerWrapper {
-            padding-bottom: 30px;
-        }
-
-        .storeMapTitle {
-            font-family: "RyuGHbatang", serif;
-            font-size: 28px;
-            letter-spacing: 0;
-            color: #2F2F2F;
-            padding-bottom: 40px;
-            font-weight: bold;
-        }
-
-        .storeMapDescription {
-            font-family: "RyuGHbatang", serif;
-            font-size: 20px;
-            color: #2f2f2f;
-            letter-spacing: 0;
-            padding-bottom: 40px;
-        }
-    }
+  }
 }
 
 .kaliscoButton {
-    padding: 21px 54px 18px;
-    background-color: rgba($color: #e8390e, $alpha: 0.9);
-    box-shadow: 0px 3px 0px #00000029;
-    border-radius: 8px;
-    font-family: "RyuGHbatang", serif;
-    font-size: 18px;
-    line-height: 26px;
-    color: rgba($color: #ffffff, $alpha: 0.8);
-    letter-spacing: -0.36px;
-    text-decoration: none;
-    display: inline-block;
-    min-width: 240px;
-    box-sizing: border-box;
-    text-align: center;
+  padding: 21px 54px 18px;
+  background-color: rgba($color: #e8390e, $alpha: 0.9);
+  box-shadow: 0px 3px 0px #00000029;
+  border-radius: 8px;
+  font-family: "RyuGHbatang", serif;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba($color: #ffffff, $alpha: 0.8);
+  letter-spacing: -0.36px;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 240px;
+  box-sizing: border-box;
+  text-align: center;
 }

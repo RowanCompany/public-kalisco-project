@@ -1,0 +1,53 @@
+.menuPanel {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(4n),
+  &:nth-child(5n) {
+    flex-grow: 1;
+  }
+
+  .panelTextWrapper {
+    padding: 23px 30px 18px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+
+    .panelFlexWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .panelTitleWrapper {
+        padding-right: 40px;
+
+        .panelTitle {
+          font-family: "RyuGHbatang", serif;
+          font-size: 17px;
+          letter-spacing: 0;
+          color: #2f2f2f;
+          padding-bottom: 8px;
+        }
+
+        .panelEnTitle {
+          font-family: "RyuGHbatang", serif;
+          font-size: 14px;
+          letter-spacing: 0;
+          color: rgba($color: #2f2f2f, $alpha: 0.5);
+          white-space: pre;
+        }
+      }
+
+      .panelPrice {
+        font-family: "RyuGHbatang", serif;
+        letter-spacing: 0;
+        color: #2f2f2f;
+        font-size: 14px;
+      }
+    }
+  }
+}
