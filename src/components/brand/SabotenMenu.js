@@ -80,7 +80,7 @@ function SabotenMenu({ subject }) {
                             <Link
                                 onMouseEnter={() => setMenu("katsu")}
                                 className={styles.menuListLinkWrapper}
-                                to={`/brand/hibarin/${subject}/katsu`}
+                                to={`/brand/saboten/${subject}/katsu`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
@@ -99,7 +99,7 @@ function SabotenMenu({ subject }) {
                             <Link
                                 onMouseEnter={() => setMenu("donburi")}
                                 className={styles.menuListLinkWrapper}
-                                to={`/brand/hibarin/${subject}/donburi`}
+                                to={`/brand/saboten/${subject}/donburi`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
@@ -118,7 +118,7 @@ function SabotenMenu({ subject }) {
                             <Link
                                 onMouseEnter={() => setMenu("noodle")}
                                 className={styles.menuListLinkWrapper}
-                                to={`/brand/hibarin/${subject}/noodle`}
+                                to={`/brand/saboten/${subject}/noodle`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
@@ -137,7 +137,7 @@ function SabotenMenu({ subject }) {
                             <Link
                                 onMouseEnter={() => setMenu("side")}
                                 className={styles.menuListLinkWrapper}
-                                to={`/brand/hibarin/${subject}/side`}
+                                to={`/brand/saboten/${subject}/side`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
