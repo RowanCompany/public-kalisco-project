@@ -1,0 +1,163 @@
+.menuFirstSection {
+    padding: 80px 0;
+    position: relative;
+    background-color: #191919;
+
+    .menuTitleTextWrapper {
+        text-align: center;
+        padding-bottom: 80px;
+    }
+}
+
+.menuSwiper {
+    height: auto;
+}
+
+.menuListSection {
+    padding: 100px 0 160px;
+
+    .MenuListFlexWrapper {
+        display: flex;
+        margin-bottom: 58px;
+    }
+
+    .menuBorderLine {
+        align-self: center;
+        min-height: 1px;
+
+        &.katsuBorderLine,
+        &.noodleBorderLine {
+            width: 80%;
+            max-width: 540px;
+            margin-right: 38px;
+        }
+
+        &.donburiBorderLine,
+        &.sideBorderLine {
+            width: 85%;
+            max-width: 617px;
+            margin-right: 40px;
+        }
+    }
+
+    .menuListTitle {
+        font-size: 40px;
+        line-height: 64px;
+        color: #ffffff;
+        letter-spacing: 1.2px;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        align-items: center;
+        position: relative;
+        font-weight: 600;
+
+        &.menuListTitleActive {
+            &::after {
+                content: " ";
+                width: 8px;
+                height: 8px;
+                border-radius: 100%;
+                margin-left: 5px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &.katsuSection {
+        background-color: #343434;
+
+        .katsuBorderLine {
+            border-top: 1px solid #FFE42B;
+        }
+
+        .menuListTitleActive {
+            color: #FFE42B;
+
+            &::after {
+                background-color: #FFE42B;
+            }
+        }
+    }
+
+    &.donburiSection {
+        background-color: #151515;
+
+        .donburiBorderLine {
+            border-top: 1px solid #E8390E;
+        }
+
+        .menuListTitleActive {
+            color: #E8390E;
+
+            &::after {
+                background-color: #E8390E;
+            }
+        }
+    }
+
+    &.noodleSection {
+        background-color: #D4D288;
+
+        .noodleBorderLine {
+            border-top: 1px solid #325D24;
+        }
+
+        .menuListTitleActive {
+            color: #325D24;
+
+            &::after {
+                background-color: #325D24;
+            }
+        }
+    }
+
+    &.sideSection {
+        background-color: #9A633A;
+
+        .sideBorderLine {
+            border-top: 1px solid #222222;
+        }
+
+        .menuListTitleActive {
+            color: #222222;
+
+            &::after {
+                background-color: #222222;
+            }
+        }
+    }
+
+    .menuListLinkWrapper {
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .menuListTitleWrapper {
+        padding-bottom: 145px;
+        text-align: center;
+    }
+
+    .menuListGridWrapper {
+        align-items: center;
+    }
+}
+
+.menuDetailSection {
+    padding-top: 50px;
+    padding-bottom: 83px;
+    position: relative;
+    background-color: #ffffff;
+
+    .categoryButtonListWrapper {
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* autoprefixer grid: autoplace */
+    .menuDetailPanelWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 20px;
+    }
+}
