@@ -79,7 +79,18 @@ function Nav() {
                             HR
                         </Link>
                     </div>
-                    <div>Recruit</div>
+                    <div>
+                        <Link
+                            to="/recruit"
+                            className={`${styles.navLink} ${
+                                currentPathRef.current.includes("recruit")
+                                    ? styles.active
+                                    : ""
+                            }`}
+                        >
+                            Recruit
+                        </Link>
+                    </div>
                 </li>
                 {/* <li>
                     <div>고객소통</div>
