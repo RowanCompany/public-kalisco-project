@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../Footer";
-import styles from "./hibarin.module.scss";
-import HibarinBanner from "./HibarinBanner";
+import styles from "./saboten.module.scss";
+import SabotenBanner from "./SabotenBanner";
 import { useParams } from "react-router-dom";
 import CategoryLink from "../categoryButton/CategoryLink";
 import HibarnMenuData from "./HibarinMenuData";
@@ -13,22 +13,22 @@ function HibarinMenuContent() {
         {
             text: "Katsu",
             type: "katsu",
-            link: "/brand/hibarin/menu/katsu",
+            link: "/brand/saboten/menu/katsu",
         },
         {
             text: "Donburi",
             type: "donburi",
-            link: "/brand/hibarin/menu/donburi",
+            link: "/brand/saboten/menu/donburi",
         },
         {
             text: "Noodles",
             type: "noodles",
-            link: "/brand/hibarin/menu/noodles",
+            link: "/brand/saboten/menu/noodles",
         },
         {
             text: "Side",
             type: "side",
-            link: "/brand/hibarin/menu/side",
+            link: "/brand/saboten/menu/side",
         },
     ];
     const [category, setCategory] = useState(
@@ -37,7 +37,7 @@ function HibarinMenuContent() {
 
     return (
         <>
-            <HibarinBanner subject={params.subject} />
+            <SabotenBanner subject={params.subject} />
             <section className={styles.menuDetailSection}>
                 <div className={styles.categoryButtonListWrapper}>
                     {categoryData.map((d, i) => (

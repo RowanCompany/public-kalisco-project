@@ -6,6 +6,7 @@ import HibarinContent from "../../components/brand/HibarinContent";
 import HibarinMenuContent from "../../components/brand/HibarinMenuContent";
 import SabotenLanding from "../../components/brand/SabotenLanding";
 import SabotenContent from "../../components/brand/SabotenContent";
+import SabotenMenuContent from "../../components/brand/SabotenMenuContent";
 
 function Brand() {
     const match = useRouteMatch();
@@ -13,6 +14,10 @@ function Brand() {
         <>
             <Nav />
             <Switch>
+                <Route
+                    path={`${match.path}/saboten/:subject/:menu`}
+                    component={SabotenMenuContent}
+                />
                 <Route
                     path={`${match.path}/saboten/:subject`}
                     component={SabotenContent}
