@@ -25,7 +25,6 @@ import EventCircle from "../mainFooterCircle/EventCircle";
 import RecruitCircle from "../mainFooterCircle/RecruitCircle";
 import Footer from "../Footer";
 import { Link, useLocation } from "react-router-dom";
-import qs from "qs";
 
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -52,7 +51,7 @@ function MainVerticalList() {
                 controlledSwiper.activeIndex = 0;
             }
         }
-    }, [controlledSwiper, !!queryActiveIndex]);
+    }, [controlledSwiper, queryActiveIndex]);
 
     return (
         <>
