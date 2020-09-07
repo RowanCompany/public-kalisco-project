@@ -4,7 +4,7 @@ import styles from "./saboten.module.scss";
 import SabotenBanner from "./SabotenBanner";
 import { useParams } from "react-router-dom";
 import CategoryLink from "../categoryButton/CategoryLink";
-import HibarnMenuData from "./HibarinMenuData";
+import SabotenMenuData from "./SabotenMenuData";
 import MenuPanel from "./panel/MenuPanel";
 
 function HibarinMenuContent() {
@@ -52,8 +52,8 @@ function HibarinMenuContent() {
                 {/* TODO: Modal 제작해야 함 */}
                 <div className="container">
                     <div className={styles.menuDetailPanelWrapper}>
-                        {HibarnMenuData[category] &&
-                            HibarnMenuData[category].map((d, i) => (
+                        {SabotenMenuData[category] &&
+                            SabotenMenuData[category].map((d, i) => (
                                 <MenuPanel key={i} {...d} />
                             ))}
                     </div>
