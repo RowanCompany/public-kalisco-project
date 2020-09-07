@@ -12,6 +12,18 @@
 
         .bannerTitle {
             padding-top: 30px;
+
+            &.sabotenTitle {
+                padding-bottom: 87px;
+            }
+        }
+
+        .sabotenDescription {
+            font-size: 18px;
+            color: #ffffff;
+            letter-spacing: 0;
+            font-family: "RyuGHbatang", serif;
+            font-weight: 400;
         }
     }
 }

@@ -123,7 +123,10 @@ function MainVerticalList() {
                     {/* TODO: 링크 추가해야 함 */}
                     <div className="main-bg-wrapper">
                         <div className="brand-list-wrapper">
-                            <Link className="d-inline-block brand-circle-wrapper saboten">
+                            <Link
+                                className="d-inline-block brand-circle-wrapper saboten"
+                                to="/brand/saboten"
+                            >
                                 <div className="brand-logo-wrapper">
                                     <img src={sabotonLogo} alt="saboten logo" />
                                 </div>
