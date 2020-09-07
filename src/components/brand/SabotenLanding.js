@@ -13,7 +13,7 @@ function SabotenLanding() {
         <>
             <Swiper>
                 <SwiperSlide>
-                    <Link className="d-block" to="/brand/hibarin/story">
+                    <Link className="d-block" to="/brand/saboten/story">
                         <div className={styles.bannerWrapper}>
                             <div className={styles.bannerTitleWrapper}>
                                 <div>
