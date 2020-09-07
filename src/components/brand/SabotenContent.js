@@ -4,6 +4,7 @@ import SabotenStore from "./SabotenStore";
 import { useParams, Redirect } from "react-router-dom";
 import Footer from "../Footer";
 import SabotenMenu from "./SabotenMenu";
+import SabotenStory from "./SabotenStory";
 
 function SabotenContent() {
     const { subject } = useParams();
@@ -19,7 +20,7 @@ function SabotenContent() {
 function SabotenCaseRenderer({ subject }) {
     switch (subject) {
         case "story":
-            return <></>;
+            return <SabotenStory />;
         case "menu":
             //return <HibarinMenu subject={subject} />;
             return <SabotenMenu subject={subject} />;
