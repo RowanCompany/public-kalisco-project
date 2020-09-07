@@ -31,7 +31,18 @@ function Nav() {
                             About
                         </Link>
                     </div>
-                    <div>Brand</div>
+                    <div>
+                        <Link
+                            to="/?activeIndex=3"
+                            className={`${styles.navLink} ${
+                                currentPathRef.current.includes("brand")
+                                    ? styles.active
+                                    : ""
+                            }`}
+                        >
+                            Brand
+                        </Link>
+                    </div>
                     <div>
                         <Link
                             to="/products"

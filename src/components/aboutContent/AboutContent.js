@@ -43,7 +43,7 @@ function AboutContent() {
                         </div>
                     </div>
                 </Link>
-                <div className={styles.gridColumn}>
+                <Link to="/?activeIndex=1" className={styles.gridColumn}>
                     <div className={styles.gridBackgroundWrapper}>
                         <div className={styles.gridText}>사업 소개</div>
                     </div>
@@ -54,7 +54,7 @@ function AboutContent() {
                             className="img-fill"
                         />
                     </div>
-                </div>
+                </Link>
             </div>
         </>
     );

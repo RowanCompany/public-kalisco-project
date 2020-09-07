@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SwiperCore, { Mousewheel, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import introFirst from "../../static/images/intro-1.png";
@@ -24,15 +24,35 @@ import NoticeCircle from "../mainFooterCircle/NoticeCircle";
 import EventCircle from "../mainFooterCircle/EventCircle";
 import RecruitCircle from "../mainFooterCircle/RecruitCircle";
 import Footer from "../Footer";
+import { Link, useLocation } from "react-router-dom";
+import qs from "qs";
 
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
 import "./main_vertical_list.scss";
-import { Link } from "react-router-dom";
+
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
 
 function MainVerticalList() {
     SwiperCore.use([Mousewheel, Pagination]);
+    const [controlledSwiper, setControlledSwiper] = useState(null);
     const [activeIndex, setActiveIndex] = useState(0);
+
+    let query = useQuery();
+    const queryActiveIndex = query.get("activeIndex");
+    useEffect(() => {
+        if (controlledSwiper) {
+            if (queryActiveIndex) {
+                setActiveIndex(Number(queryActiveIndex));
+                controlledSwiper.activeIndex = queryActiveIndex;
+            } else {
+                setActiveIndex(0);
+                controlledSwiper.activeIndex = 0;
+            }
+        }
+    }, [controlledSwiper, !!queryActiveIndex]);
 
     return (
         <>
@@ -53,6 +73,8 @@ function MainVerticalList() {
                         allowTouchMove: false,
                     },
                 }}
+                onSwiper={setControlledSwiper}
+                controller={{ control: controlledSwiper }}
                 className="swiper-container-vertical"
             >
                 <SwiperSlide role="banner">
