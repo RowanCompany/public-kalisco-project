@@ -168,7 +168,7 @@ function HibarinMenu({ subject }) {
                             <Link
                                 onMouseEnter={() => setMenu("noodle")}
                                 className={styles.menuListLinkWrapper}
-                                to={`/brand/hibarin/${subject}/noodle`}
+                                to={`/brand/hibarin/${subject}/noodles`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
@@ -176,7 +176,7 @@ function HibarinMenu({ subject }) {
                                         styles.menuListTitleActive
                                     }`}
                                 >
-                                    Noodle
+                                    Noodles
                                 </div>
                             </Link>
                         </div>

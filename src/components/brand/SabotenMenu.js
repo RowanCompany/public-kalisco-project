@@ -118,7 +118,7 @@ function SabotenMenu({ subject }) {
                             <Link
                                 onMouseEnter={() => setMenu("noodle")}
                                 className={styles.menuListLinkWrapper}
-                                to={`/brand/saboten/${subject}/noodle`}
+                                to={`/brand/saboten/${subject}/noodles`}
                             >
                                 <div
                                     className={`${styles.menuListTitle} ${
