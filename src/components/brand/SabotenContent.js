@@ -22,14 +22,13 @@ function SabotenCaseRenderer({ subject }) {
         case "story":
             return <SabotenStory />;
         case "menu":
-            //return <HibarinMenu subject={subject} />;
             return <SabotenMenu subject={subject} />;
         case "gift-card":
-            return <Redirect to="/brand/saboten/story" />;
+            return <Redirect to="/supports/partnership" />;
         case "store":
             return <SabotenStore />;
         case "news-and-events":
-            return <Redirect to="/brand/saboten/story" />;
+            return <Redirect to="/supports/events" />;
         default:
             return <Redirect to="/brand/saboten/story" />;
     }

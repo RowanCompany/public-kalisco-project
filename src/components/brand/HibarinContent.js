@@ -24,11 +24,11 @@ function HibarinCaseRenderer({ subject }) {
         case "menu":
             return <HibarinMenu subject={subject} />;
         case "gift-card":
-            return <Redirect to="/brand/hibarin/story" />;
+            return <Redirect to="/supports/partnership" />;
         case "store":
             return <HibarinStore />;
         case "news-and-events":
-            return <Redirect to="/brand/hibarin/story" />;
+            return <Redirect to="/supports/events" />;
         default:
             return <Redirect to="/brand/hibarin/story" />;
     }
