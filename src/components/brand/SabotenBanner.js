@@ -34,7 +34,7 @@ function SabotenBanner({ subject }) {
                                     Menu
                                 </Link>
                             </li>
-                            <li className={styles.menu}>
+                            {/* <li className={styles.menu}>
                                 <Link
                                     to="/brand/saboten/gift-card"
                                     className={`${styles.menuLink} ${
@@ -45,7 +45,7 @@ function SabotenBanner({ subject }) {
                                 >
                                     Gift Card
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className={styles.menu}>
                                 <Link
                                     to="/brand/saboten/store"
@@ -56,7 +56,7 @@ function SabotenBanner({ subject }) {
                                     Store
                                 </Link>
                             </li>
-                            <li className={styles.menu}>
+                            {/* <li className={styles.menu}>
                                 <Link
                                     to="/brand/saboten/news-and-events"
                                     className={`${styles.menuLink} ${
@@ -67,7 +67,7 @@ function SabotenBanner({ subject }) {
                                 >
                                     News &amp; Events
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
