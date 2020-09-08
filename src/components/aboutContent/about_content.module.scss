@@ -9,7 +9,7 @@
 
     .aboutTextTitle {
         font-size: 32px;
-        color: #2F2F2F;
+        color: #2f2f2f;
         text-align: center;
         letter-spacing: 0;
         font-family: "RyuGHbatang", serif;
@@ -17,14 +17,14 @@
 
         .emphasis {
             display: inline-block;
-            color: #E8390E;
+            color: #e8390e;
             font-weight: 700;
         }
     }
 
     .aboutTextParagraph {
         font-size: 20px;
-        color: #2F2F2F;
+        color: #2f2f2f;
         text-align: center;
         letter-spacing: 0;
         font-family: "RyuGHbatang", serif;
@@ -32,7 +32,7 @@
 
         .emphasis {
             display: inline-block;
-            color: #E8390E;
+            color: #e8390e;
             font-weight: 700;
         }
     }
@@ -63,7 +63,7 @@
                 align-items: center;
                 font-family: "RyuGHbatang", serif;
                 letter-spacing: 0px;
-                color: #FFFFFF;
+                color: #ffffff;
                 text-shadow: 0px 3px 6px #00000029;
                 font-size: 33px;
             }
@@ -72,7 +72,7 @@
 }
 
 .historyWrapper {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 190px 0 100px;
 
     .historyLogoWrapper {
@@ -84,7 +84,6 @@
         position: relative;
         margin: 0 auto;
         width: 100%;
-
     }
 
     .timeline ul li {
@@ -98,7 +97,7 @@
     .point {
         min-width: 20px;
         height: 20px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         border-radius: 100%;
         z-index: 2;
         border: 7px solid #dddddd;
@@ -117,11 +116,9 @@
         body {
             font-size: 15px;
         }
-
     }
 
     @media (max-width: 650px) {
-
         html,
         body {
             font-size: 14px;
@@ -131,11 +128,9 @@
             min-width: 12px;
             height: 12px;
         }
-
     }
 
     @media (max-width: 450px) {
-
         html,
         body {
             font-size: 10px;
@@ -153,6 +148,7 @@
 
     .timeline ul li:nth-child(odd) .content {
         padding-left: 0;
+        text-align: right;
     }
 
     .timeline ul li:nth-child(odd) .date {
@@ -229,7 +225,7 @@
         font-family: "RyuGHbatang", serif;
         font-size: 18px;
         letter-spacing: 0;
-        color: #E8390E;
+        color: #e8390e;
         padding-bottom: 8px;
     }
 
