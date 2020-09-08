@@ -24,7 +24,8 @@ import NoticeCircle from "../mainFooterCircle/NoticeCircle";
 import EventCircle from "../mainFooterCircle/EventCircle";
 import RecruitCircle from "../mainFooterCircle/RecruitCircle";
 import Footer from "../Footer";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import productText from "../../static/images/product.png";
 
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -198,7 +199,10 @@ function MainVerticalList() {
                 <SwiperSlide>
                     <div className="main-bg-wrapper">
                         <div className="first-main-banner-title-wrapper">
-                            <div className="product-intro-title">제품소개</div>
+                            {/* <div className="product-intro-title">제품소개</div> */}
+                            <div className="product-intro-title">
+                                <img src={productText} alt="product text" />
+                            </div>
                             <div className="product-intro-paragraph">
                                 레스토랑에서 먹던 그 맛 그대로-
                             </div>

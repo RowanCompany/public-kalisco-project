@@ -11,16 +11,17 @@ import iconSpringOnion from "../../static/svg/spring-onion.svg";
 import iconSteak from "../../static/svg/steak.svg";
 import iconSesameSecond from "../../static/svg/sesame.svg";
 import iconTangerine from "../../static/svg/tangerine.svg";
-import sauceTop51Image from "../../static/images/sauce-top5-1.jpg";
-import sauceTop52Image from "../../static/images/sauce-top5-2.jpg";
-import sauceTop53Image from "../../static/images/sauce-top5-3.jpg";
-import sauceTop54Image from "../../static/images/sauce-top5-4.jpg";
-import sauceTop55Image from "../../static/images/sauce-top5-5.jpg";
+import iconRice from "../../static/svg/rice.svg";
+import sauceTop51Image from "../../static/images/sauce-top4-1.png";
+import sauceTop52Image from "../../static/images/sauce-top4-2.png";
+import sauceTop53Image from "../../static/images/sauce-top4-3.png";
+import sauceTop54Image from "../../static/images/sauce-top4-4.png";
+//import sauceTop55Image from "../../static/images/sauce-top5-5.jpg";
 import curryImage from "../../static/images/img-newari-curry.png";
 import { Link } from "react-router-dom";
 
 function ProductSauce({ content }) {
-    const [clickedSauce, setClickedSauce] = useState("spicy-cream");
+    const [clickedSauce, setClickedSauce] = useState("tonkatsu");
     const sauceImageData = {
         "spicy-cream": {
             image: sauceTop51Image,
@@ -31,16 +32,20 @@ function ProductSauce({ content }) {
             link: "/products/homemade/sauce/green-onion",
         },
         tonkatsu: {
-            image: sauceTop53Image,
+            image: sauceTop51Image,
             link: "/products/homemade/sauce/donkatsu",
         },
         sesame: {
-            image: sauceTop54Image,
+            image: sauceTop52Image,
             link: "/products/homemade/sauce/sesame",
         },
         citron: {
-            image: sauceTop55Image,
+            image: sauceTop53Image,
             link: "/products/homemade/sauce/citron",
+        },
+        "rice-bowl": {
+            image: sauceTop54Image,
+            link: "/products/homemade/sauce/rice-bowl",
         },
     };
 
@@ -117,9 +122,9 @@ function ProductSauce({ content }) {
                 </div>
             </section>
             <section className={styles.sauceSecondSection}>
-                <div className={styles.sauceSecondTitle}>대표 5종 소스</div>
+                <div className={styles.sauceSecondTitle}>대표 4종 소스</div>
                 <div className={styles.sauceSecondNavigatorWrapper}>
-                    <button
+                    {/* <button
                         type="button"
                         className={`${styles.sauceSecondNavigator} ${
                             clickedSauce === "spicy-cream"
@@ -150,7 +155,7 @@ function ProductSauce({ content }) {
                             style={{ paddingRight: "6px" }}
                         />
                         파소스
-                    </button>
+                    </button> */}
                     <button
                         type="button"
                         className={`${styles.sauceSecondNavigator} ${
@@ -199,8 +204,24 @@ function ProductSauce({ content }) {
                         />
                         유자소스
                     </button>
+                    <button
+                        type="button"
+                        className={`${styles.sauceSecondNavigator} ${
+                            clickedSauce === "rice-bowl"
+                                ? styles.sauceSecondNavigatorActive
+                                : ""
+                        }`}
+                        onMouseEnter={() => setClickedSauce("rice-bowl")}
+                    >
+                        <img
+                            src={iconRice}
+                            alt="rice bowl icon"
+                            style={{ paddingRight: "6px" }}
+                        />
+                        덮밥소스
+                    </button>
                 </div>
-                <div className="container">
+                <div className="container text-center">
                     <Link
                         className="d-inline-block"
                         to={
@@ -219,7 +240,7 @@ function ProductSauce({ content }) {
                     </Link>
                 </div>
             </section>
-            <section className={styles.sauceThirdSection}>
+            {/* <section className={styles.sauceThirdSection}>
                 <div className={styles.sauceThirdImageWrapper}>
                     <img src={curryImage} alt="curry" className="img-fill" />
                 </div>
@@ -241,7 +262,7 @@ function ProductSauce({ content }) {
                         </Link>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     );
 }

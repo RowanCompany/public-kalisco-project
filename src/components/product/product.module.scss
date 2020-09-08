@@ -22,7 +22,7 @@
             padding: 0 0 12px 0;
             margin: 0;
 
-            >.menu {
+            > .menu {
                 &:not(:last-child) {
                     margin-right: 30px;
                 }
@@ -36,7 +36,8 @@
 
                     &:hover {
                         color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
+                        border-bottom: 3px solid
+                            rgba($color: #ffffff, $alpha: 0.8);
                     }
 
                     &.active {
@@ -123,7 +124,7 @@
 
             &.fourth {
                 border: 1px solid transparent;
-                background-color: #E8390E;
+                background-color: #e8390e;
 
                 &::before {
                     content: " ";
@@ -158,7 +159,7 @@
         }
 
         .homemadeButton {
-            background-color: rgba($color: #E8390E, $alpha: 0.9);
+            background-color: rgba($color: #e8390e, $alpha: 0.9);
             border-radius: 8px;
             box-shadow: 0 3px 0 rgba(0, 0, 0, 0.16);
             min-width: 300px;
@@ -227,7 +228,7 @@
                 .sauceTitle {
                     font-family: "RyuGHbatang", serif;
                     letter-spacing: 0.72px;
-                    color: #2F2F2F;
+                    color: #2f2f2f;
                     font-weight: bold;
                     font-size: 24px;
                     padding-bottom: 8px;
@@ -236,7 +237,7 @@
 
                 .sauceDescription {
                     letter-spacing: 0.48px;
-                    color: #2F2F2F;
+                    color: #2f2f2f;
                     text-align: center;
                     font-size: 16px;
                     font-family: "RyuGHbatang", serif;
@@ -256,7 +257,7 @@
 }
 
 .sauceSecondSection {
-    background-color: #1C1C1C;
+    background-color: #1c1c1c;
     padding: 100px 0;
 
     .sauceSecondTitle {
@@ -364,10 +365,17 @@
 
         .sauceDetailTextTitle {
             font-family: "RyuGHbatang", serif;
-            font-size: 28px;
             letter-spacing: 0;
             color: #2f2f2f;
             font-weight: bold;
+
+            @media screen and (min-width: 1200px) {
+                font-size: 18px;
+            }
+
+            @media screen and (min-width: 1800px) {
+                font-size: calc(28px - 0.35vw);
+            }
         }
 
         .sauceDetailTextSubTitle {
@@ -392,7 +400,6 @@
             line-height: 30px;
             letter-spacing: 0;
             color: #2f2f2f;
-
 
             &:not(:last-child) {
                 padding-bottom: 118px;
@@ -420,7 +427,7 @@
     padding-right: 0;
     margin: 0;
 
-    >li {
+    > li {
         .navigator {
             min-width: 210px;
             padding: 13px 12px 15px;
@@ -447,11 +454,10 @@
                 color: #707070;
 
                 &.lightThemeNavActive {
-                    border: 1px solid #E8390E;
-                    color: #E8390E;
+                    border: 1px solid #e8390e;
+                    color: #e8390e;
                 }
             }
-
         }
 
         &:not(:last-child) {
@@ -468,7 +474,7 @@
     padding: 0 0 106px 0;
     list-style: none;
 
-    >li {
+    > li {
         &:not(:last-child) {
             margin-right: 20px;
         }
@@ -482,9 +488,9 @@
             text-decoration: none;
 
             &.sauceNavigatorActive {
-                color: #E8390E;
+                color: #e8390e;
                 font-weight: bold;
-                border-bottom: 2px solid #E8390E;
+                border-bottom: 2px solid #e8390e;
             }
         }
     }

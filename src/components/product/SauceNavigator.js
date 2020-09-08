@@ -6,7 +6,7 @@ function SauceNavigator({ sauce }) {
     return (
         <nav>
             <ul className={styles.sauceNavigatorWrapper}>
-                <li>
+                {/* <li>
                     <Link
                         to="/products/homemade/sauce/spicy-creem"
                         className={`${styles.sauceNavigator} ${
@@ -29,7 +29,7 @@ function SauceNavigator({ sauce }) {
                     >
                         Green Onion
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <Link
                         to="/products/homemade/sauce/donkatsu"
@@ -68,6 +68,18 @@ function SauceNavigator({ sauce }) {
                 </li>
                 <li>
                     <Link
+                        to="/products/homemade/sauce/rice-bowl"
+                        className={`${styles.sauceNavigator} ${
+                            sauce === "rice-bowl"
+                                ? styles.sauceNavigatorActive
+                                : ""
+                        }`}
+                    >
+                        Rice bowl
+                    </Link>
+                </li>
+                {/* <li>
+                    <Link
                         to="/products/homemade/sauce/curry"
                         className={`${styles.sauceNavigator} ${
                             sauce === "curry" ? styles.sauceNavigatorActive : ""
@@ -75,7 +87,7 @@ function SauceNavigator({ sauce }) {
                     >
                         Curry
                     </Link>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );

@@ -5,15 +5,17 @@ import { useParams, Redirect } from "react-router-dom";
 import SauceNavigator from "./SauceNavigator";
 import imgCurry1 from "../../static/images/img-p-sauce-curry-1.png";
 import imgCurry2 from "../../static/images/img-p-sauce-curry-2.png";
-import imgCitron1 from "../../static/images/img-p-sauce-yuzu-1.png";
+import imgCitron1 from "../../static/images/img-p-sauce-yuzu-2-1.jpg";
 import imgCitron2 from "../../static/images/img-p-sauce-yuzu-2.png";
 import imgCitronRec from "../../static/images/img-sauce-citron-rec.png";
-import imgSesame1 from "../../static/images/img-p-sauce-sesame-1.png";
+import imgSesame1 from "../../static/images/img-p-sauce-sesame-2-1.jpg";
 import imgSesame2 from "../../static/images/img-p-sauce-sesame-2.png";
 import imgSesameRec from "../../static/images/img-sauce-sesame-rec.png";
-import imgKatsu1 from "../../static/images/img-p-sauce-don-1.png";
+import imgKatsu1 from "../../static/images/img-p-sauce-katsu-2-1.jpg";
 import imgKatsu2 from "../../static/images/img-p-sauce-don-2.png";
 import imgKatsuRec from "../../static/images/img-sauce-katsu-rec.png";
+import imgRice1 from "../../static/images/img-p-sauce-rice-bowl-1.jpg";
+import imgRice2 from "../../static/images/img-p-sauce-rice-bowl-2.jpg";
 
 function ProductSauceDetail({ content }) {
     const { sauce } = useParams();
@@ -151,6 +153,53 @@ function ProductSauceDetail({ content }) {
             ),
             recipeImage: imgCitronRec,
         },
+        "rice-bowl": {
+            firstImage: imgRice1,
+            secondImage: imgRice2,
+            firstTitle:
+                "[20주년 에디션] 사보텐 일식 덮밥 소스 (셰프의 만능 치트키)",
+            priceText: (
+                <>
+                    <b>5,100</b>원(VAT포함)
+                </>
+            ),
+            // firstDescription: (
+            //     <>
+            //         비타민C가 풍부해서, 노화와 피로 회복에 효과가 있는 국내산
+            //         전라도 황유자 사용
+            //         <br />
+            //         50℃ 저온추출공법으로 유자 본연의 맛을 구현,
+            //         <br />
+            //         엄선된 재료로 위생적이고 엄격한 품질 관리하에 만든Chef made
+            //         제품
+            //         <br />
+            //         16년간 정통 돈카츠 전문점 사보텐을 운영한 캘리스코의 소스
+            //         노하우
+            //     </>
+            // ),
+            // secondDescription: (
+            //     <>
+            //         양조식초, 양조간장[탈지대두(인도산)],
+            //         유자청징농축액[유자청(국산)],
+            //         <br />
+            //         야채액기스, 정제염, 가쓰오조미액, 유산균발효액
+            //     </>
+            // ),
+            // thirdDescription: (
+            //     <>
+            //         각종 샐러드 드레싱
+            //         <br />
+            //         유자소스 + 참깨소스 섞어서 샐러드 및 고기소스
+            //         <br />
+            //         샤브샤브 소스
+            //         <br />
+            //         생선구이 소스(고등어, 연어, 삼치, 메로구이 등)
+            //         <br />
+            //         튀김, 유린기, 탕수육
+            //     </>
+            // ),
+            //recipeImage: imgCitronRec,
+        },
         curry: {
             firstImage: imgCurry1,
             secondImage: imgCurry2,
@@ -180,6 +229,7 @@ function ProductSauceDetail({ content }) {
         case "sesame":
         case "citron":
         case "curry":
+        case "rice-bowl":
             return (
                 <>
                     <section className={styles.sauceDetailFristSection}>
