@@ -16,7 +16,7 @@ function BrandList() {
                     <div className="brand-list-wrapper">
                         <Link
                             className="d-inline-block brand-circle-wrapper saboten"
-                            to="/brand/saboten"
+                            to="/brand/saboten/story"
                         >
                             <div className="brand-logo-wrapper">
                                 <img src={sabotonLogo} alt="saboten logo" />
@@ -25,7 +25,7 @@ function BrandList() {
                         </Link>
                         <Link
                             className="d-inline-block brand-circle-wrapper hibarin"
-                            to="/brand/hibarin"
+                            to="/brand/hibarin/story"
                         >
                             <div className="brand-logo-wrapper">
                                 <img src={hibarinLogo} alt="hibarin logo" />
