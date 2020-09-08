@@ -5,16 +5,16 @@ import { useParams, Redirect } from "react-router-dom";
 import SauceNavigator from "./SauceNavigator";
 import imgCurry1 from "../../static/images/img-p-sauce-curry-1.png";
 import imgCurry2 from "../../static/images/img-p-sauce-curry-2.png";
-import imgCitron1 from "../../static/images/img-p-sauce-yuzu-2-1.jpg";
+import imgCitron1 from "../../static/images/img-sauce-citron.png";
 import imgCitron2 from "../../static/images/img-p-sauce-yuzu-2.png";
 import imgCitronRec from "../../static/images/img-sauce-citron-rec.png";
-import imgSesame1 from "../../static/images/img-p-sauce-sesame-2-1.jpg";
+import imgSesame1 from "../../static/images/img-sauce-sesame.png";
 import imgSesame2 from "../../static/images/img-p-sauce-sesame-2.png";
 import imgSesameRec from "../../static/images/img-sauce-sesame-rec.png";
-import imgKatsu1 from "../../static/images/img-p-sauce-katsu-2-1.jpg";
+import imgKatsu1 from "../../static/images/img-sauce-kastu.png";
 import imgKatsu2 from "../../static/images/img-p-sauce-don-2.png";
 import imgKatsuRec from "../../static/images/img-sauce-katsu-rec.png";
-import imgRice1 from "../../static/images/img-p-sauce-rice-bowl-1.jpg";
+import imgRice1 from "../../static/images/img-sauce-rice.png";
 import imgRice2 from "../../static/images/img-p-sauce-rice-bowl-2.jpg";
 
 function ProductSauceDetail({ content }) {
@@ -24,10 +24,10 @@ function ProductSauceDetail({ content }) {
             firstImage: imgKatsu1,
             secondImage: imgKatsu2,
             recipeImage: imgKatsuRec,
-            firstTitle: "돈카츠소스",
+            firstTitle: "[20주년 에디션] 사보텐 돈카츠 소스 220g",
             priceText: (
                 <>
-                    <b>5,300</b>원(VAT포함)
+                    <b>4,500</b>원(VAT포함)
                 </>
             ),
             firstDescription: (
@@ -68,10 +68,10 @@ function ProductSauceDetail({ content }) {
             firstImage: imgSesame1,
             secondImage: imgSesame2,
             recipeImage: imgSesameRec,
-            firstTitle: "참깨소스",
+            firstTitle: "[20주년 에디션] 사보텐 참깨소스 200g",
             priceText: (
                 <>
-                    <b>5,900</b>원(VAT포함)
+                    <b>5,400</b>원(VAT포함)
                 </>
             ),
             firstDescription: (
@@ -110,10 +110,10 @@ function ProductSauceDetail({ content }) {
         citron: {
             firstImage: imgCitron1,
             secondImage: imgCitron2,
-            firstTitle: "유자소스",
+            firstTitle: "[20주년 에디션] 사보텐 유자소스 210g",
             priceText: (
                 <>
-                    <b>6,300</b>원(VAT포함)
+                    <b>5,200</b>원(VAT포함)
                 </>
             ),
             firstDescription: (

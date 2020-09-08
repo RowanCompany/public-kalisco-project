@@ -12,10 +12,10 @@ import iconSteak from "../../static/svg/steak.svg";
 import iconSesameSecond from "../../static/svg/sesame.svg";
 import iconTangerine from "../../static/svg/tangerine.svg";
 import iconRice from "../../static/svg/rice.svg";
-import sauceTop51Image from "../../static/images/sauce-top4-1.png";
-import sauceTop52Image from "../../static/images/sauce-top4-2.png";
-import sauceTop53Image from "../../static/images/sauce-top4-3.png";
-import sauceTop54Image from "../../static/images/sauce-top4-4.png";
+import sauceTop51Image from "../../static/images/sauce-top4-2.png";
+import sauceTop52Image from "../../static/images/sauce-top4-4.png";
+import sauceTop53Image from "../../static/images/sauce-top4-1.png";
+import sauceTop54Image from "../../static/images/sauce-top4-3.png";
 //import sauceTop55Image from "../../static/images/sauce-top5-5.jpg";
 import curryImage from "../../static/images/img-newari-curry.png";
 import { Link } from "react-router-dom";
@@ -159,38 +159,6 @@ function ProductSauce({ content }) {
                     <button
                         type="button"
                         className={`${styles.sauceSecondNavigator} ${
-                            clickedSauce === "tonkatsu"
-                                ? styles.sauceSecondNavigatorActive
-                                : ""
-                        }`}
-                        onMouseEnter={() => setClickedSauce("tonkatsu")}
-                    >
-                        <img
-                            src={iconSteak}
-                            alt="Steak icon"
-                            style={{ paddingRight: "6px" }}
-                        />
-                        돈카츠소스
-                    </button>
-                    <button
-                        type="button"
-                        className={`${styles.sauceSecondNavigator} ${
-                            clickedSauce === "sesame"
-                                ? styles.sauceSecondNavigatorActive
-                                : ""
-                        }`}
-                        onMouseEnter={() => setClickedSauce("sesame")}
-                    >
-                        <img
-                            src={iconSesameSecond}
-                            alt="Sesame icon"
-                            style={{ paddingRight: "6px" }}
-                        />
-                        참깨소스
-                    </button>
-                    <button
-                        type="button"
-                        className={`${styles.sauceSecondNavigator} ${
                             clickedSauce === "citron"
                                 ? styles.sauceSecondNavigatorActive
                                 : ""
@@ -207,6 +175,22 @@ function ProductSauce({ content }) {
                     <button
                         type="button"
                         className={`${styles.sauceSecondNavigator} ${
+                            clickedSauce === "tonkatsu"
+                                ? styles.sauceSecondNavigatorActive
+                                : ""
+                        }`}
+                        onMouseEnter={() => setClickedSauce("tonkatsu")}
+                    >
+                        <img
+                            src={iconSteak}
+                            alt="Steak icon"
+                            style={{ paddingRight: "6px" }}
+                        />
+                        돈카츠소스
+                    </button>
+                    <button
+                        type="button"
+                        className={`${styles.sauceSecondNavigator} ${
                             clickedSauce === "rice-bowl"
                                 ? styles.sauceSecondNavigatorActive
                                 : ""
@@ -219,6 +203,22 @@ function ProductSauce({ content }) {
                             style={{ paddingRight: "6px" }}
                         />
                         덮밥소스
+                    </button>
+                    <button
+                        type="button"
+                        className={`${styles.sauceSecondNavigator} ${
+                            clickedSauce === "sesame"
+                                ? styles.sauceSecondNavigatorActive
+                                : ""
+                        }`}
+                        onMouseEnter={() => setClickedSauce("sesame")}
+                    >
+                        <img
+                            src={iconSesameSecond}
+                            alt="Sesame icon"
+                            style={{ paddingRight: "6px" }}
+                        />
+                        참깨소스
                     </button>
                 </div>
                 <div className="container text-center">

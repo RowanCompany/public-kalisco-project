@@ -32,30 +32,6 @@ function SauceNavigator({ sauce }) {
                 </li> */}
                 <li>
                     <Link
-                        to="/products/homemade/sauce/donkatsu"
-                        className={`${styles.sauceNavigator} ${
-                            sauce === "donkatsu"
-                                ? styles.sauceNavigatorActive
-                                : ""
-                        }`}
-                    >
-                        DonKatsu
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        to="/products/homemade/sauce/sesame"
-                        className={`${styles.sauceNavigator} ${
-                            sauce === "sesame"
-                                ? styles.sauceNavigatorActive
-                                : ""
-                        }`}
-                    >
-                        Sesame
-                    </Link>
-                </li>
-                <li>
-                    <Link
                         to="/products/homemade/sauce/citron"
                         className={`${styles.sauceNavigator} ${
                             sauce === "citron"
@@ -68,6 +44,18 @@ function SauceNavigator({ sauce }) {
                 </li>
                 <li>
                     <Link
+                        to="/products/homemade/sauce/donkatsu"
+                        className={`${styles.sauceNavigator} ${
+                            sauce === "donkatsu"
+                                ? styles.sauceNavigatorActive
+                                : ""
+                        }`}
+                    >
+                        DonKatsu
+                    </Link>
+                </li>
+                <li>
+                    <Link
                         to="/products/homemade/sauce/rice-bowl"
                         className={`${styles.sauceNavigator} ${
                             sauce === "rice-bowl"
@@ -76,6 +64,18 @@ function SauceNavigator({ sauce }) {
                         }`}
                     >
                         Rice bowl
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/products/homemade/sauce/sesame"
+                        className={`${styles.sauceNavigator} ${
+                            sauce === "sesame"
+                                ? styles.sauceNavigatorActive
+                                : ""
+                        }`}
+                    >
+                        Sesame
                     </Link>
                 </li>
                 {/* <li>
