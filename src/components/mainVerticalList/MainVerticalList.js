@@ -79,7 +79,7 @@ function MainVerticalList() {
                 <SwiperSlide role="banner">
                     <MainBanner verticalIndex={activeIndex} />
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <div className="main-bg-wrapper">
                         <MainBusinessIntro />
                     </div>
@@ -112,7 +112,7 @@ function MainVerticalList() {
                             </div>
                         </div>
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide>
                     <div className="main-bg-wrapper">
                         <div className="first-main-banner-title-wrapper">
@@ -140,8 +140,7 @@ function MainVerticalList() {
                         />
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
-                    {/* TODO: 링크 추가해야 함 */}
+                {/* <SwiperSlide>
                     <div className="main-bg-wrapper">
                         <div className="brand-list-wrapper">
                             <Link
@@ -195,7 +194,7 @@ function MainVerticalList() {
                             className="img-fill"
                         />
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide>
                     <div className="main-bg-wrapper">
                         <div className="first-main-banner-title-wrapper">

@@ -4,6 +4,7 @@ import marStoneImage from "../../static/images/img-mar-stone.png";
 import aboutFirstImage from "../../static/images/about-2.png";
 import aboutSecondImage from "../../static/images/about-1.png";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 function AboutContent() {
     return (
@@ -43,7 +44,7 @@ function AboutContent() {
                         </div>
                     </div>
                 </Link>
-                <Link to="/?activeIndex=1" className={styles.gridColumn}>
+                <Link to="/about/business" className={styles.gridColumn}>
                     <div className={styles.gridBackgroundWrapper}>
                         <div className={styles.gridText}>사업 소개</div>
                     </div>
@@ -56,6 +57,7 @@ function AboutContent() {
                     </div>
                 </Link>
             </div>
+            <Footer />
         </>
     );
 }
