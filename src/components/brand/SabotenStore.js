@@ -79,7 +79,7 @@ function SabotenStore() {
                                     className={styles.kaliscoButton}
                                     href={`https://map.naver.com/v5/search/%EC%82%AC%EB%B3%B4%ED%85%90?placeSearchOption=fromNxList=true%26noredirect=1%26entry=pll&c=14135681.1787198,4517242.0563975,13,0,0,0,dh`}
                                     target="_blank"
-                                    rel="noopener"
+                                    rel="noopener noreferrer"
                                 >
                                     사보텐 매장찾기
                                 </a>

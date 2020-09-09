@@ -35,7 +35,7 @@ function BrandList() {
                         <a
                             className="d-inline-block brand-circle-wrapper tacobell"
                             href="http://koreatacobell.com/"
-                            rel="noopener"
+                            rel="noopener noreferrer"
                             target="_blank"
                         >
                             <div className="brand-logo-wrapper">
