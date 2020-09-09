@@ -1,30 +1,20 @@
 import React, { useState, useEffect } from "react";
 import SwiperCore, { Mousewheel, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import introFirst from "../../static/images/intro-1.png";
-import introSecond from "../../static/images/intro-2.png";
-import introThrid from "../../static/images/intro-3.png";
 import hrImage from "../../static/images/hr.png";
-import brandImage from "../../static/images/brand.png";
-import sabotonLogo from "../../static/svg/logo-saboten.svg";
-import hibarinLogo from "../../static/svg/logo-hibarin.svg";
-import tacobellLogo from "../../static/svg/logo-tacobell.svg";
-import centralkcLogo from "../../static/svg/logo-centralkc.svg";
-import banjooLogo from "../../static/images/logo-banjoo.png";
 import productIntroImage from "../../static/images/product-intro.png";
 import kaliscoFamilyText from "../../static/images/kalisco-family-text.png";
 import joinUsImage from "../../static/images/joinus.png";
 import joinUsTextImage from "../../static/images/join-us-text.png";
 import beyondTasteApronImage from "../../static/images/beyond-taste-apron.png";
 import beyondTasteText from "../../static/images/beyond-taste.png";
-import MainBusinessIntro from "../mainBusinessIntro/MainBusinessIntro";
 import MainBanner from "../mainBanner/MainBanner";
 import SupportCircle from "../mainFooterCircle/SupportCircle";
 import NoticeCircle from "../mainFooterCircle/NoticeCircle";
 import EventCircle from "../mainFooterCircle/EventCircle";
 import RecruitCircle from "../mainFooterCircle/RecruitCircle";
 import Footer from "../Footer";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import productText from "../../static/images/product.png";
 
 import "swiper/swiper.scss";
@@ -208,9 +198,12 @@ function MainVerticalList() {
                             </div>
                             <div className="vertical-hr membership-hr" />
                             {/* TODO: Link to React Route Link */}
-                            <a href="" className="kalisco-button">
+                            <Link
+                                to="/products/homemade"
+                                className="kalisco-button"
+                            >
                                 홈메이드 제품 보러가기
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="wh-100">
@@ -235,9 +228,9 @@ function MainVerticalList() {
                             </div>
                             <div className="vertical-hr membership-hr" />
                             {/* TODO: Link to React Route Link */}
-                            <a href="" className="kalisco-button">
+                            <Link to="/hr/talent" className="kalisco-button">
                                 교육 / 복지 바로가기
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div className="wh-100">
