@@ -6,8 +6,6 @@ import sauceSectionTextBG from "../../static/svg/sauce-section-text-bg.svg";
 import iconKatsu from "../../static/images/icon-sauce-katsu.png";
 import iconCitron from "../../static/images/icon-sauce-citron.png";
 import iconSesame from "../../static/images/icon-sauce-sesame.png";
-import iconChili from "../../static/svg/chili.svg";
-import iconSpringOnion from "../../static/svg/spring-onion.svg";
 import iconSteak from "../../static/svg/steak.svg";
 import iconSesameSecond from "../../static/svg/sesame.svg";
 import iconTangerine from "../../static/svg/tangerine.svg";
