@@ -12,7 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 // TODO: Suspense 도입 고려
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter forceRefresh={true}>
             <>
                 <ScrollToTop />
                 <Switch>
