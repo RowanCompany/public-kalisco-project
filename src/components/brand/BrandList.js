@@ -1,5 +1,5 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+//import { Swiper, SwiperSlide } from "swiper/react";
 import brandImage from "../../static/images/brand.png";
 import sabotonLogo from "../../static/svg/logo-saboten.svg";
 import hibarinLogo from "../../static/svg/logo-hibarin.svg";
@@ -7,11 +7,12 @@ import tacobellLogo from "../../static/svg/logo-tacobell.svg";
 import centralkcLogo from "../../static/svg/logo-centralkc.svg";
 import banjooLogo from "../../static/images/logo-banjoo.png";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 function BrandList() {
     return (
-        <Swiper>
-            <SwiperSlide>
+        <>
+            <div className="viewport-wrapper">
                 <div className="main-bg-wrapper">
                     <div className="brand-list-wrapper">
                         <Link
@@ -63,8 +64,9 @@ function BrandList() {
                 <div className="wh-100">
                     <img src={brandImage} alt="brand bg" className="img-fill" />
                 </div>
-            </SwiperSlide>
-        </Swiper>
+            </div>
+            <Footer />
+        </>
     );
 }
 

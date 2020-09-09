@@ -293,3 +293,12 @@
         }
     }
 }
+
+.viewport-wrapper {
+    width: 100%;
+    height: 100vh;
+
+    &>.main-bg-wrapper {
+        height: 100vh;
+    }
+}

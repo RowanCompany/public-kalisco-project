@@ -91,6 +91,11 @@ function Nav() {
                         </Link>
                     </div>
                 </li>
+                <li style={{ opacity: 0 }}>
+                    <Link to="/">
+                        <img src={logo} alt="Brand logo" />
+                    </Link>
+                </li>
                 {/* <li>
                     <div>고객소통</div>
                 </li> */}
