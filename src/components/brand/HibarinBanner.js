@@ -56,7 +56,7 @@ function HibarinBanner({ subject }) {
                                     Store
                                 </Link>
                             </li>
-                            {/* <li className={styles.menu}>
+                            <li className={styles.menu}>
                                 <Link
                                     to="/brand/hibarin/news-and-events"
                                     className={`${styles.menuLink} ${
@@ -67,7 +67,7 @@ function HibarinBanner({ subject }) {
                                 >
                                     News &amp; Events
                                 </Link>
-                            </li> */}
+                            </li>
                         </ul>
                     </div>
                 </div>

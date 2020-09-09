@@ -28,7 +28,7 @@ function SabotenCaseRenderer({ subject }) {
         case "store":
             return <SabotenStore />;
         case "news-and-events":
-            return <Redirect to="/supports/events" />;
+            return <Redirect to="/supports/events?type=saboten" />;
         default:
             return <Redirect to="/brand/saboten/story" />;
     }

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CategoryButton from "../../categoryButton/CategoryButton";
 import { eventCategoryListWrapper } from "./event.module.scss";
 
-function EventCategoryList() {
+function EventCategoryList({ contentType }) {
     const data = [
         {
             text: "전체",
@@ -34,6 +34,7 @@ function EventCategoryList() {
         },
     ];
     const [type, setType] = useState("all");
+    useEffect(() => setType(contentType), [contentType]);
 
     return (
         <div className={eventCategoryListWrapper}>

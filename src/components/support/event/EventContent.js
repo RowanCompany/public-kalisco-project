@@ -1,18 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import EventCategoryList from "./EventCategoryList";
 import EventList from "./EventList";
 import { eventContentWrapper } from "./event.module.scss";
-import { useRouteMatch, Route, Switch } from "react-router-dom";
+import { useLocation, useRouteMatch, Route, Switch } from "react-router-dom";
 import EventDetailContent from "./EventDetailContent";
 
-// TODO: Route 넣어야 됨
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
+
 function EventContent() {
     const match = useRouteMatch();
+    let query = useQuery();
+    const type = query.get("type");
+    const [contentType, setContentType] = useState(null);
+    useEffect(() => {
+        if (type) {
+            setContentType(type);
+        }
+    }, [type]);
 
     return (
         <section className={eventContentWrapper}>
             <div className="container">
-                <EventCategoryList />
+                <EventCategoryList contentType={contentType} />
                 <Switch>
                     <Route
                         path={`${match.path}/:event`}
