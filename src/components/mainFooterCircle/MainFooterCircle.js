@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./main_footer_circle.module.scss";
 
 function MainFooterCircle(props) {
     return (
@@ -7,7 +8,7 @@ function MainFooterCircle(props) {
             onMouseEnter={props.enterEvent}
             onMouseLeave={props.leaveEvent}
         >
-            <div className="content">{props.children}</div>
+            <div className={styles.content}>{props.children}</div>
         </div>
     );
 }

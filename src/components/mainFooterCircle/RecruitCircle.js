@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MainFooterCircle from "./MainFooterCircle";
 import RecruitLogo from "./svg/RecruitLogo";
+import { Link } from "react-router-dom";
 
 // TODO: Route Link 넣어야 함
 function RecruitCircle() {
@@ -11,10 +12,12 @@ function RecruitCircle() {
             enterEvent={() => setHovered(true)}
             leaveEvent={() => setHovered(false)}
         >
-            <div>
-                <RecruitLogo hovered={hovered} />
-            </div>
-            <div style={{ paddingTop: "32px" }}>Recruit</div>
+            <Link to="/recruit">
+                <div>
+                    <RecruitLogo hovered={hovered} />
+                </div>
+                <div style={{ paddingTop: "32px" }}>Recruit</div>
+            </Link>
         </MainFooterCircle>
     );
 }
