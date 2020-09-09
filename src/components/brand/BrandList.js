@@ -32,12 +32,17 @@ function BrandList() {
                             </div>
                             <div className="brand-title">히바린</div>
                         </Link>
-                        <div className="brand-circle-wrapper tacobell">
+                        <a
+                            className="d-inline-block brand-circle-wrapper tacobell"
+                            href="http://koreatacobell.com/"
+                            rel="noopener"
+                            target="_blank"
+                        >
                             <div className="brand-logo-wrapper">
                                 <img src={tacobellLogo} alt="taco bell logo" />
                             </div>
                             <div className="brand-title">타코벨</div>
-                        </div>
+                        </a>
                         <div className="brand-circle-wrapper centralkc">
                             <div className="brand-logo-wrapper">
                                 <img

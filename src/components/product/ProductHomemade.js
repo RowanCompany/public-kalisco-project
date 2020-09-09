@@ -5,7 +5,7 @@ import productHomemadeRecipeIcon from "../../static/svg/product-homemade-recipe.
 import productHomemadeOriginalIcon from "../../static/svg/product-homemade-original.svg";
 import productHomemadeChoosingIcon from "../../static/svg/product-homemade-choosing.svg";
 import productHome1Image from "../../static/images/img-product-home1.png";
-import productHome2Image from "../../static/images/img-product-home2.jpg";
+import productHome2Image from "../../static/images/img-product-home-2-1.png";
 import { Link } from "react-router-dom";
 
 function ProductHomemade() {
