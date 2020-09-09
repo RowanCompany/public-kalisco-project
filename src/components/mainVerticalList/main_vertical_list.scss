@@ -300,5 +300,9 @@
 
     &>.main-bg-wrapper {
         height: 100vh;
+
+        &>.brand-list-wrapper {
+            flex-wrap: wrap;
+        }
     }
 }
