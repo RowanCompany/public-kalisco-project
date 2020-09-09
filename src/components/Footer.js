@@ -23,9 +23,16 @@ function Footer() {
                 <div>입점제안 및 가맹문의</div>
                 <div>llimun@kalisco.co.kr</div>
             </div>
-            <div>
+            <div style={{ paddingRight: "5%" }}>
                 <div>Easy to cook(편의식) 상품구입 및 특판문의</div>
-                <div>Bongkyun.chin@kalisco.co.kr</div>
+                <div>kipal.cha@kalisco.co.kr</div>
+            </div>
+            <div>
+                <div>
+                    캘리스코 고객센터 : 070-4846-8215
+                    <br />
+                    (평일 09:00 ~ 18시, 공휴일 휴무)
+                </div>
             </div>
         </footer>
     );
