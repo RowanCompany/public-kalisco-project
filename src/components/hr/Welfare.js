@@ -25,7 +25,7 @@ function Welfare() {
                                     급여
                                 </div>
                                 <div className={styles.systemDescription}>
-                                    연봉제 운영, 월 급여 형태 지급
+                                    개인별 성과기반 연봉제 운영
                                 </div>
                             </div>
                             <div className={styles.systemPanelFlexWrapper}>
@@ -41,7 +41,7 @@ function Welfare() {
                                     법정제수당
                                 </div>
                                 <div className={styles.systemDescription}>
-                                    연장, 휴일, 야간 법적 수당 적용
+                                    연장, 휴일, 법정수당 적용
                                 </div>
                             </div>
                             <div className={styles.systemPanelFlexWrapper}>
@@ -49,7 +49,7 @@ function Welfare() {
                                     진급제도
                                 </div>
                                 <div className={styles.systemDescription}>
-                                    MBO평가 및 발탁 진급
+                                    정기승진급, 발탁진급
                                 </div>
                             </div>
                             <div className={styles.systemPanelFlexWrapper}>
@@ -57,7 +57,7 @@ function Welfare() {
                                     포상제도
                                 </div>
                                 <div className={styles.systemDescription}>
-                                    월/분기/반기/연간 단위 시상
+                                    우수매장포상,우수사원포상,즉포상,장기근속상
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ function Welfare() {
                                     직원할인
                                 </div>
                                 <div className={styles.systemDescription}>
-                                    점포 20% 할인
+                                    자사매장 20% 할인
                                 </div>
                             </div>
                             <div className={styles.systemPanelFlexWrapper}>

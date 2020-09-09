@@ -15,7 +15,7 @@ function Education() {
                 <img src={trainingProgramTextImage} alt="training program" />
             </div>
             <div className={styles.educationSubTitle}>
-                체계적인 육성제도를 통한 꾸준한 성장지원
+                체계적인 육성제도를 통한 성장경로 제시 및 경력개발지원
             </div>
             <div className={styles.educationContainer}>
                 <div className={styles.educationContainerImageWrapper}>
@@ -55,7 +55,7 @@ function Education() {
                             Promotion Candidate Program
                         </div>
                         <div className={styles.educationTrainingDescription}>
-                            점장, DM 후보자 역량강화 교육
+                            진급자 역량강화을 위한 교육
                         </div>
                     </div>
                     <div>
