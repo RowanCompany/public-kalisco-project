@@ -311,16 +311,14 @@ function ProductSauceDetail({ content }) {
                         </div>
                         <div className="row">
                             <div
-                                className={`col ${styles.sauceDetailTextWrapper}`}
+                                className={`col ${styles.sauceDetailTextWrapper} ${styles.sauceDetailTextSecondWrapper}`}
                             >
                                 <div className={styles.sauceDetailSpaceWrapper}>
                                     <div
                                         className={`${styles.sauceDetailTextTitleWrapper} ${styles.sauceDetailTextTitleWrapperReverse}`}
                                     >
                                         <div
-                                            className={
-                                                styles.sauceDetailTextTitle
-                                            }
+                                            className={`${styles.sauceDetailTextTitle}`}
                                         >
                                             어울리는 음식
                                         </div>
