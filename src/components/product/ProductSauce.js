@@ -240,7 +240,7 @@ function ProductSauce({ content }) {
                     </Link>
                 </div>
             </section>
-            {/* <section className={styles.sauceThirdSection}>
+            <section className={styles.sauceThirdSection}>
                 <div className={styles.sauceThirdImageWrapper}>
                     <img src={curryImage} alt="curry" className="img-fill" />
                 </div>
@@ -262,7 +262,7 @@ function ProductSauce({ content }) {
                         </Link>
                     </div>
                 </div>
-            </section> */}
+            </section>
         </>
     );
 }

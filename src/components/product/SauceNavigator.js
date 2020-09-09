@@ -78,7 +78,7 @@ function SauceNavigator({ sauce }) {
                         Sesame
                     </Link>
                 </li>
-                {/* <li>
+                <li>
                     <Link
                         to="/products/homemade/sauce/curry"
                         className={`${styles.sauceNavigator} ${
@@ -87,7 +87,7 @@ function SauceNavigator({ sauce }) {
                     >
                         Curry
                     </Link>
-                </li> */}
+                </li>
             </ul>
         </nav>
     );
