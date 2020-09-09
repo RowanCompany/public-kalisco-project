@@ -99,6 +99,7 @@ function Recruit() {
                     지원하기
                 </Link>
             </div>
+            <div className={styles.contact}>채용문의: 02-6956-4617,4618</div>
         </section>
     );
 }
