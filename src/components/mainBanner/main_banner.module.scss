@@ -33,6 +33,7 @@
 
     .subBannerHoverElement {
         flex-grow: 1;
+        flex-basis: 0;
         position: relative;
         cursor: pointer;
 
@@ -91,6 +92,7 @@
                             font-weight: 400;
                             letter-spacing: 0;
                             font-size: 18px;
+                            line-height: 31px;
                             text-align: center;
                             padding: 0 0.5rem;
                             word-break: keep-all;

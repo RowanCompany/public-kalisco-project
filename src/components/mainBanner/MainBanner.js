@@ -121,7 +121,7 @@ function MainBanner(props) {
                                     in={wholesomenessState}
                                     timeout={1000}
                                     nodeRef={wholesomenessRef}
-                                    appear={true}
+                                    //appear={true}
                                     unmountOnExit={true}
                                     classNames={{
                                         enter:
