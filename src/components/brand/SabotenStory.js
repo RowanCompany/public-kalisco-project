@@ -101,8 +101,8 @@ function SabotenStory() {
                             일본의 정통 돈카츠 맛을 완성했습니다.
                         </div>
                     </div>
-                    <div className={styles.storyFlexListWrapper}>
-                        <div>
+                    <div className={`row ${styles.storyFlexListWrapper}`}>
+                        <div className="col text-right">
                             <img
                                 src={image1}
                                 alt="yuja"
@@ -110,7 +110,7 @@ function SabotenStory() {
                             />
                         </div>
                         <div
-                            className={styles.storyFlexRightDescriptionWrapper}
+                            className={`col ${styles.storyFlexRightDescriptionWrapper}`}
                         >
                             <div className={styles.storyFlexDescriptionTitle}>
                                 전남고흥 유자샐러드 소스
@@ -122,8 +122,10 @@ function SabotenStory() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.storyFlexListWrapper}>
-                        <div className={styles.storyFlexLeftDescriptionWrapper}>
+                    <div className={`row ${styles.storyFlexListWrapper}`}>
+                        <div
+                            className={`col ${styles.storyFlexLeftDescriptionWrapper}`}
+                        >
                             <div className={styles.storyFlexDescriptionTitle}>
                                 50년 전통비법 생 빵가루
                             </div>
@@ -133,7 +135,7 @@ function SabotenStory() {
                                 부드럽고 바삭한 사보텐만의 차별화된 생빵가루
                             </div>
                         </div>
-                        <div className={styles.storyRightImageWrapper}>
+                        <div className={`col text-left`}>
                             <img
                                 src={image2}
                                 alt="breadcrumb"
@@ -141,12 +143,12 @@ function SabotenStory() {
                             />
                         </div>
                     </div>
-                    <div className={styles.storyFlexListWrapper}>
-                        <div>
+                    <div className={`row ${styles.storyFlexListWrapper}`}>
+                        <div className="col text-right">
                             <img src={gif3} alt="fry" className="img-fluid" />
                         </div>
                         <div
-                            className={styles.storyFlexRightDescriptionWrapper}
+                            className={`col ${styles.storyFlexRightDescriptionWrapper}`}
                         >
                             <div className={styles.storyFlexDescription}>
                                 신선하고 바삭한 튀김의 식감을 위해 자체 제작하는
@@ -156,8 +158,10 @@ function SabotenStory() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.storyFlexListWrapper}>
-                        <div className={styles.storyFlexLeftDescriptionWrapper}>
+                    <div className={`row ${styles.storyFlexListWrapper}`}>
+                        <div
+                            className={`col ${styles.storyFlexLeftDescriptionWrapper}`}
+                        >
                             <div className={styles.storyFlexDescriptionTitle}>
                                 트랜스지방 0% 튀김유
                             </div>
@@ -169,12 +173,12 @@ function SabotenStory() {
                                 느끼하지 않은 국내최초 돈카츠 전용 튀김유
                             </div>
                         </div>
-                        <div className={styles.storyRightImageWrapper}>
+                        <div className="col text-left">
                             <img src={gif4} alt="oil" className="img-fluid" />
                         </div>
                     </div>
-                    <div className={styles.storyFlexListWrapper}>
-                        <div>
+                    <div className={`row ${styles.storyFlexListWrapper}`}>
+                        <div className="col text-right">
                             <img
                                 src={image3}
                                 alt="pork"
@@ -182,7 +186,7 @@ function SabotenStory() {
                             />
                         </div>
                         <div
-                            className={styles.storyFlexRightDescriptionWrapper}
+                            className={`col ${styles.storyFlexRightDescriptionWrapper}`}
                         >
                             <div className={styles.storyFlexDescriptionTitle}>
                                 192시간 숙성 프리미엄 돈육
@@ -194,8 +198,10 @@ function SabotenStory() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.storyFlexListWrapper}>
-                        <div className={styles.storyFlexLeftDescriptionWrapper}>
+                    <div className={`row ${styles.storyFlexListWrapper}`}>
+                        <div
+                            className={`col ${styles.storyFlexLeftDescriptionWrapper}`}
+                        >
                             <div className={styles.storyFlexDescriptionTitle}>
                                 5과1주 돈카츠 소스
                             </div>
@@ -207,7 +213,7 @@ function SabotenStory() {
                                 특제 돈카츠 소스
                             </div>
                         </div>
-                        <div className={styles.storyRightImageWrapper}>
+                        <div className="col text-left">
                             <img
                                 src={image4}
                                 alt="sauce"
@@ -215,8 +221,8 @@ function SabotenStory() {
                             />
                         </div>
                     </div>
-                    <div className={styles.storyFlexListWrapper}>
-                        <div>
+                    <div className={`row ${styles.storyFlexListWrapper}`}>
+                        <div className="col text-right">
                             <img
                                 src={image5}
                                 alt="homemade"
@@ -224,7 +230,7 @@ function SabotenStory() {
                             />
                         </div>
                         <div
-                            className={styles.storyFlexRightDescriptionWrapper}
+                            className={`col ${styles.storyFlexRightDescriptionWrapper}`}
                         >
                             <div className={styles.storyFlexDescriptionTitle}>
                                 일본 정통의 수제 방식
