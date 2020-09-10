@@ -19,7 +19,7 @@ import curryImage from "../../static/images/img-newari-curry.png";
 import { Link } from "react-router-dom";
 
 function ProductSauce({ content }) {
-    const [clickedSauce, setClickedSauce] = useState("tonkatsu");
+    const [clickedSauce, setClickedSauce] = useState("citron");
     const sauceImageData = {
         "spicy-cream": {
             image: sauceTop51Image,
