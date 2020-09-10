@@ -119,9 +119,9 @@ function MainBanner(props) {
                                 </div>
                                 <CSSTransition
                                     in={wholesomenessState}
-                                    timeout={1000}
+                                    timeout={2000}
                                     nodeRef={wholesomenessRef}
-                                    //appear={true}
+                                    appear={true}
                                     unmountOnExit={true}
                                     classNames={{
                                         enter:
@@ -220,7 +220,7 @@ function MainBanner(props) {
                                 </div>
                                 <CSSTransition
                                     in={sincerenessState}
-                                    timeout={1000}
+                                    timeout={2000}
                                     nodeRef={sincerenessRef}
                                     appear={true}
                                     unmountOnExit={true}
@@ -327,7 +327,7 @@ function MainBanner(props) {
                                 </div>
                                 <CSSTransition
                                     in={togethernewssState}
-                                    timeout={1000}
+                                    timeout={2000}
                                     nodeRef={togethernewssRef}
                                     appear={true}
                                     unmountOnExit={true}
