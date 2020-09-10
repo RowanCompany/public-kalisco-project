@@ -1,5 +1,4 @@
 .homeNav {
-    padding: 22px 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,23 +16,12 @@
         padding-inline-start: 0;
         margin: 0;
         display: flex;
+        border-bottom: 1px solid #dddddd;
 
-        >li {
-            font-family: "Montserrat", sans-serif;
-            font-size: 17px;
-            line-height: 20px;
-            font-weight: 400;
-            letter-spacing: 0;
-            //color: #e8390e;
-            color: #707070;
+        &.homeNavWrapper {
+            padding: 22px 40px;
 
-            >div {
-                &:not(:last-child) {
-                    padding-right: 90px;
-                }
-            }
-
-            .navLink {
+            >li {
                 font-family: "Montserrat", sans-serif;
                 font-size: 17px;
                 line-height: 20px;
@@ -41,16 +29,33 @@
                 letter-spacing: 0;
                 //color: #e8390e;
                 color: #707070;
-                text-decoration: none;
-                transition: color 200ms;
 
-                &:hover {
-                    color: #e8390e;
+                >div {
+                    &:not(:last-child) {
+                        padding-right: 90px;
+                    }
                 }
 
-                &.active {
-                    font-weight: 700;
-                    color: #e8390e;
+                .navLink {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 17px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    letter-spacing: 0;
+                    //color: #e8390e;
+                    color: #707070;
+                    text-decoration: none;
+                    transition: color 200ms;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #e8390e;
+                    }
+
+                    &.active {
+                        font-weight: 700;
+                        color: #e8390e;
+                    }
                 }
             }
         }
