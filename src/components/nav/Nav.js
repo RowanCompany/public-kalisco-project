@@ -53,7 +53,8 @@ function Nav() {
                         <Link
                             to="/about"
                             className={`${styles.navLink} ${
-                                currentPathRef.current.includes("about")
+                                currentPathRef.current.includes("about") ||
+                                currentHovered.includes("about")
                                     ? styles.active
                                     : ""
                             }`}
@@ -66,7 +67,8 @@ function Nav() {
                         <Link
                             to="/brand"
                             className={`${styles.navLink} ${
-                                currentPathRef.current.includes("brand")
+                                currentPathRef.current.includes("brand") ||
+                                currentHovered.includes("brand")
                                     ? styles.active
                                     : ""
                             }`}
@@ -79,7 +81,8 @@ function Nav() {
                         <Link
                             to="/products"
                             className={`${styles.navLink} ${
-                                currentPathRef.current.includes("products")
+                                currentPathRef.current.includes("products") ||
+                                currentHovered.includes("products")
                                     ? styles.active
                                     : ""
                             }`}
@@ -92,7 +95,8 @@ function Nav() {
                         <Link
                             to="/supports"
                             className={`${styles.navLink} ${
-                                currentPathRef.current.includes("supports")
+                                currentPathRef.current.includes("supports") ||
+                                currentHovered.includes("supports")
                                     ? styles.active
                                     : ""
                             }`}
@@ -105,7 +109,8 @@ function Nav() {
                         <Link
                             to="/hr"
                             className={`${styles.navLink} ${
-                                currentPathRef.current.includes("hr")
+                                currentPathRef.current.includes("hr") ||
+                                currentHovered.includes("hr")
                                     ? styles.active
                                     : ""
                             }`}
