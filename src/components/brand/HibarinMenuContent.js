@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import CategoryLink from "../categoryButton/CategoryLink";
 import HibarnMenuData from "./HibarinMenuData";
 import MenuPanel from "./panel/MenuPanel";
+import MenuModal from "./modal/MenuModal";
+import ModalProvider from "./modal/modal-provider";
 
 function HibarinMenuContent() {
     const params = useParams();
@@ -36,7 +38,7 @@ function HibarinMenuContent() {
     );
 
     return (
-        <>
+        <ModalProvider>
             <HibarinBanner subject={params.subject} />
             <section className={styles.menuDetailSection}>
                 <div className={styles.categoryButtonListWrapper}>
@@ -60,7 +62,8 @@ function HibarinMenuContent() {
                 </div>
             </section>
             <Footer />
-        </>
+            <MenuModal />
+        </ModalProvider>
     );
 }
 

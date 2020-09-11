@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./menu_panel.module.scss";
+import { ModalContext } from "../modal/modal-context";
 
-// TODO: 팝업 해야 함
 function MenuPanel(props) {
+    const { setModalOpen } = useContext(ModalContext);
     return (
-        <div className={styles.menuPanel}>
+        <div className={styles.menuPanel} onClick={() => setModalOpen(props)}>
             <div>
                 <img src={props.image} alt={props.title} className="img-fill" />
             </div>
