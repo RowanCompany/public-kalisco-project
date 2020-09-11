@@ -9,6 +9,7 @@
         "react": "^16.13.1",
         "react-app-polyfill": "^1.0.6",
         "react-dom": "^16.13.1",
+        "react-modal": "^3.11.2",
         "react-router-dom": "^5.2.0",
         "react-scripts": "^3.4.3",
         "react-transition-group": "^4.4.1",
@@ -35,5 +36,8 @@
     },
     "main": "src/index.js",
     "repository": "https://github.com/rowan-dev/kalisco-front-end.git",
-    "author": "Subin Lee <chandar@rowan.kr>"
+    "author": "Subin Lee <chandar@rowan.kr>",
+    "devDependencies": {
+        "@types/react-modal": "^3.10.6"
+    }
 }
