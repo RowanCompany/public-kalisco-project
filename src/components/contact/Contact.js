@@ -1,11 +1,15 @@
 import React, { useState, useMemo } from "react";
 import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
+import storeData from "./storeData";
 
 function Contact() {
     const [description, setDescription] = useState("");
-    const [fileName, setFileName] = useState("");
     const textLength = useMemo(() => description.length, [description]);
+    const [fileName, setFileName] = useState("");
+    const [category, setCategory] = useState("");
+    const [brand, setBrand] = useState("");
+
     return (
         <>
             <ContactBanner />
@@ -80,35 +84,10 @@ function Contact() {
                                                 id="category"
                                                 className={`${styles.commonSelectInput} ${styles.categorySelectInput}`}
                                                 defaultValue=""
-                                            >
-                                                <option
-                                                    value=""
-                                                    hidden
-                                                    disabled
-                                                >
-                                                    선택
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <label
-                                                htmlFor="category_sub"
-                                                className={
-                                                    styles.commonFormLabel
+                                                onChange={(e) =>
+                                                    setCategory(e.target.value)
                                                 }
                                             >
-                                                유형
-                                            </label>
-                                        </div>
-                                        <div className="position-relative">
-                                            <select
-                                                name="category_sub"
-                                                id="category_sub"
-                                                className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
-                                                defaultValue=""
-                                            >
                                                 <option
                                                     value=""
                                                     hidden
@@ -116,9 +95,63 @@ function Contact() {
                                                 >
                                                     선택
                                                 </option>
+                                                <option value="칭찬">
+                                                    칭찬
+                                                </option>
+                                                <option value="불만">
+                                                    불만
+                                                </option>
+                                                <option value="문의">
+                                                    문의
+                                                </option>
+                                                <option value="기타">
+                                                    기타
+                                                </option>
                                             </select>
                                         </div>
                                     </div>
+                                    {category && (
+                                        <div>
+                                            <div>
+                                                <label
+                                                    htmlFor="category_sub"
+                                                    className={
+                                                        styles.commonFormLabel
+                                                    }
+                                                >
+                                                    유형
+                                                </label>
+                                            </div>
+                                            <div className="position-relative">
+                                                <select
+                                                    name="category_sub"
+                                                    id="category_sub"
+                                                    className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
+                                                    defaultValue=""
+                                                >
+                                                    <option
+                                                        value=""
+                                                        hidden
+                                                        disabled
+                                                    >
+                                                        선택
+                                                    </option>
+                                                    <option value="서비스">
+                                                        서비스
+                                                    </option>
+                                                    <option value="메뉴">
+                                                        메뉴
+                                                    </option>
+                                                    <option value="위생">
+                                                        위생
+                                                    </option>
+                                                    <option value="기타">
+                                                        기타
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             <div className={styles.formWrapper}>
@@ -140,35 +173,10 @@ function Contact() {
                                                 id="brand"
                                                 className={`${styles.commonSelectInput} ${styles.categorySelectInput}`}
                                                 defaultValue=""
-                                            >
-                                                <option
-                                                    value=""
-                                                    hidden
-                                                    disabled
-                                                >
-                                                    선택
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <label
-                                                htmlFor="store"
-                                                className={
-                                                    styles.commonFormLabel
+                                                onChange={(e) =>
+                                                    setBrand(e.target.value)
                                                 }
                                             >
-                                                매장
-                                            </label>
-                                        </div>
-                                        <div className="position-relative">
-                                            <select
-                                                name="store"
-                                                id="store"
-                                                className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
-                                                defaultValue=""
-                                            >
                                                 <option
                                                     value=""
                                                     hidden
@@ -176,9 +184,65 @@ function Contact() {
                                                 >
                                                     선택
                                                 </option>
+                                                <option value="saboten">
+                                                    사보텐
+                                                </option>
+                                                <option value="hibarin">
+                                                    히바린
+                                                </option>
+                                                <option value="tacobell">
+                                                    타코벨
+                                                </option>
+                                                <option value="centralkitchen">
+                                                    센트럴키친
+                                                </option>
+                                                <option value="repluk">
+                                                    re-pulk
+                                                </option>
                                             </select>
                                         </div>
                                     </div>
+                                    {brand && (
+                                        <div>
+                                            <div>
+                                                <label
+                                                    htmlFor="store"
+                                                    className={
+                                                        styles.commonFormLabel
+                                                    }
+                                                >
+                                                    매장
+                                                </label>
+                                            </div>
+                                            <div className="position-relative">
+                                                <select
+                                                    name="store"
+                                                    id="store"
+                                                    className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
+                                                    defaultValue=""
+                                                >
+                                                    <option
+                                                        value=""
+                                                        hidden
+                                                        disabled
+                                                    >
+                                                        선택
+                                                    </option>
+                                                    {storeData[brand] &&
+                                                        storeData[brand].map(
+                                                            (d, i) => (
+                                                                <option
+                                                                    value={d.no}
+                                                                    key={i}
+                                                                >
+                                                                    {d.title}
+                                                                </option>
+                                                            )
+                                                        )}
+                                                </select>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             <div className={styles.formWrapper}>
@@ -221,7 +285,7 @@ function Contact() {
                                         ></textarea>
                                     </div>
                                     <div className={styles.countText}>
-                                        {textLength} / 2,000자
+                                        {textLength} / 2,000
                                     </div>
                                 </div>
                             </div>
