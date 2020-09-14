@@ -4,7 +4,7 @@ import logo from "../../static/svg/logo-header-or.svg";
 import styles from "./nav.module.scss";
 import SubNavData from "./SubNavData";
 
-function ConditionalLinkRenderer({ link, title }, ref) {
+function ConditionalLinkRenderer({ link, title, alternativeLink }, ref) {
     if (link && link.includes("http")) {
         return (
             <a
@@ -21,7 +21,11 @@ function ConditionalLinkRenderer({ link, title }, ref) {
             <Link
                 to={link}
                 className={`${styles.navLink} ${
-                    ref.current.includes(link) ? styles.active : ""
+                    ref.current.includes(
+                        alternativeLink ? alternativeLink : link
+                    )
+                        ? styles.active
+                        : ""
                 }`}
             >
                 {title}
@@ -133,14 +137,26 @@ function Nav() {
                         </Link>
                     </div>
                 </li>
-                <li style={{ opacity: 0, visibility: "hidden" }}>
+                {/* <li style={{ opacity: 0, visibility: "hidden" }}>
                     <Link to="/">
                         <img src={logo} alt="Brand logo" />
                     </Link>
-                </li>
-                {/* <li>
-                    <div>고객소통</div>
                 </li> */}
+                <li>
+                    <div>
+                                <Link
+                            to="/contact"
+                            className={`${styles.navLink} ${
+                                currentPathRef.current.includes("contact")
+                                    ? styles.active
+                                    : ""
+                            }`}
+                            onMouseEnter={() => setCurrentHovered("contact")}
+                        >
+                                고객소통
+                        </Link>
+                    </div>
+                </li>
             </ul>
             {SubNavData[currentHovered] && (
                 <ul className={styles.homeNavWrapper}>
@@ -148,18 +164,6 @@ function Nav() {
                         {SubNavData[currentHovered].map((d, i) => {
                             return (
                                 <div key={i}>
-                                    {/* <Link
-                                        to={d.link}
-                                        className={`${styles.navLink} ${
-                                            currentPathRef.current.includes(
-                                                d.link
-                                            )
-                                                ? styles.active
-                                                : ""
-                                        }`}
-                                    >
-                                        {d.title}
-                                    </Link> */}
                                     {ConditionalLinkRenderer(d, currentPathRef)}
                                 </div>
                             );

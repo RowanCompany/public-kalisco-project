@@ -13,10 +13,12 @@ export default {
         {
             title: "사보텐",
             link: "/brand/saboten/story",
+            alternativeLink: "/brand/saboten",
         },
         {
             title: "히바린",
             link: "/brand/hibarin/story",
+            alternativeLink: "/brand/hibarin",
         },
         {
             title: "타코벨",

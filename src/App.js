@@ -6,6 +6,7 @@ import HR from "./pages/hr/HR";
 import Brand from "./pages/brand/Brand";
 import Product from "./pages/product/Product";
 import Recruit from "./pages/recruit/Recruit";
+import Contact from "./pages/contact/Contact";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/hr" component={HR} />
                     <Route path="/brand" component={Brand} />
                     <Route path="/products" component={Product} />
+                    <Route path="/contact" component={Contact} />
                     <Route>
                         <Redirect to="/" />
                     </Route>
