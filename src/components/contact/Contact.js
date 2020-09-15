@@ -1,14 +1,57 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef } from "react";
 import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
 import storeData from "./storeData";
+import axios from "axios";
 
 function Contact() {
     const [description, setDescription] = useState("");
     const textLength = useMemo(() => description.length, [description]);
-    const [fileName, setFileName] = useState("");
     const [category, setCategory] = useState("");
     const [brand, setBrand] = useState("");
+    const formRef = useRef(null);
+    const [countryNumber, setCountryNumber] = useState("+82");
+    const [telNumber, setTelNumber] = useState("");
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(formRef.current);
+        data.append("phone", countryNumber + telNumber);
+        let dataObject = {};
+        data.forEach((value, key) => {
+            switch (key) {
+                case "code":
+                    dataObject[key] = window.parseInt(value);
+                    break;
+                case "content":
+                    dataObject[key] = value.replace(/\n/g, "<br />");
+                    break;
+                default:
+                    dataObject[key] = value;
+                    break;
+            }
+        });
+        const json = JSON.stringify(dataObject);
+        const apiUrl =
+            "https://3nbky7tmc7.execute-api.ap-northeast-2.amazonaws.com/kalisco/api/v1";
+        axios
+            .post(apiUrl, json, {
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+            })
+            .then(() => {
+                window.alert("메일 발송에 성공했습니다!");
+                document.location.reload();
+            })
+            .catch(() => {
+                window.alert(
+                    "메일 발송에 실패했습니다, 관리자에게 문의해주세요."
+                );
+                return false;
+            });
+    }
 
     return (
         <>
@@ -17,11 +60,12 @@ function Contact() {
                 <div className="container">
                     <div className={styles.contactTitle}>문의 작성</div>
                     <div className={styles.contactFormPanel}>
-                        <form encType="multipart/form-data">
+                        {/* <form encType="multipart/form-data"> */}
+                        <form onSubmit={(e) => handleSubmit(e)} ref={formRef}>
                             <div className={styles.formWrapper}>
                                 <div>
                                     <label
-                                        htmlFor="writer"
+                                        htmlFor="name"
                                         className={styles.commonFormLabel}
                                     >
                                         작성자
@@ -29,8 +73,26 @@ function Contact() {
                                 </div>
                                 <input
                                     type="text"
-                                    name="writer"
-                                    id="writer"
+                                    name="name"
+                                    id="name"
+                                    required
+                                    className={`${styles.commonFormInput} ${styles.writerFormInput}`}
+                                />
+                            </div>
+                            <div className={styles.formWrapper}>
+                                <div>
+                                    <label
+                                        htmlFor="email"
+                                        className={styles.commonFormLabel}
+                                    >
+                                        이메일
+                                    </label>
+                                </div>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    required
                                     className={`${styles.commonFormInput} ${styles.writerFormInput}`}
                                 />
                             </div>
@@ -49,9 +111,13 @@ function Contact() {
                                             name="mobile"
                                             id="mobile"
                                             className={`${styles.commonSelectInput} ${styles.telSelectInput}`}
-                                            defaultValue=""
+                                            defaultValue="+82"
+                                            required
+                                            onChange={(e) =>
+                                                setCountryNumber(e.target.value)
+                                            }
                                         >
-                                            <option value="82">+82</option>
+                                            <option value="+82">+82</option>
                                         </select>
                                     </div>
                                     <div className="position-relative">
@@ -60,6 +126,10 @@ function Contact() {
                                             name="tel"
                                             id="tel"
                                             placeholder="휴대전화번호 입력"
+                                            required
+                                            onInput={(e) =>
+                                                setTelNumber(e.target.value)
+                                            }
                                             className={`${styles.commonFormInput} ${styles.telFormInput}`}
                                         />
                                     </div>
@@ -70,7 +140,7 @@ function Contact() {
                                     <div>
                                         <div>
                                             <label
-                                                htmlFor="category"
+                                                htmlFor="type"
                                                 className={
                                                     styles.commonFormLabel
                                                 }
@@ -80,10 +150,11 @@ function Contact() {
                                         </div>
                                         <div>
                                             <select
-                                                name="category"
-                                                id="category"
+                                                name="type"
+                                                id="type"
                                                 className={`${styles.commonSelectInput} ${styles.categorySelectInput}`}
                                                 defaultValue=""
+                                                required
                                                 onChange={(e) =>
                                                     setCategory(e.target.value)
                                                 }
@@ -114,7 +185,7 @@ function Contact() {
                                         <div>
                                             <div>
                                                 <label
-                                                    htmlFor="category_sub"
+                                                    htmlFor="sub_type"
                                                     className={
                                                         styles.commonFormLabel
                                                     }
@@ -124,10 +195,11 @@ function Contact() {
                                             </div>
                                             <div className="position-relative">
                                                 <select
-                                                    name="category_sub"
-                                                    id="category_sub"
+                                                    name="sub_type"
+                                                    id="sub_type"
                                                     className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
                                                     defaultValue=""
+                                                    required
                                                 >
                                                     <option
                                                         value=""
@@ -159,7 +231,7 @@ function Contact() {
                                     <div>
                                         <div>
                                             <label
-                                                htmlFor="brand"
+                                                htmlFor="code"
                                                 className={
                                                     styles.commonFormLabel
                                                 }
@@ -169,13 +241,14 @@ function Contact() {
                                         </div>
                                         <div>
                                             <select
-                                                name="brand"
-                                                id="brand"
+                                                name="code"
+                                                id="code"
                                                 className={`${styles.commonSelectInput} ${styles.categorySelectInput}`}
                                                 defaultValue=""
                                                 onChange={(e) =>
                                                     setBrand(e.target.value)
                                                 }
+                                                required
                                             >
                                                 <option
                                                     value=""
@@ -184,25 +257,28 @@ function Contact() {
                                                 >
                                                     선택
                                                 </option>
-                                                <option value="saboten">
+                                                <option value="101">
+                                                    캘리스코
+                                                </option>
+                                                <option value="102">
                                                     사보텐
                                                 </option>
-                                                <option value="hibarin">
+                                                <option value="103">
                                                     히바린
                                                 </option>
-                                                <option value="tacobell">
+                                                <option value="104">
                                                     타코벨
                                                 </option>
-                                                <option value="centralkitchen">
+                                                <option value="105">
                                                     센트럴키친
                                                 </option>
-                                                <option value="repluk">
+                                                <option value="106">
                                                     re-pulk
                                                 </option>
                                             </select>
                                         </div>
                                     </div>
-                                    {brand && (
+                                    {storeData[brand] && (
                                         <div>
                                             <div>
                                                 <label
@@ -220,6 +296,7 @@ function Contact() {
                                                     id="store"
                                                     className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
                                                     defaultValue=""
+                                                    required
                                                 >
                                                     <option
                                                         value=""
@@ -232,7 +309,9 @@ function Contact() {
                                                         storeData[brand].map(
                                                             (d, i) => (
                                                                 <option
-                                                                    value={d.no}
+                                                                    value={
+                                                                        d.title
+                                                                    }
                                                                     key={i}
                                                                 >
                                                                     {d.title}
@@ -260,12 +339,13 @@ function Contact() {
                                     id="title"
                                     className={`${styles.titleInput}`}
                                     placeholder="제목을 입력해주세요."
+                                    required
                                 />
                             </div>
                             <div className={styles.formWrapper}>
                                 <div>
                                     <label
-                                        htmlFor="description"
+                                        htmlFor="content"
                                         className={styles.commonFormLabel}
                                     >
                                         내용
@@ -274,14 +354,15 @@ function Contact() {
                                 <div className={styles.descriptionPanel}>
                                     <div>
                                         <textarea
-                                            name="description"
-                                            id="description"
+                                            name="content"
+                                            id="content"
                                             placeholder="2000자 이내로 내용을 입력해주세요."
                                             onInput={(e) =>
                                                 setDescription(e.target.value)
                                             }
                                             maxLength={2000}
                                             className={styles.description}
+                                            required
                                         ></textarea>
                                     </div>
                                     <div className={styles.countText}>
@@ -289,7 +370,7 @@ function Contact() {
                                     </div>
                                 </div>
                             </div>
-                            <div className={styles.formWrapper}>
+                            {/* <div className={styles.formWrapper}>
                                 <div>
                                     <label
                                         htmlFor="file"
@@ -341,7 +422,7 @@ function Contact() {
                                         }}
                                     />
                                 </div>
-                            </div>
+                            </div> */}
                             <div className={styles.formSubitButtonWrapper}>
                                 <div>
                                     <button

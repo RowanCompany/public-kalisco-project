@@ -1,5 +1,5 @@
 export default {
-    saboten: [
+    102: [
         {
             no: 1,
             title: "사보텐 AK평택점",
