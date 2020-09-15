@@ -120,29 +120,29 @@ img {
 }
 
 .container {
-    width: 100%;
+    width: 1140px;
     margin-left: auto;
     margin-right: auto;
 
-    @media screen and (max-width: 576px) {
-        max-width: 100%;
-    }
+    // @media screen and (max-width: 576px) {
+    //     max-width: 100%;
+    // }
 
-    @media screen and (min-width: 576px) {
-        max-width: 540px;
-    }
+    // @media screen and (min-width: 576px) {
+    //     max-width: 540px;
+    // }
 
-    @media screen and (min-width: 768px) {
-        max-width: 720px;
-    }
+    // @media screen and (min-width: 768px) {
+    //     max-width: 720px;
+    // }
 
-    @media screen and (min-width: 992px) {
-        max-width: 960px;
-    }
+    // @media screen and (min-width: 992px) {
+    //     max-width: 960px;
+    // }
 
-    @media screen and (min-width: 1140px) {
-        max-width: 1140px;
-    }
+    // @media screen and (min-width: 1140px) {
+    //     max-width: 1140px;
+    // }
 }
 
 .footer {
@@ -157,6 +157,8 @@ img {
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
     word-break: keep-all;
+    box-sizing: border-box;
+    min-width: 1800px;
 
     .sitemap-text {
         letter-spacing: -0.32px;

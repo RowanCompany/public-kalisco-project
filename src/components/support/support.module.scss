@@ -23,7 +23,7 @@
             padding: 0 0 12px 0;
             margin: 0;
 
-            > .supportDetailMenu {
+            >.supportDetailMenu {
                 &:not(:last-child) {
                     margin-right: 30px;
                 }
@@ -37,8 +37,7 @@
 
                     &:hover {
                         color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid
-                            rgba($color: #ffffff, $alpha: 0.8);
+                        border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
                     }
 
                     &.active {
@@ -57,9 +56,127 @@
 }
 
 .tempDetailContent {
-    height: 440px;
+    padding-top: 80px;
+    padding-bottom: 70px;
     position: relative;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
+
+    .tempKakaotalkPanel {
+        width: 800px;
+        margin: 0 auto;
+        background-color: #FFE833;
+        padding-top: 50px;
+        position: relative;
+
+        .tempKakaotalkPanelTitle {
+            text-align: center;
+            font-size: 33px;
+            letter-spacing: -0.66px;
+            padding-top: 12px;
+
+            b {
+                font-size: 45px;
+            }
+        }
+
+        .tempKakaotalkPanelSubTitle {
+            text-align: center;
+            font-size: 24px;
+            letter-spacing: -0.48px;
+            color: #2f2f2f;
+            padding-bottom: 76px;
+        }
+
+        .tempKakaotalkPanelFlexWrapper {
+            display: flex;
+            padding: 0 16px;
+
+            .tempKakaotalkPanelBenefitWrapper {
+                padding-left: 40px;
+
+                .tempKakaotalkPanelBenefitTextWrapper {
+                    display: flex;
+                    margin-bottom: 11px;
+                    align-items: center;
+
+                    .tempKakaoPanelBenefitCircle {
+                        padding: 6px 12px;
+                        border-radius: 100%;
+                        background-color: #391B1B;
+                        font-size: 16px;
+                        letter-spacing: -0.32px;
+                        color: #ffffff;
+                        width: 33px;
+                        height: 33px;
+                        text-align: center;
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 13px;
+                        font-weight: bold;
+                    }
+
+                    .tempKakaoPanelBenefitText {
+                        font-size: 18px;
+                        letter-spacing: -0.36px;
+                        color: #2f2f2f;
+                    }
+                }
+            }
+        }
+
+        .tempKakaoPanelFooter {
+            background-color: #F4D32F;
+            padding: 19px 20px 19px 30px;
+            display: flex;
+            justify-content: space-between;
+
+            .tempKakaoPanelFooterBox {
+                border: 2px solid #dbbb19;
+                border-radius: 8px;
+                padding: 14px 34px;
+                display: flex;
+                background-color: #ffffff;
+                align-items: center;
+
+                .tempKakaoPanelFooterBoxText {
+                    padding-left: 40px;
+                    font-size: 17px;
+                    color: #2f2f2f;
+                    letter-spacing: -0.34px;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+
+    .tempPanel {
+        width: 800px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 65px 0;
+        text-align: center;
+
+        .tempPanelTitle {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: -0.56px;
+            color: #2f2f2f;
+            font-family: "RyuGHbatang", serif;
+            padding-bottom: 34px;
+        }
+
+        .tempPanelDescription {
+            font-size: 18px;
+            letter-spacing: -0.36px;
+            color: #2f2f2f;
+            padding-top: 34px;
+        }
+    }
 
     .tempDetailButtonWrapper {
         position: absolute;
