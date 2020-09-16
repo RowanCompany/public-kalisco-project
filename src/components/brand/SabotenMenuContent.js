@@ -64,7 +64,7 @@ function HibarinMenuContent() {
             </section>
             <Footer />
             <MenuModal />
-            <Fab />
+            <Fab subject="saboten" />
         </ModalProvider>
     );
 }

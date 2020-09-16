@@ -22,7 +22,7 @@
             padding: 0 0 12px 0;
             margin: 0;
 
-            >.menu {
+            > .menu {
                 &:not(:last-child) {
                     margin-right: 30px;
                 }
@@ -36,7 +36,8 @@
 
                     &:hover {
                         color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
+                        border-bottom: 3px solid
+                            rgba($color: #ffffff, $alpha: 0.8);
                     }
 
                     &.active {
@@ -82,13 +83,13 @@
             font-weight: 700;
             letter-spacing: 0;
             color: #2f2f2f;
-            font-family: "RyuGHbatang", serif;
+            font-family: "Nanum Myeongjo", serif;
             padding-bottom: 12px;
             text-align: center;
         }
 
         .gridParagraph {
-            font-family: "RyuGHbatang", serif;
+            font-family: "Nanum Myeongjo", serif;
             letter-spacing: 0;
             color: #2f2f2f;
             text-align: center;
@@ -118,7 +119,7 @@
 
         .peopleParagraph {
             text-align: center;
-            font-family: "RyuGHbatang", serif;
+            font-family: "Nanum Myeongjo", serif;
             font-size: 20px;
             letter-spacing: 0;
             line-height: 29px;
@@ -148,14 +149,14 @@
                 margin-bottom: 30px;
                 color: #ffffff;
                 font-weight: 700;
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 letter-spacing: 0;
                 font-size: 22px;
             }
 
             .peopleGridParagraph {
                 letter-spacing: 0;
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 color: #ffffff;
                 text-align: center;
                 font-size: 18px;
@@ -165,7 +166,7 @@
 }
 
 .educationSection {
-    background-color: #F4F4F4;
+    background-color: #f4f4f4;
     position: relative;
     padding-top: 84px;
     padding-bottom: 50px;
@@ -174,7 +175,7 @@
         color: #2f2f2f;
         letter-spacing: 0;
         text-align: center;
-        font-family: "RyuGHbatang", serif;
+        font-family: "Nanum Myeongjo", serif;
         font-size: 20px;
         padding-bottom: 40px;
     }
@@ -227,7 +228,7 @@
             }
 
             .eudcationTrainingTitle {
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 font-size: 22px;
                 font-weight: 700;
                 letter-spacing: 0;
@@ -239,7 +240,7 @@
                 font-size: 18px;
                 letter-spacing: 0;
                 color: #2f2f2f;
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 text-align: center;
                 padding-bottom: 30px;
             }
@@ -248,7 +249,7 @@
                 font-size: 18px;
                 letter-spacing: 0;
                 color: #2f2f2f;
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 text-align: center;
             }
         }
@@ -266,9 +267,9 @@
     .systemParagraph {
         text-align: center;
         letter-spacing: 0px;
-        color: #2F2F2F;
+        color: #2f2f2f;
         font-size: 20px;
-        font-family: "RyuGHbatang", serif;
+        font-family: "Nanum Myeongjo", serif;
         padding-bottom: 100px;
     }
 
@@ -277,7 +278,7 @@
         justify-content: center;
 
         .systemPanel {
-            background: #FFFFFF 0% 0% no-repeat padding-box;
+            background: #ffffff 0% 0% no-repeat padding-box;
             border-radius: 20px;
             box-sizing: border-box;
 
@@ -296,7 +297,7 @@
                 width: 9px;
                 height: 9px;
                 border-radius: 50%;
-                background-color: #E8390E;
+                background-color: #e8390e;
                 margin: 0 auto;
                 margin-bottom: 11px;
             }
@@ -325,12 +326,12 @@
                         font-size: 16px;
                         letter-spacing: 0;
                         color: #2f2f2f;
-                        font-family: "RyuGHbatang", serif;
+                        font-family: "Nanum Myeongjo", serif;
                         margin-right: 30px;
                     }
 
                     .systemDescription {
-                        font-family: "RyuGHbatang", serif;
+                        font-family: "Nanum Myeongjo", serif;
                         color: #2f2f2f;
                         letter-spacing: 0;
                         font-size: 16px;
@@ -375,7 +376,7 @@
             align-items: center;
             border: 1px solid #dddddd;
             border-radius: 50%;
-            font-family: "RyuGHbatang", serif;
+            font-family: "Nanum Myeongjo", serif;
             font-size: 18px;
             color: #2f2f2f;
             font-weight: bold;
@@ -384,14 +385,13 @@
                 padding-bottom: 20px;
             }
         }
-
     }
 
     .contact {
         text-align: center;
         padding-top: 60px;
         color: #2f2f2f;
-        font-family: "RyuGHbatang", serif;
+        font-family: "Nanum Myeongjo", serif;
         font-size: 16px;
     }
 
@@ -400,7 +400,7 @@
         background-color: rgba($color: #e8390e, $alpha: 0.9);
         box-shadow: 0px 3px 0px #00000029;
         border-radius: 8px;
-        font-family: "RyuGHbatang", serif;
+        font-family: "Nanum Myeongjo", serif;
         font-size: 18px;
         line-height: 26px;
         color: rgba($color: #ffffff, $alpha: 0.8);
@@ -418,6 +418,6 @@
     .systemTitle {
         font-size: 40px;
         text-align: center;
-        font-family: "RyuGHbatang", serif;
+        font-family: "Nanum Myeongjo", serif;
     }
 }

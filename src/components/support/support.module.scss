@@ -23,7 +23,7 @@
             padding: 0 0 12px 0;
             margin: 0;
 
-            >.supportDetailMenu {
+            > .supportDetailMenu {
                 &:not(:last-child) {
                     margin-right: 30px;
                 }
@@ -37,7 +37,8 @@
 
                     &:hover {
                         color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
+                        border-bottom: 3px solid
+                            rgba($color: #ffffff, $alpha: 0.8);
                     }
 
                     &.active {
@@ -64,7 +65,7 @@
     .tempKakaotalkPanel {
         width: 800px;
         margin: 0 auto;
-        background-color: #FFE833;
+        background-color: #ffe833;
         padding-top: 50px;
         position: relative;
 
@@ -102,7 +103,7 @@
                     .tempKakaoPanelBenefitCircle {
                         padding: 6px 12px;
                         border-radius: 100%;
-                        background-color: #391B1B;
+                        background-color: #391b1b;
                         font-size: 16px;
                         letter-spacing: -0.32px;
                         color: #ffffff;
@@ -127,7 +128,7 @@
         }
 
         .tempKakaoPanelFooter {
-            background-color: #F4D32F;
+            background-color: #f4d32f;
             padding: 19px 20px 19px 30px;
             display: flex;
             justify-content: space-between;
@@ -166,7 +167,7 @@
             font-weight: bold;
             letter-spacing: -0.56px;
             color: #2f2f2f;
-            font-family: "RyuGHbatang", serif;
+            font-family: "Nanum Myeongjo", serif;
             padding-bottom: 34px;
         }
 

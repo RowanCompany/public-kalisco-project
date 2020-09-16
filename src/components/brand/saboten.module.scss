@@ -15,12 +15,12 @@
             .sabotenStoryFirstTitle {
                 font-size: 50px;
                 letter-spacing: 1.5px;
-                font-family: "RyuGHbatang", serif;
-                color: #C70017;
+                font-family: "Nanum Myeongjo", serif;
+                color: #c70017;
             }
 
             .sabotenStoryFirstSubTitle {
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 color: #ffffff;
                 font-size: 24px;
                 letter-spacing: 0.72px;
@@ -58,9 +58,8 @@
 
             .redBox {
                 display: inline-block;
-                background-color: #C70017;
+                background-color: #c70017;
                 padding: 32px 40px 30px;
-
             }
         }
 
@@ -98,7 +97,7 @@
             }
 
             .storyFlexDescriptionTitle {
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 font-size: 24px;
                 line-height: 28px;
                 padding-bottom: 35px;
@@ -106,7 +105,7 @@
             }
 
             .storyFlexDescription {
-                font-family: "RyuGHbatang", serif;
+                font-family: "Nanum Myeongjo", serif;
                 font-size: 15px;
                 line-height: 24px;
                 color: #ffffff;
@@ -116,7 +115,7 @@
 
     .storyDescription {
         color: #ffffff;
-        font-family: "RyuGHbatang", serif;
+        font-family: "Nanum Myeongjo", serif;
         letter-spacing: 0;
         font-size: 18px;
         line-height: 29px;
@@ -135,7 +134,7 @@
         justify-content: center;
         background-color: rgba($color: #000000, $alpha: 0.68);
         color: #ffffff;
-        font-family: "RyuGHbatang", serif;
+        font-family: "Nanum Myeongjo", serif;
         font-size: 18px;
         letter-spacing: 0;
         line-height: 34px;
@@ -146,7 +145,7 @@
     width: 1px;
     max-height: 100%;
     border: none;
-    border-left: 2px solid #C70017;
+    border-left: 2px solid #c70017;
     margin: 60px 0;
     text-align: center;
 
@@ -224,14 +223,14 @@
         background-color: #343434;
 
         .katsuBorderLine {
-            border-top: 1px solid #FFE42B;
+            border-top: 1px solid #ffe42b;
         }
 
         .menuListTitleActive {
-            color: #FFE42B;
+            color: #ffe42b;
 
             &::after {
-                background-color: #FFE42B;
+                background-color: #ffe42b;
             }
         }
     }
@@ -240,36 +239,36 @@
         background-color: #151515;
 
         .donburiBorderLine {
-            border-top: 1px solid #E8390E;
+            border-top: 1px solid #e8390e;
         }
 
         .menuListTitleActive {
-            color: #E8390E;
+            color: #e8390e;
 
             &::after {
-                background-color: #E8390E;
+                background-color: #e8390e;
             }
         }
     }
 
     &.noodleSection {
-        background-color: #D4D288;
+        background-color: #d4d288;
 
         .noodleBorderLine {
-            border-top: 1px solid #325D24;
+            border-top: 1px solid #325d24;
         }
 
         .menuListTitleActive {
-            color: #325D24;
+            color: #325d24;
 
             &::after {
-                background-color: #325D24;
+                background-color: #325d24;
             }
         }
     }
 
     &.sideSection {
-        background-color: #9A633A;
+        background-color: #9a633a;
 
         .sideBorderLine {
             border-top: 1px solid #222222;
@@ -303,7 +302,7 @@
     padding-top: 50px;
     padding-bottom: 83px;
     position: relative;
-    background-color: #2F2F2F;
+    background-color: #2f2f2f;
 
     .categoryButtonListWrapper {
         margin-bottom: 50px;

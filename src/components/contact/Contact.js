@@ -1,8 +1,13 @@
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
 import storeData from "./storeData";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
+
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
 
 function Contact() {
     const [description, setDescription] = useState("");
@@ -12,6 +17,24 @@ function Contact() {
     const formRef = useRef(null);
     const [countryNumber, setCountryNumber] = useState("+82");
     const [telNumber, setTelNumber] = useState("");
+
+    let query = useQuery();
+    const querySubject = query.get("subject");
+    useEffect(() => {
+        if (querySubject) {
+            switch (querySubject) {
+                case "saboten":
+                    setBrand(102);
+                    break;
+                case "hibarin":
+                    setBrand(103);
+                    break;
+                default:
+                    break;
+            }
+        }
+        return () => setBrand("");
+    }, [querySubject]);
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -244,7 +267,7 @@ function Contact() {
                                                 name="code"
                                                 id="code"
                                                 className={`${styles.commonSelectInput} ${styles.categorySelectInput}`}
-                                                defaultValue=""
+                                                defaultValue={brand}
                                                 onChange={(e) =>
                                                     setBrand(e.target.value)
                                                 }

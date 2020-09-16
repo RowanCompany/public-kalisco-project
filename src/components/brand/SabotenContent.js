@@ -14,7 +14,7 @@ function SabotenContent() {
             <SabotenBanner subject={subject} />
             <SabotenCaseRenderer subject={subject} />
             <Footer />
-            <Fab />
+            <Fab subject="saboten" />
         </>
     );
 }

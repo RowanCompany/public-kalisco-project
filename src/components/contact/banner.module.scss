@@ -13,7 +13,7 @@
         .title {
             margin-top: auto;
             margin-bottom: 160px;
-            font-family: "RyuGHbatang", serif;
+            font-family: "Nanum Myeongjo", serif;
             font-size: 40px;
             line-height: 42px;
             color: #ffffff;
@@ -27,7 +27,7 @@
             padding: 0 0 12px 0;
             margin: 0;
 
-            >.menu {
+            > .menu {
                 &:not(:last-child) {
                     margin-right: 30px;
                 }
@@ -41,7 +41,8 @@
 
                     &:hover {
                         color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
+                        border-bottom: 3px solid
+                            rgba($color: #ffffff, $alpha: 0.8);
                     }
 
                     &.active {

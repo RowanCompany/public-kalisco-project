@@ -14,7 +14,7 @@ function HibarinContent() {
             <HibarinBanner subject={subject} />
             <HibarinCaseRenderer subject={subject} />
             <Footer />
-            <Fab />
+            <Fab subject="hibarin" />
         </>
     );
 }
