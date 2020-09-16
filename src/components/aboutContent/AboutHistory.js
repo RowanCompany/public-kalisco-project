@@ -22,9 +22,11 @@ import history7 from "../../static/images/history_img_07.png";
 import history8 from "../../static/images/history_img_08.png";
 import history9 from "../../static/images/history_img_09.png";
 import Footer from "../Footer";
+import LazyLoad from "react-lazy-load";
 
-//className="animate__animated animate__fadeInUp"
 function AboutHistory() {
+    document.documentElement.style.setProperty("--animate-duration", "2s");
+
     return (
         <>
             <section className={styles.historyWrapper}>
@@ -39,11 +41,17 @@ function AboutHistory() {
                             >
                                 <div
                                     style={{
-                                        marginRight: "128px",
-                                        textAlign: "left",
+                                        marginRight: "80px",
+                                        textAlign: "right",
                                     }}
                                 >
-                                    <img src={history1} alt="first history" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history1}
+                                            alt="first history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div
@@ -79,11 +87,17 @@ function AboutHistory() {
                                     style={{
                                         paddingBottom: "69px",
                                         textAlign: "right",
-                                        marginRight: "10px",
+                                        marginRight: "100px",
                                         marginTop: "156px",
                                     }}
                                 >
-                                    <img src={history2} alt="second history" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history2}
+                                            alt="second history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div className={styles.point} />
@@ -135,7 +149,13 @@ function AboutHistory() {
                                         bottom: "-20px",
                                     }}
                                 >
-                                    <img src={history3} alt="third history" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history3}
+                                            alt="third history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                         </li>
@@ -169,7 +189,13 @@ function AboutHistory() {
                                         bottom: "-90px",
                                     }}
                                 >
-                                    <img src={history4} alt="4th history" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history4}
+                                            alt="4th history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div
@@ -242,7 +268,13 @@ function AboutHistory() {
                                         bottom: "-30px",
                                     }}
                                 >
-                                    <img src={history5} alt="5th story" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history5}
+                                            alt="5th story"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                         </li>
@@ -269,8 +301,20 @@ function AboutHistory() {
                         </li>
                         <li style={{ marginBottom: "190px" }}>
                             <div className={styles.content}>
-                                <div style={{ paddingBottom: "30px" }}>
-                                    <img src={history6} alt="9th history" />
+                                <div
+                                    style={{
+                                        paddingBottom: "30px",
+                                        textAlign: "right",
+                                        marginRight: "100px",
+                                    }}
+                                >
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history6}
+                                            alt="9th history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div
@@ -301,7 +345,13 @@ function AboutHistory() {
                                         bottom: "-240px",
                                     }}
                                 >
-                                    <img src={history7} alt="10th history" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history7}
+                                            alt="10th history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div
@@ -353,14 +403,26 @@ function AboutHistory() {
                             />
                             <div className={styles.content}>
                                 <div style={{ paddingLeft: "125px" }}>
-                                    <img src={history8} alt="12th history" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history8}
+                                            alt="12th history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                         </li>
                         <li style={{ marginBottom: "300px" }}>
                             <div className={styles.content}>
                                 <div style={{ paddingBottom: "30px" }}>
-                                    <img src={history9} alt="13th history" />
+                                    <LazyLoad debounce={false}>
+                                        <img
+                                            src={history9}
+                                            alt="13th history"
+                                            className="animate__animated animate__fadeInUp"
+                                        />
+                                    </LazyLoad>
                                 </div>
                             </div>
                             <div
