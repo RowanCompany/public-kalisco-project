@@ -77,13 +77,13 @@
 
     .historyLogoWrapper {
         text-align: center;
-        padding-bottom: 83px;
+        padding-bottom: 184px;
     }
 
     .timeline {
         position: relative;
         margin: 0 auto;
-        width: 100%;
+        width: 1680px;
     }
 
     .timeline ul li {
@@ -104,68 +104,16 @@
         position: relative;
         left: 1px;
         align-self: flex-start;
-    }
-
-    @media (max-width: 800px) {
-        .point {
-            min-width: 15px;
-            height: 15px;
-        }
-
-        html,
-        body {
-            font-size: 15px;
-        }
-    }
-
-    @media (max-width: 650px) {
-        html,
-        body {
-            font-size: 14px;
-        }
-
-        .point {
-            min-width: 12px;
-            height: 12px;
-        }
-    }
-
-    @media (max-width: 450px) {
-        html,
-        body {
-            font-size: 10px;
-        }
-
-        p {
-            padding: 10px !important;
-        }
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .timeline ul li .content {
         width: 50%;
-        padding: 0 20px;
-    }
-
-    .timeline ul li:nth-child(odd) .content {
-        padding-left: 0;
-        text-align: right;
-    }
-
-    .timeline ul li:nth-child(odd) .date {
-        padding-right: 0;
-    }
-
-    .timeline ul li:nth-child(even) .content {
-        padding-right: 0;
-    }
-
-    .timeline ul li:nth-child(even) .date {
-        padding-left: 0;
     }
 
     .timeline ul li .date {
         width: 50%;
-        padding: 0 20px;
         font-weight: normal;
     }
 
@@ -186,16 +134,17 @@
         border-top-right-radius: 10px;
     }
 
-    .timeline ul li:nth-child(even) {
-        flex-direction: row-reverse;
+    .timeline ul li {
+        flex-direction: row;
     }
 
     .timeline::before {
         content: "";
         position: absolute;
-        height: 100%;
+        height: calc(100% - 330px);
         width: 1px;
         left: 50%;
+        margin-top: 200px;
         background-color: #dddddd;
     }
 
@@ -204,21 +153,18 @@
         font-size: 30px;
         letter-spacing: 0;
         color: #2f2f2f;
-        padding: 0 20px;
+        //padding: 0 20px;
         font-style: italic;
         line-height: 39px;
-    }
-
-    ul li:nth-child(even) .dateText {
-        float: right;
+        padding-bottom: 24px;
     }
 
     .contentTitle {
-        font-family: "Nanum Myeongjo", serif;
-        font-size: 18px;
+        font: normal normal bold 18px/20px "Nanum Myeongjo";
+        font-weight: bold;
         letter-spacing: 0;
         color: #2f2f2f;
-        padding-bottom: 16px;
+        padding-bottom: 12px;
     }
 
     .contentDate {
