@@ -8,6 +8,7 @@ import SabotenMenuData from "./SabotenMenuData";
 import MenuPanel from "./panel/MenuPanel";
 import MenuModal from "./modal/MenuModal";
 import ModalProvider from "./modal/modal-provider";
+import Fab from "./fab/Fab";
 
 function HibarinMenuContent() {
     const params = useParams();
@@ -63,6 +64,7 @@ function HibarinMenuContent() {
             </section>
             <Footer />
             <MenuModal />
+            <Fab />
         </ModalProvider>
     );
 }

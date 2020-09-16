@@ -5,6 +5,7 @@ import { useParams, Redirect } from "react-router-dom";
 import Footer from "../Footer";
 import SabotenMenu from "./SabotenMenu";
 import SabotenStory from "./SabotenStory";
+import Fab from "./fab/Fab";
 
 function SabotenContent() {
     const { subject } = useParams();
@@ -13,6 +14,7 @@ function SabotenContent() {
             <SabotenBanner subject={subject} />
             <SabotenCaseRenderer subject={subject} />
             <Footer />
+            <Fab />
         </>
     );
 }

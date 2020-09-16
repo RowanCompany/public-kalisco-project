@@ -5,6 +5,7 @@ import Footer from "../Footer";
 import HibarinStory from "./HibarinStory";
 import HibarinStore from "./HibarinStore";
 import HibarinMenu from "./HibarinMenu";
+import Fab from "./fab/Fab";
 
 function HibarinContent() {
     const { subject } = useParams();
@@ -13,6 +14,7 @@ function HibarinContent() {
             <HibarinBanner subject={subject} />
             <HibarinCaseRenderer subject={subject} />
             <Footer />
+            <Fab />
         </>
     );
 }
