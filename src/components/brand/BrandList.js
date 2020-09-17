@@ -3,7 +3,7 @@ import React from "react";
 import brandImage from "../../static/images/brand.png";
 import sabotonLogo from "../../static/svg/logo-saboten.svg";
 import hibarinLogo from "../../static/svg/logo-hibarin.svg";
-import tacobellLogo from "../../static/svg/logo-tacobell.svg";
+import tacobellLogo from "../../static/svg/logo-tacobell-2.svg";
 import centralkcLogo from "../../static/svg/logo-centralkc.svg";
 import banjooLogo from "../../static/images/logo-banjoo.png";
 import { Link } from "react-router-dom";
@@ -44,7 +44,10 @@ function BrandList() {
                             </div>
                             <div className="brand-title">타코벨</div>
                         </a>
-                        <div className="brand-circle-wrapper centralkc">
+                        <div
+                            className="brand-circle-wrapper centralkc"
+                            onClick={() => window.alert("준비중입니다.")}
+                        >
                             <div className="brand-logo-wrapper">
                                 <img
                                     src={centralkcLogo}
@@ -53,7 +56,10 @@ function BrandList() {
                             </div>
                             <div className="brand-title">센트럴키친</div>
                         </div>
-                        <div className="brand-circle-wrapper banjoo">
+                        <div
+                            className="brand-circle-wrapper banjoo"
+                            onClick={() => window.alert("준비중입니다.")}
+                        >
                             <div className="brand-logo-wrapper">
                                 <img src={banjooLogo} alt="banjoo logo" />
                             </div>
