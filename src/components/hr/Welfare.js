@@ -9,7 +9,7 @@ function Welfare() {
             <section className={styles.welfareFirstSection}>
                 <div className={styles.systemTitle}>인사제도</div>
                 <div className={styles.systemParagraph}>
-                    임직원을 위한 복지/지원 정책
+                    임직원을 위한 복지정책
                 </div>
                 <div className={styles.systemPanelWrapper}>
                     <div

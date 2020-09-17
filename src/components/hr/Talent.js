@@ -76,16 +76,14 @@ function Talent() {
                         />
                     </div>
                     <div className={styles.peopleParagraph}>
-                        회사의 전략을 위해 고민하고 아이디어를 제안하며,
-                        실행하는 열정적인 프로의 모습을 가진사람
+                        회사의 새로운 가치를 창출하기 위해 고민하고, 아이디어를
+                        제안하며, 실행하는 열정적인 인재
                     </div>
                     <div className={styles.peopleGridWrapper}>
                         <div>
-                            <div className={styles.peopleCircle}>
-                                소통과 수용
-                            </div>
+                            <div className={styles.peopleCircle}>겸손</div>
                             <div className={styles.peopleGridParagraph}>
-                                자신의 know how를 내세우기보다는
+                                소통과 수용을 통해 신뢰를 형성하며
                                 <br />
                                 항상 겸허한 자세로 타인의 아이디어를
                                 <br />
@@ -95,19 +93,25 @@ function Talent() {
                         <div>
                             <div className={styles.peopleCircle}>책임</div>
                             <div className={styles.peopleGridParagraph}>
-                                자신의 맡은 R&amp;R에
+                                자신의 R&amp;R뿐만 아니라
                                 <br />
-                                최선을 다하는 책임감
+                                다양한 분야에서 능력을 발휘하고,
+                                <br />
+                                민첩하고 자율적으로
+                                <br />
+                                책임감있게 임하는 자세
                             </div>
                         </div>
                         <div>
-                            <div className={styles.peopleCircle}>열의</div>
+                            <div className={styles.peopleCircle}>리더십</div>
                             <div className={styles.peopleGridParagraph}>
-                                다른 사람들과 소통을 통해
+                                타인과의 소통을 통해
                                 <br />
-                                이해심을 바탕으로
+                                상대방의 입장을 이해하고 공감하며,
                                 <br />
-                                상대방의 입장을 공감할 줄 아는 사람
+                                협력을 통해 도전적인 목표 달성을 위해
+                                <br />
+                                열정적으로 일하는 자세
                             </div>
                         </div>
                     </div>

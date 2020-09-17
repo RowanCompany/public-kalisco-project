@@ -47,7 +47,7 @@ function HrBanner({ subject }) {
                                             : ""
                                     }`}
                                 >
-                                    복지
+                                    인사제도
                                 </Link>
                             </li>
                         </ul>
