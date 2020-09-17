@@ -228,7 +228,7 @@ function MainVerticalList() {
                             <div className="vertical-hr membership-hr" />
                             {/* TODO: Link to React Route Link */}
                             <Link to="/hr/talent" className="kalisco-button">
-                                교육 / 복지 바로가기
+                                교육 / 인사제도
                             </Link>
                         </div>
                     </div>
