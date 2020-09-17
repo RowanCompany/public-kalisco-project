@@ -4,7 +4,7 @@ import productHomemadeMaterialIcon from "../../static/svg/product-homemade-mater
 import productHomemadeRecipeIcon from "../../static/svg/product-homemade-recipe.svg";
 import productHomemadeOriginalIcon from "../../static/svg/product-homemade-original.svg";
 import productHomemadeChoosingIcon from "../../static/svg/product-homemade-choosing.svg";
-import productHome1Image from "../../static/images/img-product-home1.png";
+import productHome1Image from "../../static/images/product-katsu-old-200917.jpg";
 import productHome2Image from "../../static/images/img-product-home-2-1.png";
 import { Link } from "react-router-dom";
 

@@ -50,6 +50,15 @@
                 padding-left: 118px;
                 padding-bottom: 40px;
             }
+
+            .gifFlexWrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: #ffffff;
+                font-size: 18px;
+                line-height: 21px;
+            }
         }
 
         .redBoxWrapper {

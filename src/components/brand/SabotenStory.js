@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./saboten.module.scss";
 import story1 from "../../static/images/img-p-saboten-story1.png";
 import sabotenLogo from "../../static/svg/logo-saboten-story.svg";
-import gif1 from "../../static/images/gif-p-saboten-story1.gif";
-import gif2 from "../../static/images/gif-p-saboten-story2.gif";
 import gif3 from "../../static/images/gif-p-saboten-story3.gif";
 import gif4 from "../../static/images/gif-p-saboten-story4.gif";
 import lastImage from "../../static/images/img-p-saboten-story-last.png";
@@ -12,6 +10,8 @@ import image2 from "../../static/images/img-p-saboten-story-breadcrumbs.png";
 import image3 from "../../static/images/img-p-saboten-story-pork.png";
 import image4 from "../../static/images/img-p-saboten-story-sauce.png";
 import image5 from "../../static/images/img-p-saboten-story-handmade.png";
+import image6 from "../../static/images/img-p-saboten-story-new-1.png";
+import image7 from "../../static/images/img-p-saboten-story-new-2.png";
 
 function SabotenStory() {
     return (
@@ -50,12 +50,12 @@ function SabotenStory() {
                     <div
                         className={`${styles.secondDescriptionWrapper} ${styles.storyDescription}`}
                     >
-                        사보텐은 스페인어로{" "}
+                        사보텐은 스페인어로
                         <span style={{ fontSize: "28px" }}>‘선인장’</span>을
                         의미 합니다.
                         <br />
                         <br />
-                        신주쿠 돈카츠 전문점 사보텐은
+                        정통 돈카츠 전문점 사보텐은
                         <br />
                         선인장과 같은 영원한 생명력을 염원으로 탄생한 브랜드
                         입니다.
@@ -65,19 +65,26 @@ function SabotenStory() {
                         style={{ height: "198px" }}
                     />
                     <div className={styles.gifListWrapper}>
-                        <div style={{ paddingRight: "20px" }}>
+                        <div
+                            className={styles.gifFlexWrapper}
+                            style={{
+                                paddingRight: "20px",
+                            }}
+                        >
                             <img
-                                src={gif1}
+                                src={image6}
                                 alt="gif 1"
                                 className={styles.sabotenKatsuImages}
                             />
+                            <div>겨울왕굴돈카츠</div>
                         </div>
-                        <div>
+                        <div className={styles.gifFlexWrapper}>
                             <img
-                                src={gif2}
+                                src={image7}
                                 alt="gif 2"
                                 className={styles.sabotenKatsuImages}
                             />
+                            <div>유린기 냉소바</div>
                         </div>
                         <div
                             className={`${styles.storyDescription} ${styles.sabotenKatsuDescriptionWrapper}`}
@@ -89,7 +96,7 @@ function SabotenStory() {
                             우리의 입맛에 맞게 개선하였습니다.
                         </div>
                     </div>
-                    <div className={styles.redBoxWrapper}>
+                    {/* <div className={styles.redBoxWrapper}>
                         <div
                             className={`${styles.redBox} ${styles.storyDescription}`}
                         >
@@ -100,7 +107,7 @@ function SabotenStory() {
                             <br />
                             일본의 정통 돈카츠 맛을 완성했습니다.
                         </div>
-                    </div>
+                    </div> */}
                     <div className={`row ${styles.storyFlexListWrapper}`}>
                         <div className="col text-right">
                             <img
@@ -233,12 +240,12 @@ function SabotenStory() {
                             className={`col ${styles.storyFlexRightDescriptionWrapper}`}
                         >
                             <div className={styles.storyFlexDescriptionTitle}>
-                                일본 정통의 수제 방식
+                                정통의 수제 방식
                             </div>
                             <div className={styles.storyFlexDescription}>
-                                일본식 돈카츠 본연의 맛을 느낄 수 있는
+                                정통 돈카츠 본연의 맛을 느낄 수 있는
                                 <br />
-                                일본 장인의 돈육 수제 두드림 방식 테테타타쿠
+                                장인의 돈육 수제 두드림 방식 테테타타쿠
                             </div>
                         </div>
                     </div>
