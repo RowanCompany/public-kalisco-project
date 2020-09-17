@@ -117,7 +117,6 @@ function MainVerticalList() {
                                 맛을 아는 당신을 위해 캘리스코가 준비한 선물.
                             </div>
                             <div className="vertical-hr membership-hr" />
-                            {/* TODO: Link to React Route Link */}
                             <Link to="/supports" className="kalisco-button">
                                 혜택 보러가기
                             </Link>

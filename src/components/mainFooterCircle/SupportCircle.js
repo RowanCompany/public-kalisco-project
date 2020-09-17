@@ -15,7 +15,7 @@ function SupportCircle() {
                 <SupportLogo hovered={hovered} />
             </div>
             <div style={{ paddingTop: "32px" }}>
-                고객센터
+                Customer Service
                 <br />
                 FAQ
             </div>

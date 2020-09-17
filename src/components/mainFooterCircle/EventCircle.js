@@ -16,7 +16,7 @@ function EventCircle() {
                 <div>
                     <EventLogo hovered={hovered} />
                 </div>
-                <div style={{ paddingTop: "32px" }}>이벤트</div>
+                <div style={{ paddingTop: "32px" }}>Event</div>
             </Link>
         </MainFooterCircle>
     );
