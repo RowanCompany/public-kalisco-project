@@ -70,7 +70,9 @@ function SabotenStore() {
                                 당신의 일상에서 사보텐을 만나보세요.
                             </div>
                             <div className={styles.storeMapDescription}>
-                                전국 88개 매장을
+                                매장을 지도로
+                                <br />
+                                더욱 쉽고 빠르게 찾아보아요
                                 <br />
                                 지도로 더욱 쉽고 빠르게 찾아보아요
                             </div>

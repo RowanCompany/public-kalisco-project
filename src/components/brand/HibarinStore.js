@@ -42,13 +42,13 @@ function HibarinStore() {
                         <div className={styles.storeTextWrapper}>
                             <div className="container text-right">
                                 <div className={styles.storeTextTitle}>
-                                    송파 하비오점
+                                    이태원점
                                 </div>
                                 <div className={styles.storeTextDescription}>
-                                    송파 하비오점에서 스타일리쉬한 히노끼에이징
+                                    이태원점에서 스타일리쉬한 히노끼에이징
                                     카츠와
                                     <br />
-                                    하비오점만의 시그니처 메뉴를 만나보세요
+                                    이태원점만의 시그니처 메뉴를 만나보세요
                                 </div>
                             </div>
                         </div>
@@ -94,7 +94,9 @@ function HibarinStore() {
                                 당신의 일상에서 히바린을 만나보세요.
                             </div>
                             <div className={styles.storeMapDescription}>
-                                전국 88개 매장을
+                                매장을 지도로
+                                <br />
+                                더욱 쉽고 빠르게 찾아보아요
                                 <br />
                                 지도로 더욱 쉽고 빠르게 찾아보아요
                             </div>
