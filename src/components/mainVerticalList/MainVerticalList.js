@@ -118,9 +118,9 @@ function MainVerticalList() {
                             </div>
                             <div className="vertical-hr membership-hr" />
                             {/* TODO: Link to React Route Link */}
-                            {/* <a href="" className="kalisco-button">
-                                캘리스코 멤버십 신청하기
-                            </a> */}
+                            <Link to="/supports" className="kalisco-button">
+                                혜택 보러가기
+                            </Link>
                         </div>
                     </div>
                     <div className="wh-100">
