@@ -57,58 +57,70 @@ function HibarinMenu({ subject }) {
                         navigation
                     >
                         <SwiperSlide className="menu-slide">
-                            <div className="text-center">
-                                <img
-                                    src={menu1}
-                                    alt="Menu 1"
-                                    className="img-fill"
-                                />
-                            </div>
+                            <Link to="/supports/events/1">
+                                <div className="text-center">
+                                    <img
+                                        src={menu1}
+                                        alt="Menu 1"
+                                        className="img-fill"
+                                    />
+                                </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide className="menu-slide">
-                            <div className="text-center">
-                                <img
-                                    src={menu2}
-                                    alt="Menu 2"
-                                    className="img-fill"
-                                />
-                            </div>
+                            <Link to="/supports/events/1">
+                                <div className="text-center">
+                                    <img
+                                        src={menu2}
+                                        alt="Menu 2"
+                                        className="img-fill"
+                                    />
+                                </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide className="menu-slide">
-                            <div className="text-center">
-                                <img
-                                    src={menu3}
-                                    alt="Menu 3"
-                                    className="img-fill"
-                                />
-                            </div>
+                            <Link to="/supports/events/1">
+                                <div className="text-center">
+                                    <img
+                                        src={menu3}
+                                        alt="Menu 3"
+                                        className="img-fill"
+                                    />
+                                </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide className="menu-slide">
-                            <div className="text-center">
-                                <img
-                                    src={menu4}
-                                    alt="Menu 4"
-                                    className="img-fill"
-                                />
-                            </div>
+                            <Link to="/supports/events/1">
+                                <div className="text-center">
+                                    <img
+                                        src={menu4}
+                                        alt="Menu 4"
+                                        className="img-fill"
+                                    />
+                                </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide className="menu-slide">
-                            <div className="text-center">
-                                <img
-                                    src={menu5}
-                                    alt="Menu 5"
-                                    className="img-fill"
-                                />
-                            </div>
+                            <Link to="/supports/events/1">
+                                <div className="text-center">
+                                    <img
+                                        src={menu5}
+                                        alt="Menu 5"
+                                        className="img-fill"
+                                    />
+                                </div>
+                            </Link>
                         </SwiperSlide>
                         <SwiperSlide className="menu-slide">
-                            <div className="text-center">
-                                <img
-                                    src={menu6}
-                                    alt="Menu 6"
-                                    className="img-fill"
-                                />
-                            </div>
+                            <Link to="/supports/events/1">
+                                <div className="text-center">
+                                    <img
+                                        src={menu6}
+                                        alt="Menu 6"
+                                        className="img-fill"
+                                    />
+                                </div>
+                            </Link>
                         </SwiperSlide>
                     </Swiper>
                 </div>

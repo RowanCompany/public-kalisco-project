@@ -52,13 +52,15 @@ function SabotenMenu({ subject }) {
                         navigation
                     >
                         <SwiperSlide className="menu-slide">
-                            <div className="text-center">
-                                <img
-                                    src={menu1}
-                                    alt="Menu 1"
-                                    className="img-fill"
-                                />
-                            </div>
+                            <Link to="/supports/events/1">
+                                <div className="text-center">
+                                    <img
+                                        src={menu1}
+                                        alt="Menu 1"
+                                        className="img-fill"
+                                    />
+                                </div>
+                            </Link>
                         </SwiperSlide>
                     </Swiper>
                 </div>
