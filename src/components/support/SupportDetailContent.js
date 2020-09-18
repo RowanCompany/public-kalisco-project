@@ -181,57 +181,78 @@ function SupportCaseRenderer({ subject }) {
                             </div>
                         </div>
                         <div className={styles.tempKakaoPanelFooter}>
-                            <div className={styles.tempKakaoPanelFooterBox}>
-                                <div>
-                                    <img
-                                        src={footerSabotenLogo}
-                                        alt="footer saboten"
-                                    />
+                            <a
+                                href="https://pf.kakao.com/_rSEPxb"
+                                rel="noopener noreferrer"
+                                className="text-no-decoration d-inline-block"
+                                target="_blank"
+                            >
+                                <div className={styles.tempKakaoPanelFooterBox}>
+                                    <div>
+                                        <img
+                                            src={footerSabotenLogo}
+                                            alt="footer saboten"
+                                        />
+                                    </div>
+                                    <div
+                                        className={
+                                            styles.tempKakaoPanelFooterBoxText
+                                        }
+                                    >
+                                        <b>'사보텐'</b>
+                                        <br />
+                                        카카오톡으로 이동
+                                    </div>
                                 </div>
-                                <div
-                                    className={
-                                        styles.tempKakaoPanelFooterBoxText
-                                    }
-                                >
-                                    <b>'사보텐'</b>
-                                    <br />
-                                    카카오톡으로 이동
+                            </a>
+                            <a
+                                href="https://pf.kakao.com/_xcancxb"
+                                rel="noopener noreferrer"
+                                className="text-no-decoration d-inline-block"
+                                target="_blank"
+                            >
+                                <div className={styles.tempKakaoPanelFooterBox}>
+                                    <div>
+                                        <img
+                                            src={footerHibarinLogo}
+                                            alt="footer hibarin"
+                                        />
+                                    </div>
+                                    <div
+                                        className={
+                                            styles.tempKakaoPanelFooterBoxText
+                                        }
+                                    >
+                                        <b>'히바린'</b>
+                                        <br />
+                                        카카오톡으로 이동
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.tempKakaoPanelFooterBox}>
-                                <div>
-                                    <img
-                                        src={footerHibarinLogo}
-                                        alt="footer hibarin"
-                                    />
+                            </a>
+                            <a
+                                href="https://pf.kakao.com/_lxnKUxb"
+                                rel="noopener noreferrer"
+                                className="text-no-decoration d-inline-block"
+                                target="_blank"
+                            >
+                                <div className={styles.tempKakaoPanelFooterBox}>
+                                    <div>
+                                        <img
+                                            src={footerCentralKitchenLogo}
+                                            alt="footer hibarin"
+                                        />
+                                    </div>
+                                    <div
+                                        className={
+                                            styles.tempKakaoPanelFooterBoxText
+                                        }
+                                    >
+                                        <b>'센트럴키친'</b>
+                                        <br />
+                                        카카오톡으로 이동
+                                    </div>
                                 </div>
-                                <div
-                                    className={
-                                        styles.tempKakaoPanelFooterBoxText
-                                    }
-                                >
-                                    <b>'히바린'</b>
-                                    <br />
-                                    카카오톡으로 이동
-                                </div>
-                            </div>
-                            <div className={styles.tempKakaoPanelFooterBox}>
-                                <div>
-                                    <img
-                                        src={footerCentralKitchenLogo}
-                                        alt="footer hibarin"
-                                    />
-                                </div>
-                                <div
-                                    className={
-                                        styles.tempKakaoPanelFooterBoxText
-                                    }
-                                >
-                                    <b>'센트럴키친'</b>
-                                    <br />
-                                    카카오톡으로 이동
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
