@@ -9,7 +9,7 @@ function ProductDetailNavigator({ content }) {
         ? styles.darkThemeNavigator
         : isContentSauce
         ? styles.lightThemeNavigator
-        : "";
+        : styles.lightThemeNavigator;
     const darkThemeActiveStyle = styles.darkThemeNavActive;
     const lightThemeActiveStyle = styles.lightThemeNavActive;
     return (

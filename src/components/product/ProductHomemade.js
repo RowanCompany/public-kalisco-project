@@ -6,12 +6,14 @@ import productHomemadeOriginalIcon from "../../static/svg/product-homemade-origi
 import productHomemadeChoosingIcon from "../../static/svg/product-homemade-choosing.svg";
 import productHome1Image from "../../static/images/product-katsu-old-200917.jpg";
 import productHome2Image from "../../static/images/img-product-home-2-1.png";
+import ProductDetailNavigator from "./ProductDetailNavigator";
 import { Link } from "react-router-dom";
 
 function ProductHomemade() {
     return (
         <>
             <section className={styles.homemadeFirstSection}>
+                <ProductDetailNavigator />
                 <div className="container">
                     <div className={styles.homemadeCircleList}>
                         <div
