@@ -92,7 +92,7 @@ function ProductHomemade() {
                                     className={styles.homemadeButton}
                                     to="/products/homemade/katsu"
                                 >
-                                    돈카츠 제품 보러가기
+                                    제품 보러가기
                                 </Link>
                             </div>
                         </div>
@@ -126,18 +126,53 @@ function ProductHomemade() {
                             사보텐 매장에서 샐러드와 곁들여 먹는
                             <b>참깨소스, 유자소스</b>
                             <br />
-                            뿐만 아니라{" "}
+                            뿐만 아니라
                             <b>베스트 메뉴에서 탄생한 커리소스, 일식덮밥소스</b>
                             등
                             <br />
                             고퀄리티의 다양한 소스를 즐겨보세요!
-                            <div style={{ paddingTop: "70px" }}>
+                            <div
+                                style={{
+                                    paddingTop: "70px",
+                                }}
+                            >
                                 <Link
                                     className={styles.homemadeButton}
                                     to="/products/homemade/sauce"
+                                    style={{
+                                        marginRight: "16px",
+                                        minWidth: "180px",
+                                        paddingTop: "16px",
+                                        paddingBottom: "16px",
+                                    }}
                                 >
-                                    소스 제품 보러가기
+                                    제품 보러가기
                                 </Link>
+                                <a
+                                    href="https://store.kakao.com/sabotenkorea/products/68160429?ref=share"
+                                    rel="noopener noreferrer"
+                                    className={styles.homemadeButton}
+                                    style={{
+                                        marginRight: "16px",
+                                        minWidth: "180px",
+                                        paddingTop: "16px",
+                                        paddingBottom: "16px",
+                                    }}
+                                >
+                                    톡스토어
+                                </a>
+                                <a
+                                    href="https://smartstore.naver.com/saboten"
+                                    rel="noopener noreferrer"
+                                    className={styles.homemadeButton}
+                                    style={{
+                                        minWidth: "180px",
+                                        paddingTop: "16px",
+                                        paddingBottom: "16px",
+                                    }}
+                                >
+                                    스토어팜
+                                </a>
                             </div>
                         </div>
                     </div>
