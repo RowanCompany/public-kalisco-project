@@ -129,27 +129,27 @@
 
         .tempKakaoPanelFooter {
             background-color: #f4d32f;
-            padding: 19px 20px 19px 30px;
+            padding: 19px 30px;
             display: flex;
             justify-content: space-between;
 
             .tempKakaoPanelFooterBox {
                 border: 2px solid #dbbb19;
                 border-radius: 8px;
-                padding: 14px 34px;
+                padding: 14px 20px;
                 display: flex;
                 background-color: #ffffff;
                 align-items: center;
 
                 .tempKakaoPanelFooterBoxText {
-                    padding-left: 40px;
-                    font-size: 17px;
+                    padding-left: 10px;
+                    font-size: 15px;
                     color: #2f2f2f;
                     letter-spacing: -0.34px;
                 }
 
                 &:not(:last-child) {
-                    margin-right: 40px;
+                    margin-right: 18px;
                 }
             }
         }

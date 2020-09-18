@@ -8,6 +8,7 @@ import kakaotalkIcon from "../../static/svg/icon_kakaotalk.svg";
 import kakaoPlusImage from "../../static/images/img_kakaoplus.png";
 import footerSabotenLogo from "../../static/svg/icon_saboten_b.svg";
 import footerHibarinLogo from "../../static/svg/icon_hibarin_b.svg";
+import footerCentralKitchenLogo from "../../static/svg/logo_central_kakao.svg";
 
 function SupportDetailContent() {
     const { subject } = useParams();
@@ -192,9 +193,9 @@ function SupportCaseRenderer({ subject }) {
                                         styles.tempKakaoPanelFooterBoxText
                                     }
                                 >
-                                    카카오톡에서
+                                    <b>'사보텐'</b>
                                     <br />
-                                    <b>'사보텐'</b>을 검색해주세요!
+                                    카카오톡으로 이동
                                 </div>
                             </div>
                             <div className={styles.tempKakaoPanelFooterBox}>
@@ -209,9 +210,26 @@ function SupportCaseRenderer({ subject }) {
                                         styles.tempKakaoPanelFooterBoxText
                                     }
                                 >
-                                    카카오톡에서
+                                    <b>'히바린'</b>
                                     <br />
-                                    <b>'히바린'</b>을 검색해주세요!
+                                    카카오톡으로 이동
+                                </div>
+                            </div>
+                            <div className={styles.tempKakaoPanelFooterBox}>
+                                <div>
+                                    <img
+                                        src={footerCentralKitchenLogo}
+                                        alt="footer hibarin"
+                                    />
+                                </div>
+                                <div
+                                    className={
+                                        styles.tempKakaoPanelFooterBoxText
+                                    }
+                                >
+                                    <b>'센트럴키친'</b>
+                                    <br />
+                                    카카오톡으로 이동
                                 </div>
                             </div>
                         </div>
