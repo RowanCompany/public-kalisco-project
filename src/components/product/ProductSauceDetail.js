@@ -71,7 +71,7 @@ function ProductSauceDetail({ content }) {
             firstTitle: "[20주년 에디션] 사보텐 참깨소스 200g",
             priceText: (
                 <>
-                    <b>5,400</b>원(VAT포함)
+                    <b>4,500</b>원(VAT포함)
                 </>
             ),
             firstDescription: (
@@ -113,7 +113,7 @@ function ProductSauceDetail({ content }) {
             firstTitle: "[20주년 에디션] 사보텐 유자소스 210g",
             priceText: (
                 <>
-                    <b>5,200</b>원(VAT포함)
+                    <b>4,500</b>원(VAT포함)
                 </>
             ),
             firstDescription: (
@@ -160,7 +160,7 @@ function ProductSauceDetail({ content }) {
                 "[20주년 에디션] 사보텐 일식 덮밥 소스 (셰프의 만능 치트키)",
             priceText: (
                 <>
-                    <b>5,100</b>원(VAT포함)
+                    <b>4,500</b>원(VAT포함)
                 </>
             ),
             // firstDescription: (
@@ -204,6 +204,11 @@ function ProductSauceDetail({ content }) {
             firstImage: imgCurry1,
             secondImage: imgCurry2,
             firstTitle: "커리소스",
+            priceText: (
+                <>
+                    <b>4,500</b>원(VAT포함)
+                </>
+            ),
             firstDescription: (
                 <>
                     일본 전통 방식으로 깊은 맛 가득
