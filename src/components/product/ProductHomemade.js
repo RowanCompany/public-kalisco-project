@@ -8,6 +8,8 @@ import productHome1Image from "../../static/images/product-katsu-old-200917.jpg"
 import productHome2Image from "../../static/images/img-product-home-2-1.png";
 import ProductDetailNavigator from "./ProductDetailNavigator";
 import { Link } from "react-router-dom";
+import naverIcon from "../../static/svg/icon_naver.svg";
+import kakaotalkIcon from "../../static/svg/icon_kakaotalk_product.svg";
 
 function ProductHomemade() {
     return (
@@ -136,44 +138,34 @@ function ProductHomemade() {
                             <div
                                 style={{
                                     paddingTop: "70px",
+                                    paddingBottom: "60px",
                                 }}
                             >
                                 <Link
                                     className={styles.homemadeButton}
                                     to="/products/homemade/sauce"
-                                    style={{
-                                        marginRight: "16px",
-                                        minWidth: "180px",
-                                        paddingTop: "16px",
-                                        paddingBottom: "16px",
-                                    }}
                                 >
                                     제품 보러가기
                                 </Link>
+                            </div>
+                            <div className={styles.storeButtonWrapper}>
                                 <a
                                     href="https://store.kakao.com/sabotenkorea/products/68160429?ref=share"
                                     rel="noopener noreferrer"
-                                    className={styles.homemadeButton}
-                                    style={{
-                                        marginRight: "16px",
-                                        minWidth: "180px",
-                                        paddingTop: "16px",
-                                        paddingBottom: "16px",
-                                    }}
+                                    target="_blank"
+                                    className={styles.naverStoreButton}
                                 >
-                                    톡스토어
+                                    <img src={naverIcon} alt="naver" />
+                                    네이버 스토어에서 구매하기
                                 </a>
                                 <a
                                     href="https://smartstore.naver.com/saboten"
                                     rel="noopener noreferrer"
-                                    className={styles.homemadeButton}
-                                    style={{
-                                        minWidth: "180px",
-                                        paddingTop: "16px",
-                                        paddingBottom: "16px",
-                                    }}
+                                    target="_blank"
+                                    className={styles.kakaoStoreButton}
                                 >
-                                    스토어팜
+                                    <img src={kakaotalkIcon} alt="kakaotalk" />
+                                    카카오 스토어에서 구매하기
                                 </a>
                             </div>
                         </div>

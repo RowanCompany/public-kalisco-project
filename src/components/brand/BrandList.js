@@ -16,7 +16,7 @@ function BrandList() {
                 <div className="main-bg-wrapper">
                     <div className="brand-list-wrapper">
                         <Link
-                            className="d-inline-block brand-circle-wrapper saboten"
+                            className="d-inline-block brand-circle-wrapper saboten animate__animated animate__rotateIn"
                             to="/brand/saboten/story"
                         >
                             <div className="brand-logo-wrapper">
@@ -25,7 +25,7 @@ function BrandList() {
                             <div className="brand-title">사보텐</div>
                         </Link>
                         <Link
-                            className="d-inline-block brand-circle-wrapper hibarin"
+                            className="d-inline-block brand-circle-wrapper hibarin animate__animated animate__rotateIn"
                             to="/brand/hibarin/story"
                         >
                             <div className="brand-logo-wrapper">
@@ -34,7 +34,7 @@ function BrandList() {
                             <div className="brand-title">히바린</div>
                         </Link>
                         <a
-                            className="d-inline-block brand-circle-wrapper tacobell"
+                            className="d-inline-block brand-circle-wrapper tacobell animate__animated animate__rotateIn"
                             href="http://koreatacobell.com/"
                             rel="noopener noreferrer"
                             target="_blank"
@@ -45,7 +45,7 @@ function BrandList() {
                             <div className="brand-title">타코벨</div>
                         </a>
                         <div
-                            className="brand-circle-wrapper centralkc"
+                            className="brand-circle-wrapper centralkc animate__animated animate__rotateIn"
                             onClick={() => window.alert("준비중입니다.")}
                         >
                             <div className="brand-logo-wrapper">
@@ -57,7 +57,7 @@ function BrandList() {
                             <div className="brand-title">센트럴키친</div>
                         </div>
                         <div
-                            className="brand-circle-wrapper banjoo"
+                            className="brand-circle-wrapper banjoo animate__animated animate__rotateIn"
                             onClick={() => window.alert("준비중입니다.")}
                         >
                             <div className="brand-logo-wrapper">
