@@ -8,6 +8,7 @@ import SabotenLanding from "../../components/brand/SabotenLanding";
 import SabotenContent from "../../components/brand/SabotenContent";
 import SabotenMenuContent from "../../components/brand/SabotenMenuContent";
 import BrandList from "../../components/brand/BrandList";
+import Fab from "../../components/brand/fab/Fab";
 
 function Brand() {
     const match = useRouteMatch();
@@ -39,7 +40,10 @@ function Brand() {
                     path={`${match.path}/hibarin`}
                     component={HibarinLanding}
                 />
-                <Route path={match.path} component={BrandList} />
+                <Route path={match.path}>
+                    <BrandList />
+                    <Fab />
+                </Route>
             </Switch>
         </>
     );

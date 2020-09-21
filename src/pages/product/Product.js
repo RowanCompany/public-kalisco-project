@@ -3,6 +3,7 @@ import Nav from "../../components/nav/Nav";
 import Footer from "../../components/Footer";
 import ProductContent from "../../components/product/ProductContent";
 import { useRouteMatch, Switch, Route, Redirect } from "react-router-dom";
+import Fab from "../../components/brand/fab/Fab";
 
 function Product() {
     const match = useRouteMatch();
@@ -19,6 +20,7 @@ function Product() {
                 </Route>
             </Switch>
             <Footer />
+            <Fab />
         </>
     );
 }

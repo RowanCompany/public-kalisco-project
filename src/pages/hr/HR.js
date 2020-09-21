@@ -3,6 +3,7 @@ import Nav from "../../components/nav/Nav";
 import Footer from "../../components/Footer";
 import { useRouteMatch, Switch, Route, Redirect } from "react-router-dom";
 import HrContent from "../../components/hr/HrContent";
+import Fab from "../../components/brand/fab/Fab";
 
 function HR() {
     const match = useRouteMatch();
@@ -16,6 +17,7 @@ function HR() {
                 </Route>
             </Switch>
             <Footer />
+            <Fab />
         </>
     );
 }

@@ -4,6 +4,7 @@ import AboutHistory from "../../components/aboutContent/AboutHistory";
 import AboutContent from "../../components/aboutContent/AboutContent";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 import AboutBusiness from "../../components/aboutContent/AboutBusiness";
+import Fab from "../../components/brand/fab/Fab";
 
 function About() {
     const match = useRouteMatch();
@@ -21,6 +22,7 @@ function About() {
                 />
                 <Route path={match.path} component={AboutContent} />
             </Switch>
+            <Fab />
         </>
     );
 }
