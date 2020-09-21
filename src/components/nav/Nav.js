@@ -32,7 +32,14 @@ function ConditionalLinkRenderer({ link, title, alternativeLink }, ref) {
             </Link>
         );
     } else {
-        return <div className={styles.navLink}>{title}</div>;
+        return (
+            <div
+                className={styles.navLink}
+                onClick={() => window.alert("준비중입니다.")}
+            >
+                {title}
+            </div>
+        );
     }
 }
 
@@ -144,7 +151,7 @@ function Nav() {
                 </li> */}
                 <li>
                     <div>
-                                <Link
+                        <Link
                             to="/contact"
                             className={`${styles.navLink} ${
                                 currentPathRef.current.includes("contact")
@@ -153,7 +160,7 @@ function Nav() {
                             }`}
                             onMouseEnter={() => setCurrentHovered("contact")}
                         >
-                                고객소통
+                            고객소통
                         </Link>
                     </div>
                 </li>

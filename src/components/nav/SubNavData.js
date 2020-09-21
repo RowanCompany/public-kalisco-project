@@ -79,7 +79,7 @@ export default {
             link: "/hr/education",
         },
         {
-            title: "복지",
+            title: "인사제도",
             link: "/hr/welfare",
         },
     ],
