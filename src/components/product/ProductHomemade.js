@@ -150,7 +150,7 @@ function ProductHomemade() {
                             </div>
                             <div className={styles.storeButtonWrapper}>
                                 <a
-                                    href="https://store.kakao.com/sabotenkorea/products/68160429?ref=share"
+                                    href="https://smartstore.naver.com/saboten"
                                     rel="noopener noreferrer"
                                     target="_blank"
                                     className={styles.naverStoreButton}
@@ -159,7 +159,7 @@ function ProductHomemade() {
                                     네이버 스토어에서 구매하기
                                 </a>
                                 <a
-                                    href="https://smartstore.naver.com/saboten"
+                                    href="https://store.kakao.com/sabotenkorea/products/68160429?ref=share"
                                     rel="noopener noreferrer"
                                     target="_blank"
                                     className={styles.kakaoStoreButton}
