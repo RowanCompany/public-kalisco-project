@@ -78,7 +78,7 @@ function Contact() {
 
     return (
         <>
-            <ContactBanner />
+            <ContactBanner subject="contact" />
             <section className={styles.contactSection}>
                 <div className="container">
                     <div className={styles.contactTitle}>문의 작성</div>

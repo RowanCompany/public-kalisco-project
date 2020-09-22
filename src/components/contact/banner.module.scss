@@ -12,12 +12,13 @@
 
         .title {
             margin-top: auto;
-            margin-bottom: 160px;
+            margin-bottom: 105px;
             font-family: "Nanum Myeongjo", serif;
             font-size: 40px;
             line-height: 42px;
             color: #ffffff;
             letter-spacing: 0;
+            --animate-duration: 1.5s;
         }
 
         .menuList {

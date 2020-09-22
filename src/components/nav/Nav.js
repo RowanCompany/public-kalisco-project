@@ -154,7 +154,9 @@ function Nav() {
                         <Link
                             to="/contact"
                             className={`${styles.navLink} ${
-                                currentPathRef.current.includes("contact")
+                                currentPathRef.current.includes("contact") ||
+                                currentPathRef.current.includes("notices") ||
+                                currentPathRef.current.includes("faq")
                                     ? styles.active
                                     : ""
                             }`}

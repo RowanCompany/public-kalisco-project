@@ -49,11 +49,19 @@
         flex-basis: 50%;
         position: relative;
 
+        &:hover {
+            .gridBackgroundWrapper {
+                background-color: rgba($color: #000000, $alpha: 0.3);
+            }
+        }
+
         .gridBackgroundWrapper {
             position: absolute;
             width: 100%;
             height: 100%;
             background-color: rgba($color: #000000, $alpha: 0.5);
+            transition: background-color 500ms;
+            z-index: 100;
 
             .gridText {
                 width: 100%;

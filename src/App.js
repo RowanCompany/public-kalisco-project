@@ -9,6 +9,7 @@ import Recruit from "./pages/recruit/Recruit";
 import Contact from "./pages/contact/Contact";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import Notice from "./pages/contact/Notice";
 
 // TODO: Suspense 도입 고려
 function App() {
@@ -25,6 +26,8 @@ function App() {
                     <Route path="/brand" component={Brand} />
                     <Route path="/products" component={Product} />
                     <Route path="/contact" component={Contact} />
+                    <Route path="/faq" component={Notice} />
+                    <Route path="/notices" component={Notice} />
                     <Route>
                         <Redirect to="/" />
                     </Route>

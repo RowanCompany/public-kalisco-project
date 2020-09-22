@@ -9,7 +9,9 @@ function HibarinBanner({ subject }) {
         <div className="position-relative">
             <div className={styles.backgroundWrapper}>
                 <div className={styles.layoutWrapper}>
-                    <div className={styles.title}>
+                    <div
+                        className={`${styles.title} animate__animated animate__fadeInDown`}
+                    >
                         <img src={textImage} alt="text" />
                     </div>
                     <div>

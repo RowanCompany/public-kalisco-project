@@ -9,7 +9,9 @@ function SupportBanner({ subject }) {
         <div className="position-relative">
             <div className={styles.supportDetailBackgroundWrapper}>
                 <div className={styles.supportDetailLayoutWrapper}>
-                    <div className={styles.supportDetailTitle}>
+                    <div
+                        className={`${styles.supportDetailTitle} animate__animated animate__fadeInDown`}
+                    >
                         <img src={SupportTextImage} alt="Support text" />
                     </div>
                     <div>
