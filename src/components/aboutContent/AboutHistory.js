@@ -41,7 +41,6 @@ function AboutHistory() {
                             >
                                 <div
                                     style={{
-                                        marginRight: "80px",
                                         textAlign: "right",
                                     }}
                                 >
@@ -87,7 +86,6 @@ function AboutHistory() {
                                     style={{
                                         paddingBottom: "69px",
                                         textAlign: "right",
-                                        marginRight: "100px",
                                         marginTop: "156px",
                                     }}
                                 >
@@ -144,7 +142,6 @@ function AboutHistory() {
                             <div className={styles.content}>
                                 <div
                                     style={{
-                                        paddingLeft: "120px",
                                         position: "relative",
                                         bottom: "-20px",
                                     }}
@@ -184,7 +181,6 @@ function AboutHistory() {
                                 <div
                                     style={{
                                         paddingBottom: "30px",
-                                        paddingRight: "128px",
                                         position: "relative",
                                         bottom: "-90px",
                                     }}
@@ -263,7 +259,6 @@ function AboutHistory() {
                             <div className={styles.content}>
                                 <div
                                     style={{
-                                        paddingLeft: "28px",
                                         position: "relative",
                                         bottom: "-30px",
                                     }}
@@ -305,7 +300,6 @@ function AboutHistory() {
                                     style={{
                                         paddingBottom: "30px",
                                         textAlign: "right",
-                                        marginRight: "100px",
                                     }}
                                 >
                                     <LazyLoad debounce={false}>
@@ -340,7 +334,6 @@ function AboutHistory() {
                             >
                                 <div
                                     style={{
-                                        paddingRight: "127px",
                                         position: "relative",
                                         bottom: "-240px",
                                     }}
@@ -402,7 +395,7 @@ function AboutHistory() {
                                 style={{ marginTop: "150px" }}
                             />
                             <div className={styles.content}>
-                                <div style={{ paddingLeft: "125px" }}>
+                                <div>
                                     <LazyLoad debounce={false}>
                                         <img
                                             src={history8}
@@ -415,7 +408,12 @@ function AboutHistory() {
                         </li>
                         <li style={{ marginBottom: "300px" }}>
                             <div className={styles.content}>
-                                <div style={{ paddingBottom: "30px" }}>
+                                <div
+                                    style={{
+                                        paddingBottom: "30px",
+                                        textAlign: "right",
+                                    }}
+                                >
                                     <LazyLoad debounce={false}>
                                         <img
                                             src={history9}

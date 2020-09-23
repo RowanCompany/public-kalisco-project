@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./saboten.module.scss";
 import story1 from "../../static/images/img-p-saboten-story1.png";
 import sabotenLogo from "../../static/svg/logo-saboten-story.svg";
+import gif1 from "../../static/images/gif-p-saboten-story1.gif";
+import gif2 from "../../static/images/gif-p-saboten-story2.gif";
 import gif3 from "../../static/images/gif-p-saboten-story3.gif";
 import gif4 from "../../static/images/gif-p-saboten-story4.gif";
 import lastImage from "../../static/images/img-p-saboten-story-last.png";
@@ -10,8 +12,8 @@ import image2 from "../../static/images/img-p-saboten-story-breadcrumbs.png";
 import image3 from "../../static/images/img-p-saboten-story-pork.png";
 import image4 from "../../static/images/img-p-saboten-story-sauce.png";
 import image5 from "../../static/images/img-p-saboten-story-handmade.png";
-import image6 from "../../static/images/img-p-saboten-story-new-1.png";
-import image7 from "../../static/images/img-p-saboten-story-new-2.png";
+//import image6 from "../../static/images/img-p-saboten-story-new-1.png";
+//import image7 from "../../static/images/img-p-saboten-story-new-2.png";
 
 function SabotenStory() {
     return (
@@ -65,7 +67,7 @@ function SabotenStory() {
                         style={{ height: "198px" }}
                     />
                     <div className={styles.gifListWrapper}>
-                        <div
+                        {/* <div
                             className={styles.gifFlexWrapper}
                             style={{
                                 paddingRight: "20px",
@@ -85,6 +87,20 @@ function SabotenStory() {
                                 className={styles.sabotenKatsuImages}
                             />
                             <div>유린기 냉소바</div>
+                        </div> */}
+                        <div style={{ paddingRight: "20px" }}>
+                            <img
+                                src={gif1}
+                                alt="gif 1"
+                                className={styles.sabotenKatsuImages}
+                            />
+                        </div>
+                        <div>
+                            <img
+                                src={gif2}
+                                alt="gif 2"
+                                className={styles.sabotenKatsuImages}
+                            />
                         </div>
                         <div
                             className={`${styles.storyDescription} ${styles.sabotenKatsuDescriptionWrapper}`}
