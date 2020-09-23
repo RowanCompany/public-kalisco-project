@@ -11,6 +11,7 @@
     cursor: pointer;
     transition: all 250ms;
     text-decoration: none;
+    box-sizing: border-box;
 
     &:hover {
         background-color: rgba($color: #ffffff, $alpha: 0.8);

@@ -17,7 +17,7 @@ function EventList() {
                 <EventPanel />
                 <EventPanel />
             </div>
-            <div className={eventLoadMoreWrapper}>
+            {/* <div className={eventLoadMoreWrapper}>
                 <button type="button" className={eventLoadMore}>
                     LOAD MORE&nbsp;
                     <img
@@ -26,7 +26,7 @@ function EventList() {
                         style={{ paddingLeft: "8px" }}
                     />
                 </button>
-            </div>
+            </div> */}
         </>
     );
 }
