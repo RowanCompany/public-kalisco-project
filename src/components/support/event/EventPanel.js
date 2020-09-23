@@ -5,28 +5,26 @@ import EventPanelImage from "../../../static/images/img-event-saboten-1.png";
 import { useRouteMatch } from "react-router-dom";
 
 // TODO: 데이터 연동해야 함
-function EventPanel() {
-    const match = useRouteMatch();
-    return (
-        <Link to={`${match.url}/1`} className={styles.eventLinkWrapper}>
-            <div>
-                <div>
-                    <img
-                        src={EventPanelImage}
-                        alt="Temp event"
-                        className={styles.panelImageFill}
-                    />
-                </div>
-                <div className={styles.eventLinkboxWrapper}>
-                    <div className={styles.eventLinkTitle}>
-                        사보텐 벤또 출시!
-                    </div>
-                    <div className={styles.eventLinkDate}>2020-08-03</div>
-                    <div className={styles.eventLinkMore}>More &gt;</div>
-                </div>
-            </div>
-        </Link>
-    );
+function EventPanel(props) {
+  const match = useRouteMatch();
+  return (
+    <Link to={`${match.url}/${props.id}`} className={styles.eventLinkWrapper}>
+      <div>
+        <div>
+          <img
+            src={props.image}
+            alt="Temp event"
+            className={styles.panelImageFill}
+          />
+        </div>
+        <div className={styles.eventLinkboxWrapper}>
+          <div className={styles.eventLinkTitle}>{props.title}</div>
+          <div className={styles.eventLinkDate}>{props.createdAt}</div>
+          <div className={styles.eventLinkMore}>More &gt;</div>
+        </div>
+      </div>
+    </Link>
+  );
 }
 
 export default EventPanel;

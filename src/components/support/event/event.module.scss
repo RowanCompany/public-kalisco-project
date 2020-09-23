@@ -1,159 +1,162 @@
 .eventContentWrapper {
-    background-color: #ffffff;
-    padding-top: 40px;
-    padding-bottom: 95px;
+  background-color: #ffffff;
+  padding-top: 40px;
+  padding-bottom: 95px;
 }
 
 .eventCategoryListWrapper {
-    text-align: center;
-    margin-bottom: 54px;
+  text-align: center;
+  margin-bottom: 54px;
 }
 
 .eventListWrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
-    max-width: 800px;
-    margin: 0 auto;
-    grid-gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  max-width: 800px;
+  margin: 0 auto;
+  grid-gap: 40px;
 
-    .eventLinkWrapper {
-        display: inline-block;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-        border-radius: 10px;
-        text-decoration: none;
+  .eventLinkWrapper {
+    display: inline-block;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    text-decoration: none;
 
-        .panelImageFill {
-            width: 240px;
-            height: 240px;
-            object-fit: cover;
-        }
-
-        .eventLinkboxWrapper {
-            padding: 30px 19px 19px 19px;
-
-            .eventLinkTitle {
-                font-family: "Nanum Myeongjo", serif;
-                font-weight: bold;
-                font-size: 18px;
-                letter-spacing: 0;
-                color: #2f2f2f;
-                text-align: left;
-                padding-bottom: 6px;
-            }
-
-            .eventLinkDate {
-                font-family: "Nanum Myeongjo", serif;
-                font-weight: 400;
-                letter-spacing: 0px;
-                color: #707070;
-                font-size: 14px;
-                padding-bottom: 6px;
-                text-align: left;
-            }
-
-            .eventLinkMore {
-                text-align: right;
-                font-size: 12px;
-                letter-spacing: 0;
-                font-weight: 400;
-                color: #e8390e;
-            }
-        }
+    .panelImageFill {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
     }
+
+    .eventLinkboxWrapper {
+      padding: 30px 19px 19px 19px;
+
+      .eventLinkTitle {
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: bold;
+        font-size: 18px;
+        letter-spacing: 0;
+        color: #2f2f2f;
+        text-align: left;
+        padding-bottom: 6px;
+        word-break: keep-all;
+      }
+
+      .eventLinkDate {
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 400;
+        letter-spacing: 0px;
+        color: #707070;
+        font-size: 14px;
+        padding-bottom: 6px;
+        text-align: left;
+      }
+
+      .eventLinkMore {
+        text-align: right;
+        font-size: 12px;
+        letter-spacing: 0;
+        font-weight: 400;
+        color: #e8390e;
+      }
+    }
+  }
 }
 
 .eventLoadMoreWrapper {
+  text-align: center;
+  padding-top: 20px;
+
+  .eventLoadMore {
+    cursor: pointer;
+    min-width: 600px;
     text-align: center;
-    padding-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    color: #707070;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    padding: 24px;
+    border-radius: 30px;
 
-    .eventLoadMore {
-        cursor: pointer;
-        min-width: 600px;
-        text-align: center;
-        background-color: #ffffff;
-        border: 1px solid #dddddd;
-        color: #707070;
-        font-size: 16px;
-        font-weight: 500;
-        font-family: "Montserrat", sans-serif;
-        padding: 24px;
-        border-radius: 30px;
-
-        &:focus {
-            outline: none;
-        }
+    &:focus {
+      outline: none;
     }
+  }
 }
 
 .eventDetailWrapper {
-    max-width: 914px;
-    margin: 0 auto;
+  max-width: 914px;
+  margin: 0 auto;
 
-    .eventDetailTitle {
-        font-size: 24px;
-        letter-spacing: 0px;
-        color: #2f2f2f;
-        font-family: "Nanum Myeongjo", serif;
-        font-weight: bold;
-        padding-bottom: 10px;
+  .eventDetailTitle {
+    font-size: 24px;
+    letter-spacing: 0px;
+    color: #2f2f2f;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+
+  .eventDetailDate {
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #707070;
+  }
+
+  .eventDetailNavigatorWrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dddddd;
+
+    .eventDetailNavigator {
+      display: flex;
+
+      &.disabled {
+        opacity: 0.5;
+      }
     }
+  }
 
-    .eventDetailDate {
-        font-family: "Nanum Myeongjo", serif;
-        font-size: 16px;
+  .eventDetailContentWrapper {
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+
+  .eventDetailPostNavigatorWrapper {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+
+    .eventDetailPostNavigator {
+      display: flex;
+      padding: 26px 14px;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      .eventDetailPostNavigatorText {
         letter-spacing: 0px;
         color: #707070;
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 11px;
+      }
+
+      .eventDetailPostNavigatorTitle {
+        padding-left: 48px;
+        letter-spacing: 0px;
+        color: #707070;
+        font-size: 16px;
+        font-weight: 400;
+      }
     }
-
-    .eventDetailNavigatorWrapper {
-        display: flex;
-        justify-content: flex-end;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #dddddd;
-
-        .eventDetailNavigator {
-            display: flex;
-
-            &.disabled {
-                opacity: 0.5;
-            }
-        }
-    }
-
-    .eventDetailContentWrapper {
-        padding-top: 40px;
-        padding-bottom: 56px;
-    }
-
-    .eventDetailPostNavigatorWrapper {
-        border-top: 1px solid #dddddd;
-        border-bottom: 1px solid #dddddd;
-
-        .eventDetailPostNavigator {
-            display: flex;
-            padding: 26px 14px;
-            align-items: center;
-
-            &:not(:last-child) {
-                border-bottom: 1px solid #dddddd;
-            }
-
-            .eventDetailPostNavigatorText {
-                letter-spacing: 0px;
-                color: #707070;
-                font-size: 14px;
-                font-weight: 400;
-                padding-left: 11px;
-            }
-
-            .eventDetailPostNavigatorTitle {
-                padding-left: 48px;
-                letter-spacing: 0px;
-                color: #707070;
-                font-size: 16px;
-                font-weight: 400;
-            }
-        }
-    }
+  }
 }

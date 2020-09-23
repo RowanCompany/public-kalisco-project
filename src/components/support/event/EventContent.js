@@ -6,34 +6,33 @@ import { useLocation, useRouteMatch, Route, Switch } from "react-router-dom";
 import EventDetailContent from "./EventDetailContent";
 
 function useQuery() {
-    return new URLSearchParams(useLocation().search);
+  return new URLSearchParams(useLocation().search);
 }
 
 function EventContent() {
-    const match = useRouteMatch();
-    let query = useQuery();
-    const type = query.get("type");
-    const [contentType, setContentType] = useState(null);
-    useEffect(() => {
-        if (type) {
-            setContentType(type);
-        }
-    }, [type]);
+  const match = useRouteMatch();
+  let query = useQuery();
+  const type = query.get("type");
+  const [contentType, setContentType] = useState("all");
+  useEffect(() => {
+    if (type) {
+      setContentType(type);
+    }
+  }, [type]);
 
-    return (
-        <section className={eventContentWrapper}>
-            <div className="container">
-                <EventCategoryList contentType={contentType} />
-                <Switch>
-                    <Route
-                        path={`${match.path}/:event`}
-                        component={EventDetailContent}
-                    />
-                    <Route path={match.path} component={EventList} />
-                </Switch>
-            </div>
-        </section>
-    );
+  return (
+    <section className={eventContentWrapper}>
+      <div className="container">
+        <EventCategoryList contentType={contentType} />
+        <Switch>
+          <Route path={`${match.path}/:event`} component={EventDetailContent} />
+          <Route path={match.path}>
+            <EventList type={contentType} />
+          </Route>
+        </Switch>
+      </div>
+    </section>
+  );
 }
 
 export default EventContent;
