@@ -261,6 +261,15 @@
             padding-bottom: 40px;
         }
     }
+
+    .storeMapImageWrapper {
+        position: relative;
+
+        .storeMapMarkerPosition {
+            position: absolute;
+            display: inline-block;
+        }
+    }
 }
 
 .kaliscoButton {
