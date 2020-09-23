@@ -156,18 +156,18 @@ img {
 
 .footer {
     background-color: #2f2f2f;
-    padding: 40px 140px;
+    padding: 18px 32px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 10px;
+    line-height: 20px;
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
     word-break: keep-all;
     box-sizing: border-box;
-    min-width: 1800px;
+    //min-width: 1800px;
 
     .sitemap-text {
         letter-spacing: -0.32px;
@@ -176,7 +176,11 @@ img {
     }
 
     .footer-logo-wrapper {
-        padding-right: 5%;
+        padding-right: 3%;
         //padding-bottom: 5%;
     }
+}
+
+.justify-content-center {
+    justify-content: center;
 }

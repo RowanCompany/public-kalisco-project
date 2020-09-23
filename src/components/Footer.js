@@ -7,7 +7,10 @@ function Footer() {
             <div className="footer-logo-wrapper">
                 <img src={footerLogo} alt="footer logo" />
             </div>
-            <div className="d-flex" style={{ flexGrow: 1, flexBasis: 0 }}>
+            <div
+                className="d-flex justify-content-center"
+                style={{ flexGrow: 1, flexBasis: 0 }}
+            >
                 <div style={{ paddingRight: "3%" }}>
                     <div className="d-flex">
                         <div style={{ paddingRight: "0.5rem" }}>
