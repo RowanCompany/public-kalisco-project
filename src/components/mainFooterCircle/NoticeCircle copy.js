@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainFooterCircle from "./MainFooterCircle";
-import SupportLogo from "./svg/SupportLogo";
+import NoticeLogo from "./svg/NoticeLogo";
 
 // TODO: Route Link 넣어야 함
 function SupportCircle() {
@@ -13,7 +13,7 @@ function SupportCircle() {
             leaveEvent={() => setHovered(false)}
         >
             <Link
-                to="/contact"
+                to="/support/events"
                 style={{
                     width: "100%",
                     height: "100%",
@@ -24,13 +24,9 @@ function SupportCircle() {
                 }}
             >
                 <div>
-                    <SupportLogo hovered={hovered} />
+                    <NoticeLogo hovered={hovered} />
                 </div>
-                <div style={{ paddingTop: "32px" }}>
-                    Customer Service
-                    {/* <br />
-                FAQ */}
-                </div>
+                <div style={{ paddingTop: "32px" }}>Product</div>
             </Link>
         </MainFooterCircle>
     );

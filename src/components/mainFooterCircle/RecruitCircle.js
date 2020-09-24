@@ -12,7 +12,17 @@ function RecruitCircle() {
             enterEvent={() => setHovered(true)}
             leaveEvent={() => setHovered(false)}
         >
-            <Link to="/recruit">
+            <Link
+                to="/recruit"
+                style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                }}
+            >
                 <div>
                     <RecruitLogo hovered={hovered} />
                 </div>

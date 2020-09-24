@@ -52,7 +52,6 @@ function HibarinMenuContent() {
                         />
                     ))}
                 </div>
-                {/* TODO: Modal 제작해야 함 */}
                 <div className="container">
                     <div className={styles.menuDetailPanelWrapper}>
                         {HibarnMenuData[category] &&

@@ -1,17 +1,18 @@
-import React from "react";
-//import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useContext } from "react";
 import brandImage from "../../static/images/brand.png";
 import sabotonLogo from "../../static/svg/logo-saboten.svg";
 import hibarinLogo from "../../static/svg/logo-hibarin.svg";
 import tacobellLogo from "../../static/svg/logo-tacobell-2.svg";
-import centralkcLogo from "../../static/svg/logo-centralkc.svg";
-import banjooLogo from "../../static/images/logo-banjoo.png";
 import { Link } from "react-router-dom";
 import Footer from "../Footer";
+import ModalProvider from "./modal/modal-provider";
+import BrandModal from "./modal/BrandModal";
+import CentralCircle from "./circle/CentralCircle";
+import BanjooCircle from "./circle/BanjooCircle";
 
 function BrandList() {
     return (
-        <>
+        <ModalProvider>
             <div className="viewport-wrapper">
                 <div className="main-bg-wrapper">
                     <div className="brand-list-wrapper">
@@ -44,27 +45,8 @@ function BrandList() {
                             </div>
                             <div className="brand-title">타코벨</div>
                         </a>
-                        <div
-                            className="brand-circle-wrapper centralkc animate__animated animate__rotateIn"
-                            onClick={() => window.alert("준비중입니다.")}
-                        >
-                            <div className="brand-logo-wrapper">
-                                <img
-                                    src={centralkcLogo}
-                                    alt="central kitchen logo"
-                                />
-                            </div>
-                            <div className="brand-title">센트럴키친</div>
-                        </div>
-                        <div
-                            className="brand-circle-wrapper banjoo animate__animated animate__rotateIn"
-                            onClick={() => window.alert("준비중입니다.")}
-                        >
-                            <div className="brand-logo-wrapper">
-                                <img src={banjooLogo} alt="banjoo logo" />
-                            </div>
-                            <div className="brand-title">반주</div>
-                        </div>
+                        <CentralCircle />
+                        <BanjooCircle />
                     </div>
                 </div>
                 <div className="wh-100">
@@ -72,7 +54,8 @@ function BrandList() {
                 </div>
             </div>
             <Footer />
-        </>
+            <BrandModal />
+        </ModalProvider>
     );
 }
 
