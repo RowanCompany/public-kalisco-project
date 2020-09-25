@@ -15,7 +15,7 @@ function ContactBanner({ subject }) {
                     </div>
                     <div>
                         <ul className={styles.menuList}>
-                            {/* <li className={styles.menu}>
+                            <li className={styles.menu}>
                                 <Link
                                     to="/notices"
                                     className={`${styles.menuLink} ${
@@ -36,7 +36,7 @@ function ContactBanner({ subject }) {
                                 >
                                     FAQ
                                 </Link>
-                            </li> */}
+                            </li>
                             <li className={styles.menu}>
                                 <Link
                                     to="/contact"
