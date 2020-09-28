@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./product.module.scss";
 import ProductDetailNavigator from "./ProductDetailNavigator";
-import sauceImage1 from "../../static/images/img-p-sauce3-1.png";
+//import sauceImage1 from "../../static/images/img-p-sauce3-1.png";
+import sauceImage1 from "../../static/images/img-p-sauce-3-2.jpg";
 import sauceSectionTextBG from "../../static/svg/sauce-section-text-bg.svg";
 import iconKatsu from "../../static/images/icon-sauce-katsu.png";
 import iconCitron from "../../static/images/icon-sauce-citron.png";
