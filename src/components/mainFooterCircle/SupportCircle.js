@@ -28,8 +28,8 @@ function SupportCircle() {
                 </div>
                 <div style={{ paddingTop: "32px" }}>
                     Customer Service
-                    {/* <br />
-                FAQ */}
+                    <br />
+                    FAQ
                 </div>
             </Link>
         </MainFooterCircle>

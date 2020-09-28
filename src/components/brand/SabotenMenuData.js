@@ -1,36 +1,45 @@
-import katsu1 from "../../static/images/menu-saboten-katsu-1.jpg";
-import katsu2 from "../../static/images/menu-saboten-katsu-2.jpg";
-import katsu3 from "../../static/images/menu-saboten-katsu-3.jpg";
-import katsu4 from "../../static/images/menu-saboten-katsu-4.jpg";
-import katsu5 from "../../static/images/menu-saboten-katsu-5.jpg";
-import katsu6 from "../../static/images/menu-saboten-katsu-6.jpg";
-import katsu7 from "../../static/images/menu-saboten-katsu-7.jpg";
-import katsu8 from "../../static/images/menu-saboten-katsu-8.jpg";
-import katsu9 from "../../static/images/menu-saboten-katsu-9.jpg";
-import katsu10 from "../../static/images/menu-saboten-katsu-10.jpg";
-import katsu11 from "../../static/images/menu-saboten-katsu-11.jpg";
-import katsu12 from "../../static/images/menu-saboten-katsu-12.jpg";
-import donburi1 from "../../static/images/menu-saboten-donburi-1.jpg";
-import donburi2 from "../../static/images/menu-saboten-donburi-2.jpg";
-import donburi3 from "../../static/images/menu-saboten-donburi-3.jpg";
-import donburi4 from "../../static/images/menu-saboten-donburi-4.jpg";
-import donburi5 from "../../static/images/menu-saboten-donburi-5.jpg";
-import donburi6 from "../../static/images/menu-saboten-donburi-6.jpg";
-import donburi7 from "../../static/images/menu-saboten-donburi-7.jpg";
-import noodles1 from "../../static/images/menu-saboten-noodles-1.jpg";
-import noodles2 from "../../static/images/menu-saboten-noodles-2.jpg";
-import noodles3 from "../../static/images/menu-saboten-noodles-3.jpg";
-import noodles4 from "../../static/images/menu-saboten-noodles-4.jpg";
-import side1 from "../../static/images/menu-saboten-side-1.jpg";
-import side2 from "../../static/images/menu-saboten-side-2.jpg";
-import side3 from "../../static/images/menu-saboten-side-3.jpg";
-import side4 from "../../static/images/menu-saboten-side-4.jpg";
-import side5 from "../../static/images/menu-saboten-side-5.jpg";
-import side6 from "../../static/images/menu-saboten-side-6.jpg";
-import side7 from "../../static/images/menu-saboten-side-7.jpg";
-import side8 from "../../static/images/menu-saboten-side-8.jpg";
-import side9 from "../../static/images/menu-saboten-side-9.jpg";
-import side10 from "../../static/images/menu-saboten-side-10.jpg";
+import katsu1 from "../../static/images/detail-katsu1.png";
+import katsu2 from "../../static/images/detail-katsu2.png";
+import katsu3 from "../../static/images/detail-katsu3.png";
+import katsu4 from "../../static/images/detail-katsu4.png";
+import katsu5 from "../../static/images/detail-katsu5.png";
+import katsu6 from "../../static/images/detail-katsu6.png";
+import katsu7 from "../../static/images/detail-katsu7.png";
+import katsu8 from "../../static/images/detail-katsu8.png";
+import katsu9 from "../../static/images/detail-katsu9.png";
+import katsu10 from "../../static/images/detail-katsu10.png";
+import katsu11 from "../../static/images/detail-katsu11.png";
+import katsu12 from "../../static/images/detail-katsu12.png";
+import donburi1 from "../../static/images/detail-donburi1.png";
+import donburi2 from "../../static/images/detail-donburi2.png";
+import donburi3 from "../../static/images/detail-donburi3.png";
+import donburi4 from "../../static/images/detail-donburi4.png";
+import donburi5 from "../../static/images/detail-donburi5.png";
+import donburi6 from "../../static/images/detail-donburi6.png";
+import donburi7 from "../../static/images/detail-donburi7.png";
+import noodles1 from "../../static/images/detail-noodles1.png";
+import noodles2 from "../../static/images/detail-noodles2.png";
+import noodles3 from "../../static/images/detail-noodles3.png";
+import noodles4 from "../../static/images/detail-noodles4.png";
+import side1 from "../../static/images/detail-side1.png";
+import side2 from "../../static/images/detail-side2.png";
+import side3 from "../../static/images/detail-side3.png";
+import side4 from "../../static/images/detail-side4.png";
+import side5 from "../../static/images/detail-side5.png";
+import side6 from "../../static/images/detail-side6.png";
+import side7 from "../../static/images/detail-side7.png";
+import side8 from "../../static/images/detail-side8.png";
+import banner1 from "../../static/images/img-p-saboten-detail1.jpg";
+import banner2 from "../../static/images/img-p-saboten-detail2.jpg";
+import banner3 from "../../static/images/img-p-saboten-detail3.jpg";
+import banner4 from "../../static/images/img-p-saboten-detail4.jpg";
+
+export const bannerData = {
+    katsu: banner1,
+    donburi: banner2,
+    noodles: banner3,
+    side: banner4,
+};
 
 export default {
     katsu: [
@@ -270,14 +279,12 @@ export default {
             price: "1.2",
         },
         {
-            image: side9,
             title: "소바 추가(면/장)",
             enTitle: "added soba(noodle/soup)",
             description: "",
             price: "5.0 / 2.0",
         },
         {
-            image: side10,
             title: "카레소스",
             enTitle: "curry sauce",
             description: "",

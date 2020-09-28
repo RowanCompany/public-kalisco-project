@@ -168,6 +168,10 @@
     padding: 80px 0;
     position: relative;
     background-color: #191919;
+    background-image: url(../../static/images/img-p-saboten-background-1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat;
 
     .menuTitleTextWrapper {
         text-align: center;
@@ -181,6 +185,10 @@
 
 .menuListSection {
     //padding: 100px 0 160px;
+    background-image: url(../../static/images/img-p-saboten-background-1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat;
 
     .MenuListFlexWrapper {
         display: flex;
@@ -310,9 +318,12 @@
 
 .menuDetailSection {
     padding-top: 50px;
-    padding-bottom: 83px;
     position: relative;
-    background-color: #2f2f2f;
+    background-color: #191919;
+    background-image: url(../../static/images/img-p-saboten-background-1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat;
 
     .categoryButtonListWrapper {
         margin-bottom: 50px;
@@ -324,5 +335,82 @@
         display: flex;
         flex-wrap: wrap;
         grid-gap: 20px;
+    }
+
+    .fixedMenuListFlexWrapper {
+        min-width: 1800px;
+        margin: 0 auto;
+
+        .menuListFlexColumnWrapper {
+            padding-left: 120px;
+            padding-right: 120px;
+            display: flex;
+            flex-direction: column;
+
+            &::before {
+                opacity: 0.7;
+                content: " ";
+                display: block;
+                position: absolute;
+                left: 25%;
+                right: auto;
+                margin-right: -25%;
+                width: 15px;
+                height: 100%;
+                background-color: #8b0303;
+                z-index: 1;
+            }
+
+            .menuListFlexColumn {
+                display: flex;
+                align-items: center;
+                margin-bottom: 50px;
+                cursor: pointer;
+
+                &:first-child {
+                    margin-top: 50px;
+                }
+
+                .menuListRecipeImageWrapper {
+                    flex: 0 0 40%;
+                    max-width: 40%;
+                    text-align: center;
+                    margin-right: 104px;
+                    position: relative;
+                    z-index: 20;
+
+                    img {
+                        max-height: 177px;
+                    }
+                }
+
+                .menuListEnTitle {
+                    font-size: 20px;
+                    font-family: "Nanum Myeongjo", serif;
+                    letter-spacing: 0;
+                    color: rgba($color: #ffffff, $alpha: 0.6);
+                    font-style: italic;
+                    padding-bottom: 11px;
+                }
+
+                .menuListTitle {
+                    font-size: 18px;
+                    font-family: "Nanum Myeongjo", serif;
+                    color: #dddddd;
+                    letter-spacing: 0;
+                    padding-bottom: 20px;
+                    font-weight: 600;
+                }
+
+                .menuListPrice {
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: #ffffff;
+                    letter-spacing: 0;
+                    font-style: italic;
+                    font-family: "Nanum Myeongjo", serif;
+                }
+            }
+        }
     }
 }

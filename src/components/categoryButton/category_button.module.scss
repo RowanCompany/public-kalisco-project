@@ -17,12 +17,20 @@
         background-color: rgba($color: #ffffff, $alpha: 0.8);
         border: 1px solid rgba($color: #e8390e, $alpha: 0.8);
         color: rgba($color: #e8390e, $alpha: 0.8);
+
+        &.darkOutline {
+            background-color: transparent;
+        }
     }
 
     &.active {
         background-color: #ffffff;
         border: 1px solid #e8390e;
         color: #e8390e;
+        
+        &.darkOutline {
+            background-color: transparent;
+        }
     }
 
     &:not(:last-child) {

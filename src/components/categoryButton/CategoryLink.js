@@ -8,8 +8,8 @@ function CategoryLink(props) {
         <Link
             to={link && link}
             className={`${styles.categoryButton} ${
-                type === parentType ? styles.active : ""
-            }`}
+                type === parentType && styles.active
+            } ${!!props.darkOutline && styles.darkOutline}`}
             onClick={props.clickEvent}
         >
             {text}

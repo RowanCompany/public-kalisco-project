@@ -65,7 +65,7 @@ function HibarinMenuContent() {
                                 newBannerData[category] &&
                                 newBannerData[category]
                             }
-                            alt="hibarin image"
+                            alt="hibarin"
                             className="img-fill"
                         />
                     </div>

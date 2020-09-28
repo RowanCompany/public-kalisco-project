@@ -4,11 +4,12 @@ import styles from "./saboten.module.scss";
 import SabotenBanner from "./SabotenBanner";
 import { useParams } from "react-router-dom";
 import CategoryLink from "../categoryButton/CategoryLink";
-import SabotenMenuData from "./SabotenMenuData";
+import SabotenMenuData, { bannerData } from "./SabotenMenuData";
 import MenuPanel from "./panel/MenuPanel";
 import MenuModal from "./modal/MenuModal";
 import ModalProvider from "./modal/modal-provider";
 import Fab from "./fab/Fab";
+import SabotenMenuFlexColumn from "./SabotenMenuFlexColumn";
 
 function HibarinMenuContent() {
     const params = useParams();
@@ -46,18 +47,49 @@ function HibarinMenuContent() {
                     {categoryData.map((d, i) => (
                         <CategoryLink
                             key={i}
+                            darkOutline={true}
                             {...d}
                             parentType={category}
                             clickEvent={() => setCategory(d.type)}
                         />
                     ))}
                 </div>
-                {/* TODO: Modal 제작해야 함 */}
-                <div className="container">
+                {/* <div className="container">
                     <div className={styles.menuDetailPanelWrapper}>
                         {SabotenMenuData[category] &&
                             SabotenMenuData[category].map((d, i) => (
                                 <MenuPanel key={i} {...d} />
+                            ))}
+                    </div>
+                </div> */}
+                <div className={`row ${styles.fixedMenuListFlexWrapper}`}>
+                    <div className="col">
+                        <img
+                            src={bannerData[category] && bannerData[category]}
+                            alt="saboten"
+                            className="img-fill"
+                        />
+                    </div>
+                    <div className={`col ${styles.menuListFlexColumnWrapper}`}>
+                        {/* <div className={styles.menuListFlexColumn}>
+                            <div className={styles.menuListRecipeImageWrapper}>
+                                <img src={sabotenImage1} alt="katsu" />
+                            </div>
+                            <div>
+                                <div className={styles.menuListEnTitle}>
+                                    hibarin katsu(tenderloin/sirloin)
+                                </div>
+                                <div className={styles.menuListTitle}>
+                                    히바린 카츠(히레/로스)
+                                </div>
+                                <div className={styles.menuListPrice}>
+                                    17.0 / 16.0
+                                </div>
+                            </div>
+                        </div> */}
+                        {SabotenMenuData[category] &&
+                            SabotenMenuData[category].map((d, i) => (
+                                <SabotenMenuFlexColumn key={i} {...d} />
                             ))}
                     </div>
                 </div>

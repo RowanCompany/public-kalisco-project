@@ -16,7 +16,7 @@ const modalStyle = {
     content: {
         position: "absolute",
         top: "50%",
-        left: "50%",
+        left: "70%",
         right: "auto",
         bottom: "auto",
         marginRight: "-50%",
@@ -61,7 +61,7 @@ function MenuModal() {
                 <div className={styles.price}>{data && data.price}</div>
             </div>
             <div className={styles.description}>{data && data.description}</div>
-            {data && (
+            {data && data["image"] && (
                 <div className={styles.imageBackgroundWrapper}>
                     <img
                         src={data.image}

@@ -13,6 +13,8 @@ import katsuImage from "../../static/images/img-saboten-menu-1.png";
 import donburiImage from "../../static/images/img-saboten-menu-2.png";
 import noodleImage from "../../static/images/img-saboten-menu-3.png";
 import sideImage from "../../static/images/img-saboten-menu-4.png";
+//import sabotenBackground from "../../static/images/img-p-saboten-background.png";
+
 import { Link } from "react-router-dom";
 
 import "swiper/components/navigation/navigation.scss";
