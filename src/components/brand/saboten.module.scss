@@ -230,65 +230,65 @@
     }
 
     &.katsuSection {
-        background-color: #343434;
+        background-color: #191919;
 
         .katsuBorderLine {
-            border-top: 1px solid #ffe42b;
+            border-top: 1px solid #ffffff;
         }
 
         .menuListTitleActive {
-            color: #ffe42b;
+            color: #ffffff;
 
             &::after {
-                background-color: #ffe42b;
+                background-color: #ffffff;
             }
         }
     }
 
     &.donburiSection {
-        background-color: #151515;
+        background-color: #191919;
 
         .donburiBorderLine {
-            border-top: 1px solid #e8390e;
+            border-top: 1px solid #ffffff;
         }
 
         .menuListTitleActive {
-            color: #e8390e;
+            color: #ffffff;
 
             &::after {
-                background-color: #e8390e;
+                background-color: #ffffff;
             }
         }
     }
 
     &.noodleSection {
-        background-color: #d4d288;
+        background-color: #191919;
 
         .noodleBorderLine {
-            border-top: 1px solid #325d24;
+            border-top: 1px solid #ffffff;
         }
 
         .menuListTitleActive {
-            color: #325d24;
+            color: #ffffff;
 
             &::after {
-                background-color: #325d24;
+                background-color: #ffffff;
             }
         }
     }
 
     &.sideSection {
-        background-color: #9a633a;
+        background-color: #191919;
 
         .sideBorderLine {
-            border-top: 1px solid #222222;
+            border-top: 1px solid #ffffff;
         }
 
         .menuListTitleActive {
-            color: #222222;
+            color: #ffffff;
 
             &::after {
-                background-color: #222222;
+                background-color: #ffffff;
             }
         }
     }

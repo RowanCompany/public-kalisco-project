@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import firstBanner from "../../static/images/main-banner-1.png";
-import bannerIdentityImage from "../../static/images/banner-identity.png";
+import bannerIdentityImage from "../../static/images/img-p-main-banner-2-1.jpg";
+//import bannerIdentityImage from "../../static/images/banner-identity.png";
 import SwiperCore, { Autoplay, EffectFade, Controller } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import mainBannerTitleText from "../../static/images/main-banner-2-title-text.png";
 import trustText from "../../static/images/trust.png";
 import sincerityText from "../../static/images/sincerity.png";
 import connectivityText from "../../static/images/connectivity.png";
-import beyondTasteText from "../../static/images/beyond-taste.png";
+//import beyondTasteText from "../../static/images/beyond-taste.png";
 import identityFirstImage from "../../static/images/identity-1.png";
 import wholesomenessText from "../../static/images/wholesomeness-text.png";
 import identitySecondImage from "../../static/images/identity-2.png";

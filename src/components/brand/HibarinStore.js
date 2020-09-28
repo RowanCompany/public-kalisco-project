@@ -7,6 +7,10 @@ import yeojuStoreImage from "../../static/images/img-p-store-yeoju.png";
 import mapImage from "../../static/images/img-map-korea.png";
 import markerImage from "../../static/images/img-p-store-map-marker.png";
 import markerOnMapImage from "../../static/images/icon-map-marker.png";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+
+import "../contact/bootstrap.scss";
 
 function HibarinStore() {
     return (
@@ -114,51 +118,141 @@ function HibarinStore() {
                         </div>
                         <div>
                             <div className={styles.storeMapImageWrapper}>
-                                <a
-                                    href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EC%84%9C%EC%9A%B8?c=14120288.6721489,4518345.6159933,10,0,0,0,dh"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    className={styles.storeMapMarkerPosition}
-                                    style={{ top: "95px", left: "85px" }}
+                                <OverlayTrigger
+                                    overlay={
+                                        <Tooltip
+                                            className={styles.test}
+                                            placement="top"
+                                            delay={{ show: 250, hide: 250 }}
+                                            id="tooltip"
+                                        >
+                                            서울
+                                        </Tooltip>
+                                    }
                                 >
-                                    <img src={markerOnMapImage} alt="marker" />
-                                </a>
-                                <a
-                                    href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%ED%8C%8C%EC%A3%BC?c=14103720.9462680,4546398.0053740,13,0,0,0,dh"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    className={styles.storeMapMarkerPosition}
-                                    style={{ top: "70px", left: "50px" }}
+                                    <a
+                                        href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EC%84%9C%EC%9A%B8?c=14120288.6721489,4518345.6159933,10,0,0,0,dh"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        className={
+                                            styles.storeMapMarkerPosition
+                                        }
+                                        style={{ top: "95px", left: "85px" }}
+                                    >
+                                        <img
+                                            src={markerOnMapImage}
+                                            alt="marker"
+                                        />
+                                    </a>
+                                </OverlayTrigger>
+                                <OverlayTrigger
+                                    overlay={
+                                        <Tooltip
+                                            className={styles.test}
+                                            placement="top"
+                                            delay={{ show: 250, hide: 250 }}
+                                            id="tooltip"
+                                        >
+                                            파주
+                                        </Tooltip>
+                                    }
                                 >
-                                    <img src={markerOnMapImage} alt="marker" />
-                                </a>
-                                <a
-                                    href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EC%9D%B8%EC%B2%9C?c=14089866.7348914,4502828.8992514,10,0,0,0,dh"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    className={styles.storeMapMarkerPosition}
-                                    style={{ top: "120px", left: "50px" }}
+                                    <a
+                                        href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%ED%8C%8C%EC%A3%BC?c=14103720.9462680,4546398.0053740,13,0,0,0,dh"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        className={
+                                            styles.storeMapMarkerPosition
+                                        }
+                                        style={{ top: "70px", left: "50px" }}
+                                    >
+                                        <img
+                                            src={markerOnMapImage}
+                                            alt="marker"
+                                        />
+                                    </a>
+                                </OverlayTrigger>
+                                <OverlayTrigger
+                                    overlay={
+                                        <Tooltip
+                                            className={styles.test}
+                                            placement="top"
+                                            delay={{ show: 250, hide: 250 }}
+                                            id="tooltip"
+                                        >
+                                            인천
+                                        </Tooltip>
+                                    }
                                 >
-                                    <img src={markerOnMapImage} alt="marker" />
-                                </a>
-                                <a
-                                    href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EA%B2%BD%EA%B8%B0?c=14217287.2610428,4483872.5162367,9,0,0,0,dh"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    className={styles.storeMapMarkerPosition}
-                                    style={{ top: "140px", left: "120px" }}
+                                    <a
+                                        href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EC%9D%B8%EC%B2%9C?c=14089866.7348914,4502828.8992514,10,0,0,0,dh"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        className={
+                                            styles.storeMapMarkerPosition
+                                        }
+                                        style={{ top: "120px", left: "50px" }}
+                                    >
+                                        <img
+                                            src={markerOnMapImage}
+                                            alt="marker"
+                                        />
+                                    </a>
+                                </OverlayTrigger>
+                                <OverlayTrigger
+                                    overlay={
+                                        <Tooltip
+                                            className={styles.test}
+                                            placement="top"
+                                            delay={{ show: 250, hide: 250 }}
+                                            id="tooltip"
+                                        >
+                                            경기
+                                        </Tooltip>
+                                    }
                                 >
-                                    <img src={markerOnMapImage} alt="marker" />
-                                </a>
-                                <a
-                                    href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EB%B6%80%EC%82%B0?c=14353650.9195035,4188328.7463721,10,0,0,0,dh"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    className={styles.storeMapMarkerPosition}
-                                    style={{ top: "350px", right: "30px" }}
+                                    <a
+                                        href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EA%B2%BD%EA%B8%B0?c=14217287.2610428,4483872.5162367,9,0,0,0,dh"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        className={
+                                            styles.storeMapMarkerPosition
+                                        }
+                                        style={{ top: "140px", left: "120px" }}
+                                    >
+                                        <img
+                                            src={markerOnMapImage}
+                                            alt="marker"
+                                        />
+                                    </a>
+                                </OverlayTrigger>
+                                <OverlayTrigger
+                                    overlay={
+                                        <Tooltip
+                                            className={styles.test}
+                                            placement="top"
+                                            delay={{ show: 250, hide: 250 }}
+                                            id="tooltip"
+                                        >
+                                            부산
+                                        </Tooltip>
+                                    }
                                 >
-                                    <img src={markerOnMapImage} alt="marker" />
-                                </a>
+                                    <a
+                                        href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0%20%EB%B6%80%EC%82%B0?c=14353650.9195035,4188328.7463721,10,0,0,0,dh"
+                                        rel="noopener noreferrer"
+                                        target="_blank"
+                                        className={
+                                            styles.storeMapMarkerPosition
+                                        }
+                                        style={{ top: "350px", right: "30px" }}
+                                    >
+                                        <img
+                                            src={markerOnMapImage}
+                                            alt="marker"
+                                        />
+                                    </a>
+                                </OverlayTrigger>
                                 <img
                                     src={mapImage}
                                     alt="korea map"
