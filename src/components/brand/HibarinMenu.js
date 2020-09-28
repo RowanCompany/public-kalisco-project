@@ -235,7 +235,7 @@ function HibarinMenu({ subject }) {
                             />
                         </div>
                     </Link>
-                    <Link
+                    {/* <Link
                         className="d-block col"
                         onMouseEnter={() => setMenu("donburi")}
                         to={`/brand/hibarin/${subject}/donburi`}
@@ -249,33 +249,33 @@ function HibarinMenu({ subject }) {
                                 }`}
                             />
                         </div>
-                    </Link>
+                    </Link> */}
                     <Link
                         className="d-block col"
-                        onMouseEnter={() => setMenu("noodles")}
-                        to={`/brand/hibarin/${subject}/noodles`}
+                        onMouseEnter={() => setMenu("friends")}
+                        to={`/brand/hibarin/${subject}/friends`}
                     >
                         <div>
                             <img
                                 src={noodleImage}
                                 alt="noodle"
                                 className={`img-fill ${
-                                    menu === "noodles" ? styles.active : ""
+                                    menu === "friends" ? styles.active : ""
                                 }`}
                             />
                         </div>
                     </Link>
                     <Link
                         className="d-block col"
-                        onMouseEnter={() => setMenu("side")}
-                        to={`/brand/hibarin/${subject}/side`}
+                        onMouseEnter={() => setMenu("drink")}
+                        to={`/brand/hibarin/${subject}/drink`}
                     >
                         <div>
                             <img
                                 src={sideImage}
                                 alt="side"
                                 className={`img-fill ${
-                                    menu === "side" ? styles.active : ""
+                                    menu === "drink" ? styles.active : ""
                                 }`}
                             />
                         </div>

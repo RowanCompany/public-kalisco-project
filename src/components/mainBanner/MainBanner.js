@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import firstBanner from "../../static/images/main-banner-1.png";
-import bannerIdentityImage from "../../static/images/img-p-main-banner-2-1.jpg";
+import bannerIdentityImage from "../../static/images/img-p-main-banner-2-2.png";
 //import bannerIdentityImage from "../../static/images/banner-identity.png";
 import SwiperCore, { Autoplay, EffectFade, Controller } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";

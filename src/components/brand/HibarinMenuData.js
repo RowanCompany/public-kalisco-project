@@ -45,6 +45,144 @@ import side10 from "../../static/images/menu-hibarin-side-10.jpg";
 import side11 from "../../static/images/menu-hibarin-side-11.jpg";
 import side12 from "../../static/images/menu-hibarin-side-12.jpg";
 import side13 from "../../static/images/menu-hibarin-side-13.jpg";
+import newImage1 from "../../static/images/img-hibarin-menu-katsu1.png";
+import newImage2 from "../../static/images/img-hibarin-menu-katsu2.png";
+import newImage3 from "../../static/images/img-hibarin-menu-katsu3.png";
+import newImage4 from "../../static/images/img-hibarin-menu-katsu4.png";
+import newImage5 from "../../static/images/img-hibarin-menu-katsu5.png";
+import newImage6 from "../../static/images/img-hibarin-menu-katsu6.png";
+import newImage7 from "../../static/images/img-hibarin-menu-katsu7.png";
+import newImage8 from "../../static/images/img-hibarin-menu-katsu8.png";
+import newImage9 from "../../static/images/img-hibarin-menu-katsu9.png";
+import newImage10 from "../../static/images/img-hibarin-menu-katsu10.png";
+import newImage11 from "../../static/images/img-hibarin-menu-katsu11.png";
+import newImage12 from "../../static/images/img-hibarin-menu-katsu12.png";
+import bannerImage1 from "../../static/images/img-hibarin-menu-detail-1.jpg";
+import bannerImage2 from "../../static/images/img-hibarin-menu-detail-2.jpg";
+import bannerImage3 from "../../static/images/img-hibarin-menu-detail-3.jpg";
+
+export const newData = {
+    katsu: [
+        {
+            no: "01",
+            image: newImage1,
+            enTitle: "CHINESE CHICKEN KATSU",
+            title: "유린기카츠",
+            description:
+                "쫄깃한 닭다리 순살을 튀겨 낸 치킨카츠에\n상큼한 유린기 소스를 부어먹는 카츠",
+            price: "14.0",
+        },
+        {
+            no: "02",
+            image: newImage2,
+            enTitle: "PREMIUM SHRIMP KATSU",
+            title: "프리미엄 에비카츠",
+            description:
+                "여러가지 특제 소스에 찍어먹는\n히바린이 재해석한 프리미엄 에비 카츠",
+            price: "19.0",
+        },
+        {
+            no: "03",
+            image: newImage3,
+            enTitle: "MOAZZA-CHEDDAR CHEESE KATSU",
+            title: "모짜체다치즈카츠",
+            description:
+                "고소하고 부드러운 모짜체다 치즈와 새우\n스테이크를 함께 즐기는 베스트 카츠",
+            price: "14.5",
+        },
+        {
+            no: "04",
+            image: newImage4,
+            enTitle: "MENTAIKO CHEESE KATSU",
+            title: "명란치즈카츠",
+            description:
+                "얇게 저민 등심을 층층이 쌓아 치즈와 함께\n튀긴 카츠 위에 명란소스를 듬뿍 올려 낸 명란카츠",
+            price: "16.0",
+        },
+        {
+            no: "05",
+            image: newImage5,
+            enTitle: "HIBARIN KATSU (130G / 200G)",
+            title: "히바린 카츠 정식",
+            description:
+                "3.5cm 두께의 두툼한 돈육을 두들겨 돼지고기의\n진한 풍미와 육즙이 가득한 히바린 시그니처 카츠",
+            price: "13.0 / 17.0",
+        },
+    ],
+    friends: [
+        {
+            no: "06",
+            image: newImage6,
+            enTitle: "MODERN KATSU-DON",
+            title: "모던 카츠동",
+            description:
+                "히바린만의 특제 소스와 카츠, 계란, 김치가 어우러져 부드러운 덮밥",
+            price: "13.5",
+        },
+        {
+            no: "07",
+            image: newImage7,
+            enTitle: "AVOCADO SALMON RICE",
+            title: "아보카도 연어라이스",
+            description:
+                "슈퍼푸드 아보카도와 생연어 위에 간장소스를\n취향에 맞게 부어 비벼먹는 시그니쳐 라이스",
+            price: "15.0",
+        },
+        {
+            no: "08",
+            image: newImage8,
+            enTitle: "SALMON AVO KATSU ROLL",
+            title: "연어아보카츠롤",
+            description:
+                "세계 3대푸드 연어와 아보카도가 듬뿍 들어간 빅 카츠 롤",
+            price: "12.0",
+        },
+        {
+            no: "09",
+            image: newImage9,
+            enTitle: "SEAFOOD KUNG PAO NOODLES",
+            title: "해물쿵파오누들",
+            description:
+                "카츠와 함께 즐기는 다양한 해물이 들어간 매콤 볶음 누들",
+            price: "14.0",
+        },
+        {
+            no: "10",
+            image: newImage10,
+
+            enTitle: "SPICY BULGOGI NOODLE SOUP",
+            title: "육개장불고기누들",
+            description:
+                "얼큰한 육개장 누들에 불고기가 듬뿍! 들어간 카츠의 짝꿍",
+            price: "13.0",
+        },
+        {
+            no: "11",
+            image: newImage11,
+            enTitle: "BUCKWHEAT SOBA NOODLE",
+            title: "히야시소바",
+            description:
+                "상큼한 레몬 슬라이스와 시원한 간 무가\n가득 올라간 메밀 소바",
+            price: "12.0",
+        },
+        {
+            no: "12",
+            image: newImage12,
+
+            enTitle: "KIDS' KATSU",
+            title: "키즈메뉴 (카레)",
+            description:
+                "베스트 카츠로 담아 낸 프리미엄 키즈 정식\n(커리 라이스 & 누들 중 선택)",
+            price: "9.5",
+        },
+    ],
+};
+
+export const newBannerData = {
+    katsu: bannerImage1,
+    friends: bannerImage2,
+    drink: bannerImage3,
+};
 
 export default {
     katsu: [
