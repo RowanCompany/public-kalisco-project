@@ -200,7 +200,7 @@ function SabotenMenu({ subject }) {
                             </Link>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="d-flex">
                         <div className="text-right">
                             <img
                                 src={menuData[menu] && menuData[menu]["image"]}

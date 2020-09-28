@@ -49,7 +49,11 @@
 }
 
 .menuListSection {
-    padding: 100px 0 160px;
+    padding-top: 100px;
+    background-image: url(../../static/images/img-hibarin-special-back.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat repeat;
 
     .MenuListFlexWrapper {
         display: flex;
@@ -168,12 +172,22 @@
     }
 
     .menuListTitleWrapper {
-        padding-bottom: 145px;
+        padding-bottom: 76px;
         text-align: center;
     }
 
     .menuListGridWrapper {
         align-items: center;
+        background-color: #ffffff;
+
+        img {
+            transition: opacity 250ms;
+            opacity: 0.34;
+
+            &.active {
+                opacity: 1;
+            }
+        }
     }
 }
 
