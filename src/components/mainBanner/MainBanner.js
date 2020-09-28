@@ -110,12 +110,12 @@ function MainBanner(props) {
                                     >
                                         <img src={trustText} alt="Trust" />
                                     </div>
-                                    <div style={{ textAlign: "center" }}>
+                                    {/* <div style={{ textAlign: "center" }}>
                                         <img
                                             src={beyondTasteText}
                                             alt="beyond taste"
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <CSSTransition
                                     in={wholesomenessState}
@@ -211,12 +211,12 @@ function MainBanner(props) {
                                     >
                                         <img src={sincerityText} alt="Trust" />
                                     </div>
-                                    <div style={{ textAlign: "center" }}>
+                                    {/* <div style={{ textAlign: "center" }}>
                                         <img
                                             src={beyondTasteText}
                                             alt="beyond taste"
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <CSSTransition
                                     in={sincerenessState}
@@ -318,12 +318,12 @@ function MainBanner(props) {
                                             alt="Trust"
                                         />
                                     </div>
-                                    <div style={{ textAlign: "center" }}>
+                                    {/* <div style={{ textAlign: "center" }}>
                                         <img
                                             src={beyondTasteText}
                                             alt="beyond taste"
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <CSSTransition
                                     in={togethernewssState}
