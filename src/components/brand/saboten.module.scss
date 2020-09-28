@@ -340,6 +340,14 @@
     .fixedMenuListFlexWrapper {
         min-width: 1800px;
         margin: 0 auto;
+        position: relative;
+
+        .menuFlexImageColumn {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
 
         .menuListFlexColumnWrapper {
             padding-left: 120px;
@@ -366,6 +374,8 @@
                 align-items: center;
                 margin-bottom: 50px;
                 cursor: pointer;
+                position: relative;
+                z-index: 30;
 
                 &:first-child {
                     margin-top: 50px;
@@ -381,6 +391,9 @@
 
                     img {
                         max-height: 177px;
+                        overflow-y: hidden;
+                        position: relative;
+                        z-index: 30;
                     }
                 }
 

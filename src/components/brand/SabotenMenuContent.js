@@ -63,7 +63,7 @@ function HibarinMenuContent() {
                     </div>
                 </div> */}
                 <div className={`row ${styles.fixedMenuListFlexWrapper}`}>
-                    <div className="col">
+                    <div className={`col ${styles.menuFlexImageColumn}`}>
                         <img
                             src={bannerData[category] && bannerData[category]}
                             alt="saboten"
@@ -89,7 +89,11 @@ function HibarinMenuContent() {
                         </div> */}
                         {SabotenMenuData[category] &&
                             SabotenMenuData[category].map((d, i) => (
-                                <SabotenMenuFlexColumn key={i} {...d} />
+                                <SabotenMenuFlexColumn
+                                    key={i}
+                                    delayKey={i}
+                                    {...d}
+                                />
                             ))}
                     </div>
                 </div>

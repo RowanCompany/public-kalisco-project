@@ -13,7 +13,7 @@ function SupportCircle() {
             leaveEvent={() => setHovered(false)}
         >
             <Link
-                to="/products"
+                to="/notices"
                 style={{
                     width: "100%",
                     height: "100%",

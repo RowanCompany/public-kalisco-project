@@ -73,7 +73,10 @@ function HibarinMenuContent() {
                         {newData[category] &&
                             newData[category].map((d, i) => (
                                 <div
-                                    className={styles.menuListFlexColumn}
+                                    className={`${styles.menuListFlexColumn} animate__animated animate__fadeInUp`}
+                                    style={{
+                                        "animation-delay": `${0.25 * (i + 1)}s`,
+                                    }}
                                     key={i}
                                 >
                                     <div className={styles.menuListNumber}>
