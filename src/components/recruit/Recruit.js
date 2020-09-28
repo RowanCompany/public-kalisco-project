@@ -16,7 +16,9 @@ import { Link } from "react-router-dom";
 function Recruit() {
     return (
         <section className={styles.welfareSecondSection}>
-            <div className={styles.systemTitle}>맛을 아는 분만 지원하세요!</div>
+            <div className={styles.systemTitle}>
+                회사의 성장과 함께 전문가가 되고 싶으신 분들 지원하세요.
+            </div>
             <div className={styles.systemFlowWrapper}>
                 <div>
                     <div className={styles.systemStepWrapper}>
