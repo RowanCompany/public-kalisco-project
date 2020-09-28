@@ -9,10 +9,10 @@ import sabotenImage3 from "../../static/images/img-saboten-event-3.jpg";
 import sabotenImage4 from "../../static/images/img-saboten-event-4.jpg";
 import sabotenImage5 from "../../static/images/img-saboten-event-5.jpg";
 import textOrdinaryImage from "../../static/images/text-saboten-ordinary.png";
-import katsuImage from "../../static/images/img-samenu-katsu.png";
-import donburiImage from "../../static/images/img-samenu-donburi.png";
-import noodleImage from "../../static/images/img-samenu-noodle.png";
-import sideImage from "../../static/images/img-samenu-side.png";
+import katsuImage from "../../static/images/img-saboten-menu-1.png";
+import donburiImage from "../../static/images/img-saboten-menu-2.png";
+import noodleImage from "../../static/images/img-saboten-menu-3.png";
+import sideImage from "../../static/images/img-saboten-menu-4.png";
 import { Link } from "react-router-dom";
 
 import "swiper/components/navigation/navigation.scss";
@@ -118,11 +118,11 @@ function SabotenMenu({ subject }) {
                     menuData[menu] && menuData[menu]["sectionStyle"]
                 }`}
             >
-                <div className={styles.menuListTitleWrapper}>
-                    <img src={textOrdinaryImage} alt="ordinary menu" />
-                </div>
                 <div className={`row ${styles.menuListGridWrapper}`}>
                     <div className="col">
+                        <div className={styles.menuListTitleWrapper}>
+                            <img src={textOrdinaryImage} alt="ordinary menu" />
+                        </div>
                         <div className={styles.MenuListFlexWrapper}>
                             <div
                                 className={`${styles.menuBorderLine} ${styles.katsuBorderLine}`}
@@ -201,7 +201,7 @@ function SabotenMenu({ subject }) {
                         </div>
                     </div>
                     <div className="col">
-                        <div className="text-center">
+                        <div className="text-right">
                             <img
                                 src={menuData[menu] && menuData[menu]["image"]}
                                 alt="menu"
