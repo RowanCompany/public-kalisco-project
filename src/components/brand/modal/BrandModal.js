@@ -27,7 +27,6 @@ const modalStyle = {
         outline: "none",
         width: "640px",
         height: "650px",
-        borderRadius: 0,
         boxShadow: "rgba(0, 0, 0, 0.16)",
         boxSizing: "border-box",
         borderRadius: "20px",
@@ -69,7 +68,7 @@ function BrandModal() {
                             className="img-fluid"
                         />
                     </div>
-                )}                
+                )}
                 <div className={styles.brandDescription}>
                     {data && data.description}
                 </div>

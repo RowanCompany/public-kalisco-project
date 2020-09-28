@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import brandImage from "../../static/images/brand.png";
 import sabotonLogo from "../../static/svg/logo-saboten.svg";
 import hibarinLogo from "../../static/svg/logo-hibarin.svg";

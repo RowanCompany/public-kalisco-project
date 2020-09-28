@@ -1,9 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 import "./bootstrap.scss";
 
