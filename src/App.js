@@ -16,24 +16,22 @@ import Faq from "./pages/contact/Faq";
 function App() {
     return (
         <BrowserRouter forceRefresh={true}>
-            <>
-                <ScrollToTop />
-                <Switch>
-                    <Route path="/" exact component={HomePage} />
-                    <Route path="/about" component={About} />
-                    <Route path="/supports" component={Supports} />
-                    <Route path="/recruit" component={Recruit} />
-                    <Route path="/hr" component={HR} />
-                    <Route path="/brand" component={Brand} />
-                    <Route path="/products" component={Product} />
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/faq" component={Faq} />
-                    <Route path="/notices" component={Notice} />
-                    <Route>
-                        <Redirect to="/" />
-                    </Route>
-                </Switch>
-            </>
+            <ScrollToTop />
+            <Switch>
+                <Route path="/" exact component={HomePage} />
+                <Route path="/about" component={About} />
+                <Route path="/supports" component={Supports} />
+                <Route path="/recruit" component={Recruit} />
+                <Route path="/hr" component={HR} />
+                <Route path="/brand" component={Brand} />
+                <Route path="/products" component={Product} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/faq" component={Faq} />
+                <Route path="/notices" component={Notice} />
+                <Route>
+                    <Redirect to="/" />
+                </Route>
+            </Switch>
         </BrowserRouter>
     );
 }
