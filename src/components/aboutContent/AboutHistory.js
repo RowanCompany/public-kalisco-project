@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./about_content.module.scss";
 import historyLogo from "../../static/images/History.png";
 import history1 from "../../static/images/history_img_01.png";
@@ -24,8 +24,28 @@ import history9 from "../../static/images/history_img_09.png";
 import Footer from "../Footer";
 import LazyLoad from "react-lazy-load";
 
+import 'intersection-observer';
+
 function AboutHistory() {
     document.documentElement.style.setProperty("--animate-duration", "2s");
+
+    useEffect(() => {
+        const PointList = document.querySelectorAll(`.${styles.point}`);
+        const observer = new IntersectionObserver((entry) => {
+            entry.forEach(e => {
+                if (e.isIntersecting) {
+                    setTimeout(() => {
+                        e.target.style.borderColor = '#e8390e';
+                    }, 300);
+                } else {
+                    setTimeout(() => {
+                        e.target.style.borderColor = '#dddddd';
+                    }, 300);
+                }
+            });
+        });
+        PointList.forEach(e => observer.observe(e));
+    }, []);
 
     return (
         <>
