@@ -48,6 +48,7 @@
     "repository": "https://github.com/rowan-dev/kalisco-front-end.git",
     "author": "Subin Lee <chandar@rowan.kr>",
     "devDependencies": {
-        "@types/react-modal": "^3.10.6"
+        "@types/react-modal": "^3.10.6",
+        "prettier": "^2.1.2"
     }
 }
