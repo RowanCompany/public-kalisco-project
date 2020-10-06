@@ -285,6 +285,8 @@ function MainVerticalList() {
           setActiveIndex(0);
           controlledSwiper.activeIndex = 0;
           controlledSwiper.update();
+          setIsEnd(controlledSwiper.isEnd);
+          setIsBeginning(controlledSwiper.isBeginning);
         }}
       />
     </>
