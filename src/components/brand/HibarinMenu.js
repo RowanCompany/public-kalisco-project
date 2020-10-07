@@ -29,70 +29,62 @@ import "./swiper_menu.scss";
 import { Link } from "react-router-dom";
 
 function HibarinMenu({ subject }) {
-    SwiperCore.use([Navigation]);
-    const [menu, setMenu] = useState("katsu");
-    const menuData = {
-        katsu: {
-            sectionStyle: styles.katsuSection,
-            image: katsuImage,
-        },
-        donburi: {
-            sectionStyle: styles.donburiSection,
-            image: donburiImage,
-        },
-        noodles: {
-            sectionStyle: styles.noodleSection,
-            image: noodleImage,
-        },
-        side: {
-            sectionStyle: styles.sideSection,
-            image: sideImage,
-        },
-    };
+  SwiperCore.use([Navigation]);
+  const [menu, setMenu] = useState("katsu");
+  const menuData = {
+    katsu: {
+      sectionStyle: styles.katsuSection,
+      image: katsuImage,
+    },
+    donburi: {
+      sectionStyle: styles.donburiSection,
+      image: donburiImage,
+    },
+    noodles: {
+      sectionStyle: styles.noodleSection,
+      image: noodleImage,
+    },
+    side: {
+      sectionStyle: styles.sideSection,
+      image: sideImage,
+    },
+  };
 
-    /* <section
+  /* <section
         className={`${styles.menuListSection} ${
           menuData[menu] && menuData[menu]["sectionStyle"]
         }`}
       > */
-    return (
-        <>
-            <section className={styles.menuFirstSection}>
-                <div className={styles.menuTitleTextWrapper}>
-                    <img src={textMenuImage} alt="new menu" />
+  return (
+    <>
+      <section className={styles.menuFirstSection}>
+        <div className={styles.menuTitleTextWrapper}>
+          <img src={textMenuImage} alt="new menu" />
+        </div>
+        <div>
+          <Swiper
+            className={styles.menuSwiper}
+            slidesPerView="auto"
+            spaceBetween={10}
+            loop={true}
+            centeredSlides={true}
+            navigation
+          >
+            <SwiperSlide className="menu-slide">
+              <Link to="/supports/events/6">
+                <div className="text-center">
+                  <img src={menu1} alt="Menu 1" className="img-fill" />
                 </div>
-                <div>
-                    <Swiper
-                        className={styles.menuSwiper}
-                        slidesPerView="auto"
-                        spaceBetween={10}
-                        loop={true}
-                        centeredSlides={true}
-                        navigation
-                    >
-                        <SwiperSlide className="menu-slide">
-                            <Link to="/supports/events/6">
-                                <div className="text-center">
-                                    <img
-                                        src={menu1}
-                                        alt="Menu 1"
-                                        className="img-fill"
-                                    />
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide className="menu-slide">
-                            <Link to="/supports/events/7">
-                                <div className="text-center">
-                                    <img
-                                        src={menu2}
-                                        alt="Menu 2"
-                                        className="img-fill"
-                                    />
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide className="menu-slide">
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className="menu-slide">
+              <Link to="/supports/events/7">
+                <div className="text-center">
+                  <img src={menu2} alt="Menu 2" className="img-fill" />
+                </div>
+              </Link>
+            </SwiperSlide>
+            {/*<SwiperSlide className="menu-slide">
                             <Link to="/supports/events/8">
                                 <div className="text-center">
                                     <img
@@ -102,38 +94,30 @@ function HibarinMenu({ subject }) {
                                     />
                                 </div>
                             </Link>
-                        </SwiperSlide>
-                        <SwiperSlide className="menu-slide">
-                            <Link to="/supports/events/9">
-                                <div className="text-center">
-                                    <img
-                                        src={menu4}
-                                        alt="Menu 4"
-                                        className="img-fill"
-                                    />
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                        <SwiperSlide className="menu-slide">
-                            <Link to="/supports/events/10">
-                                <div className="text-center">
-                                    <img
-                                        src={menu5}
-                                        alt="Menu 5"
-                                        className="img-fill"
-                                    />
-                                </div>
-                            </Link>
-                        </SwiperSlide>
-                    </Swiper>
+                        </SwiperSlide>*/}
+            <SwiperSlide className="menu-slide">
+              <Link to="/supports/events/9">
+                <div className="text-center">
+                  <img src={menu4} alt="Menu 4" className="img-fill" />
                 </div>
-            </section>
-            <section className={styles.menuListSection}>
-                <div className={styles.menuListTitleWrapper}>
-                    <img src={hibarinTitleText} alt="ordinary menu" />
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className="menu-slide">
+              <Link to="/supports/events/10">
+                <div className="text-center">
+                  <img src={menu5} alt="Menu 5" className="img-fill" />
                 </div>
-                <div className={`row ${styles.menuListGridWrapper}`}>
-                    {/* <div className="col">
+              </Link>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+      <section className={styles.menuListSection}>
+        <div className={styles.menuListTitleWrapper}>
+          <img src={hibarinTitleText} alt="ordinary menu" />
+        </div>
+        <div className={`row ${styles.menuListGridWrapper}`}>
+          {/* <div className="col">
                         <div className={styles.MenuListFlexWrapper}>
                             <div
                                 className={`${styles.menuBorderLine} ${styles.katsuBorderLine}`}
@@ -220,22 +204,20 @@ function HibarinMenu({ subject }) {
                             />
                         </div>
                     </div> */}
-                    <Link
-                        className="d-block col"
-                        onMouseEnter={() => setMenu("katsu")}
-                        to={`/brand/hibarin/${subject}/katsu`}
-                    >
-                        <div>
-                            <img
-                                src={katsuImage}
-                                alt="katsu"
-                                className={`img-fill ${
-                                    menu === "katsu" ? styles.active : ""
-                                }`}
-                            />
-                        </div>
-                    </Link>
-                    {/* <Link
+          <Link
+            className="d-block col"
+            onMouseEnter={() => setMenu("katsu")}
+            to={`/brand/hibarin/${subject}/katsu`}
+          >
+            <div>
+              <img
+                src={katsuImage}
+                alt="katsu"
+                className={`img-fill ${menu === "katsu" ? styles.active : ""}`}
+              />
+            </div>
+          </Link>
+          {/* <Link
                         className="d-block col"
                         onMouseEnter={() => setMenu("donburi")}
                         to={`/brand/hibarin/${subject}/donburi`}
@@ -250,40 +232,38 @@ function HibarinMenu({ subject }) {
                             />
                         </div>
                     </Link> */}
-                    <Link
-                        className="d-block col"
-                        onMouseEnter={() => setMenu("friends")}
-                        to={`/brand/hibarin/${subject}/friends`}
-                    >
-                        <div>
-                            <img
-                                src={noodleImage}
-                                alt="noodle"
-                                className={`img-fill ${
-                                    menu === "friends" ? styles.active : ""
-                                }`}
-                            />
-                        </div>
-                    </Link>
-                    <Link
-                        className="d-block col"
-                        onMouseEnter={() => setMenu("drink")}
-                        to={`/brand/hibarin/${subject}/drink`}
-                    >
-                        <div>
-                            <img
-                                src={sideImage}
-                                alt="side"
-                                className={`img-fill ${
-                                    menu === "drink" ? styles.active : ""
-                                }`}
-                            />
-                        </div>
-                    </Link>
-                </div>
-            </section>
-        </>
-    );
+          <Link
+            className="d-block col"
+            onMouseEnter={() => setMenu("friends")}
+            to={`/brand/hibarin/${subject}/friends`}
+          >
+            <div>
+              <img
+                src={noodleImage}
+                alt="noodle"
+                className={`img-fill ${
+                  menu === "friends" ? styles.active : ""
+                }`}
+              />
+            </div>
+          </Link>
+          <Link
+            className="d-block col"
+            onMouseEnter={() => setMenu("drink")}
+            to={`/brand/hibarin/${subject}/drink`}
+          >
+            <div>
+              <img
+                src={sideImage}
+                alt="side"
+                className={`img-fill ${menu === "drink" ? styles.active : ""}`}
+              />
+            </div>
+          </Link>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default HibarinMenu;
