@@ -59,7 +59,7 @@ function HibarinMenu({ subject }) {
     <>
       <section className={styles.menuFirstSection}>
         <div className={styles.menuTitleTextWrapper}>
-          <img src={textMenuImage} alt="new menu" />
+          <img src={textMenuImage} alt="instagram" />
         </div>
         <div>
           <Swiper

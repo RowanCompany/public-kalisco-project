@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./saboten.module.scss";
-import textMenuImage from "../../static/images/text-saboten-menu.png";
+//import textMenuImage from "../../static/images/text-saboten-menu.png";
+import textInstagramImage from "../../static/images/img-instagram-text.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import sabotenImage1 from "../../static/images/img-saboten-event-1.jpg";
@@ -9,10 +10,10 @@ import sabotenImage3 from "../../static/images/img-saboten-event-3.jpg";
 import sabotenImage4 from "../../static/images/img-saboten-event-4.jpg";
 import sabotenImage5 from "../../static/images/img-saboten-event-5.jpg";
 import textOrdinaryImage from "../../static/images/text-saboten-ordinary.png";
-import katsuImage from "../../static/images/img-saboten-menu-1.png";
-import donburiImage from "../../static/images/img-saboten-menu-2.png";
-import noodleImage from "../../static/images/img-saboten-menu-3.png";
-import sideImage from "../../static/images/img-saboten-menu-4.png";
+import katsuImage from "../../static/images/img-saboten-menu2-1.jpg";
+import donburiImage from "../../static/images/img-saboten-menu2-2.jpg";
+import noodleImage from "../../static/images/img-saboten-menu2-3.jpg";
+import sideImage from "../../static/images/img-saboten-menu2-4.jpg";
 //import sabotenBackground from "../../static/images/img-p-saboten-background.png";
 
 import { Link } from "react-router-dom";
@@ -46,7 +47,7 @@ function SabotenMenu({ subject }) {
     <>
       <section className={styles.menuFirstSection}>
         <div className={styles.menuTitleTextWrapper}>
-          <img src={textMenuImage} alt="new menu" />
+          <img src={textInstagramImage} alt="instagram" />
         </div>
         <div>
           <Swiper
@@ -188,6 +189,7 @@ function SabotenMenu({ subject }) {
                 src={menuData[menu] && menuData[menu]["image"]}
                 alt="menu"
                 className="img-fluid"
+                style={{ maxWidth: "720px" }}
               />
             </div>
           </div>

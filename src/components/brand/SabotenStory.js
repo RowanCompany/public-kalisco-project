@@ -3,7 +3,7 @@ import styles from "./saboten.module.scss";
 import story1 from "../../static/images/img-p-saboten-story1.png";
 import sabotenLogo from "../../static/svg/logo-saboten-story.svg";
 import gif1 from "../../static/images/gif-p-saboten-story1.gif";
-import gif2 from "../../static/images/gif-p-saboten-story2.gif";
+//import gif2 from "../../static/images/gif-p-saboten-story2.gif";
 import gif3 from "../../static/images/gif-p-saboten-story3.gif";
 import gif4 from "../../static/images/gif-p-saboten-story4.gif";
 import lastImage from "../../static/images/img-p-saboten-story-last.png";
@@ -12,6 +12,7 @@ import image2 from "../../static/images/img-p-saboten-story-breadcrumbs.png";
 import image3 from "../../static/images/img-p-saboten-story-pork.png";
 import image4 from "../../static/images/img-p-saboten-story-sauce.png";
 import image5 from "../../static/images/img-p-saboten-story-handmade.png";
+import imageCheeseKatsu from "../../static/images/img-saboten-story-cheese-katsu.jpg";
 
 function SabotenStory() {
   return (
@@ -162,8 +163,9 @@ function SabotenStory() {
             </div>
             <div>
               <img
-                src={gif2}
+                src={imageCheeseKatsu}
                 alt="gif 2"
+                style={{ height: "333px" }}
                 className={styles.sabotenKatsuImages}
               />
             </div>
@@ -212,7 +214,7 @@ function SabotenStory() {
           <div className={`row ${styles.storyFlexListWrapper}`}>
             <div className={`col ${styles.storyFlexLeftDescriptionWrapper}`}>
               <div className={styles.storyFlexDescriptionTitle}>
-                50년 전통비법 생 빵가루
+                국내 최초 생 빵가루 사용
               </div>
               <div className={styles.storyFlexDescription}>
                 50년 전통비법 레시피로 만든,
@@ -239,7 +241,7 @@ function SabotenStory() {
           <div className={`row ${styles.storyFlexListWrapper}`}>
             <div className={`col ${styles.storyFlexLeftDescriptionWrapper}`}>
               <div className={styles.storyFlexDescriptionTitle}>
-                트랜스지방 0% 튀김유
+                트랜스지방 0% 돈카츠 전용 기름 개발
               </div>
               <div className={styles.storyFlexDescription}>
                 트랜스 지방 0%!
