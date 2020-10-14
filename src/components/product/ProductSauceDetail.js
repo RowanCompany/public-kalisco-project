@@ -4,7 +4,7 @@ import styles from "./product.module.scss";
 import { useParams, Redirect } from "react-router-dom";
 import SauceNavigator from "./SauceNavigator";
 import imgCurry1 from "../../static/images/img-p-sauce-curry-1.png";
-import imgCurry2 from "../../static/images/img-p-sauce-curry-2.png";
+import imgCurry2 from "../../static/images/img-sauce-curry-2-2-1.jpg";
 import imgCitron1 from "../../static/images/img-sauce-citron.png";
 import imgCitron2 from "../../static/images/img-p-sauce-yuzu-2.png";
 import imgCitronRec from "../../static/images/img-sauce-citron-rec-2.jpg";

@@ -72,18 +72,26 @@ function HibarinMenu({ subject }) {
             navigation
           >
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/6">
+              <a
+                href="https://www.instagram.com/p/CFGJMs7lRlb/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={menu1} alt="Menu 1" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/7">
+              <a
+                href="https://www.instagram.com/p/CE8vs1VFjNY/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={menu2} alt="Menu 2" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
             {/*<SwiperSlide className="menu-slide">
                             <Link to="/supports/events/8">
@@ -97,18 +105,26 @@ function HibarinMenu({ subject }) {
                             </Link>
                         </SwiperSlide>*/}
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/9">
+              <a
+                href="https://www.instagram.com/p/CEVY83XFjjE/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={menu4} alt="Menu 4" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/10">
+              <a
+                href="https://www.instagram.com/p/CED0LQPFsqw/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={menu5} alt="Menu 5" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
           </Swiper>
         </div>

@@ -12,7 +12,8 @@ import image2 from "../../static/images/img-p-saboten-story-breadcrumbs.png";
 import image3 from "../../static/images/img-p-saboten-story-pork.png";
 import image4 from "../../static/images/img-p-saboten-story-sauce.png";
 import image5 from "../../static/images/img-p-saboten-story-handmade.png";
-import imageCheeseKatsu from "../../static/images/img-saboten-story-cheese-katsu.jpg";
+//import imageCheeseKatsu from "../../static/images/img-saboten-story-cheese-katsu.jpg";
+import imageCheeseKatsu from "../../static/images/img-saboten-story-katsu.png";
 
 function SabotenStory() {
   return (
@@ -154,18 +155,18 @@ function SabotenStory() {
             </div>
           </div>
           <div className={styles.gifListWrapper}>
-            <div style={{ paddingRight: "20px" }}>
+            {/*<div style={{ paddingRight: "20px" }}>
               <img
                 src={gif1}
                 alt="gif 1"
                 className={styles.sabotenKatsuImages}
               />
-            </div>
-            <div>
+            </div>*/}
+            <div style={{ paddingRight: "60px" }}>
               <img
                 src={imageCheeseKatsu}
                 alt="gif 2"
-                style={{ height: "333px" }}
+                style={{ height: "333px", maxWidth: "100%" }}
                 className={styles.sabotenKatsuImages}
               />
             </div>

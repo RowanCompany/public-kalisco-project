@@ -59,32 +59,48 @@ function SabotenMenu({ subject }) {
             navigation
           >
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/1">
+              <a
+                href="https://www.instagram.com/p/CFbPDrZj63E/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={sabotenImage1} alt="Menu 1" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/2">
+              <a
+                href="https://www.instagram.com/p/CFOYinzjIOk/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={sabotenImage2} alt="Menu 1" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/3">
+              <a
+                href="https://www.instagram.com/p/CE_Ct3YD0ZZ/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={sabotenImage3} alt="Menu 1" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
             <SwiperSlide className="menu-slide">
-              <Link to="/supports/events/4">
+              <a
+                href="https://www.instagram.com/p/CE0uVSKBH2F/?utm_source=ig_web_copy_link"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
                 <div className="text-center">
                   <img src={sabotenImage4} alt="Menu 1" className="img-fill" />
                 </div>
-              </Link>
+              </a>
             </SwiperSlide>
             {/*<SwiperSlide className="menu-slide">
                             <Link to="/supports/events/5">
