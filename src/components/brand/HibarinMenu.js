@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./hibarin.module.scss";
-import textMenuImage from "../../static/images/text-hibarin-menu.png";
+//import textMenuImage from "../../static/images/text-hibarin-menu.png";
+import textInstagramImage from "../../static/images/imginstagram-text-hibarin.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 // import menu1 from "../../static/images/img-p-hibarin-menu1.png";
@@ -59,7 +60,7 @@ function HibarinMenu({ subject }) {
     <>
       <section className={styles.menuFirstSection}>
         <div className={styles.menuTitleTextWrapper}>
-          <img src={textMenuImage} alt="instagram" />
+          <img src={textInstagramImage} alt="instagram" />
         </div>
         <div>
           <Swiper

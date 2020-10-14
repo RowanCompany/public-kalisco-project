@@ -5,39 +5,65 @@ import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
 
 import "./bootstrap.scss";
+import FaqData from "./FaqData";
+
+const FaqDataLength = FaqData.length;
 
 function Faq() {
-    return (
-        <>
-            <ContactBanner subject="faq" />
-            <section className={styles.noticeSection}>
-                <div className="container">
-                    <form>
-                        <div className={styles.searchFormWrapper}>
-                            <div className={styles.searchFormTitle}>FAQ</div>
-                            <div className={styles.searchFormInputWrapper}>
-                                <div>
-                                    <label className="d-inline-block">
-                                        <input
-                                            type="text"
-                                            className={styles.searchFormInput}
-                                        />
-                                    </label>
-                                </div>
-                                <div className={styles.searchFormButtonWrapper}>
-                                    <button
-                                        type="submit"
-                                        className={styles.searchFormButton}
-                                    >
-                                        Search
-                                    </button>
-                                </div>
-                            </div>
+  return (
+    <>
+      <ContactBanner subject="faq" />
+      <section className={styles.noticeSection}>
+        <div className="container">
+          <form>
+            <div className={styles.searchFormWrapper}>
+              <div className={styles.searchFormTitle}>FAQ</div>
+              <div className={styles.searchFormInputWrapper}>
+                <div>
+                  <label className="d-inline-block">
+                    <input type="text" className={styles.searchFormInput} />
+                  </label>
+                </div>
+                <div className={styles.searchFormButtonWrapper}>
+                  <button type="submit" className={styles.searchFormButton}>
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div>
+            <Accordion className={styles.noticeAccordionWrapper}>
+              {FaqData.reverse().map((d, i) => (
+                <Card key={i}>
+                  <Accordion.Toggle as={Card.Header} eventKey={i + 1}>
+                    <div className={styles.headerTitleWrapper}>
+                      <div className={styles.headerTitleNumber}>
+                        {FaqDataLength - i}
+                      </div>
+                      <div className={styles.headerTitle}>{d.question}</div>
+                      <div className={styles.headerTitleSideWrapper}>
+                        <div className={styles.headerTitleCreatedAt}>
+                          2020.10.14
                         </div>
-                    </form>
-                    <div>
-                        <Accordion className={styles.noticeAccordionWrapper}>
-                            <Card>
+                      </div>
+                    </div>
+                  </Accordion.Toggle>
+                  <Accordion.Collapse eventKey={i + 1}>
+                    <Card.Body>
+                      {/*쿠폰 선물하기 이용 방법은 홈페이지 또는 APP 에서 로그인 후
+                      마이쿠폰 &gt; 리워즈 쿠폰에서 쿠폰을 선택하시면 쿠폰
+                      상세에서 하단 쿠폰 선물하기를 통해 가능합니다.
+                      <br />
+                      <br />
+                      쿠폰 선물하기는 캘리스코 APP, 문자, 카카오톡으로 선물할 수
+                      있습니다.*/}
+                      {d.description}
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              ))}
+              {/*<Card>
                                 <Accordion.Toggle as={Card.Header} eventKey="0">
                                     <div className={styles.headerTitleWrapper}>
                                         <div
@@ -120,14 +146,13 @@ function Faq() {
                                         총 15일 동안 사용 가능합니다.
                                     </Card.Body>
                                 </Accordion.Collapse>
-                            </Card>
-                        </Accordion>
-                    </div>
-                    <div></div>
-                </div>
-            </section>
-        </>
-    );
+                            </Card>*/}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
 
 export default Faq;

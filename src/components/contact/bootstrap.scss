@@ -11,18 +11,22 @@
 @import "~bootstrap/scss/tooltip";
 
 section {
-    .card {
-        background-color: #ffffff;
-        border-top: none !important;
-        border-left: none !important;
-        border-right: none !important;
-        border-bottom: 1px solid #dddddd !important;
+  .card {
+    background-color: #ffffff;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 1px solid #dddddd !important;
 
-        .card-header {
-            background-color: #ffffff;
-            border: none;
-            border-bottom: 1px solid #dddddd;
-            cursor: pointer;
-        }
+    .card-header {
+      background-color: #ffffff;
+      border: none;
+      border-bottom: 1px solid #dddddd;
+      cursor: pointer;
     }
+
+    .card-body {
+      white-space: pre-line;
+    }
+  }
 }
