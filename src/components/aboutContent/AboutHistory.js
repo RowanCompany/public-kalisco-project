@@ -101,6 +101,7 @@ function AboutHistory() {
                       src={history2}
                       alt="second history"
                       className="animate__animated animate__fadeInUp"
+                      style={{ width: "674px" }}
                     />
                   </LazyLoad>
                 </div>
@@ -253,6 +254,7 @@ function AboutHistory() {
                       src={history5}
                       alt="5th story"
                       className="animate__animated animate__fadeInUp"
+                      style={{ width: "674px" }}
                     />
                   </LazyLoad>
                 </div>
@@ -287,6 +289,7 @@ function AboutHistory() {
                       src={history6}
                       alt="9th history"
                       className="animate__animated animate__fadeInUp"
+                      style={{ width: "674px" }}
                     />
                   </LazyLoad>
                 </div>
@@ -317,6 +320,7 @@ function AboutHistory() {
                       src={history7}
                       alt="10th history"
                       className="animate__animated animate__fadeInUp"
+                      style={{ width: "674px" }}
                     />
                   </LazyLoad>
                 </div>
@@ -384,6 +388,7 @@ function AboutHistory() {
                       src={history9}
                       alt="13th history"
                       className="animate__animated animate__fadeInUp"
+                      style={{ width: "674px" }}
                     />
                   </LazyLoad>
                 </div>
