@@ -1,226 +1,266 @@
 .supportDetailBackgroundWrapper {
-    position: absolute;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.67);
+
+  .supportDetailLayoutWrapper {
     width: 100%;
     height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.67);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-    .supportDetailLayoutWrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        .supportDetailTitle {
-            margin-top: auto;
-            margin-bottom: 80px;
-            --animation-duration: 1.5s;
-        }
-
-        .supportDetailMenuList {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0 0 12px 0;
-            margin: 0;
-
-            > .supportDetailMenu {
-                &:not(:last-child) {
-                    margin-right: 30px;
-                }
-
-                .supportDetailMenuLink {
-                    display: inline-block;
-                    padding: 16px 34px;
-                    color: rgba($color: #ffffff, $alpha: 0.5);
-                    text-decoration: none;
-                    border-bottom: 3px solid transparent;
-
-                    &:hover {
-                        color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid
-                            rgba($color: #ffffff, $alpha: 0.8);
-                    }
-
-                    &.active {
-                        color: #ffffff;
-                        border-bottom: 3px solid #ffffff;
-
-                        &:hover {
-                            color: #ffffff;
-                            border-bottom: 3px solid #ffffff;
-                        }
-                    }
-                }
-            }
-        }
+    .supportDetailTitle {
+      margin-top: auto;
+      margin-bottom: 80px;
+      --animation-duration: 1.5s;
     }
+
+    .supportDetailMenuList {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0 0 12px 0;
+      margin: 0;
+
+      > .supportDetailMenu {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        .supportDetailMenuLink {
+          display: inline-block;
+          padding: 16px 34px;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+          text-decoration: none;
+          border-bottom: 3px solid transparent;
+
+          &:hover {
+            color: rgba($color: #ffffff, $alpha: 0.8);
+            border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
+          }
+
+          &.active {
+            color: #ffffff;
+            border-bottom: 3px solid #ffffff;
+
+            &:hover {
+              color: #ffffff;
+              border-bottom: 3px solid #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .tempDetailContent {
-    padding-top: 80px;
-    padding-bottom: 70px;
-    position: relative;
-    background-color: #f4f4f4;
+  padding-top: 80px;
+  padding-bottom: 70px;
+  position: relative;
+  background-color: #f4f4f4;
 
-    .tempKakaotalkPanel {
-        width: 800px;
-        margin: 0 auto;
-        background-color: #ffe833;
-        padding-top: 50px;
-        position: relative;
+  .giveawayPanel {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 45px 8px;
 
-        .tempKakaotalkPanelTitle {
-            text-align: center;
-            font-size: 33px;
-            letter-spacing: -0.66px;
-            padding-top: 12px;
-
-            b {
-                font-size: 45px;
-            }
-        }
-
-        .tempKakaotalkPanelSubTitle {
-            text-align: center;
-            font-size: 24px;
-            letter-spacing: -0.48px;
-            color: #2f2f2f;
-            padding-bottom: 76px;
-        }
-
-        .tempKakaotalkPanelFlexWrapper {
-            display: flex;
-            padding: 0 16px;
-
-            .tempKakaotalkPanelBenefitWrapper {
-                padding-left: 40px;
-
-                .tempKakaotalkPanelBenefitTextWrapper {
-                    display: flex;
-                    margin-bottom: 11px;
-                    align-items: center;
-
-                    .tempKakaoPanelBenefitCircle {
-                        padding: 6px 12px;
-                        border-radius: 100%;
-                        background-color: #391b1b;
-                        font-size: 16px;
-                        letter-spacing: -0.32px;
-                        color: #ffffff;
-                        width: 33px;
-                        height: 33px;
-                        text-align: center;
-                        box-sizing: border-box;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 13px;
-                        font-weight: bold;
-                    }
-
-                    .tempKakaoPanelBenefitText {
-                        font-size: 18px;
-                        letter-spacing: -0.36px;
-                        color: #2f2f2f;
-                    }
-                }
-            }
-        }
-
-        .tempKakaoPanelFooter {
-            background-color: #f4d32f;
-            padding: 19px 30px;
-            display: flex;
-            justify-content: space-between;
-
-            .tempKakaoPanelFooterBox {
-                border: 2px solid #dbbb19;
-                border-radius: 8px;
-                padding: 14px 20px;
-                display: flex;
-                background-color: #ffffff;
-                align-items: center;
-                box-sizing: border-box;
-                height: 100%;
-
-                .tempKakaoPanelFooterBoxText {
-                    padding-left: 10px;
-                    font-size: 15px;
-                    color: #2f2f2f;
-                    letter-spacing: -0.34px;
-                    text-decoration: none;
-                }
-
-                &:not(:last-child) {
-                    margin-right: 18px;
-                }
-            }
-        }
+    .giveawayTitle {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2f2f2f;
+      text-align: center;
+      margin-bottom: 36px;
+      font-family: "Nanum Myeongjo", serif;
+      letter-spacing: -0.56px;
     }
 
-    .tempPanel {
-        width: 800px;
-        margin: 0 auto;
-        background-color: #ffffff;
-        padding: 65px 0;
-        text-align: center;
+    .giveawayContact {
+      font-size: 18px;
+      text-align: center;
+      padding-top: 24px;
+    }
 
-        .tempPanelTitle {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: -0.56px;
-            color: #2f2f2f;
-            font-family: "Nanum Myeongjo", serif;
-            padding-bottom: 34px;
+    ul {
+      list-style-type: disc;
+      padding-left: 16px;
+
+      li {
+        font-size: 14px;
+        color: #2f2f2f;
+        letter-spacing: 0;
+        line-height: 18px;
+        word-break: keep-all;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
         }
+      }
+    }
+  }
 
-        .tempPanelDescription {
+  .tempKakaotalkPanel {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ffe833;
+    padding-top: 50px;
+    position: relative;
+
+    .tempKakaotalkPanelTitle {
+      text-align: center;
+      font-size: 33px;
+      letter-spacing: -0.66px;
+      padding-top: 12px;
+
+      b {
+        font-size: 45px;
+      }
+    }
+
+    .tempKakaotalkPanelSubTitle {
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: -0.48px;
+      color: #2f2f2f;
+      padding-bottom: 76px;
+    }
+
+    .tempKakaotalkPanelFlexWrapper {
+      display: flex;
+      padding: 0 16px;
+
+      .tempKakaotalkPanelBenefitWrapper {
+        padding-left: 40px;
+
+        .tempKakaotalkPanelBenefitTextWrapper {
+          display: flex;
+          margin-bottom: 11px;
+          align-items: center;
+
+          .tempKakaoPanelBenefitCircle {
+            padding: 6px 12px;
+            border-radius: 100%;
+            background-color: #391b1b;
+            font-size: 16px;
+            letter-spacing: -0.32px;
+            color: #ffffff;
+            width: 33px;
+            height: 33px;
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 13px;
+            font-weight: bold;
+          }
+
+          .tempKakaoPanelBenefitText {
             font-size: 18px;
             letter-spacing: -0.36px;
             color: #2f2f2f;
-            padding-top: 34px;
+          }
         }
+      }
     }
 
-    .tempDetailButtonWrapper {
-        position: absolute;
-        right: 48px;
-        bottom: 52px;
+    .tempKakaoPanelFooter {
+      background-color: #f4d32f;
+      padding: 19px 30px;
+      display: flex;
+      justify-content: space-between;
 
-        .tempDetailButton {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: #e8390e;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-            font-size: 13px;
-            font-family: "Montserrat", sans-serif;
-            border: none;
-            padding: 0;
-            cursor: pointer;
+      .tempKakaoPanelFooterBox {
+        border: 2px solid #dbbb19;
+        border-radius: 8px;
+        padding: 14px 20px;
+        display: flex;
+        background-color: #ffffff;
+        align-items: center;
+        box-sizing: border-box;
+        height: 100%;
 
-            &:focus {
-                outline: none;
-                border: none;
-                box-shadow: none;
-            }
+        .tempKakaoPanelFooterBoxText {
+          padding-left: 10px;
+          font-size: 15px;
+          color: #2f2f2f;
+          letter-spacing: -0.34px;
+          text-decoration: none;
         }
+
+        &:not(:last-child) {
+          margin-right: 18px;
+        }
+      }
     }
+  }
+
+  .tempPanel {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 65px 0;
+    text-align: center;
+
+    .tempPanelTitle {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: -0.56px;
+      color: #2f2f2f;
+      font-family: "Nanum Myeongjo", serif;
+      padding-bottom: 34px;
+    }
+
+    .tempPanelDescription {
+      font-size: 18px;
+      letter-spacing: -0.36px;
+      color: #2f2f2f;
+      padding-top: 34px;
+    }
+  }
+
+  .tempDetailButtonWrapper {
+    position: absolute;
+    right: 48px;
+    bottom: 52px;
+
+    .tempDetailButton {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #e8390e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 13px;
+      font-family: "Montserrat", sans-serif;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 .supportListWrapper {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($color: #000000, $alpha: 0.67);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.67);
 
-    .supportTextWrapper {
-        padding-top: 190px;
-        text-align: center;
-        padding-bottom: 150px;
-    }
+  .supportTextWrapper {
+    padding-top: 190px;
+    text-align: center;
+    padding-bottom: 150px;
+  }
 }
