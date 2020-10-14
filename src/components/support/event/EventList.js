@@ -1,8 +1,8 @@
 import React from "react";
 import EventPanel from "./EventPanel";
 import { eventListWrapper } from "./event.module.scss";
-import iconArrowDown from "../../../static/svg/icon-arrow-down.svg";
-import EventPanelData from "./EventPanelData";
+//import iconArrowDown from "../../../static/svg/icon-arrow-down.svg";
+import EventPanelData from "./EventPanelNewData";
 
 function EventList({ type }) {
   return (

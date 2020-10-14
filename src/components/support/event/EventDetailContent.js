@@ -4,7 +4,7 @@ import LeftArrow from "./svg/LeftArrow";
 import RightArrow from "./svg/RightArrow";
 import upArrow from "../../../static/svg/icon-arrow-up.svg";
 import downArrow from "../../../static/svg/icon-arrow-down.svg";
-import EventPanelData from "./EventPanelData";
+import EventPanelData from "./EventPanelNewData";
 import { useParams } from "react-router-dom";
 
 // TODO: 데이터 연동해야 함
@@ -17,7 +17,7 @@ function EventDetailContent() {
       <div className={styles.eventDetailTitle}>{filteredItem.title}</div>
       <div className={styles.eventDetailDate}>{filteredItem.createdAt}</div>
       <div className={styles.eventDetailNavigatorWrapper}>
-        <div
+        {/*<div
           className={`${styles.eventDetailNavigator} ${styles.disabled}`}
           style={{ paddingRight: "15px" }}
         >
@@ -34,7 +34,7 @@ function EventDetailContent() {
           <div>
             <RightArrow />
           </div>
-        </div>
+        </div>*/}
       </div>
       <div className={styles.eventDetailContentWrapper}>
         <div>
@@ -43,7 +43,7 @@ function EventDetailContent() {
         <div style={{ paddingTop: "50px" }}>{filteredItem.description}</div>
       </div>
       <div className={styles.eventDetailPostNavigatorWrapper}>
-        <div className={styles.eventDetailPostNavigator}>
+        {/*<div className={styles.eventDetailPostNavigator}>
           <div>
             <img src={upArrow} alt="Up Arrow" />
           </div>
@@ -60,7 +60,7 @@ function EventDetailContent() {
           <div className={styles.eventDetailPostNavigatorTitle}>
             사보텐 벤또 출시!
           </div>
-        </div>
+        </div>*/}
       </div>
     </div>
   );
