@@ -101,6 +101,11 @@ function HibarinMenuContent() {
                 </div>
                 <div className={styles.sideMenuPrice}>1.2</div>
                 <div>
+                  <div className={styles.sideMenuEnTitle}>SIDE UDON/SOBA</div>
+                  <div className={styles.sideMenuTitle}>곁들임 우동/소바</div>
+                </div>
+                <div className={styles.sideMenuPrice}>3.8</div>
+                <div>
                   <div className={styles.sideMenuEnTitle}>SIDE DISH</div>
                   <div className={styles.sideMenuTitle}>곁들임 반찬</div>
                 </div>

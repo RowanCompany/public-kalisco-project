@@ -87,7 +87,7 @@ export const newData = {
       enTitle: "MOAZZA-CHEDDAR CHEESE KATSU",
       title: "모짜체다치즈카츠",
       description:
-        "고소하고 부드러운 모짜체다 치즈와\n새우스테이크를 함께 즐기는 베스트 카츠",
+        "고소하고 부드러운 모짜체다 치즈와\n새우 스테이크를 함께 즐기는 베스트 카츠",
       price: "14.5",
     },
     {

@@ -13,7 +13,7 @@ import image3 from "../../static/images/img-p-saboten-story-pork.png";
 import image4 from "../../static/images/img-p-saboten-story-sauce.png";
 import image5 from "../../static/images/img-p-saboten-story-handmade.png";
 //import imageCheeseKatsu from "../../static/images/img-saboten-story-cheese-katsu.jpg";
-import imageCheeseKatsu from "../../static/images/img-saboten-story-katsu.png";
+import imageCheeseKatsu from "../../static/images/img-saboten-story-katsu-2.png";
 
 function SabotenStory() {
   return (
@@ -163,12 +163,7 @@ function SabotenStory() {
               />
             </div>*/}
             <div>
-              <img
-                src={imageCheeseKatsu}
-                alt="gif 2"
-                style={{ height: "333px", maxWidth: "100%" }}
-                className={styles.sabotenKatsuImages}
-              />
+              <img src={imageCheeseKatsu} alt="gif 2" className="img-fluid" />
             </div>
             <div
               className={`${styles.storyDescription} ${styles.sabotenKatsuDescriptionWrapper}`}
@@ -178,11 +173,6 @@ function SabotenStory() {
               끊임없는 연구를 통해
               <br />
               우리의 입맛에 맞게 개선하였습니다.
-              {/*<br />
-              <br />
-              이러한 노력 끝에 2001년
-              <b style={{ color: "#E8390E" }}>세계 최초</b>로 치즈카츠를
-              개발하였습니다.*/}
             </div>
           </div>
           <div
