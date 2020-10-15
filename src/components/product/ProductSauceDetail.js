@@ -16,6 +16,8 @@ import imgKatsu2 from "../../static/images/img-p-sauce-don-2.png";
 import imgKatsuRec from "../../static/images/img-sauce-katsu-rec-2.jpg";
 import imgRice1 from "../../static/images/img-sauce-rice.png";
 import imgRice2 from "../../static/images/img-p-sauce-rice-bowl-2.jpg";
+import naverIcon from "../../static/svg/icon_naver.svg";
+import kakaotalkIcon from "../../static/svg/icon_kakaotalk_product.svg";
 
 function ProductSauceDetail({ content }) {
   const { sauce } = useParams();
@@ -25,6 +27,9 @@ function ProductSauceDetail({ content }) {
       secondImage: imgKatsu2,
       recipeImage: imgKatsuRec,
       firstTitle: "[20주년 에디션] 사보텐 돈카츠 소스 220g",
+      naverStoreLink:
+        "https://smartstore.naver.com/saboten/products/5018645498",
+      kakaoStoreLink: "https://store.kakao.com/sabotenkorea/products/68159908",
       priceText: (
         <>
           <b>4,500</b>원(VAT포함)
@@ -68,6 +73,9 @@ function ProductSauceDetail({ content }) {
       secondImage: imgSesame2,
       recipeImage: imgSesameRec,
       firstTitle: "[20주년 에디션] 사보텐 참깨소스 200g",
+      naverStoreLink:
+        "https://smartstore.naver.com/saboten/products/5040809243",
+      kakaoStoreLink: "https://store.kakao.com/sabotenkorea/products/68160033",
       priceText: (
         <>
           <b>4,500</b>원(VAT포함)
@@ -107,6 +115,9 @@ function ProductSauceDetail({ content }) {
       firstImage: imgCitron1,
       secondImage: imgCitron2,
       firstTitle: "[20주년 에디션] 사보텐 유자소스 210g",
+      naverStoreLink:
+        "https://smartstore.naver.com/saboten/products/5040793601",
+      kakaoStoreLink: "https://store.kakao.com/sabotenkorea/products/68159986",
       priceText: (
         <>
           <b>4,500</b>원(VAT포함)
@@ -150,6 +161,9 @@ function ProductSauceDetail({ content }) {
       firstImage: imgRice1,
       secondImage: imgRice2,
       firstTitle: "[20주년 에디션] 사보텐 일식 덮밥 소스 (셰프의 만능 치트키)",
+      naverStoreLink:
+        "https://smartstore.naver.com/saboten/products/5071567105",
+      kakaoStoreLink: "https://store.kakao.com/sabotenkorea/products/68160101",
       priceText: (
         <>
           <b>4,500</b>원(VAT포함)
@@ -264,6 +278,30 @@ function ProductSauceDetail({ content }) {
                   <div className={styles.sauceDetailTextDescription}>
                     {sauceData[sauce] && sauceData[sauce]["secondDescription"]}
                   </div>
+                  {sauceData[sauce]["naverStoreLink"] ? (
+                    <div className={styles.storeButtonWrapper}>
+                      <a
+                        href={sauceData[sauce]["naverStoreLink"]}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className={styles.naverStoreButton}
+                      >
+                        <img src={naverIcon} alt="naver" />
+                        네이버 스토어에서 구매하기
+                      </a>
+                      <a
+                        href={sauceData[sauce]["kakaoStoreLink"]}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className={styles.kakaoStoreButton}
+                      >
+                        <img src={kakaotalkIcon} alt="kakaotalk" />
+                        카카오 스토어에서 구매하기
+                      </a>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                 </div>
               </div>
             </div>

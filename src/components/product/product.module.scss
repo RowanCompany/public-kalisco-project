@@ -1,544 +1,581 @@
 .backgroundWrapper {
-    position: absolute;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .layoutWrapper {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-    .layoutWrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        .title {
-            margin-top: auto;
-            margin-bottom: 80px;
-            --animate-duration: 1.5s;
-        }
-
-        .menuList {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0 0 12px 0;
-            margin: 0;
-
-            > .menu {
-                &:not(:last-child) {
-                    margin-right: 30px;
-                }
-
-                .menuLink {
-                    display: inline-block;
-                    padding: 16px 34px;
-                    color: rgba($color: #ffffff, $alpha: 0.5);
-                    text-decoration: none;
-                    border-bottom: 3px solid transparent;
-
-                    &:hover {
-                        color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid
-                            rgba($color: #ffffff, $alpha: 0.8);
-                    }
-
-                    &.active {
-                        color: #ffffff;
-                        border-bottom: 3px solid #ffffff;
-
-                        &:hover {
-                            color: #ffffff;
-                            border-bottom: 3px solid #ffffff;
-                        }
-                    }
-                }
-            }
-        }
+    .title {
+      margin-top: auto;
+      margin-bottom: 80px;
+      --animate-duration: 1.5s;
     }
+
+    .menuList {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0 0 12px 0;
+      margin: 0;
+
+      > .menu {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        .menuLink {
+          display: inline-block;
+          padding: 16px 34px;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+          text-decoration: none;
+          border-bottom: 3px solid transparent;
+
+          &:hover {
+            color: rgba($color: #ffffff, $alpha: 0.8);
+            border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
+          }
+
+          &.active {
+            color: #ffffff;
+            border-bottom: 3px solid #ffffff;
+
+            &:hover {
+              color: #ffffff;
+              border-bottom: 3px solid #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .homemadeFirstSection {
-    background-color: #151515;
-    padding: 100px 0;
+  background-color: #151515;
+  padding: 100px 0;
 
-    .homemadeCircleList {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        justify-content: center;
+  .homemadeCircleList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
 
-        .homemadeCircle {
-            width: 228px;
-            height: 228px;
-            border-radius: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-            border: 1px solid #ffffff;
-            text-align: center;
-            position: relative;
+    .homemadeCircle {
+      width: 228px;
+      height: 228px;
+      border-radius: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      text-align: center;
+      position: relative;
 
-            .homemadeCircleDescription {
-                padding-top: 33px;
-                font-family: "Nanum Myeongjo", serif;
-                color: #ffffff;
-                letter-spacing: 0;
-                font-size: 18px;
-            }
+      .homemadeCircleDescription {
+        padding-top: 33px;
+        font-family: "Nanum Myeongjo", serif;
+        color: #ffffff;
+        letter-spacing: 0;
+        font-size: 18px;
+      }
 
-            &.first {
-                &::before {
-                    content: " ";
-                    position: absolute;
-                    width: 13px;
-                    height: 13px;
-                    border-radius: 100%;
-                    background-color: #ffffff;
-                    top: -6px;
-                }
-            }
-
-            &.second {
-                &::before {
-                    content: " ";
-                    position: absolute;
-                    width: 13px;
-                    height: 13px;
-                    border-radius: 100%;
-                    background-color: #ffffff;
-                    left: -6px;
-                }
-            }
-
-            &.third {
-                &::before {
-                    content: " ";
-                    position: absolute;
-                    width: 13px;
-                    height: 13px;
-                    border-radius: 100%;
-                    background-color: #ffffff;
-                    bottom: -6px;
-                }
-            }
-
-            &.fourth {
-                border: 1px solid transparent;
-                background-color: #e8390e;
-
-                &::before {
-                    content: " ";
-                    position: absolute;
-                    width: 13px;
-                    height: 13px;
-                    border-radius: 100%;
-                    background-color: #ffffff;
-                    right: -6px;
-                }
-            }
+      &.first {
+        &::before {
+          content: " ";
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          border-radius: 100%;
+          background-color: #ffffff;
+          top: -6px;
         }
+      }
+
+      &.second {
+        &::before {
+          content: " ";
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          border-radius: 100%;
+          background-color: #ffffff;
+          left: -6px;
+        }
+      }
+
+      &.third {
+        &::before {
+          content: " ";
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          border-radius: 100%;
+          background-color: #ffffff;
+          bottom: -6px;
+        }
+      }
+
+      &.fourth {
+        border: 1px solid transparent;
+        background-color: #e8390e;
+
+        &::before {
+          content: " ";
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          border-radius: 100%;
+          background-color: #ffffff;
+          right: -6px;
+        }
+      }
     }
+  }
 }
 
 .homemadeSecondSection {
-    position: relative;
+  position: relative;
 
-    .homemadeTextWrapper {
-        align-self: center;
-        text-align: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+  .homemadeTextWrapper {
+    align-self: center;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-        .homemadeDescription {
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 20px;
-            letter-spacing: 0;
-            color: #2f2f2f;
-        }
-
-        .homemadeButton {
-            background-color: rgba($color: #e8390e, $alpha: 0.9);
-            border-radius: 8px;
-            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.16);
-            min-width: 300px;
-            text-align: center;
-            padding-top: 33px;
-            padding-bottom: 28px;
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 18px;
-            letter-spacing: -0.36px;
-            text-decoration: none;
-            color: #ffffff;
-            display: inline-block;
-        }
-
-        .storeButtonWrapper {
-            display: flex;
-            align-items: center;
-
-            .naverStoreButton {
-                border: 2px solid #459d25;
-                border-radius: 8px;
-                padding: 25px;
-                text-decoration: none;
-                font-size: 15px;
-                font-family: "Noto Sans KR", sans-serif;
-                font-weight: bold;
-                margin-right: 10px;
-                letter-spacing: -0.3px;
-                color: #2f2f2f;
-
-                > img {
-                    margin-right: 42px;
-                }
-            }
-
-            .kakaoStoreButton {
-                padding: 19px 32px;
-                border-radius: 8px;
-                border: 2px solid #fae300;
-                text-decoration: none;
-                font-size: 15px;
-                font-family: "Noto Sans KR", sans-serif;
-                font-weight: bold;
-                letter-spacing: -0.3px;
-                color: #2f2f2f;
-
-                > img {
-                    margin-right: 32px;
-                }
-            }
-        }
+    .homemadeDescription {
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 20px;
+      letter-spacing: 0;
+      color: #2f2f2f;
     }
+
+    .homemadeButton {
+      background-color: rgba($color: #e8390e, $alpha: 0.9);
+      border-radius: 8px;
+      box-shadow: 0 3px 0 rgba(0, 0, 0, 0.16);
+      min-width: 300px;
+      text-align: center;
+      padding-top: 33px;
+      padding-bottom: 28px;
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 18px;
+      letter-spacing: -0.36px;
+      text-decoration: none;
+      color: #ffffff;
+      display: inline-block;
+    }
+
+    .storeButtonWrapper {
+      display: flex;
+      align-items: center;
+
+      .naverStoreButton {
+        border: 2px solid #459d25;
+        border-radius: 8px;
+        padding: 25px;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: bold;
+        margin-right: 10px;
+        letter-spacing: -0.3px;
+        color: #2f2f2f;
+
+        > img {
+          margin-right: 42px;
+        }
+      }
+
+      .kakaoStoreButton {
+        padding: 19px 32px;
+        border-radius: 8px;
+        border: 2px solid #fae300;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: bold;
+        letter-spacing: -0.3px;
+        color: #2f2f2f;
+
+        > img {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
 }
 
 .katsuSection {
-    background-color: #151515;
-    padding-top: 80px;
-    padding-bottom: 150px;
-    position: relative;
+  background-color: #151515;
+  padding-top: 80px;
+  padding-bottom: 150px;
+  position: relative;
 }
 
 .sauceFirstSection {
+  position: relative;
+  padding-top: 80px;
+
+  .sauceTitle {
+    font-size: 40px;
+    color: #2f2f2f;
+    font-family: "Nanum Myeongjo", serif;
+    letter-spacing: 0;
+    text-align: center;
+    padding-bottom: 80px;
+  }
+
+  .sauceListWrapper {
     position: relative;
-    padding-top: 80px;
+    text-align: center;
 
-    .sauceTitle {
-        font-size: 40px;
-        color: #2f2f2f;
-        font-family: "Nanum Myeongjo", serif;
-        letter-spacing: 0;
-        text-align: center;
-        padding-bottom: 80px;
-    }
+    .sauceList {
+      position: relative;
+      padding-top: 60px;
+      padding-bottom: 75px;
+      box-sizing: border-box;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-    .sauceListWrapper {
-        position: relative;
-        text-align: center;
+      .sauceBox {
+        display: inline-block;
+        padding: 30px;
+        flex: 0 0 auto;
+        align-self: center;
+        min-width: 420px;
 
-        .sauceList {
-            position: relative;
-            padding-top: 60px;
-            padding-bottom: 75px;
-            box-sizing: border-box;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            .sauceBox {
-                display: inline-block;
-                padding: 30px;
-                flex: 0 0 auto;
-                align-self: center;
-                min-width: 420px;
-
-                &:not(:last-child) {
-                    border-bottom: 1px solid #dddddd;
-                }
-
-                .sauceImageWrapper {
-                    text-align: center;
-                    padding-bottom: 16px;
-                }
-
-                .sauceTitle {
-                    font-family: "Nanum Myeongjo", serif;
-                    letter-spacing: 0.72px;
-                    color: #2f2f2f;
-                    font-weight: bold;
-                    font-size: 24px;
-                    padding-bottom: 8px;
-                    text-align: center;
-                }
-
-                .sauceDescription {
-                    letter-spacing: 0.48px;
-                    color: #2f2f2f;
-                    text-align: center;
-                    font-size: 16px;
-                    font-family: "Nanum Myeongjo", serif;
-                }
-            }
+        &:not(:last-child) {
+          border-bottom: 1px solid #dddddd;
         }
 
-        .sauceListBackgroundWrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
-            height: 100%;
+        .sauceImageWrapper {
+          text-align: center;
+          padding-bottom: 16px;
         }
+
+        .sauceTitle {
+          font-family: "Nanum Myeongjo", serif;
+          letter-spacing: 0.72px;
+          color: #2f2f2f;
+          font-weight: bold;
+          font-size: 24px;
+          padding-bottom: 8px;
+          text-align: center;
+        }
+
+        .sauceDescription {
+          letter-spacing: 0.48px;
+          color: #2f2f2f;
+          text-align: center;
+          font-size: 16px;
+          font-family: "Nanum Myeongjo", serif;
+        }
+      }
     }
+
+    .sauceListBackgroundWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .sauceSecondSection {
-    background-color: #1c1c1c;
-    padding: 100px 0;
+  background-color: #1c1c1c;
+  padding: 100px 0;
 
-    .sauceSecondTitle {
-        font-size: 40px;
-        font-family: "Nanum Myeongjo", serif;
-        color: #ffffff;
-        text-align: center;
-        padding-bottom: 77px;
-    }
+  .sauceSecondTitle {
+    font-size: 40px;
+    font-family: "Nanum Myeongjo", serif;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 77px;
+  }
 
-    .sauceSecondNavigatorWrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-bottom: 30px;
-
-        .sauceSecondNavigator {
-            background-color: transparent;
-            padding: 10px 20px;
-            border: 1px solid #ffffff;
-            border-radius: 30px;
-            font-size: 16px;
-            opacity: 0.5;
-            letter-spacing: 0;
-            color: #ffffff;
-            cursor: pointer;
-
-            &.sauceSecondNavigatorActive {
-                opacity: 1;
-            }
-
-            &:focus {
-                outline: none;
-            }
-
-            &:not(:last-child) {
-                margin-right: 15px;
-            }
-        }
-    }
-}
-
-.sauceThirdSection {
-    position: relative;
-
-    .sauceThirdImageWrapper {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .sourceThirdContentWrapper {
-        padding: 100px 0;
-        position: relative;
-
-        .sourceThirdContent {
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 28px;
-            color: #ffffff;
-            letter-spacing: 0;
-            padding-bottom: 54px;
-        }
-
-        .sourceThirdLink {
-            display: inline-block;
-            border: 1px solid #ffffff;
-            padding: 20px 26px 16px;
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 16px;
-            color: #ffffff;
-            letter-spacing: 0;
-            text-decoration: none;
-        }
-    }
-}
-
-.sauceDetailFristSection {
-    padding-top: 80px;
-    position: relative;
-
-    .sauceDetailTextWrapper {
-        //align-self: center;
-        text-align: left;
-        display: flex;
-        //justify-content: center;
-        padding-top: 100px;
-        flex-direction: column;
-
-        &.sauceDetailTextSecondWrapper {
-            align-self: center;
-            justify-content: center;
-            padding-top: 0;
-        }
-
-        .sauceDetailSpaceWrapper {
-            padding-left: 80px;
-            padding-right: 80px;
-        }
-
-        .sauceDetailTextTitleWrapper {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 100px;
-            width: 100%;
-            align-items: center;
-
-            &.sauceDetailTextTitleWrapperReverse {
-                justify-content: flex-end;
-                padding-bottom: 40px;
-            }
-        }
-
-        .sauceDetailTextTitle {
-            font-family: "Nanum Myeongjo", serif;
-            letter-spacing: 0;
-            color: #2f2f2f;
-            font-weight: bold;
-
-            @media screen and (min-width: 1200px) {
-                font-size: 18px;
-            }
-
-            @media screen and (min-width: 1800px) {
-                font-size: calc(28px - 0.35vw);
-            }
-        }
-
-        .sauceDetailTextSubTitle {
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 0;
-            color: #2f2f2f;
-            padding-bottom: 22px;
-        }
-
-        .sauceDetailPriceText {
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 19px;
-            letter-spacing: 0;
-            color: #2f2f2f;
-        }
-
-        .sauceDetailTextDescription {
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 16px;
-            line-height: 30px;
-            letter-spacing: 0;
-            color: #2f2f2f;
-
-            &:not(:last-child) {
-                padding-bottom: 118px;
-            }
-
-            &.sauceDetailTextDescriptionReverse {
-                text-align: right;
-            }
-        }
-    }
-}
-
-.sauceDetailRecipeSection {
-    padding: 100px 0 115px;
-    background-color: #151515;
-    position: relative;
-}
-
-.navigatorWrapper {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 67px;
-    list-style: none;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
-
-    > li {
-        .navigator {
-            min-width: 210px;
-            padding: 13px 12px 15px;
-            text-align: center;
-            font-size: 16px;
-            letter-spacing: 0;
-            border-radius: 30px;
-            text-decoration: none;
-            display: inline-block;
-
-            &.darkThemeNavigator {
-                border: 1px solid #ffffff;
-                color: #ffffff;
-                opacity: 0.37;
-
-                &.darkThemeNavActive {
-                    border: 2px solid #ffffff;
-                    opacity: 1;
-                }
-            }
-
-            &.lightThemeNavigator {
-                border: 1px solid #dddddd;
-                color: #707070;
-
-                &.lightThemeNavActive {
-                    border: 1px solid #e8390e;
-                    color: #e8390e;
-                }
-            }
-        }
-
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
-    }
-}
-
-.sauceNavigatorWrapper {
+  .sauceSecondNavigatorWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0;
-    padding: 0 0 106px 0;
-    list-style: none;
+    padding-bottom: 30px;
 
-    > li {
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
+    .sauceSecondNavigator {
+      background-color: transparent;
+      padding: 10px 20px;
+      border: 1px solid #ffffff;
+      border-radius: 30px;
+      font-size: 16px;
+      opacity: 0.5;
+      letter-spacing: 0;
+      color: #ffffff;
+      cursor: pointer;
 
-        .sauceNavigator {
-            font-size: 16px;
-            letter-spacing: 0;
-            color: #707070;
-            padding: 0 30px 6px;
-            border-bottom: 1px solid transparent;
-            text-decoration: none;
+      &.sauceSecondNavigatorActive {
+        opacity: 1;
+      }
 
-            &.sauceNavigatorActive {
-                color: #e8390e;
-                font-weight: bold;
-                border-bottom: 2px solid #e8390e;
-            }
-        }
+      &:focus {
+        outline: none;
+      }
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
     }
+  }
+}
+
+.sauceThirdSection {
+  position: relative;
+
+  .sauceThirdImageWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sourceThirdContentWrapper {
+    padding: 100px 0;
+    position: relative;
+
+    .sourceThirdContent {
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 28px;
+      color: #ffffff;
+      letter-spacing: 0;
+      padding-bottom: 54px;
+    }
+
+    .sourceThirdLink {
+      display: inline-block;
+      border: 1px solid #ffffff;
+      padding: 20px 26px 16px;
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 16px;
+      color: #ffffff;
+      letter-spacing: 0;
+      text-decoration: none;
+    }
+  }
+}
+
+.sauceDetailFristSection {
+  padding-top: 80px;
+  position: relative;
+
+  .sauceDetailTextWrapper {
+    //align-self: center;
+    text-align: left;
+    display: flex;
+    //justify-content: center;
+    padding-top: 100px;
+    flex-direction: column;
+
+    &.sauceDetailTextSecondWrapper {
+      align-self: center;
+      justify-content: center;
+      padding-top: 0;
+    }
+
+    .sauceDetailSpaceWrapper {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    .sauceDetailTextTitleWrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 100px;
+      width: 100%;
+      align-items: center;
+
+      &.sauceDetailTextTitleWrapperReverse {
+        justify-content: flex-end;
+        padding-bottom: 40px;
+      }
+    }
+
+    .sauceDetailTextTitle {
+      font-family: "Nanum Myeongjo", serif;
+      letter-spacing: 0;
+      color: #2f2f2f;
+      font-weight: bold;
+
+      @media screen and (min-width: 1200px) {
+        font-size: 18px;
+      }
+
+      @media screen and (min-width: 1800px) {
+        font-size: calc(28px - 0.35vw);
+      }
+    }
+
+    .sauceDetailTextSubTitle {
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 0;
+      color: #2f2f2f;
+      padding-bottom: 22px;
+    }
+
+    .sauceDetailPriceText {
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 19px;
+      letter-spacing: 0;
+      color: #2f2f2f;
+    }
+
+    .sauceDetailTextDescription {
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 0;
+      color: #2f2f2f;
+
+      &:not(:last-child) {
+        padding-bottom: 118px;
+      }
+
+      &.sauceDetailTextDescriptionReverse {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.sauceDetailRecipeSection {
+  padding: 100px 0 115px;
+  background-color: #151515;
+  position: relative;
+}
+
+.navigatorWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 67px;
+  list-style: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+
+  > li {
+    .navigator {
+      min-width: 210px;
+      padding: 13px 12px 15px;
+      text-align: center;
+      font-size: 16px;
+      letter-spacing: 0;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+
+      &.darkThemeNavigator {
+        border: 1px solid #ffffff;
+        color: #ffffff;
+        opacity: 0.37;
+
+        &.darkThemeNavActive {
+          border: 2px solid #ffffff;
+          opacity: 1;
+        }
+      }
+
+      &.lightThemeNavigator {
+        border: 1px solid #dddddd;
+        color: #707070;
+
+        &.lightThemeNavActive {
+          border: 1px solid #e8390e;
+          color: #e8390e;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.sauceNavigatorWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0 106px 0;
+  list-style: none;
+
+  > li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    .sauceNavigator {
+      font-size: 16px;
+      letter-spacing: 0;
+      color: #707070;
+      padding: 0 30px 6px;
+      border-bottom: 1px solid transparent;
+      text-decoration: none;
+
+      &.sauceNavigatorActive {
+        color: #e8390e;
+        font-weight: bold;
+        border-bottom: 2px solid #e8390e;
+      }
+    }
+  }
+}
+
+.storeButtonWrapper {
+  display: flex;
+  align-items: center;
+
+  .naverStoreButton {
+    border: 2px solid #459d25;
+    border-radius: 8px;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    margin-right: 10px;
+    letter-spacing: -0.3px;
+    color: #2f2f2f;
+
+    > img {
+      margin-right: 42px;
+    }
+  }
+
+  .kakaoStoreButton {
+    padding: 19px 32px;
+    border-radius: 8px;
+    border: 2px solid #fae300;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    color: #2f2f2f;
+
+    > img {
+      margin-right: 32px;
+    }
+  }
 }

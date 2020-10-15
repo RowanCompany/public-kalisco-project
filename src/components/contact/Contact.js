@@ -226,7 +226,7 @@ function Contact() {
                         <option value="103">히바린</option>
                         <option value="104">타코벨</option>
                         <option value="105">센트럴키친</option>
-                        <option value="106">reperk</option>
+                        {/*<option value="106">reperk</option>*/}
                       </select>
                     </div>
                   </div>
@@ -294,7 +294,7 @@ function Contact() {
                       maxLength={2000}
                       className={styles.description}
                       required
-                    ></textarea>
+                    />
                   </div>
                   <div className={styles.countText}>{textLength} / 2,000</div>
                 </div>
