@@ -9,7 +9,8 @@ import kakaoPlusImage from "../../static/images/img_kakaoplus.png";
 import footerSabotenLogo from "../../static/svg/icon_saboten_b.svg";
 import footerHibarinLogo from "../../static/svg/icon_hibarin_b.svg";
 import footerCentralKitchenLogo from "../../static/svg/logo_central_kakao.svg";
-import giveawayImage from "../../static/images/img-p-giveaway-1.png";
+import giveawayImage from "../../static/images/img-gift-3set.png";
+import giveawayLogo from "../../static/svg/logo-giveaway-w.svg";
 
 function SupportDetailContent() {
   const { subject } = useParams();
@@ -52,52 +53,53 @@ function SupportCaseRenderer({ subject }) {
       );
     case "giveaway":
       return (
-        <div className={styles.tempDetailContent}>
+        <div className={styles.giveawaySection}>
           <div className={styles.giveawayPanel}>
             <div className={styles.giveawayTitle}>캘리스코 상품권 안내</div>
-            <div className="row">
-              <div
-                className="col"
-                style={{ paddingLeft: "40px", paddingRight: "40px" }}
-              >
-                <img src={giveawayImage} alt="giveaway" className="img-fill" />
+            <div className={styles.giveawayLogoLine}>
+              <div className={styles.giveawayLine} />
+              <div className={styles.giveawayLogoWrapper}>
+                <img src={giveawayLogo} alt="kalisco" />
               </div>
-              <div className="col" style={{ paddingRight: "40px" }}>
-                <ul>
-                  <li>
-                    이 상품권은 캘리스코 업장 (사보텐/타코벨/히바린/더
-                    센트럴키친 바이 캘리스코)에서 사용 가능합니다.
-                  </li>
-                  <li>이 상품권의 유효기간은 발행일로부터 5년간입니다.</li>
-                  <li>
-                    이 상품권은 현금과 교환되지 않습니다. 다만, 액면 금액
-                    100분의 60이상을(1만원 이하는 100분의 80) 구매 시 현금으로
-                    잔액을 돌려 받으실 수 있습니다.{" "}
-                  </li>
-                  <li>
-                    다음과 같은 경우에 상품권은 사용하실 수 없으므로 양지하여
-                    주시기 바랍니다.
-                    <ul style={{ padding: "8px" }}>
-                      <li>
-                        상품권이 훼손되어 당사가 발행한 상품권으로 식별 불가능한
-                        경우
-                      </li>
-                      <li>상품권이 위,변조 또는 부정하게 발행된 경우</li>
-                    </ul>
-                  </li>
-                  <li>
-                    고객이 상품권을 도난, 분실한 경우 재발행되지 않으며, 당사는
-                    일체 책임을 지지 않습니다.
-                  </li>
-                  <li>
-                    캘리스코 상품권은 일만원권, 삼만원권, 오만원권 3종이
-                    있습니다.
-                  </li>
-                </ul>
-              </div>
+              <div className={styles.giveawayLine} />
             </div>
+            <div className={styles.giveawayImageWrapper}>
+              <img src={giveawayImage} alt="giveaway" />
+            </div>
+            <div className={styles.giveawayListWrapper}>
+              <ul className={styles.giveawayList}>
+                <li>
+                  이 상품권은 캘리스코 업장 (사보텐/타코벨/히바린/더 센트럴키친
+                  바이 캘리스코)에서 사용 가능합니다.
+                </li>
+                <li>이 상품권의 유효기간은 발행일로부터 5년간입니다.</li>
+                <li>
+                  이 상품권은 현금과 교환되지 않습니다. 다만, 액면 금액 100분의
+                  60이상을(1만원 이하는 100분의 80)
+                  <br />
+                  구매 시 현금으로 잔액을 돌려 받으실 수 있습니다.
+                </li>
+                <li>
+                  다음과 같은 경우에 상품권은 사용하실 수 없으므로 양지하여
+                  주시기 바랍니다.
+                </li>
+                <li>
+                  상품권이 훼손되어 당사가 발행한 상품권으로 식별 불가능한 경우
+                </li>
+                <li>상품권이 위,변조 또는 부정하게 발행된 경우</li>
+                <li>
+                  고객이 상품권을 도난, 분실한 경우 재발행되지 않으며, 당사는
+                  일체 책임을 지지 않습니다.
+                </li>
+                <li>
+                  캘리스코 상품권은 일만원권, 삼만원권, 오만원권 3종이 있습니다.
+                </li>
+              </ul>
+            </div>
+            <div className={styles.giveawayPanelFooterLine} />
             <div className={styles.giveawayContact}>
-              구입 및 이용 문의 : 고객센터 070-4846-8215
+              <b style={{ fontWeight: "bold" }}>구입 및 이용 문의:</b> 고객센터
+              070-4846-8215
             </div>
           </div>
         </div>

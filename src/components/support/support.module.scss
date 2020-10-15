@@ -56,52 +56,96 @@
   }
 }
 
-.tempDetailContent {
+.giveawaySection {
   padding-top: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 120px;
   position: relative;
   background-color: #f4f4f4;
 
   .giveawayPanel {
     width: 800px;
     margin: 0 auto;
-    background-color: #ffffff;
-    box-sizing: border-box;
-    padding: 45px 8px;
+    background-color: #2f2f2f;
+    padding: 65px 45px 30px;
 
     .giveawayTitle {
-      font-size: 28px;
-      font-weight: bold;
-      color: #2f2f2f;
       text-align: center;
-      margin-bottom: 36px;
+      color: #ededed;
       font-family: "Nanum Myeongjo", serif;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 45px;
       letter-spacing: -0.56px;
+      margin-bottom: 60px;
     }
 
-    .giveawayContact {
-      font-size: 18px;
+    .giveawayLogoLine {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 64px;
+
+      .giveawayLine {
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.5);
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+
+      .giveawayLogoWrapper {
+        padding: 0 30px;
+      }
+    }
+
+    .giveawayImageWrapper {
       text-align: center;
-      padding-top: 24px;
+      margin-bottom: 54px;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 16px;
+    .giveawayListWrapper {
+      margin-bottom: 40px;
 
-      li {
-        font-size: 14px;
-        color: #2f2f2f;
-        letter-spacing: 0;
-        line-height: 18px;
-        word-break: keep-all;
+      .giveawayList {
+        color: #ffffff;
+        padding-left: 40px;
+        margin: 0;
 
-        &:not(:last-child) {
-          margin-bottom: 16px;
+        > li {
+          font-size: 16px;
+          line-height: 34px;
+          letter-spacing: -0.34px;
+          font-family: "Noto Sans KR", sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
         }
       }
     }
+
+    .giveawayPanelFooterLine {
+      width: 100%;
+      border-top: 1px solid rgba($color: #fff, $alpha: 0.5);
+      margin-bottom: 20px;
+    }
+
+    .giveawayContact {
+      font-size: 16px;
+      font-family: "Noto Sans KR", sans-serif;
+      letter-spacing: -0.32px;
+      color: #ffffff;
+      line-height: 18px;
+      text-align: center;
+    }
   }
+}
+
+.tempDetailContent {
+  padding-top: 80px;
+  padding-bottom: 70px;
+  position: relative;
+  background-color: #f4f4f4;
 
   .tempKakaotalkPanel {
     width: 800px;

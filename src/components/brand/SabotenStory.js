@@ -162,7 +162,7 @@ function SabotenStory() {
                 className={styles.sabotenKatsuImages}
               />
             </div>*/}
-            <div style={{ paddingRight: "60px" }}>
+            <div>
               <img
                 src={imageCheeseKatsu}
                 alt="gif 2"
@@ -185,6 +185,10 @@ function SabotenStory() {
               개발하였습니다.*/}
             </div>
           </div>
+          <div
+            className={`${styles.storyHr} ${styles.storySecondHr}`}
+            style={{ height: "198px" }}
+          />
           {/* <div className={styles.redBoxWrapper}>
                         <div
                             className={`${styles.redBox} ${styles.storyDescription}`}
@@ -309,6 +313,7 @@ function SabotenStory() {
         <div className={styles.storySecondBackgroundWrapper}>
           <div className="text-center">
             음식에 대한 신뢰는 시간의 축적으로 만들어집니다.
+            <br />
             <br />
             오랜 시간 많은 사람들의 한끼 식사를 책임져온
             <br />

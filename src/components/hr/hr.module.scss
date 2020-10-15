@@ -1,433 +1,435 @@
 .backgroundWrapper {
-    position: absolute;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .layoutWrapper {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-    .layoutWrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
-        .title {
-            margin-top: auto;
-            margin-bottom: 80px;
-            --animation-duration: 1.5s;
-        }
-
-        .menuList {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0 0 12px 0;
-            margin: 0;
-
-            > .menu {
-                &:not(:last-child) {
-                    margin-right: 30px;
-                }
-
-                .menuLink {
-                    display: inline-block;
-                    padding: 16px 34px;
-                    color: rgba($color: #ffffff, $alpha: 0.5);
-                    text-decoration: none;
-                    border-bottom: 3px solid transparent;
-
-                    &:hover {
-                        color: rgba($color: #ffffff, $alpha: 0.8);
-                        border-bottom: 3px solid
-                            rgba($color: #ffffff, $alpha: 0.8);
-                    }
-
-                    &.active {
-                        color: #ffffff;
-                        border-bottom: 3px solid #ffffff;
-
-                        &:hover {
-                            color: #ffffff;
-                            border-bottom: 3px solid #ffffff;
-                        }
-                    }
-                }
-            }
-        }
+    .title {
+      margin-top: auto;
+      margin-bottom: 80px;
+      --animation-duration: 1.5s;
     }
+
+    .menuList {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0 0 12px 0;
+      margin: 0;
+
+      > .menu {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        .menuLink {
+          display: inline-block;
+          padding: 16px 34px;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+          text-decoration: none;
+          border-bottom: 3px solid transparent;
+
+          &:hover {
+            color: rgba($color: #ffffff, $alpha: 0.8);
+            border-bottom: 3px solid rgba($color: #ffffff, $alpha: 0.8);
+          }
+
+          &.active {
+            color: #ffffff;
+            border-bottom: 3px solid #ffffff;
+
+            &:hover {
+              color: #ffffff;
+              border-bottom: 3px solid #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .talentFirstSection {
-    padding-top: 84px;
-    padding-bottom: 153px;
-    background-color: #ffffff;
+  padding-top: 84px;
+  padding-bottom: 153px;
+  background-color: #ffffff;
 
-    .titleWrapper {
-        text-align: center;
-        padding-bottom: 132px;
+  .titleWrapper {
+    text-align: center;
+    padding-bottom: 132px;
+  }
+
+  .gridWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .imageWrapper {
+      height: 120px;
+      padding-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .gridWrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        .imageWrapper {
-            height: 120px;
-            padding-bottom: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .gridTitle {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 0;
-            color: #2f2f2f;
-            font-family: "Nanum Myeongjo", serif;
-            padding-bottom: 12px;
-            text-align: center;
-        }
-
-        .gridParagraph {
-            font-family: "Nanum Myeongjo", serif;
-            letter-spacing: 0;
-            color: #2f2f2f;
-            text-align: center;
-            font-size: 18px;
-            font-weight: 400;
-        }
+    .gridTitle {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0;
+      color: #2f2f2f;
+      font-family: "Nanum Myeongjo", serif;
+      padding-bottom: 12px;
+      text-align: center;
     }
+
+    .gridParagraph {
+      font-family: "Nanum Myeongjo", serif;
+      letter-spacing: 0;
+      color: #2f2f2f;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
 }
 
 .talentSecondSection {
+  position: relative;
+
+  .peopleBackgroundImageWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .peopleBackgroundWrapper {
     position: relative;
 
-    .peopleBackgroundImageWrapper {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+    .peopleTextImageWrapper {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 60px;
     }
 
-    .peopleBackgroundWrapper {
-        position: relative;
-
-        .peopleTextImageWrapper {
-            text-align: center;
-            padding-top: 100px;
-            padding-bottom: 60px;
-        }
-
-        .peopleParagraph {
-            text-align: center;
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 20px;
-            letter-spacing: 0;
-            line-height: 29px;
-            color: #ffffff;
-            padding-bottom: 100px;
-        }
-
-        .peopleGridWrapper {
-            display: grid;
-            max-width: 1130px;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(auto, auto);
-            margin: 0 auto;
-            grid-gap: 130px;
-            padding-bottom: 100px;
-
-            .peopleCircle {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 212px;
-                height: 212px;
-                border-radius: 50%;
-                border: 1px solid #ffffff;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 30px;
-                color: #ffffff;
-                font-weight: 700;
-                font-family: "Nanum Myeongjo", serif;
-                letter-spacing: 0;
-                font-size: 22px;
-            }
-
-            .peopleGridParagraph {
-                letter-spacing: 0;
-                font-family: "Nanum Myeongjo", serif;
-                color: #ffffff;
-                text-align: center;
-                font-size: 15px;
-                line-height: 22.5px;
-            }
-        }
-    }
-}
-
-.educationSection {
-    background-color: #f4f4f4;
-    position: relative;
-    padding-top: 84px;
-    padding-bottom: 50px;
-
-    .educationSubTitle {
-        color: #2f2f2f;
-        letter-spacing: 0;
-        text-align: center;
-        font-family: "Nanum Myeongjo", serif;
-        font-size: 20px;
-        padding-bottom: 40px;
+    .peopleParagraph {
+      text-align: center;
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 29px;
+      color: #ffffff;
+      padding-bottom: 100px;
     }
 
-    .educationContainer {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #ffffff;
-        padding: 90px 105px;
-        position: relative;
-        box-sizing: border-box;
+    .peopleGridWrapper {
+      display: grid;
+      max-width: 1130px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(auto, auto);
+      margin: 0 auto;
+      grid-gap: 130px;
+      padding-bottom: 100px;
 
-        @media screen and (max-width: 576px) {
-            max-width: 100%;
-        }
-
-        @media screen and (min-width: 576px) {
-            max-width: 540px;
-        }
-
-        @media screen and (min-width: 768px) {
-            max-width: 720px;
-        }
-
-        @media screen and (min-width: 992px) {
-            max-width: 960px;
-        }
-
-        @media screen and (min-width: 1140px) {
-            max-width: 1140px;
-        }
-
-        .educationContainerImageWrapper {
-            position: absolute;
-            bottom: -32px;
-            left: -100px;
-        }
-
-        .educationFlexWrapper {
-            display: flex;
-            justify-content: center;
-            //gap: 60px;
-            flex-wrap: wrap;
-            position: relative;
-            margin: 0 -60px;
-
-            > div {
-                margin-bottom: 60px;
-
-                padding-left: 30px;
-                padding-right: 30px;
-            }
-
-            .educationTrainingImageWrapper {
-                text-align: center;
-                padding-bottom: 30px;
-            }
-
-            .eudcationTrainingTitle {
-                font-family: "Nanum Myeongjo", serif;
-                font-size: 22px;
-                font-weight: 700;
-                letter-spacing: 0;
-                color: #2f2f2f;
-                text-align: center;
-            }
-
-            .eudcationTrainingParagraph {
-                font-size: 18px;
-                letter-spacing: 0;
-                color: #2f2f2f;
-                font-family: "Nanum Myeongjo", serif;
-                text-align: center;
-                padding-bottom: 30px;
-            }
-
-            .educationTrainingDescription {
-                font-size: 18px;
-                letter-spacing: 0;
-                color: #2f2f2f;
-                font-family: "Nanum Myeongjo", serif;
-                text-align: center;
-            }
-        }
-    }
-}
-
-.welfareFirstSection {
-    padding: 100px 0;
-    background-color: #f4f4f4;
-
-    .systemTitle {
-        padding-bottom: 32px;
-    }
-
-    .systemParagraph {
-        text-align: center;
-        letter-spacing: 0px;
-        color: #2f2f2f;
-        font-size: 20px;
-        font-family: "Nanum Myeongjo", serif;
-        padding-bottom: 100px;
-    }
-
-    .systemPanelWrapper {
-        display: flex;
-        justify-content: center;
-
-        .systemPanel {
-            background: #ffffff 0% 0% no-repeat padding-box;
-            border-radius: 20px;
-            box-sizing: border-box;
-
-            &.systemFirstPanel {
-                margin-right: 30px;
-                padding: 60px 0;
-                min-width: 456px;
-            }
-
-            &.systemSecondPanel {
-                padding: 60px 0;
-                min-width: 539px;
-            }
-
-            .systenPanelDot {
-                width: 9px;
-                height: 9px;
-                border-radius: 50%;
-                background-color: #e8390e;
-                margin: 0 auto;
-                margin-bottom: 11px;
-            }
-
-            .systemTitleWrapper {
-                text-align: center;
-                padding-bottom: 60px;
-            }
-
-            .systemPanelContainer {
-                padding: 0 30px;
-
-                .systemPanelFlexWrapper {
-                    display: flex;
-                    align-items: center;
-                    padding-bottom: 20px;
-
-                    .systemTitleButton {
-                        min-width: 99px;
-                        border-radius: 18px;
-                        border: 1px solid #dddddd;
-                        padding: 9px;
-                        padding-top: 12px;
-                        text-align: center;
-                        background-color: #ffffff;
-                        font-size: 16px;
-                        letter-spacing: 0;
-                        color: #2f2f2f;
-                        font-family: "Nanum Myeongjo", serif;
-                        margin-right: 30px;
-                    }
-
-                    .systemDescription {
-                        font-family: "Nanum Myeongjo", serif;
-                        color: #2f2f2f;
-                        letter-spacing: 0;
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.welfareSecondSection {
-    padding: 180px 0 100px;
-    background-color: #ffffff;
-
-    .systemTitle {
-        padding-bottom: 100px;
-    }
-
-    .systemFlowWrapper {
+      .peopleCircle {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 21px;
-        padding-bottom: 100px;
+        width: 212px;
+        height: 212px;
+        border-radius: 50%;
+        border: 1px solid #ffffff;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        color: #ffffff;
+        font-weight: 700;
+        font-family: "Nanum Myeongjo", serif;
+        letter-spacing: 0;
+        font-size: 22px;
+      }
 
-        .systemStepArrowWrapper {
-            padding-top: 38px;
-        }
+      .peopleGridParagraph {
+        letter-spacing: 0;
+        font-family: "Nanum Myeongjo", serif;
+        color: #ffffff;
+        text-align: center;
+        font-size: 15px;
+        line-height: 22.5px;
+      }
+    }
+  }
+}
 
-        .systemStepWrapper {
-            text-align: center;
-            padding-bottom: 20px;
-        }
+.educationSection {
+  background-color: #f4f4f4;
+  position: relative;
+  padding-top: 84px;
+  padding-bottom: 50px;
 
-        .systemFlowCircle {
-            width: 185px;
-            height: 185px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #dddddd;
-            border-radius: 50%;
-            font-family: "Nanum Myeongjo", serif;
-            font-size: 18px;
-            color: #2f2f2f;
-            font-weight: bold;
+  .educationSubTitle {
+    color: #2f2f2f;
+    letter-spacing: 0;
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 20px;
+    padding-bottom: 40px;
+  }
 
-            .systemCircleIconWrapper {
-                padding-bottom: 20px;
-            }
-        }
+  .educationContainer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 90px 105px;
+    position: relative;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 576px) {
+      max-width: 100%;
     }
 
-    .contact {
+    @media screen and (min-width: 576px) {
+      max-width: 540px;
+    }
+
+    @media screen and (min-width: 768px) {
+      max-width: 720px;
+    }
+
+    @media screen and (min-width: 992px) {
+      max-width: 960px;
+    }
+
+    @media screen and (min-width: 1140px) {
+      max-width: 1140px;
+    }
+
+    .educationContainerImageWrapper {
+      position: absolute;
+      bottom: -32px;
+      left: -100px;
+    }
+
+    .educationFlexWrapper {
+      display: flex;
+      justify-content: center;
+      //gap: 60px;
+      flex-wrap: wrap;
+      position: relative;
+      margin: 0 -60px;
+
+      > div {
+        margin-bottom: 60px;
+
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .educationTrainingImageWrapper {
         text-align: center;
-        padding-top: 60px;
+        padding-bottom: 30px;
+      }
+
+      .eudcationTrainingTitle {
+        font-family: "Nanum Myeongjo", serif;
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: 0;
+        color: #2f2f2f;
+        text-align: center;
+      }
+
+      .eudcationTrainingParagraph {
+        font-size: 18px;
+        letter-spacing: 0;
         color: #2f2f2f;
         font-family: "Nanum Myeongjo", serif;
-        font-size: 16px;
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .educationTrainingDescription {
+        font-size: 18px;
+        letter-spacing: 0;
+        color: #2f2f2f;
+        font-family: "Nanum Myeongjo", serif;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.welfareFirstSection {
+  padding: 100px 0;
+  background-color: #f4f4f4;
+
+  .systemTitle {
+    padding-bottom: 32px;
+  }
+
+  .systemParagraph {
+    text-align: center;
+    letter-spacing: 0px;
+    color: #2f2f2f;
+    font-size: 20px;
+    font-family: "Nanum Myeongjo", serif;
+    padding-bottom: 100px;
+  }
+
+  .systemPanelWrapper {
+    display: flex;
+    justify-content: center;
+
+    .systemPanel {
+      background: #ffffff 0% 0% no-repeat padding-box;
+      border-radius: 20px;
+      box-sizing: border-box;
+
+      &.systemFirstPanel {
+        margin-right: 30px;
+        padding: 60px 0;
+        min-width: 456px;
+      }
+
+      &.systemSecondPanel {
+        padding: 60px 0;
+        min-width: 539px;
+      }
+
+      .systenPanelDot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: #e8390e;
+        margin: 0 auto;
+        margin-bottom: 11px;
+      }
+
+      .systemTitleWrapper {
+        text-align: center;
+        padding-bottom: 60px;
+      }
+
+      .systemPanelContainer {
+        padding: 0 30px;
+
+        .systemPanelFlexWrapper {
+          display: flex;
+          align-items: center;
+          padding-bottom: 20px;
+
+          .systemTitleButton {
+            min-width: 99px;
+            border-radius: 18px;
+            border: 1px solid #dddddd;
+            padding: 9px;
+            padding-top: 12px;
+            text-align: center;
+            background-color: #ffffff;
+            font-size: 16px;
+            letter-spacing: 0;
+            color: #2f2f2f;
+            font-family: "Nanum Myeongjo", serif;
+            margin-right: 30px;
+          }
+
+          .systemDescription {
+            font-family: "Nanum Myeongjo", serif;
+            color: #2f2f2f;
+            letter-spacing: 0;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.welfareSecondSection {
+  padding: 180px 0 100px;
+  background-color: #ffffff;
+
+  .systemTitle {
+    padding-bottom: 100px;
+  }
+
+  .systemFlowWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 21px;
+    padding-bottom: 100px;
+
+    .systemStepArrowWrapper {
+      padding-top: 38px;
     }
 
-    .kaliscoButton {
-        padding: 21px 54px 18px;
-        background-color: rgba($color: #e8390e, $alpha: 0.9);
-        box-shadow: 0px 3px 0px #00000029;
-        border-radius: 8px;
-        font-family: "Nanum Myeongjo", serif;
-        font-size: 18px;
-        line-height: 26px;
-        color: rgba($color: #ffffff, $alpha: 0.8);
-        letter-spacing: -0.36px;
-        text-decoration: none;
-        display: inline-block;
-        min-width: 240px;
-        box-sizing: border-box;
-        text-align: center;
+    .systemStepWrapper {
+      text-align: center;
+      padding-bottom: 20px;
     }
+
+    .systemFlowCircle {
+      width: 185px;
+      height: 185px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #dddddd;
+      border-radius: 50%;
+      font-family: "Nanum Myeongjo", serif;
+      font-size: 18px;
+      color: #2f2f2f;
+      font-weight: bold;
+
+      .systemCircleIconWrapper {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .contact {
+    text-align: center;
+    padding-top: 60px;
+    color: #2f2f2f;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 16px;
+  }
+
+  .kaliscoButton {
+    padding: 21px 54px 18px;
+    background-color: rgba($color: #e8390e, $alpha: 0.9);
+    box-shadow: 0 3px 0 #00000029;
+    border-radius: 8px;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba($color: #ffffff, $alpha: 0.8);
+    letter-spacing: -0.36px;
+    text-decoration: none;
+    display: inline-block;
+    min-width: 240px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .welfareFirstSection,
 .welfareSecondSection {
-    .systemTitle {
-        font-size: 28px;
-        text-align: center;
-        font-family: "Nanum Myeongjo", serif;
-    }
+  .systemTitle {
+    font-size: 28px;
+    text-align: center;
+    font-family: "Nanum Myeongjo", serif;
+  }
 }
