@@ -8,7 +8,7 @@ import sabotenImage1 from "../../static/images/img-saboten-event-1.jpg";
 import sabotenImage2 from "../../static/images/img-saboten-event-2.jpg";
 import sabotenImage3 from "../../static/images/img-saboten-event-3.jpg";
 import sabotenImage4 from "../../static/images/img-saboten-event-4.jpg";
-import sabotenImage5 from "../../static/images/img-saboten-event-5.jpg";
+//import sabotenImage5 from "../../static/images/img-saboten-event-5.jpg";
 import textOrdinaryImage from "../../static/images/text-saboten-ordinary.png";
 import katsuImage from "../../static/images/img-saboten-menu2-1.jpg";
 import donburiImage from "../../static/images/img-saboten-menu2-2.jpg";
