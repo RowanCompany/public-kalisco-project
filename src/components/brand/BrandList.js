@@ -8,7 +8,8 @@ import Footer from "../Footer";
 import ModalProvider from "./modal/modal-provider";
 import BrandModal from "./modal/BrandModal";
 import CentralCircle from "./circle/CentralCircle";
-import BanjooCircle from "./circle/BanjooCircle";
+//import BanjooCircle from "./circle/BanjooCircle";
+import ReperkCircle from "./circle/ReperkCircle";
 
 function BrandList() {
     return (
@@ -46,7 +47,7 @@ function BrandList() {
                             <div className="brand-title">타코벨</div>
                         </a>
                         <CentralCircle />
-                        <BanjooCircle />
+                        <ReperkCircle />
                     </div>
                 </div>
                 <div className="wh-100">

@@ -29,7 +29,7 @@ export default {
             //link: "",
         },
         {
-            title: "반주",
+            title: "리퍼크",
             //link: "",
         },
         // {

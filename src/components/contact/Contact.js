@@ -226,7 +226,7 @@ function Contact() {
                         <option value="103">히바린</option>
                         <option value="104">타코벨</option>
                         <option value="105">센트럴키친</option>
-                        {/*<option value="106">reperk</option>*/}
+                        <option value="106">reperk</option>
                       </select>
                     </div>
                   </div>
