@@ -30,7 +30,7 @@ function ReperkCircle({ parameter }) {
   return (
     <div
       className="brand-circle-wrapper reperk animate__animated animate__rotateIn"
-      onClick={() => setModalOpen()}
+      onClick={() => setModalOpen(modalData)}
     >
       <div className="brand-logo-wrapper">
         <img src={reperkLogo} alt="reperk logo" style={{ maxWidth: "118px" }} />
