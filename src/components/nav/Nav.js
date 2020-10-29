@@ -145,7 +145,7 @@ function Nav() {
         <li>
           <div>
             <Link
-              to="/notices"
+              to="/contact"
               className={`${styles.navLink} ${
                 currentPathRef.current.includes("contact") ||
                 currentPathRef.current.includes("notices") ||

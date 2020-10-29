@@ -40,6 +40,11 @@ function Contact() {
     event.preventDefault();
     const data = new FormData(formRef.current);
     data.append("phone", countryNumber + telNumber);
+    const term = window.parseInt(data.get("term"));
+    if (term === 2) {
+      window.alert("개인정보 수집 이용에 동의하셔야 합니다.");
+      return false;
+    }
     let dataObject = {};
     data.forEach((value, key) => {
       switch (key) {
@@ -297,6 +302,71 @@ function Contact() {
                     />
                   </div>
                   <div className={styles.countText}>{textLength} / 2,000</div>
+                </div>
+              </div>
+              <div className={styles.formWrapper}>
+                <div className={styles.commonFormLabel}>
+                  [개인정보 수집·이용 안내]
+                </div>
+                <div>
+                  <table className={styles.termTable}>
+                    <tbody>
+                      <tr>
+                        <td className={styles.tdTitle}>
+                          수집 목적 및 이용목적
+                        </td>
+                        <td>
+                          서비스이용에 따른 본인인증 확인, 고객 문의에 대한
+                          상담내용 접수 및 상담결과 회신
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className={styles.tdTitle}>수집항목</td>
+                        <td>성명, 이메일주소, 전화번호</td>
+                      </tr>
+                      <tr>
+                        <td className={styles.tdTitle}>보유 및 이용기간</td>
+                        <td>
+                          계약 또는 청약철회 등에 관한 기록 :
+                          5년 (전자상거래등에서의 소비자보호에 관한 법률)
+                          <br />
+                          대금결제 및 재화 등의 공급에 관한 기록:
+                          5년 (전자상거래등에서의 소비자보호에 관한 법률)
+                          <br />
+                          소비자의 불만 또는 분쟁처리에 관한 기록 :
+                          3년 (전자상거래등에서의 소비자보호에 관한 법률)
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className={styles.checkboxInlineGroup}>
+                  <div className={styles.checkboxInline}>
+                    <input
+                      type="radio"
+                      name="term"
+                      value="1"
+                      id="term-agree"
+                      required="required"
+                      className={styles.checkboxInlineRadio}
+                    />
+                    <label htmlFor="term-agree">동의합니다.</label>
+                  </div>
+                  <div className={styles.checkboxInline}>
+                    <input
+                      type="radio"
+                      name="term"
+                      value="2"
+                      id="term-disagree"
+                      className={styles.checkboxInlineRadio}
+                      required="required"
+                    />
+                    <label htmlFor="term-disagree">동의하지 않습니다.</label>
+                  </div>
+                </div>
+                <div className={styles.termDescription}>
+                  *수집항목에 동의를 거부할 수 있으며, 동의를 거부 시
+                  문의서비스를 등록하실 수 없습니다.
                 </div>
               </div>
               {/* <div className={styles.formWrapper}>
