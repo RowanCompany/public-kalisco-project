@@ -35,18 +35,16 @@ function ContactBanner({ subject }) {
                   FAQ
                 </Link>
               </li>
-              {/*<li className={styles.menu}>
-                                <Link
-                                    to="/contact"
-                                    className={`${styles.menuLink} ${
-                                        subject === "contact"
-                                            ? styles.active
-                                            : ""
-                                    }`}
-                                >
-                                    문의하기
-                                </Link>
-                            </li>*/}
+              <li className={styles.menu}>
+                <Link
+                  to="/contact"
+                  className={`${styles.menuLink} ${
+                    subject === "contact" ? styles.active : ""
+                  }`}
+                >
+                  문의하기
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

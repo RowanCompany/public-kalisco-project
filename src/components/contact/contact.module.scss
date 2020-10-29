@@ -134,9 +134,64 @@
       }
     }
 
+    .termTable {
+      //border: 1px solid #dddddd;
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      td {
+        padding: 8px;
+        border: 1px solid #e8eaef;
+        color: #272d48;
+        font-size: 13px;
+        line-height: normal;
+
+        &.tdTitle {
+          width: 20%;
+          font-size: 14px;
+          text-align: center;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .checkboxInlineGroup {
+      margin: 8px 0;
+      text-align: center;
+    }
+
+    .checkboxInline {
+      display: inline-flex;
+      align-items: center;
+      padding-left: 0;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      .checkboxInlineRadio {
+        position: static;
+        margin-top: 0;
+        margin-right: .45rem;
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      label {
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+
+    .termDescription {
+      font-size: 14px;
+      text-align: center;
+    }
+
     .fileLabel {
-      padding: 8px 16px;
-      padding-right: 32px;
+      padding: 8px 32px 8px 16px;
       border: 1px solid #e8eaef;
       background-color: #ffffff;
       display: inline-block;

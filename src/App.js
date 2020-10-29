@@ -25,7 +25,7 @@ function App() {
         <Route path="/hr" component={HR} />s
         <Route path="/brand" component={Brand} />
         <Route path="/products" component={Product} />
-        {/*<Route path="/contact" component={Contact} />*/}
+        <Route path="/contact" component={Contact} />
         <Route path="/faq" component={Faq} />
         <Route path="/notices" component={Notice} />
         <Route>
