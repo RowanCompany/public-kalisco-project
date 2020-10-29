@@ -22,3 +22,34 @@
     }
   }
 }
+
+.mobileNavOverlayWrapper {
+  opacity: 0;
+  transition: visibility 0s, opacity 500ms linear;
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #ffffff;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .overlayHeaderWrapper {
+    display: flex;
+    padding: 18px 20px;
+    margin-bottom: 60px;
+
+    .overlayCloseButtonWrapper {
+      margin-left: auto;
+    }
+  }
+
+  .mobileOverlayNavListWrapper {
+
+  }
+}
