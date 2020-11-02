@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Transition } from "react-transition-group";
 import kaliscoLogo from "../../../static/svg/logo-header-or-m.svg";
 import hamburgerMenuIcon from "../../../static/svg/icon-hammenu.svg";
 import closeButtonIcon from "../../../static/svg/icon-closed.svg";
 import styles from "./mobile_nav.module.scss";
+import MobileNavData from "./MobileNavData";
+import MobileNavList from "./MobileNavList";
 
 export default function MobileNav() {
   const [menuOverlay, setMenuOverlay] = useState(false);
@@ -52,20 +53,37 @@ export default function MobileNav() {
             </div>
           </div>
           <div className={styles.mobileOverlayNavListWrapper}>
-            <ul>
-              <li>
-                <div>About</div>
+            <ul className={styles.mobileOverlayUL}>
+              {/*<li className={styles.mobileOverlayLI}>
                 <div>
-                  <ul>
-                    <li>
-                      <a href="#">연혁</a>
+                  <a href="#" className={styles.mobileOverlayAnchorTitle}>
+                    About
+                  </a>
+                </div>
+                <div>
+                  <ul className={styles.mobileOverlaySubUL}>
+                    <li className={styles.mobileOverlaySubLI}>
+                      <a href="#" className={styles.mobileOverlaySubLink}>
+                        연혁
+                      </a>
                     </li>
-                    <li>
-                      <a href="#">사업소개</a>
+                    <li className={styles.mobileOverlaySubLI}>
+                      <a href="#" className={styles.mobileOverlaySubLink}>
+                        사업소개
+                      </a>
                     </li>
                   </ul>
                 </div>
-              </li>
+              </li>*/}
+              {MobileNavData &&
+                MobileNavData.map((d, i) => (
+                  <MobileNavList
+                    key={i}
+                    title={d.title}
+                    link={d.link}
+                    subNav={d.subNav}
+                  />
+                ))}
             </ul>
           </div>
         </div>
