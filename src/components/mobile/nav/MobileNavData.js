@@ -1,4 +1,4 @@
-export default [
+const MobileNavData = [
   {
     title: "About",
     link: "/about",
@@ -104,3 +104,5 @@ export default [
     link: "/recruit",
   },
 ];
+
+export default MobileNavData;

@@ -11,7 +11,6 @@ import iconDocs from "../../static/svg/icon-docs.svg";
 import iconPersonalityInterview from "../../static/svg/icon-personality-interview.svg";
 import iconInterview from "../../static/svg/icon-interview.svg";
 import iconOffer from "../../static/svg/icon-offer.svg";
-import { Link } from "react-router-dom";
 
 function Recruit() {
   return (

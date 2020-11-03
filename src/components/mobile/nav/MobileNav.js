@@ -5,19 +5,20 @@ import closeButtonIcon from "../../../static/svg/icon-closed.svg";
 import styles from "./mobile_nav.module.scss";
 import MobileNavData from "./MobileNavData";
 import MobileNavList from "./MobileNavList";
+import { Link } from "react-router-dom";
 
 export default function MobileNav() {
   const [menuOverlay, setMenuOverlay] = useState(false);
   const overlayNodeRef = useRef(null);
-
-  //useEffect(() => console.log(menuOverlay), [menuOverlay]);
 
   return (
     <>
       <nav className={styles.mobileNav}>
         <ul className={styles.mobileNavListWrapper}>
           <li>
-            <img src={kaliscoLogo} alt="kalisco logo" />
+            <Link to="/">
+              <img src={kaliscoLogo} alt="kalisco logo" />
+            </Link>
           </li>
           <li
             className={styles.hamburgerMenuWrapper}
@@ -27,15 +28,6 @@ export default function MobileNav() {
           </li>
         </ul>
       </nav>
-      {/* <Transition
-        in={menuOverlay}
-        timeout={500}
-        nodeRef={overlayNodeRef}
-        appear={true}
-        unmountOnExit={true}
-      >
-
-      </Transition>*/}
       {menuOverlay && (
         <div
           className={`${styles.mobileNavOverlayWrapper} ${styles.active}`}
@@ -54,27 +46,6 @@ export default function MobileNav() {
           </div>
           <div className={styles.mobileOverlayNavListWrapper}>
             <ul className={styles.mobileOverlayUL}>
-              {/*<li className={styles.mobileOverlayLI}>
-                <div>
-                  <a href="#" className={styles.mobileOverlayAnchorTitle}>
-                    About
-                  </a>
-                </div>
-                <div>
-                  <ul className={styles.mobileOverlaySubUL}>
-                    <li className={styles.mobileOverlaySubLI}>
-                      <a href="#" className={styles.mobileOverlaySubLink}>
-                        연혁
-                      </a>
-                    </li>
-                    <li className={styles.mobileOverlaySubLI}>
-                      <a href="#" className={styles.mobileOverlaySubLink}>
-                        사업소개
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>*/}
               {MobileNavData &&
                 MobileNavData.map((d, i) => (
                   <MobileNavList
@@ -85,6 +56,13 @@ export default function MobileNav() {
                   />
                 ))}
             </ul>
+          </div>
+          <div className={styles.mobileOverlayFooter}>
+            <div>
+              <Link to="/contact" className={styles.mobileOverlayFooterLink}>
+                고객소통
+              </Link>
+            </div>
           </div>
         </div>
       )}

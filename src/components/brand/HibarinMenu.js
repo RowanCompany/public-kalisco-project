@@ -12,7 +12,6 @@ import SwiperCore, { Navigation } from "swiper";
 // import menu6 from "../../static/images/img-p-hibarin-menu6.png";
 import menu1 from "../../static/images/img-hibarin-event-1.jpg";
 import menu2 from "../../static/images/img-hibarin-event-2.jpg";
-import menu3 from "../../static/images/img-hibarin-event-3.jpg";
 import menu4 from "../../static/images/img-hibarin-event-4.jpg";
 import menu5 from "../../static/images/img-hibarin-event-5.jpg";
 import hibarinTitleText from "../../static/images/text-hibarin-special.png";
@@ -21,7 +20,7 @@ import hibarinTitleText from "../../static/images/text-hibarin-special.png";
 // import noodleImage from "../../static/images/img-ormenu-noodle.png";
 // import sideImage from "../../static/images/img-ormenu-side.png";
 import katsuImage from "../../static/images/img-hibarin-special1.jpg";
-import donburiImage from "../../static/images/img-hibarin-special3.jpg";
+//import donburiImage from "../../static/images/img-hibarin-special3.jpg";
 import noodleImage from "../../static/images/img-hibarin-special4.jpg";
 import sideImage from "../../static/images/img-hibarin-special2.jpg";
 
@@ -32,7 +31,7 @@ import { Link } from "react-router-dom";
 function HibarinMenu({ subject }) {
   SwiperCore.use([Navigation]);
   const [menu, setMenu] = useState("katsu");
-  const menuData = {
+  /*const menuData = {
     katsu: {
       sectionStyle: styles.katsuSection,
       image: katsuImage,
@@ -49,7 +48,7 @@ function HibarinMenu({ subject }) {
       sectionStyle: styles.sideSection,
       image: sideImage,
     },
-  };
+  };*/
 
   /* <section
         className={`${styles.menuListSection} ${

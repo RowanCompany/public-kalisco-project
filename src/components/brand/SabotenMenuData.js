@@ -30,7 +30,7 @@ import side6 from "../../static/images/detail-side6.png";
 import side7 from "../../static/images/detail-side7.png";
 import side8 from "../../static/images/detail-side8.png";
 import banner1 from "../../static/images/img-p-saboten-detail1.jpg";
-import banner1_1 from "../../static/images/img-p-saboten-detail1-1.jpg";
+//import banner1_1 from "../../static/images/img-p-saboten-detail1-1.jpg";
 import banner2 from "../../static/images/img-p-saboten-detail2.jpg";
 import banner3 from "../../static/images/img-p-saboten-detail3.jpg";
 import banner4 from "../../static/images/img-p-saboten-detail4.jpg";
@@ -42,7 +42,7 @@ export const bannerData = {
   side: banner4,
 };
 
-export default {
+const SabotenMenuData = {
   katsu: [
     {
       image: katsu1,
@@ -291,3 +291,5 @@ export default {
     },
   ],
 };
+
+export default SabotenMenuData;

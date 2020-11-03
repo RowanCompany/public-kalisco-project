@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// TODO: Type 추가?
-export default [
+const FaqData = [
   {
     question: "캘리스코는 어떤 기업인가요?",
     description:
@@ -82,3 +81,5 @@ export default [
     ),
   },
 ];
+
+export default FaqData;

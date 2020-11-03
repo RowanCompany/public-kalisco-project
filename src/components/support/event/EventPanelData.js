@@ -3,14 +3,12 @@ import sabotenImage1 from "../../../static/images/img-saboten-event-1.jpg";
 import sabotenImage2 from "../../../static/images/img-saboten-event-2.jpg";
 import sabotenImage3 from "../../../static/images/img-saboten-event-3.jpg";
 import sabotenImage4 from "../../../static/images/img-saboten-event-4.jpg";
-import sabotenImage5 from "../../../static/images/img-saboten-event-5.jpg";
 import hibarinImage1 from "../../../static/images/img-hibarin-event-1.jpg";
 import hibarinImage2 from "../../../static/images/img-hibarin-event-2.jpg";
-import hibarinImage3 from "../../../static/images/img-hibarin-event-3.jpg";
 import hibarinImage4 from "../../../static/images/img-hibarin-event-4.jpg";
 import hibarinImage5 from "../../../static/images/img-hibarin-event-5.jpg";
 
-export default [
+const EventPanelData = [
   {
     id: 1,
     title: "사보텐이 알려주는 일식덮밥 레시피",
@@ -436,3 +434,5 @@ export default [
     ),
   },
 ];
+
+export default EventPanelData;
