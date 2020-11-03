@@ -51,6 +51,8 @@
   }
 
   .mobileOverlayNavListWrapper {
+    padding-bottom: 48px;
+
     .mobileOverlayUL {
       list-style: none;
       padding: 0 0 0 20px;
@@ -99,6 +101,19 @@
           }
         }
       }
+    }
+  }
+
+  .mobileOverlayFooter {
+    text-align: center;
+
+    .mobileOverlayFooterLink {
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: #707070;
+      text-decoration: none;
+      font-family: 'Noto Sans KR', sans-serif;
     }
   }
 }

@@ -1,10 +1,16 @@
 import React, { useLayoutEffect, useState } from "react";
 import Nav from "../../components/nav/Nav";
 import MainVerticalList from "../../components/mainVerticalList/MainVerticalList";
-import MobileNav from "../../components/mobile/nav/MobileNav";
+import MobileHomePage from "../mobile/HomePage";
+import { useMobileCheck } from "../../utils/mobile";
 
-function useMobileCheck(currentWidth) {
-  return currentWidth >= 1200;
+function HomePageComponent() {
+  return (
+    <>
+      <Nav />
+      <MainVerticalList />
+    </>
+  );
 }
 
 export default function HomePage() {
@@ -20,10 +26,5 @@ export default function HomePage() {
       });
     };
   }, []);
-  return (
-    <>
-      {useMobileCheck(width) ? <Nav /> : <MobileNav />}
-      {useMobileCheck(width) ? <MainVerticalList /> : <>hi</>}
-    </>
-  );
+  return useMobileCheck(width) ? <HomePageComponent /> : <MobileHomePage />;
 }
