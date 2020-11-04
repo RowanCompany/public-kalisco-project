@@ -3,8 +3,15 @@ import Swiper from "swiper";
 import styles from "./mobile_main_vertical_list.module.scss";
 import mainImage1 from "../../../static/images/mobile/img-main-1@2x.png";
 import mainImage2 from "../../../static/images/mobile/img-main-2@2x.png";
+import mainImage3_1 from "../../../static/images/mobile/img-main-3-1-noround.jpg";
+import mainImage3_2 from "../../../static/images/mobile/img-main-3-2-noround.jpg";
+import mainImage3_3 from "../../../static/images/mobile/img-main-3-3-noround.jpg";
+import mainImage4 from "../../../static/images/mobile/img-main-4@2x.png";
+import mainImage5 from "../../../static/images/mobile/img-main-5@2x.png";
+import mainImage6 from "../../../static/images/mobile/img-main-6@2x.png";
+import { Link } from "react-router-dom";
 
-export default function MobileMainVerticalList() {
+export default function MobileMainVerticalList({ rootHeight }) {
   useEffect(() => {
     new Swiper(`.${styles.swiperContainer}`, {
       direction: "vertical",
@@ -16,14 +23,17 @@ export default function MobileMainVerticalList() {
       wrapperClass: styles.swiperWrapper,
       slideClass: styles.swiperSlide,
       pagination: {
-        clickable: true,
+        clickable: false,
         el: `.${styles.swiperPagination}`,
       },
     });
   }, []);
 
   return (
-    <div className={styles.swiperContainer}>
+    <div
+      className={styles.swiperContainer}
+      style={{ height: `${rootHeight}px` }}
+    >
       <div className={styles.swiperWrapper}>
         <div className={styles.swiperSlide}>
           <div className={styles.firstSlideBackgroundWrapper}>
@@ -76,8 +86,128 @@ export default function MobileMainVerticalList() {
           </div>
         </div>
         <div className={styles.swiperSlide}>
+          <div className={styles.firstSlideBackgroundWrapper}>
+            <div className={styles.thirdSlideFlexWrapper}>
+              <div className={styles.thirdSlideColumn}>
+                <div className={styles.thirdSlideColumnTextWrapper}>
+                  <div className={styles.thirdSlideColumnEnglishTitle}>
+                    Wholesomeness
+                  </div>
+                  <div className={styles.thirdSlideColumnTitle}>
+                    건강한 고집
+                  </div>
+                  <div className={styles.thirdSlideColumnDescriptionTitle}>
+                    맛을 아는 사람들 캘리스코는
+                  </div>
+                  <div className={styles.thirdSlideColumnDescription}>
+                    오랜시간 연구해온 고유의 레시피를 바탕으로
+                    <br />
+                    행복한 시간을 위해 오랜시간 레시피를 연구합니다.
+                  </div>
+                </div>
+                <div>
+                  <img src={mainImage3_1} alt="main 3_1" className="img-fill" />
+                </div>
+              </div>
+              <div className={styles.thirdSlideColumn}>
+                <div className={styles.thirdSlideColumnTextWrapper}>
+                  <div className={styles.thirdSlideColumnEnglishTitle}>
+                    Sincereness
+                  </div>
+                  <div className={styles.thirdSlideColumnTitle}>
+                    일상의 미학
+                  </div>
+                  <div className={styles.thirdSlideColumnDescriptionTitle}>
+                    맛을 아는 당신을 위해
+                  </div>
+                  <div className={styles.thirdSlideColumnDescription}>
+                    좋은 재료와 맛있는 음식에 대한 건강한 고집을 지키며
+                    <br />
+                    소중한 사람들과 교감하는 일상의 풍미를 선사합니다.
+                  </div>
+                </div>
+                <div>
+                  <img src={mainImage3_2} alt="main 3_2" className="img-fill" />
+                </div>
+              </div>
+              <div className={styles.thirdSlideColumn}>
+                <div className={styles.thirdSlideColumnTextWrapper}>
+                  <div className={styles.thirdSlideColumnEnglishTitle}>
+                    Togetherness
+                  </div>
+                  <div className={styles.thirdSlideColumnTitle}>
+                    행복한 식탁
+                  </div>
+                  <div className={styles.thirdSlideColumnDescriptionTitle}>
+                    맛을 아는 당신에게
+                  </div>
+                  <div className={styles.thirdSlideColumnDescription}>
+                    식사를 통한 즐거움과 정을 나누는
+                    <br />
+                    시공간을 제공합니다.
+                  </div>
+                </div>
+                <div>
+                  <img src={mainImage3_3} alt="main 3_3" className="img-fill" />
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="wh-100">
             <img src={mainImage2} alt="main 2" className="img-fill" />
+          </div>
+        </div>
+        <div className={styles.swiperSlide}>
+          <div className={styles.firstSlideBackgroundWrapper}>
+            <div className={styles.firstSlideFlexWrapper}>
+              <div className={styles.slideEnTitle}>Kalisco Family</div>
+              <div className={styles.slideDescription}>
+                맛을 아는 당신을 위해
+                <br />
+                캘리스코가 준비한 선물
+              </div>
+              <div className={styles.slideDivider} />
+              <Link to="/supports" className={styles.slideButton}>
+                혜택 보러가기
+              </Link>
+            </div>
+          </div>
+          <div className="wh-100">
+            <img src={mainImage4} alt="main 4" className="img-fill" />
+          </div>
+        </div>
+        <div className={styles.swiperSlide}>
+          <div className={styles.firstSlideBackgroundWrapper}>
+            <div className={styles.firstSlideFlexWrapper}>
+              <div className={styles.slideEnTitle}>Product</div>
+              <div className={styles.slideDescription}>
+                레스토랑에서 먹던 그 맛 그대로-
+              </div>
+              <div className={styles.slideDivider} />
+              <Link to="/products/homemade" className={styles.slideButton}>
+                홈메이드 제품 보러가기
+              </Link>
+            </div>
+          </div>
+          <div className="wh-100">
+            <img src={mainImage5} alt="main 5" className="img-fill" />
+          </div>
+        </div>
+        <div className={styles.swiperSlide}>
+          <div className={styles.firstSlideBackgroundWrapper}>
+            <div className={styles.firstSlideFlexWrapper}>
+              <div className={styles.slideEnTitle}>Join Us</div>
+              <div className={styles.slideDescription}>
+                맛을 아는 사람들은 모이세요.
+              </div>
+              <div className={styles.slideDivider} />
+              <Link to="/hr/talent" className={styles.slideButton}>
+                교육 / 인사제도
+              </Link>
+            </div>
+          </div>
+          <div className="wh-100">
+            <img src={mainImage6} alt="main 6" className="img-fill" />
           </div>
         </div>
       </div>

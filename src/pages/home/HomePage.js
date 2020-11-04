@@ -15,16 +15,23 @@ function HomePageComponent() {
 
 export default function HomePage() {
   const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
   useLayoutEffect(() => {
     window.addEventListener("resize", (e) => {
       setWidth(e.target.innerWidth);
+      setHeight(e.target.innerHeight);
     });
 
     return () => {
       window.addEventListener("resize", (e) => {
         setWidth(e.target.innerWidth);
+        setHeight(e.target.innerHeight);
       });
     };
   }, []);
-  return useMobileCheck(width) ? <HomePageComponent /> : <MobileHomePage />;
+  return useMobileCheck(width) ? (
+    <HomePageComponent />
+  ) : (
+    <MobileHomePage rootHeight={height} />
+  );
 }
