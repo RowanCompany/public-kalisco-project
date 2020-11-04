@@ -9,6 +9,7 @@ import mainImage3_3 from "../../../static/images/mobile/img-main-3-3-noround.jpg
 import mainImage4 from "../../../static/images/mobile/img-main-4@2x.png";
 import mainImage5 from "../../../static/images/mobile/img-main-5@2x.png";
 import mainImage6 from "../../../static/images/mobile/img-main-6@2x.png";
+import mainImage7 from "../../../static/images/mobile/img-main-7@2x.png";
 import { Link } from "react-router-dom";
 
 export default function MobileMainVerticalList({ rootHeight }) {
@@ -105,7 +106,7 @@ export default function MobileMainVerticalList({ rootHeight }) {
                     행복한 시간을 위해 오랜시간 레시피를 연구합니다.
                   </div>
                 </div>
-                <div>
+                <div className="w-100">
                   <img src={mainImage3_1} alt="main 3_1" className="img-fill" />
                 </div>
               </div>
@@ -126,7 +127,7 @@ export default function MobileMainVerticalList({ rootHeight }) {
                     소중한 사람들과 교감하는 일상의 풍미를 선사합니다.
                   </div>
                 </div>
-                <div>
+                <div className="w-100">
                   <img src={mainImage3_2} alt="main 3_2" className="img-fill" />
                 </div>
               </div>
@@ -147,7 +148,7 @@ export default function MobileMainVerticalList({ rootHeight }) {
                     시공간을 제공합니다.
                   </div>
                 </div>
-                <div>
+                <div className="w-100">
                   <img src={mainImage3_3} alt="main 3_3" className="img-fill" />
                 </div>
               </div>
@@ -208,6 +209,21 @@ export default function MobileMainVerticalList({ rootHeight }) {
           </div>
           <div className="wh-100">
             <img src={mainImage6} alt="main 6" className="img-fill" />
+          </div>
+        </div>
+        <div className={styles.swiperSlide}>
+          <div className={styles.firstSlideBackgroundWrapper}>
+            <div className={styles.firstSlideFlexWrapper}>
+              <div className={styles.slideEnTitle}>Beyond Taste</div>
+              <div className={styles.slideDescription}>
+                20년간 최고의 맛을 지켜온
+                <br />
+                외식 전문 기업의 자부심
+              </div>
+            </div>
+          </div>
+          <div className="wh-100">
+            <img src={mainImage7} alt="main 7" className="img-fill" />
           </div>
         </div>
       </div>
