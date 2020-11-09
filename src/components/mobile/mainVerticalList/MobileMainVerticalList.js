@@ -226,6 +226,16 @@ export default function MobileMainVerticalList({ rootHeight }) {
             <img src={mainImage7} alt="main 7" className="img-fill" />
           </div>
         </div>
+        {/*<div className={styles.swiperSlide}>
+          <div className={styles.lastSlideBackgroundWrapper}>
+            <div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>*/}
       </div>
       <div className={styles.swiperPagination} />
     </div>
