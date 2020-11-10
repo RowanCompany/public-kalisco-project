@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ModalContext } from "../modal/modal-context";
 import reperkLogo from "../../../static/svg/logo-reperk.svg";
-import imgReperk from "../../../static/images/img_reperk_popup2.png";
+import imgReperk from "../../../static/images/img_reperk_popup2_02.png";
 
 function ReperkCircle({ parameter }) {
   const { setModalOpen } = useContext(ModalContext);
