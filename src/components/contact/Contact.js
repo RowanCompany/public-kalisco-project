@@ -3,24 +3,25 @@ import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
 import storeData from "./storeData";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+//import { useLocation } from "react-router-dom";
 
-function useQuery() {
+/*function useQuery() {
   return new URLSearchParams(useLocation().search);
-}
+}*/
 
 function Contact() {
   const [description, setDescription] = useState("");
   const textLength = useMemo(() => description.length, [description]);
-  const [category, setCategory] = useState("");
+  //const [category, setCategory] = useState("");
   const [brand, setBrand] = useState("");
   const formRef = useRef(null);
   const [countryNumber, setCountryNumber] = useState("+82");
   const [telNumber, setTelNumber] = useState("");
+  const [name, setName] = useState("");
 
-  let query = useQuery();
-  const querySubject = query.get("subject");
-  useEffect(() => {
+  //let query = useQuery();
+  //const querySubject = query.get("subject");
+  /*useEffect(() => {
     if (querySubject) {
       switch (querySubject) {
         case "saboten":
@@ -34,7 +35,30 @@ function Contact() {
       }
     }
     return () => setBrand("");
-  }, [querySubject]);
+  }, [querySubject]);*/
+  useEffect(() => {
+    const authData = sessionStorage.getItem("tempAuthData");
+    if (!authData) {
+      window.location.assign("/contact");
+    }
+    axios
+      .post(
+        "https://qlog2z6ai2.execute-api.ap-northeast-2.amazonaws.com/kalisco/v1/id/check/decode",
+        {
+          encodingData: authData,
+        }
+      )
+      .then((res) => {
+        const data = JSON.parse(res.data);
+        const sName = data["sName"];
+        if (!sName) {
+          sessionStorage.removeItem("tempAuthData");
+          window.location.assign("/contact");
+        } else {
+          setName(sName);
+        }
+      });
+  }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -71,6 +95,7 @@ function Contact() {
       })
       .then(() => {
         window.alert("메일 발송에 성공했습니다!");
+        sessionStorage.removeItem("tempAuthData");
         document.location.reload();
       })
       .catch(() => {
@@ -99,7 +124,9 @@ function Contact() {
                   name="name"
                   id="name"
                   required
+                  defaultValue={name}
                   className={`${styles.commonFormInput} ${styles.writerFormInput}`}
+                  disabled={Boolean(name)}
                 />
               </div>
               <div className={styles.formWrapper}>
@@ -150,7 +177,7 @@ function Contact() {
               </div>
               <div className={styles.formWrapper}>
                 <div className="d-flex">
-                  <div>
+                  {/*<div>
                     <div>
                       <label htmlFor="type" className={styles.commonFormLabel}>
                         분류
@@ -174,8 +201,35 @@ function Contact() {
                         <option value="기타">기타</option>
                       </select>
                     </div>
+                  </div>*/}
+                  <div>
+                    <div>
+                      <label
+                        htmlFor="sub_type"
+                        className={styles.commonFormLabel}
+                      >
+                        유형
+                      </label>
+                    </div>
+                    <div className="position-relative">
+                      <select
+                        name="sub_type"
+                        id="sub_type"
+                        className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
+                        defaultValue=""
+                        required
+                      >
+                        <option value="" hidden disabled>
+                          선택
+                        </option>
+                        <option value="서비스">서비스</option>
+                        <option value="메뉴">메뉴</option>
+                        <option value="위생">위생</option>
+                        <option value="기타">기타</option>
+                      </select>
+                    </div>
                   </div>
-                  {category && (
+                  {/*{category && (
                     <div>
                       <div>
                         <label
@@ -203,7 +257,7 @@ function Contact() {
                         </select>
                       </div>
                     </div>
-                  )}
+                  )}*/}
                 </div>
               </div>
               <div className={styles.formWrapper}>
