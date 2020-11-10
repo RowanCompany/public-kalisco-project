@@ -11,6 +11,7 @@ import mainImage5 from "../../../static/images/mobile/img-main-5@2x.png";
 import mainImage6 from "../../../static/images/mobile/img-main-6@2x.png";
 import mainImage7 from "../../../static/images/mobile/img-main-7@2x.png";
 import { Link } from "react-router-dom";
+import MobileMainCircle from "./circle/MobileMainCircle";
 
 export default function MobileMainVerticalList({ rootHeight }) {
   useEffect(() => {
@@ -226,16 +227,16 @@ export default function MobileMainVerticalList({ rootHeight }) {
             <img src={mainImage7} alt="main 7" className="img-fill" />
           </div>
         </div>
-        {/*<div className={styles.swiperSlide}>
+        <div className={styles.swiperSlide}>
           <div className={styles.lastSlideBackgroundWrapper}>
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div className={styles.lastSlideCircleWrapper}>
+              {/*<MobileMainCircle />*/}
             </div>
           </div>
-        </div>*/}
+          <div>
+            <div></div>
+          </div>
+        </div>
       </div>
       <div className={styles.swiperPagination} />
     </div>
