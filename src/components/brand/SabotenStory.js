@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./saboten.module.scss";
 import story1 from "../../static/images/img-p-saboten-story1.png";
 import sabotenLogo from "../../static/svg/logo-saboten-story.svg";
-import gif1 from "../../static/images/gif-p-saboten-story1.gif";
+//import gif1 from "../../static/images/gif-p-saboten-story1.gif";
 //import gif2 from "../../static/images/gif-p-saboten-story2.gif";
 import gif3 from "../../static/images/gif-p-saboten-story3.gif";
 import gif4 from "../../static/images/gif-p-saboten-story4.gif";

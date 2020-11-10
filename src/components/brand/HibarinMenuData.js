@@ -181,7 +181,7 @@ export const newBannerData = {
   drink: bannerImage3,
 };
 
-export default {
+const HibarinMenuData = {
   katsu: [
     {
       title: "히바린 카츠(히레/로스)",
@@ -526,3 +526,5 @@ export default {
     },
   ],
 };
+
+export default HibarinMenuData;

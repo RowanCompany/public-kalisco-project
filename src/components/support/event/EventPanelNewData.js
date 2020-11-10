@@ -11,7 +11,7 @@ import image8 from "../../../static/images/img-event-new-8.jpg";
 import image9 from "../../../static/images/img-event-new-9.jpg";
 import image10 from "../../../static/images/img-event-new-10.jpg";
 
-export default [
+const EventPanelNewData = [
   {
     id: 1,
     title: "캘리스코 통합 홈페이지 Grand OPEN",
@@ -346,3 +346,5 @@ export default [
     ),
   },
 ];
+
+export default EventPanelNewData;

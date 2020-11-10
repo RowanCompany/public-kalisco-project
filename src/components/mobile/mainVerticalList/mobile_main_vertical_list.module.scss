@@ -1,0 +1,271 @@
+.swiperContainer {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding-bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-x pan-y;
+
+  .swiperWrapper {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+    box-sizing: content-box;
+
+    .swiperSlide {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition-property: transform;
+      overflow: hidden;
+      z-index: 1;
+
+      .firstSlideBackgroundWrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000, $alpha: 0.65);
+
+        .firstSlideFlexWrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          .firstSlideTitle {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 24px;
+            color: #ffffff;
+            letter-spacing: 0;
+            text-align: center;
+            font-weight: 400;
+            margin-bottom: 19px;
+          }
+
+          .firstSlideDescription {
+            font-size: 16px;
+            color: #ffffff;
+            letter-spacing: 0;
+            font-family: 'Nanum Myeongjo', serif;
+            font-weight: 400;
+          }
+
+          .secondSlideEnglishTitle {
+            font-size: 24px;
+            //font-family: Helvetica, sans-serif;
+            font-family: 'Nanum Myeongjo', serif;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            line-height: 1.5;
+            margin-bottom: 26px;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          }
+
+          .secondSlideKoreanTitle {
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Nanum Myeongjo', serif;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 400;
+          }
+
+          .slideVerticalDivider {
+            height: 80px;
+            border-left: 2px solid rgba(255, 255, 255, 0.49);
+            margin-top: 30px;
+            margin-bottom: 30px;
+          }
+
+          .secondSlideTextList {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 16px;
+
+            .secondSlideTextWrapper {
+              flex-basis: 0;
+              flex-grow: 1;
+              position: relative;
+              box-sizing: border-box;
+
+              .secondSlideText {
+                font-size: 20px;
+                color: #e8390e;
+                font-family: 'Nanum Myeongjo', serif;
+                text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+                text-align: center;
+                font-weight: bold;
+              }
+            }
+
+            .secondSlideListDot {
+              width: 4px;
+              height: 4px;
+              margin: 0 12px;
+              border-radius: 100%;
+              background-color: #ffffff;
+              opacity: 0.5;
+            }
+          }
+
+          .slideEnTitle {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 24px;
+            letter-spacing: 0;
+            color: #ffffff;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 21px;
+          }
+
+          .slideDescription {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 16px;
+            line-height: 26px;
+            color: #ffffff;
+            letter-spacing: 0;
+            font-weight: 400;
+            text-align: center;
+          }
+
+          .slideDivider {
+            margin: 50px 0;
+            height: 150px;
+            border-left: 2px solid #ffffff;
+            opacity: 0.5;
+          }
+
+          .slideButton {
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.16);
+            border-radius: 4px;
+            max-width: 235px;
+            height: 60px;
+            margin: 0 70px;
+            background-color: rgba(232,57,14, 0.9);
+            padding-top: 21px;
+            padding-bottom: 21px;
+            width: 100%;
+            color: rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            box-sizing: border-box;
+            text-decoration: none;
+            text-align: center;
+            letter-spacing: -0.28px;
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 14px;
+          }
+        }
+
+        .thirdSlideFlexWrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          //justify-content: flex-end;
+          box-sizing: border-box;
+          padding: 74px 15px 14px;
+
+
+          .thirdSlideColumn {
+            flex-basis: 0;
+            flex-grow: 1;
+            border-radius: 30px;
+            position: relative;
+            display: flex;
+            min-height: 0;
+
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+
+            .thirdSlideColumnTextWrapper {
+              padding: 25px 30px 20px;
+              width: 100%;
+              height: 100%;
+              box-sizing: border-box;
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+
+              .thirdSlideColumnEnglishTitle {
+                font-size: 14px;
+                color: #ffffff;
+                font-family: 'Nanum Myeongjo', serif;
+                text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+                letter-spacing: 0;
+                margin-bottom: 7px;
+                font-weight: 400;
+              }
+
+              .thirdSlideColumnTitle {
+                color: #ffffff;
+                font-size: 20px;
+                font-family: 'Nanum Myeongjo', serif;
+                text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+                letter-spacing: 0;
+              }
+
+              .thirdSlideColumnDescriptionTitle {
+                margin-top: auto;
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: bold;
+                font-family: 'Nanum Myeongjo', serif;
+                margin-bottom: 10px;
+              }
+
+              .thirdSlideColumnDescription {
+                font-size: 12px;
+                color: #ffffff;
+                font-family: 'Nanum Myeongjo', serif;
+                letter-spacing: 0;
+                white-space: nowrap;
+                font-weight: 400;
+                line-height: 17px;
+              }
+            }
+
+            img {
+              border-radius: 30px;
+            }
+          }
+        }
+      }
+
+      .lastSlideBackgroundWrapper {
+        background: #2F2F2F 0 0 no-repeat padding-box;
+        padding: 130px 20px 36px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .swiperPagination {
+    position: absolute;
+    transition: 300ms opacity;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,119 @@
+.mobileNav {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid #dddddd;
+  padding: 18px 20px;
+
+  .mobileNavListWrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    .hamburgerMenuWrapper {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+}
+
+.mobileNavOverlayWrapper {
+  opacity: 0;
+  transition: visibility 0s, opacity 500ms linear;
+  z-index: 400;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #ffffff;
+  overflow: auto;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .overlayHeaderWrapper {
+    display: flex;
+    padding: 18px 20px;
+    margin-bottom: 60px;
+
+    .overlayCloseButtonWrapper {
+      margin-left: auto;
+    }
+  }
+
+  .mobileOverlayNavListWrapper {
+    padding-bottom: 48px;
+
+    .mobileOverlayUL {
+      list-style: none;
+      padding: 0 0 0 20px;
+      margin: 0;
+
+      .mobileOverlayLI {
+        border-bottom: 1px solid #DDDDDD;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .mobileOverlayAnchorTitle {
+          font-size: 17px;
+          color: #707070;
+          font-weight: 500;
+          line-height: 20px;
+          letter-spacing: 0;
+          font-family: 'Montserrat', sans-serif;
+          text-decoration: none;
+        }
+
+        .mobileOverlaySubUL {
+          list-style: none;
+          padding: 0 10px;
+          margin: 27px 0 0;
+
+          .mobileOverlaySubLI {
+            &:not(:last-child) {
+              padding-bottom: 20px;
+            }
+
+            &:last-child {
+              padding-bottom: 8px;
+            }
+
+            .mobileOverlaySubLink {
+              text-decoration: none;
+              color: #707070;
+              font-size: 16px;
+              line-height: 19px;
+
+              &:hover {
+                font-weight: bold;
+                color: #E8390E;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mobileOverlayFooter {
+    text-align: center;
+
+    .mobileOverlayFooterLink {
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0;
+      color: #707070;
+      text-decoration: none;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+  }
+}

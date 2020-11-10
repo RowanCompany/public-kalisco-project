@@ -34,7 +34,6 @@ function ConditionalEventRenderer({ type }) {
       return EventPanelData.filter((d) => d.type === type).map((d, i) => (
         <EventPanel key={i} {...d} />
       ));
-      break;
   }
 }
 

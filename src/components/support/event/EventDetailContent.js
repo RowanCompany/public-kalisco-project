@@ -1,9 +1,5 @@
 import React from "react";
 import styles from "./event.module.scss";
-import LeftArrow from "./svg/LeftArrow";
-import RightArrow from "./svg/RightArrow";
-import upArrow from "../../../static/svg/icon-arrow-up.svg";
-import downArrow from "../../../static/svg/icon-arrow-down.svg";
 import EventPanelData from "./EventPanelNewData";
 import { useParams } from "react-router-dom";
 

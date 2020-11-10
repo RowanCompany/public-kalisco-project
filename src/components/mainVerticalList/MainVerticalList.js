@@ -80,40 +80,6 @@ function MainVerticalList() {
         <SwiperSlide role="banner">
           <MainBanner verticalIndex={activeIndex} />
         </SwiperSlide>
-        {/* <SwiperSlide>
-                    <div className="main-bg-wrapper">
-                        <MainBusinessIntro />
-                    </div>
-                    <div className="main-business-intro-img-wrapper">
-                        <div>
-                            <div className="wh-100">
-                                <img
-                                    src={introFirst}
-                                    alt="First intro"
-                                    className="img-fill"
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <div className="wh-100">
-                                <img
-                                    src={introSecond}
-                                    alt="Second intro"
-                                    className="img-fill"
-                                />
-                            </div>
-                        </div>
-                        <div>
-                            <div className="wh-100">
-                                <img
-                                    src={introThrid}
-                                    alt="Thrid intro"
-                                    className="img-fill"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </SwiperSlide> */}
         <SwiperSlide>
           <div className="main-bg-wrapper">
             <div className="first-main-banner-title-wrapper">
@@ -133,61 +99,6 @@ function MainVerticalList() {
             <img src={hrImage} alt="hr Banner" className="img-fill" />
           </div>
         </SwiperSlide>
-        {/* <SwiperSlide>
-                    <div className="main-bg-wrapper">
-                        <div className="brand-list-wrapper">
-                            <Link
-                                className="d-inline-block brand-circle-wrapper saboten"
-                                to="/brand/saboten"
-                            >
-                                <div className="brand-logo-wrapper">
-                                    <img src={sabotonLogo} alt="saboten logo" />
-                                </div>
-                                <div className="brand-title">사보텐</div>
-                            </Link>
-                            <Link
-                                className="d-inline-block brand-circle-wrapper hibarin"
-                                to="/brand/hibarin"
-                            >
-                                <div className="brand-logo-wrapper">
-                                    <img src={hibarinLogo} alt="hibarin logo" />
-                                </div>
-                                <div className="brand-title">히바린</div>
-                            </Link>
-                            <div className="brand-circle-wrapper tacobell">
-                                <div className="brand-logo-wrapper">
-                                    <img
-                                        src={tacobellLogo}
-                                        alt="taco bell logo"
-                                    />
-                                </div>
-                                <div className="brand-title">타코벨</div>
-                            </div>
-                            <div className="brand-circle-wrapper centralkc">
-                                <div className="brand-logo-wrapper">
-                                    <img
-                                        src={centralkcLogo}
-                                        alt="central kitchen logo"
-                                    />
-                                </div>
-                                <div className="brand-title">센트럴키친</div>
-                            </div>
-                            <div className="brand-circle-wrapper banjoo">
-                                <div className="brand-logo-wrapper">
-                                    <img src={banjooLogo} alt="banjoo logo" />
-                                </div>
-                                <div className="brand-title">반주</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="wh-100">
-                        <img
-                            src={brandImage}
-                            alt="brand bg"
-                            className="img-fill"
-                        />
-                    </div>
-                </SwiperSlide> */}
         <SwiperSlide>
           <div className="main-bg-wrapper">
             <div className="first-main-banner-title-wrapper">
@@ -267,7 +178,6 @@ function MainVerticalList() {
             <Footer />
           </div>
         </SwiperSlide>
-        {/* TODO: Scroll navigator 추가해야 됨 */}
       </Swiper>
       {!isEnd && (
         <div className="scroll-guide animate__animated animate__fadeIn">
