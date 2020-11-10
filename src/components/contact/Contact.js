@@ -3,9 +3,9 @@ import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
 import storeData from "./storeData";
 import axios from "axios";
-//import { useLocation } from "react-router-dom";
+/*import { useLocation } from "react-router-dom";
 
-/*function useQuery() {
+function useQuery() {
   return new URLSearchParams(useLocation().search);
 }*/
 
@@ -19,9 +19,9 @@ function Contact() {
   const [telNumber, setTelNumber] = useState("");
   const [name, setName] = useState("");
 
-  //let query = useQuery();
-  //const querySubject = query.get("subject");
-  /*useEffect(() => {
+  /*let query = useQuery();
+  const querySubject = query.get("subject");
+  useEffect(() => {
     if (querySubject) {
       switch (querySubject) {
         case "saboten":
@@ -116,7 +116,7 @@ function Contact() {
               <div className={styles.formWrapper}>
                 <div>
                   <label htmlFor="name" className={styles.commonFormLabel}>
-                    작성자
+                    성명
                   </label>
                 </div>
                 <input
@@ -146,7 +146,7 @@ function Contact() {
               <div className={styles.formWrapper}>
                 <div>
                   <label htmlFor="mobile" className={styles.commonFormLabel}>
-                    휴대전화
+                    휴대폰 번호
                   </label>
                 </div>
                 <div className="d-flex">
@@ -167,7 +167,7 @@ function Contact() {
                       type="tel"
                       name="tel"
                       id="tel"
-                      placeholder="휴대전화번호 입력"
+                      placeholder="휴대폰 번호 입력"
                       required
                       onInput={(e) => setTelNumber(e.target.value)}
                       className={`${styles.commonFormInput} ${styles.telFormInput}`}
@@ -376,15 +376,15 @@ function Contact() {
                       </tr>
                       <tr>
                         <td className={styles.tdTitle}>수집항목</td>
-                        <td>성명, 이메일주소, 전화번호</td>
+                        <td>성명, 이메일, 휴대폰 번호</td>
                       </tr>
                       <tr>
                         <td className={styles.tdTitle}>보유 및 이용기간</td>
                         <td>
-                          <b style={{ paddingLeft: "16px" }}>
+                          <span style={{ paddingLeft: "16px" }}>
                             회원정보만을 추출하여 별도로 축적하지는 않으며,
                             고객문의 사항과 함께 보존됩니다.
-                          </b>
+                          </span>
                           <ul>
                             <li>
                               계약 또는 청약철회 등에 관한 기록 :
@@ -403,6 +403,15 @@ function Contact() {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+                <div
+                  className={styles.termDescription}
+                  style={{ margin: "4px 0" }}
+                >
+                  *나이스평가정보에서 인증 받은 휴대폰 번호를 사용하고 있습니다.
+                  <br />
+                  *수집항목에 동의를 거부할 수 있으며, 동의를 거부 시
+                  문의서비스를 등록하실 수 없습니다.
                 </div>
                 <div className={styles.checkboxInlineGroup}>
                   <div className={styles.checkboxInline}>
@@ -427,10 +436,6 @@ function Contact() {
                     />
                     <label htmlFor="term-disagree">동의하지 않습니다.</label>
                   </div>
-                </div>
-                <div className={styles.termDescription}>
-                  *수집항목에 동의를 거부할 수 있으며, 동의를 거부 시
-                  문의서비스를 등록하실 수 없습니다.
                 </div>
               </div>
               {/* <div className={styles.formWrapper}>

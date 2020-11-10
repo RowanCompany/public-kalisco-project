@@ -4,7 +4,7 @@ import ContactBanner from "./ContactBanner";
 import axios from "axios";
 
 export default function ContactAuth() {
-  function handleCellphoneAuthenticate() {
+  function handleCellPhoneAuthentication() {
     axios
       .post(
         "https://qlog2z6ai2.execute-api.ap-northeast-2.amazonaws.com/kalisco/v1/id/check/encode",
@@ -90,7 +90,7 @@ export default function ContactAuth() {
             <button
               type="button"
               className={styles.contactAuthWhiteButton}
-              onClick={handleCellphoneAuthenticate}
+              onClick={handleCellPhoneAuthentication}
             >
               휴대전화 인증
             </button>
