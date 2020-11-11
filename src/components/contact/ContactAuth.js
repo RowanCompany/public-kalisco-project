@@ -43,17 +43,6 @@ export default function ContactAuth() {
       } else {
         sessionStorage.setItem("tempAuthData", name);
         window.location.assign("/mail");
-        /*axios
-          .post(
-            "https://qlog2z6ai2.execute-api.ap-northeast-2.amazonaws.com/kalisco/v1/id/check/decode",
-            {
-              encodingData: name,
-            }
-          )
-          .then((res) => {
-            const data = JSON.parse(res.data);
-            console.log(data);
-          });*/
       }
     }
   }, []);

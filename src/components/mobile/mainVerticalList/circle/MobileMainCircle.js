@@ -7,11 +7,13 @@ export default function MobileMainCircle({ Logo, link, text }) {
   return (
     <Link
       to={link}
-      className={styles.lastSlideCircle}
+      className={`${styles.lastSlideCircle} ${!!hovered && styles.active}`}
       onClick={() => setHovered(true)}
     >
-      <Logo hovered={hovered} />
-      <div>{text}</div>
+      <div className={styles.lastSlideCircleElementWrapper}>
+        <Logo hovered={hovered} />
+        <div className={styles.lastSlideCircleText}>{text}</div>
+      </div>
     </Link>
   );
 }

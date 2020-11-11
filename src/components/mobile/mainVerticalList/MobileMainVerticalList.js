@@ -12,6 +12,10 @@ import mainImage6 from "../../../static/images/mobile/img-main-6@2x.png";
 import mainImage7 from "../../../static/images/mobile/img-main-7@2x.png";
 import { Link } from "react-router-dom";
 import MobileMainCircle from "./circle/MobileMainCircle";
+import SupportIcon from "./circle/svg/SupportIcon";
+import NoticeIcon from "./circle/svg/NoticeIcon";
+import EventIcon from "./circle/svg/EventIcon";
+import RecruitIcon from "./circle/svg/RecruitIcon";
 
 export default function MobileMainVerticalList({ rootHeight }) {
   useEffect(() => {
@@ -230,7 +234,32 @@ export default function MobileMainVerticalList({ rootHeight }) {
         <div className={styles.swiperSlide}>
           <div className={styles.lastSlideBackgroundWrapper}>
             <div className={styles.lastSlideCircleWrapper}>
-              {/*<MobileMainCircle />*/}
+              <MobileMainCircle
+                Logo={SupportIcon}
+                link="/faq"
+                text={
+                  <>
+                    고객센터
+                    <br />
+                    FAQ
+                  </>
+                }
+              />
+              <MobileMainCircle
+                Logo={NoticeIcon}
+                link="/notices"
+                text={<>Notice</>}
+              />
+              <MobileMainCircle
+                Logo={EventIcon}
+                link="/supports/events"
+                text={<>이벤트</>}
+              />
+              <MobileMainCircle
+                Logo={RecruitIcon}
+                link="/recruit"
+                text={<>Recruit</>}
+              />
             </div>
           </div>
           <div>
