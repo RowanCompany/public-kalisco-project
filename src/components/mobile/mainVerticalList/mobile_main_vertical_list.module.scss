@@ -251,7 +251,7 @@
 
       .lastSlideBackgroundWrapper {
         background: #2F2F2F 0 0 no-repeat padding-box;
-        padding: 130px 20px 36px;
+        padding: 100px 0 36px;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
@@ -259,9 +259,29 @@
         .lastSlideCircleWrapper {
           display: flex;
           flex-wrap: wrap;
-          gap: 20px 30px;
+          margin: -10px -15px;
           justify-content: center;
           padding-bottom: 40px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .lastSlideFooterWrapper {
+          border-top: 1px solid rgba($color: #707070, $alpha: 0.2);
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-top: 20px;
+          position: relative;
+          font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+          font-size: 11px;
+          line-height: 16px;
+          letter-spacing: -0.22px;
+          color: #ffffff;
+          font-weight: 400;
+
+          .footerLogoWrapper {
+            padding-bottom: 20px;
+          }
         }
       }
     }

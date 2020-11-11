@@ -16,6 +16,7 @@ import SupportIcon from "./circle/svg/SupportIcon";
 import NoticeIcon from "./circle/svg/NoticeIcon";
 import EventIcon from "./circle/svg/EventIcon";
 import RecruitIcon from "./circle/svg/RecruitIcon";
+import kaliscoWhiteLogo from "../../../static/svg/mobile/logo-header-wh-m.svg";
 
 export default function MobileMainVerticalList({ rootHeight }) {
   useEffect(() => {
@@ -28,10 +29,10 @@ export default function MobileMainVerticalList({ rootHeight }) {
       loop: false,
       wrapperClass: styles.swiperWrapper,
       slideClass: styles.swiperSlide,
-      pagination: {
+      /*pagination: {
         clickable: false,
         el: `.${styles.swiperPagination}`,
-      },
+      },*/
     });
   }, []);
 
@@ -261,13 +262,20 @@ export default function MobileMainVerticalList({ rootHeight }) {
                 text={<>Recruit</>}
               />
             </div>
-          </div>
-          <div>
-            <div></div>
+            <div className={styles.lastSlideFooterWrapper}>
+              <div className={styles.footerLogoWrapper}>
+                <img src={kaliscoWhiteLogo} alt="kalisco white logo" />
+              </div>
+              <div>
+                서울시 강남구 역삼로 115 2층 (우)06243
+                <br />
+                사업자등록번호 211-88-32153 | 대표이사 구지은
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className={styles.swiperPagination} />
+      {/*<div className={styles.swiperPagination} />*/}
     </div>
   );
 }
