@@ -127,7 +127,7 @@ function Contact() {
                   required
                   className={`${styles.commonFormInput} ${styles.writerFormInput}`}
                   defaultValue={name}
-                  disabled={Boolean(name)}
+                  readOnly={Boolean(name)}
                 />
               </div>
               <div className={styles.formWrapper}>
@@ -158,7 +158,6 @@ function Contact() {
                       className={`${styles.commonSelectInput} ${styles.telSelectInput}`}
                       defaultValue="+82"
                       required
-                      disabled
                       onChange={(e) => setCountryNumber(e.target.value)}
                     >
                       <option value="+82">+82</option>
@@ -174,7 +173,7 @@ function Contact() {
                       onInput={(e) => setTelNumber(e.target.value)}
                       className={`${styles.commonFormInput} ${styles.telFormInput}`}
                       defaultValue={telNumber}
-                      disabled={Boolean(telNumber)}
+                      readOnly={Boolean(telNumber)}
                     />
                   </div>
                 </div>
