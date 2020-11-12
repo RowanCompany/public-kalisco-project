@@ -1,0 +1,21 @@
+.mobileRecruitSection {
+  padding-top: 160px;
+  padding-bottom: 43px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+
+  .mobileRecruitTitle {
+    text-align: center;
+    letter-spacing: 0;
+    font-size: 24px;
+    font-family: 'Nanum Myeongjo', serif;
+    color: #2f2f2f;
+    font-weight: 500;
+    margin-bottom: 54px;
+  }
+
+  .mobileRecruitCircleWrapper {
+    display: flex;
+    padding: 0 20px;
+  }
+}

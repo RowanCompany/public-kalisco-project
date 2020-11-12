@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import RecruitComponent from "../../components/recruit/Recruit";
 import Fab from "../../components/brand/fab/Fab";
 import { useMobileCheck } from "../../utils/mobile";
+import MobileRecruitComponent from "../mobile/Recruit";
 
 function DesktopRecruitComponent() {
   return (
@@ -29,7 +30,11 @@ function Recruit() {
       });
     };
   }, []);
-  return useMobileCheck(width) ? <DesktopRecruitComponent /> : "";
+  return useMobileCheck(width) ? (
+    <DesktopRecruitComponent />
+  ) : (
+    <MobileRecruitComponent />
+  );
 }
 
 export default Recruit;
