@@ -12,6 +12,8 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Notice from "./pages/contact/Notice";
 import Faq from "./pages/contact/Faq";
+import Nav from "./components/nav/Nav";
+import Footer from "./components/Footer";
 
 // TODO: Suspense 도입 고려
 function App() {
@@ -27,7 +29,11 @@ function App() {
         <Route path="/brand" component={Brand} />
         <Route path="/products" component={Product} />
         <Route path="/contact" component={Contact} />
-        <Route path="/mail" component={ContactComponent} />
+        <Route path="/mail">
+          <Nav />
+          <ContactComponent />
+          <Footer />
+        </Route>
         <Route path="/faq" component={Faq} />
         <Route path="/notices" component={Notice} />
         <Route>
