@@ -56,6 +56,7 @@ function Contact() {
           window.location.assign("/contact");
         } else {
           setName(sName);
+          setTelNumber(data["sMobileNo"]);
         }
       });
   }, []);
@@ -124,9 +125,9 @@ function Contact() {
                   name="name"
                   id="name"
                   required
-                  defaultValue={name}
                   className={`${styles.commonFormInput} ${styles.writerFormInput}`}
-                  disabled={Boolean(name)}
+                  defaultValue={name}
+                  readOnly={Boolean(name)}
                 />
               </div>
               <div className={styles.formWrapper}>
@@ -171,6 +172,8 @@ function Contact() {
                       required
                       onInput={(e) => setTelNumber(e.target.value)}
                       className={`${styles.commonFormInput} ${styles.telFormInput}`}
+                      defaultValue={telNumber}
+                      readOnly={Boolean(telNumber)}
                     />
                   </div>
                 </div>
