@@ -1,5 +1,5 @@
 .mobileRecruitSection {
-  padding-top: 160px;
+  padding-top: 140px;
   padding-bottom: 43px;
   background-color: #ffffff;
   box-sizing: border-box;
@@ -14,8 +14,92 @@
     margin-bottom: 54px;
   }
 
-  .mobileRecruitCircleWrapper {
+  .mobileRecruitCircleListWrapper {
     display: flex;
-    padding: 0 20px;
+    flex-wrap: wrap;
+    padding: 0 20px 36px;
+    align-items: center;
+    justify-content: center;
+    margin: -12px -6px;
+
+    .mobileRecruitRightArrowWrapper {
+      //padding: 0 10px;
+    }
+
+    .mobileRecruitCircleWrapper {
+      position: relative;
+      margin: 12px 6px;
+
+      .mobileRecruitStepText {
+        color: rgba($color: #2f2f2f, $alpha: 0.5);
+        font-family: 'Nanum Myeongjo', serif;
+        font-size: 12px;
+        letter-spacing: 0;
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        top: -18px;
+        width: 100%;
+
+      }
+
+      .mobileRecruitCircle {
+        display: flex;
+        position: relative;
+        min-width: 80px;
+        border: 1px solid #DDDDDD;
+        background-color: #ffffff;
+        border-radius: 100%;
+
+        &:before {
+          content: "";
+          float: left;
+          padding-top: 100%;
+        }
+
+        > .mobileRecruitCircleContentWrapper {
+          float: left;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          box-sizing: border-box;
+          padding: 12px;
+          width: 100%;
+
+          .mobileRecruitIconWrapper {
+            padding-bottom: 10px;
+          }
+
+          .mobileRecruitCircleContent {
+            font-size: 12px;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #2F2F2F;
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .mobileRecruitButtonWrapper {
+    text-align: center;
+    padding: 0 70px;
+    /*width: 100%;*/
+
+    .mobileRecruitButton {
+      padding: 16px 0 14px;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.16);
+      border-radius: 4px;
+      background-color: rgba($color: #E8390E, $alpha: 0.9);
+      border: none;
+      box-sizing: border-box;
+      width: 100%;
+      letter-spacing: -0.28px;
+      color: rgba($color: #FFFFFF, $alpha: 0.8);
+      font-size: 14px;
+      line-height: 31px;
+      font-family: 'Nanum Myeongjo', serif;
+    }
   }
 }
