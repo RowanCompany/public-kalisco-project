@@ -1,0 +1,31 @@
+.mobileFooterBackgroundWrapper {
+  background-color: #2F2F2F;
+  padding: 36px 20px;
+  color: #FFFFFF;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.22px;
+  font-weight: 400;
+
+  > div {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .mobileFooterEmailWrapper {
+      display: flex;
+      position: relative;
+
+      > div {
+        /*width: 100%;
+        max-width: 50%;
+        flex: 0 0 50%;*/
+      }
+
+      .mobileFooterEmailLink {
+
+      }
+    }
+  }
+}
