@@ -1,0 +1,149 @@
+.talentSectionOne {
+  padding: 60px 0;
+  position: relative;
+
+  .talentTitleBlack {
+    font-size: 24px;
+    color: #333333;
+    letter-spacing: 0;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .familyListWrapper {
+    display: flex;
+    margin: -22.5px 0;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+
+    .familyColumn {
+      flex: 0 0 calc(50% - 45px);
+      max-width: calc(50% - 45px);
+      margin: 22.5px 22.5px;
+      box-sizing: border-box;
+      min-width: 1px;
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .familyColumnTitle {
+        font-family: 'Nanum Myeongjo', serif;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        color: #2F2F2F;
+        letter-spacing: 0;
+        padding-top: 22px;
+        padding-bottom: 10px;
+        line-height: 16px;
+      }
+
+      .familyColumnDescription {
+        color: #2F2F2F;
+        letter-spacing: 0;
+        font-size: 12px;
+        font-family: 'Nanum Myeongjo', serif;
+        font-weight: 400;
+        line-height: 16px;
+        white-space: nowrap;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.talentSectionTwo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .talentRightPeopleWrapper {
+    padding: 60px 0;
+    background-color: rgba($color: #000000, $alpha: 0.75);
+    z-index: 2;
+    position: relative;
+
+    .talentRightPeopleTitle {
+      color: #FFFFFF;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .talentRightPeopleDescription {
+      text-align: center;
+      color: #FFFFFF;
+      letter-spacing: 0;
+      font-size: 12px;
+      font-family: 'Nanum Myeongjo', serif;
+      line-height: 18px;
+      font-weight: 300;
+      margin-bottom: 50px;
+    }
+
+    .talentRightPeopleListWrapper {
+      position: relative;
+      padding: 0 20px;
+
+      .talentRightPeopleFlexWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+
+        .talentRightPeopleCircle {
+          position: relative;
+          border: 1px solid #FFFFFF;
+          border-radius: 100%;
+          min-width: 105px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #FFFFFF;
+          font-size: 14px;
+          font-family: 'Nanum Myeongjo', serif;
+          line-height: 18px;
+          font-weight: bold;
+
+          &:before {
+            content: "";
+            float: left;
+            padding-top: 100%;
+          }
+        }
+
+        .talentRightPeopleCircleDescription {
+          color: #FFFFFF;
+          font-size: 12px;
+          line-height: 21px;
+          letter-spacing: 0;
+          font-family: 'Nanum Myeongjo', serif;
+          font-weight: 400;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  .talentRightPeopleBgImgWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+}
