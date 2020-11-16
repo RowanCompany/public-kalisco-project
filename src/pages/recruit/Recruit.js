@@ -30,6 +30,7 @@ function Recruit() {
       });
     };
   }, []);
+
   return useMobileCheck(width) ? (
     <DesktopRecruitComponent />
   ) : (

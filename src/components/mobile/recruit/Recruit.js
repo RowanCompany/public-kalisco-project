@@ -80,9 +80,14 @@ export default function Recruit() {
         </div>
       </div>
       <div className={styles.mobileRecruitButtonWrapper}>
-        <button type="button" className={styles.mobileRecruitButton}>
+        <a
+          href="https://recruit.kalisco.co.kr:9443"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.mobileRecruitButton}
+        >
           지원하기
-        </button>
+        </a>
       </div>
     </section>
   );
