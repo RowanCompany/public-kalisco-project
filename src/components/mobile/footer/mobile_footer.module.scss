@@ -23,8 +23,17 @@
         flex: 0 0 50%;*/
       }
 
-      .mobileFooterEmailLink {
+      .mobileFooterEmailFlexWrapper {
+        font-size: 10px;
 
+        &:not(:last-child) {
+          padding-right: 20px;
+        }
+
+        .mobileFooterEmailLink {
+          color: #e8390e;
+          text-decoration: none;
+        }
       }
     }
   }

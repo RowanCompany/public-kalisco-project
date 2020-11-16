@@ -14,16 +14,24 @@ export default function Footer() {
       </div>
       <div>
         <div className={styles.mobileFooterEmailWrapper}>
-          <div>
+          <div className={styles.mobileFooterEmailFlexWrapper}>
             <div>입점제안 및 가맹문의</div>
             <div>
-              <a href="mailto:llimun@kalisco.co.kr">llimun@kalisco.co.kr</a>
+              <a
+                href="mailto:llimun@kalisco.co.kr"
+                className={styles.mobileFooterEmailLink}
+              >
+                llimun@kalisco.co.kr
+              </a>
             </div>
           </div>
-          <div>
+          <div className={styles.mobileFooterEmailFlexWrapper}>
             <div>Easy to cook(편의식) 상품구입 및 특판문의</div>
             <div>
-              <a href="mailto:kipal.cha@kalisco.co.kr">
+              <a
+                href="mailto:kipal.cha@kalisco.co.kr"
+                className={styles.mobileFooterEmailLink}
+              >
                 kipal.cha@kalisco.co.kr
               </a>
             </div>
