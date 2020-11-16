@@ -96,13 +96,15 @@ function Recruit() {
                 문의 : 02-6966-9467,9471
             </div> */}
       <div style={{ textAlign: "center" }}>
-        <button
+        <a
           className={styles.kaliscoButton}
-          type="button"
-          onClick={() => window.alert("준비중입니다.")}
+          href="https://recruit.kalisco.co.kr:9443"
+          rel="noopener noreferrer"
+          target="_blank"
+          /*onClick={() => window.alert("준비중입니다.")}*/
         >
           지원하기
-        </button>
+        </a>
       </div>
       <div className={styles.contact}>채용문의: 02-6956-4617,4618</div>
     </section>
