@@ -147,3 +147,76 @@
     top: 0;
   }
 }
+
+.educationSection {
+  padding: 60px 20px 26px;
+  background: #F4F4F4 0 0 no-repeat padding-box;
+
+  .educationTitle {
+    color: #333333;
+    font-size: 24px;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .educationDescription {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2F2F2F;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 46px;
+  }
+
+  .educationBox {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    width: 100%;
+
+    .educationBoxFlexWrapper {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+
+      .educationIconWrapper {
+        padding-right: 40px;
+      }
+
+      .educationBoxListTitle {
+        font-family: 'Nanum Myeongjo', serif;
+        color: #2F2F2F;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 18px;
+        letter-spacing: 0;
+      }
+
+      .educationBoxListSubTitle {
+        font-family: 'Nanum Myeongjo', serif;
+        color: #2F2F2F;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 13px;
+      }
+
+      .educationBoxListDescription {
+        font-family: 'Nanum Myeongjo', serif;
+        color: #2F2F2F;
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+    }
+  }
+}

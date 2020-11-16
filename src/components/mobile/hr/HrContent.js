@@ -3,11 +3,14 @@ import BannerImage from "../../../static/images/mobile/hr_top_back@2x.png";
 import Banner from "../banner/Banner";
 import { useParams } from "react-router-dom";
 import HrTalent from "./HrTalent";
+import HrEducation from "./HrEducation";
 
 function HRCaseRenderer({ subject }) {
   switch (subject) {
     case "talent":
       return <HrTalent />;
+    case "education":
+      return <HrEducation />;
     default:
       return <React.Fragment />;
   }
