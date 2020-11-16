@@ -4,6 +4,7 @@ import Banner from "../banner/Banner";
 import { useParams } from "react-router-dom";
 import HrTalent from "./HrTalent";
 import HrEducation from "./HrEducation";
+import HrWelfare from "./HrWelfare";
 
 function HRCaseRenderer({ subject }) {
   switch (subject) {
@@ -11,6 +12,8 @@ function HRCaseRenderer({ subject }) {
       return <HrTalent />;
     case "education":
       return <HrEducation />;
+    case "welfare":
+      return <HrWelfare />;
     default:
       return <React.Fragment />;
   }
@@ -28,7 +31,7 @@ export default function HrContent() {
       link: "/hr/education",
     },
     {
-      title: "복지",
+      title: "인사제도",
       link: "/hr/welfare",
     },
   ];

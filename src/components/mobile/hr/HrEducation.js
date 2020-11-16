@@ -11,7 +11,7 @@ export default function HrEducation() {
     <section className={styles.educationSection}>
       <h2 className={styles.educationTitle}>Training Program</h2>
       <p className={styles.educationDescription}>
-        체계적인 육성제도를 통한 꾸준한 성장지원
+        체계적인 육성제도를 통한 성장경로 제시 및 경럭개발지원
       </p>
       <div className={styles.educationBox}>
         <div className={styles.educationBoxFlexWrapper}>

@@ -220,3 +220,93 @@
     }
   }
 }
+
+.welfareSection {
+  padding: 66px 20px 26px;
+  background: #F4F4F4 0 0 no-repeat padding-box;
+
+  .welfareTitle {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 24px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #2F2F2F;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .welfareDescription {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'Nanum Myeongjo', serif;
+    color: #2F2F2F;
+    letter-spacing: 0;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 46px;
+  }
+
+  .welfareBox {
+    background-color: #FFFFFF;
+    padding: 30px 30px 38px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    .welfareRedDot {
+      width: 7px;
+      height: 7px;
+      border-radius: 100%;
+      background-color: #e8390e;
+      text-align: center;
+      margin: 0 auto 6px;
+    }
+
+    .welfareBoxTitle {
+      color: #2F2F2F;
+      font-size: 18px;
+      font-family: 'Nanum Myeongjo', serif;
+      text-align: center;
+      letter-spacing: 0;
+      margin-bottom: 35px;
+      font-weight: 500;
+    }
+
+    .welfareBoxFlexWrapper {
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .welfareBoxRoundTitle {
+        border: 1px solid #DDDDDD;
+        border-radius: 18px;
+        min-width: 78px;
+        white-space: nowrap;
+        padding: 8px 0;
+        font-family: 'Nanum Myeongjo', serif;
+        text-align: center;
+        font-size: 12px;
+      }
+
+      .welfareBoxDescription {
+        font-size: 12px;
+        font-family: 'Nanum Myeongjo', serif;
+        color: #2F2F2F;
+        letter-spacing: 0;
+        padding-left: 32px;
+        word-break: keep-all;
+        line-height: 18px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
