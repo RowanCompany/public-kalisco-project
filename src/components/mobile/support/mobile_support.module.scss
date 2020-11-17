@@ -80,20 +80,20 @@ a {
   }
 }
 
-.supportMemberShipSection {
+.supportWarningSection {
   position: relative;
   padding: 31px 26px 39px 23px;
   height: 433px;
   background-color: #f4f4f4;
 
-  .supportMemberShipWrapper {
+  .supportWarningWrapper {
     width: 100%;
     background-color: #ffffff;
 
-    .supportMemberShipWarning {
+    .supportWarning {
       padding: 40px 38px 33px 38px;
 
-      .supportMemberShipWarningTitle {
+      .supportWarningTitle {
         margin-bottom: 29.93px;
         font-size: 20px;
         line-height: 34px;
@@ -103,14 +103,14 @@ a {
         text-align: center;
       }
 
-      .supportMemberShipWarningImage {
+      .supportWarningImage {
         display: block;
         margin: 0 auto 28.97px auto;
         width: 165.98px;
         height: 169.09px;
       }
 
-      .supportMemberShipWarningText {
+      .supportWarningText {
         font-size: 12px;
         line-height: 18px;
         letter-spacing: -0.24px;
@@ -118,8 +118,130 @@ a {
         color: #2f2f2f;
       }
 
-      .supportMemberShipWarningTextBold {
+      .supportWarningTextBold {
         font-weight: bold;
+      }
+    }
+  }
+}
+
+.supportKakaoSection {
+  padding: 31px 26px 28px 23px;
+
+  .supportKakaoWrapper {
+    padding: 32.95px 20px 15px 20px;
+    background-color: #ffe833;
+  }
+
+  .supportKakaoIcon {
+    display: block;
+    margin: 0 auto 4.5px auto;
+    width: 34px;
+    height: 32px;
+  }
+
+  .supportKakaoTitle {
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.32px;
+    color: #2f2f2f;
+    text-align: center;
+  }
+  .supportKakaoTitleBold {
+    font-weight: bold;
+  }
+
+  .supportKakaoText {
+    margin-bottom: 19px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.24px;
+    text-align: center;
+  }
+
+  .supportKakaoImage {
+    position: relative;
+    left: calc(50% - 108.025px - 12.025px);
+    margin-bottom: 19px;
+    width: 216.05px;
+    height: 188px;
+  }
+
+  .supportKakaoSeqs {
+    margin-bottom: 19px;
+    padding: 0 14px;
+
+    .supportKakaoSeq {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 12px;
+      align-items: center;
+
+      .supportKakaoSeqNum {
+        display: flex;
+        margin-right: 14px;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        background-color: #391b1b;
+        border-radius: 50%;
+
+        .supportKakaoSeqNumText {
+          margin: auto;
+          font-size: 12px;
+          line-height: 10px;
+          letter-spacing: 0.24px;
+          color: #ffffff;
+        }
+      }
+
+      .supportKakaoSeqText {
+        margin: auto 0;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.24px;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .supportKakaoMenus {
+    .supportKakaoMenuLink {
+      display: inline-block;
+      width: 100%;
+
+      .supportKakaoMenu {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        padding: 15px 22.17px 14.45px 22.17px;
+        background-color: #ffffff;
+        border: 2px solid #dbbb19;
+        border-radius: 8px;
+
+        .supportKakaoMenuLogoSaboten {
+          margin: auto 50px auto 0;
+        }
+        .supportKakaoMenuLogoHibarin {
+          margin: auto 55px auto 0;
+        }
+        .supportKakaoMenuLogoCentral {
+          margin: auto 15px auto 0;
+        }
+
+        .supportKakaoMenuText {
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: -0.24px;
+          text-align: left;
+          color: #2f2f2f;
+          white-space: nowrap;
+        }
+        .supportKakaoMenuTextBold {
+          font-weight: bold;
+        }
       }
     }
   }

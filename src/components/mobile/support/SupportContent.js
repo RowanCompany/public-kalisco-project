@@ -4,6 +4,7 @@ import BannerImage from "../../../static/images/mobile/img-mar-support-banner@2x
 import Banner from "../banner/Banner";
 
 import SupportUnderconstruction from './SupportUnderconstruction';
+import SupportKakao from './SupportKakao';
 
 function SupportCaseRenderer({ subject }) {
     switch (subject) {
@@ -11,6 +12,8 @@ function SupportCaseRenderer({ subject }) {
             return <SupportUnderconstruction />;
         case "partnership":
             return <SupportUnderconstruction />;
+        case "kakaotalk-friends":
+            return <SupportKakao />
         case "events":
             return <React.Fragment />;
         default:
