@@ -202,3 +202,58 @@
     }
   }
 }
+
+.productKatsuSection {
+  padding-top: 37px;
+  padding-bottom: 28px;
+  background-color: #151515;
+}
+
+.navigatorWrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  list-style: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+
+  > li {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 1px;
+
+    .navigator {
+      padding: 13px 12px 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+
+      &.darkThemeNavigator {
+        border-bottom: 1px solid rgba(#FFFFFF, 0.2);
+        color: rgba(#FFFFFF, 0.53);
+
+        &.darkThemeNavActive {
+          border: 1px solid #E8390E;
+          opacity: 1;
+          color: #EA4C25;
+        }
+      }
+
+      &.lightThemeNavigator {
+        border: 1px solid #dddddd;
+        color: #707070;
+
+        &.lightThemeNavActive {
+          border: 1px solid #e8390e;
+          color: #e8390e;
+        }
+      }
+    }
+  }
+}
