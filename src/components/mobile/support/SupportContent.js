@@ -4,12 +4,15 @@ import BannerImage from "../../../static/images/mobile/img-mar-support-banner@2x
 import Banner from "../banner/Banner";
 
 import SupportUnderconstruction from './SupportUnderconstruction';
+import SupportGiveaway from './SupportGiveaway';
 import SupportKakao from './SupportKakao';
 
 function SupportCaseRenderer({ subject }) {
     switch (subject) {
         case "membership":
             return <SupportUnderconstruction />;
+        case "giveaway":
+            return <SupportGiveaway />
         case "partnership":
             return <SupportUnderconstruction />;
         case "kakaotalk-friends":
