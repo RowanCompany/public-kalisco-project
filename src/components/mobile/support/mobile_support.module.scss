@@ -1,0 +1,126 @@
+a {
+  text-decoration: none !important;
+}
+.mobileSupportSection {
+  position: relative;
+  padding-top: 60px;
+  width: 100%;
+
+  .mobileSupportWrapper {
+    padding: 40px 0 15px 0;
+    background-color: rgba($color: #000000, $alpha: 0.75);
+    z-index: 2;
+    position: relative;
+
+    .mobileSupportTitle {
+      margin-bottom: 48px;
+
+      color: #ffffff;
+      font-size: 24px;
+      font-family: "Nanum Myeongjo", serif;
+      letter-spacing: 0;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .mobileSupportMenus {
+      padding: 0 24px 0 29px;
+
+      .mobileSupportMenu {
+        display: flex;
+        flex-direction: row;
+        padding: 15px 20px;
+        border: 1px solid #ffffff;
+        border-radius: 8px;
+        margin-bottom: 20px;
+
+        .mobileSupportMenuIcon {
+          display: flex;
+          margin-right: 47px;
+          width: 40px;
+          height: 40px;
+          background-color: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+
+          .mobileSupportIconImg {
+            margin: auto;
+            opacity: 1;
+          }
+        }
+
+        .mobileSupportMenuText {
+          margin: auto 0;
+          font-size: 16px;
+          letter-spacing: 0px;
+          color: #ffffff;
+          text-shadow: 0px 3px 6px #00000029;
+          opacity: 1;
+          text-align: left;
+        }
+      }
+    }
+
+    .mobileSupportMenu:hover {
+      background-color: #ffffff;
+    }
+    .mobileSupportMenu:hover > .mobileSupportMenuText {
+      color: #2f2f2f;
+    }
+    .mobileSupportMenu:hover > .mobileSupportMenuIcon {
+      background-color: #e8390e;
+    }
+  }
+
+  .mobileSupportBgImgWrapper {
+    position: absolute;
+    width: 100%;
+    height: 590px;
+    top: 60px;
+  }
+}
+
+.supportMemberShipSection {
+  position: relative;
+  padding: 31px 26px 39px 23px;
+  height: 433px;
+  background-color: #f4f4f4;
+
+  .supportMemberShipWrapper {
+    width: 100%;
+    background-color: #ffffff;
+
+    .supportMemberShipWarning {
+      padding: 40px 38px 33px 38px;
+
+      .supportMemberShipWarningTitle {
+        margin-bottom: 29.93px;
+        font-size: 20px;
+        line-height: 34px;
+        letter-spacing: -0.4px;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .supportMemberShipWarningImage {
+        display: block;
+        margin: 0 auto 28.97px auto;
+        width: 165.98px;
+        height: 169.09px;
+      }
+
+      .supportMemberShipWarningText {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -0.24px;
+        text-align: center;
+        color: #2f2f2f;
+      }
+
+      .supportMemberShipWarningTextBold {
+        font-weight: bold;
+      }
+    }
+  }
+}
