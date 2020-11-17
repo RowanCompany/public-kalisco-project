@@ -4,11 +4,19 @@ import { Link } from "react-router-dom";
 
 export default function Banner({ image, links, title }) {
   const pathname = window.location.pathname;
+  const isScrollable = pathname.includes("supports");
+  const isBgDark = pathname.includes("supports");
 
   return (
     <div className={styles.bannerWrapper}>
       <div className={styles.bannerImageWrapper}>
-        <div className={styles.bannerTitleWrapper}>{title}</div>
+        <div
+          className={`${styles.bannerTitleWrapper} ${
+            isBgDark ? styles.bannerTitleBgDark : ""
+          }`}
+        >
+          {title}
+        </div>
         <div>
           <img src={image} alt="banner main" className={styles.bannerImage} />
         </div>
@@ -20,8 +28,8 @@ export default function Banner({ image, links, title }) {
               links.map((d, i) => (
                 <li
                   className={`${styles.bannerNavigation} ${
-                    d.link === pathname ? styles.active : ""
-                  }`}
+                    pathname.includes(d.link) ? styles.active : ""
+                  } ${isScrollable ? styles.scrollableNavigation : ""}`}
                   key={i}
                 >
                   <Link to={d.link} className={styles.bannerNavigationLink}>

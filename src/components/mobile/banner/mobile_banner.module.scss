@@ -17,6 +17,10 @@
       font-family: 'Nanum Myeongjo', serif;
       letter-spacing: 0;
       text-shadow: 0 3px 6px rgba(0,0,0,0.32);
+
+      &.bannerTitleBgDark {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
     }
 
     .bannerImage {
@@ -35,16 +39,22 @@
       padding: 20px 0 0;
       margin: 0;
       width: 100%;
+      overflow-x: auto;
 
       .bannerNavigation {
         border-bottom: 1px solid #EEEEEE;
-        flex-basis: 0;
-        flex-grow: 1;
         max-width: 100%;
         position: relative;
-        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
         padding-bottom: 8px;
         text-align: center;
+        flex-basis: 0;
+        flex-grow: 1;
+
+        &.scrollableNavigation {
+          flex: 0 0 auto !important;
+        }
 
         .bannerNavigationLink {
           text-decoration: none;
