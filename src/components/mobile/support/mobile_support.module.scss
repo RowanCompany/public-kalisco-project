@@ -410,6 +410,7 @@ a {
       justify-content: center;
 
       > a {
+        display: flex;
         width: 100%;
         margin: 0 10.25px 16.5px 10.25px;
         flex: 0 0 calc(50% - 21px);
@@ -419,6 +420,7 @@ a {
       .supportEventPanel {
         border-radius: 10px;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+        height: 100%;
 
         .supportEventPanelImage {
           display: block;
