@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ProductKatsu from "./ProductKatsu";
 import ProductSauce from "./ProductSauce";
+import ProductSauceDetail from "./ProductSauceDetail";
 
 function ProductDetailCaseRenderer({ content, match }) {
   switch (content) {
@@ -18,8 +19,7 @@ function ProductDetailCaseRenderer({ content, match }) {
         <>
           <Switch>
             <Route path={`${match.path}/:sauce`}>
-              {/*<ProductSauceDetail content={content} />*/}
-              <React.Fragment />
+              <ProductSauceDetail content={content} />
             </Route>
             <Route path={match.path}>
               <ProductSauce content={content} />

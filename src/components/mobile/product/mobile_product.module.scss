@@ -402,3 +402,147 @@
     }
   }
 }
+
+.productSauceDetailSection {
+  padding-top: 37px;
+  padding-bottom: 57px;
+  position: relative;
+
+  .sauceDetailImageWrapper {
+    margin-bottom: 30px;
+  }
+
+  .sauceDetailFirstDescriptionsWrapper {
+    padding: 0 20px;
+
+    .sauceDetailFirstTitle {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 29px;
+      color: #2F2F2F;
+      letter-spacing: 0;
+    }
+
+    .sauceDetailPrice {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 14px;
+      color: #2F2F2F;
+      letter-spacing: 0;
+      margin-bottom: 30px;
+    }
+
+    .sauceDetailTextSubTitle {
+      font-weight: bold;
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 16px;
+      line-height: 29px;
+      letter-spacing: 0;
+      color: #2F2F2F;
+    }
+
+    .sauceDetailTextDescription {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      font-family: 'Nanum Myeongjo', serif;
+      color: #2F2F2F;
+      letter-spacing: 0;
+      margin-bottom: 30px;
+      word-break: keep-all;
+    }
+
+    .storeButtonWrapper {
+      padding: 0 16px;
+      margin-bottom: 40px;
+
+      .naverStoreButton {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 13px;
+        padding: 20px 28px;
+        border: 2px solid #459D25;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-family: 'Noto Sans KR', sans-serif;
+        color: #2F2F2F;
+        font-weight: bold;
+        letter-spacing: -0.3px;
+        font-size: 15px;
+        line-height: 19px;
+
+        > img {
+          margin-right: auto;
+        }
+      }
+
+      .kakaoStoreButton {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 13px;
+        padding: 14px 28px;
+        border: 2px solid #FAE300;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        font-family: 'Noto Sans KR', sans-serif;
+        color: #2F2F2F;
+        font-weight: bold;
+        letter-spacing: -0.3px;
+        font-size: 15px;
+        line-height: 19px;
+
+        > img {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+.sauceDetailRecipeSection {
+  padding: 10px 10px 10px 18px;
+  background-color: #151515;
+  position: relative;
+}
+
+.sauceNavigatorWrapper {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0 0.25px;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+
+  > li {
+    flex-basis: 0;
+    flex-grow: 1;
+    border: 1px solid #DDDDDD;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 16px 18px;
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: 300;
+
+    &.sauceNavigatorActive {
+      border: 1px solid #E8390E;
+    }
+  }
+
+  .sauceNavigator {
+    display: inline-block;
+    color: #707070;
+
+    &.sauceNavigatorActive {
+      color: #E8390E;
+    }
+  }
+}
