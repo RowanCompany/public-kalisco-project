@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./mobile_support.module.scss";
 import ImgWarningThinking from "../../../static/images/mobile/img-thinking@2x.png";
 
-export default function SupportMemberShip() {
+export default function SupportUnderconstruction() {
     return (
         <>
             <section className={styles.supportWarningSection}>

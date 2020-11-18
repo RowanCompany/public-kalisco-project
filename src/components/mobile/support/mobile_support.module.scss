@@ -198,7 +198,6 @@ a {
       .supportKakaoSeqText {
         margin: auto 0;
         font-size: 12px;
-        line-height: 14px;
         letter-spacing: -0.24px;
         text-align: left;
         white-space: nowrap;
@@ -241,6 +240,106 @@ a {
         }
         .supportKakaoMenuTextBold {
           font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.supportGiveawaySection {
+  position: relative;
+  padding: 31px 23px 32px 23px;
+
+  .supportGiveawayWrapper {
+    padding: 40px 0 29px 0;
+    background-color: #2f2f2f;
+
+    .supportGiveawayTitle {
+      margin-bottom: 42.35px;
+      font-size: 20px;
+      line-height: 34px;
+      letter-spacing: -0.4px;
+      text-align: center;
+      color: #ffffff;
+      font-family: "Nanum Myeongjo", serif;
+    }
+
+    .supportGiveawaylines {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 51.72px;
+
+      .supportGiveawayline {
+        margin: auto 0 auto 0;
+        width: 100%;
+        border-bottom: 1px solid #ffffff;
+        opacity: 0.5;
+      }
+
+      .supportGiveawayLogo {
+        display: block;
+        margin: 0 12.5px;
+        width: 83.85px;
+        height: 18.68px;
+      }
+    }
+
+    .supportGiveawayImg {
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 277px;
+    }
+
+    .supportGiveawayDescs {
+      padding: 0 17px;
+
+      .supportGiveawayDesc {
+        display: flex;
+        margin-bottom: 9px;
+
+        .supportGiveawayDescIndex {
+          margin-top: 5px;
+          margin-right: 20px;
+          width: 5px;
+          min-width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: #ffffff;
+        }
+
+        .supportGiveawayDescText {
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: -0.24px;
+          text-align: left;
+          color: #ffffff;
+        }
+      }
+
+      .supportGiveawayDescDetails {
+        padding: 16px 0 23px 26px;
+
+        .supportGiveawayDescDetail {
+          display: flex;
+          margin-bottom: 5px;
+
+          .supportGiveawayDescDetailIndex {
+            margin-top: 5px;
+            margin-right: 20px;
+            width: 4px;
+            min-width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+          }
+
+          .supportGiveawayDescText {
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: -0.24px;
+            text-align: left;
+            color: #ffffff;
+          }
         }
       }
     }
