@@ -322,41 +322,6 @@ export default function ProductSauceDetail({ content }) {
               </div>
             </div>
           </section>
-          {/*<section className={styles.sauceDetailFristSection}>
-            <div className="row">
-              <div className={`col ${styles.sauceDetailTextWrapper}`}>
-                <div className={styles.sauceDetailSpaceWrapper}>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div
-                className={`col ${styles.sauceDetailTextWrapper} ${styles.sauceDetailTextSecondWrapper}`}
-              >
-                <div className={styles.sauceDetailSpaceWrapper}>
-                  <div
-                    className={`${styles.sauceDetailTextTitleWrapper} ${styles.sauceDetailTextTitleWrapperReverse}`}
-                  >
-                    <div className={`${styles.sauceDetailTextTitle}`}>
-                      어울리는 음식
-                    </div>
-                  </div>
-                  <div
-                    className={`${styles.sauceDetailTextDescription} ${styles.sauceDetailTextDescriptionReverse}`}
-                  >
-                    {sauceData[sauce] && sauceData[sauce]["thirdDescription"]}
-                  </div>
-                </div>
-              </div>
-              <div className="col">
-                <img
-                  src={sauceData[sauce] && sauceData[sauce]["secondImage"]}
-                  alt="product example"
-                  className="img-fill"
-                />
-              </div>
-            </div>
-          </section>*/}
           {sauceData[sauce]["recipeImage"] && (
             <section className={styles.sauceDetailRecipeSection}>
               <div className="text-center">

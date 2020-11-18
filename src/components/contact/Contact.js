@@ -77,7 +77,7 @@ function Contact() {
           dataObject[key] = window.parseInt(value);
           break;
         case "content":
-          dataObject[key] = value.replace(/\n/g, "<br />");
+          //dataObject[key] = value.replace(/\n/g, "<br />");
           break;
         default:
           dataObject[key] = value;

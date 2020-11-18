@@ -16,18 +16,15 @@ function ProductDetailCaseRenderer({ content, match }) {
       return <ProductKatsu content={content} />;
     case "sauce":
       return (
-        <>
-          <Switch>
-            <Route path={`${match.path}/:sauce`}>
-              <ProductSauceDetail content={content} />
-            </Route>
-            <Route path={match.path}>
-              <ProductSauce content={content} />
-            </Route>
-          </Switch>
-        </>
+        <Switch>
+          <Route path={`${match.path}/:sauce`}>
+            <ProductSauceDetail content={content} />
+          </Route>
+          <Route path={match.path}>
+            <ProductSauce content={content} />
+          </Route>
+        </Switch>
       );
-      return <React.Fragment />;
     default:
       return <Redirect to="/products/homemade/katsu" />;
   }

@@ -1,0 +1,100 @@
+.brandListSection {
+  height: 100%;
+  background-image: url("../../../static/images/mobile/img-p-brand@2x.png");
+  background-size: cover;
+  position: relative;
+
+  .brandListFlexWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 120px 26px 30px;
+    background-color: rgba(0, 0, 0, 0.53);
+    box-sizing: border-box;
+
+    .brandCircle {
+      border-radius: 100%;
+      width: 100%;
+      flex: 0 0 calc(50% - 27px);
+      max-width: calc(50% - 27px);
+      margin-left: 13.5px;
+      margin-right: 13.5px;
+      margin-bottom: 35px;
+      box-sizing: border-box;
+      box-shadow: 5px 5px 32px #00000052;
+      transition: all 300ms;
+
+      &.saboten {
+        background-color: rgba(#E8390E, 0.5);
+
+        &:hover {
+          background-color: rgba(#E8390E, 0.7);
+        }
+      }
+
+      &.hibarin {
+        background-color: rgba(#517E71, 0.5);
+
+        &:hover {
+          background-color: rgba(#517E71, 0.7);
+        }
+      }
+
+      &.tacobell {
+        background-color: rgba(#480F72, 0.5);
+
+        &:hover {
+          background-color: rgba(#480F72, 0.7);
+        }
+      }
+
+      &.centralKitchen {
+        background-color: rgba(#2F2F2F, 0.5);
+
+        &:hover {
+          background-color: rgba(#2F2F2F, 0.7);
+        }
+      }
+
+      &.reperk {
+        background-color: rgba(#BC711F, 0.5);
+
+        &:hover {
+          background-color: rgba(#BC711F, 0.7);
+        }
+      }
+
+      &:before {
+        content: "";
+        float: left;
+        padding-top: 100%;
+      }
+
+      .brandCircleContent {
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+        box-sizing: border-box;
+
+        .brandCircleLogoWrapper {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 0 16px 20px;
+        }
+
+        .brandCircleDescription {
+          font-size: 12px;
+          font-family: 'Nanum Myeongjo', serif;
+          color: #FFFFFF;
+          letter-spacing: -0.24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
