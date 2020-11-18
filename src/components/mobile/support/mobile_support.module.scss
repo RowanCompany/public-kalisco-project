@@ -1,6 +1,8 @@
 a {
   text-decoration: none !important;
 }
+
+//서포트 리스트 페이지
 .mobileSupportSection {
   position: relative;
   padding-top: 60px;
@@ -80,6 +82,7 @@ a {
   }
 }
 
+//서포트 준비중 페이지
 .supportWarningSection {
   position: relative;
   padding: 31px 26px 39px 23px;
@@ -125,6 +128,7 @@ a {
   }
 }
 
+//서포트 카카오 친구 페이지
 .supportKakaoSection {
   padding: 31px 26px 28px 23px;
 
@@ -246,6 +250,7 @@ a {
   }
 }
 
+//서포트 상품권 페이지
 .supportGiveawaySection {
   position: relative;
   padding: 31px 23px 32px 23px;
@@ -342,6 +347,149 @@ a {
           }
         }
       }
+    }
+  }
+}
+
+//서포트 이벤트 페이지 - 메뉴
+.supportEventMenuSection {
+  margin: 20px 0;
+
+  .supportEventMenus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    a {
+      width: 100%;
+    }
+
+    .supportEventMenu {
+      display: flex;
+      width: 100%;
+      height: 39px;
+      border: 1px solid #eeeeee;
+
+      .supportEventMenuText {
+        margin: auto;
+        font-size: 12px;
+        text-align: center;
+        line-height: 17px;
+        color: #707070;
+      }
+    }
+
+    .supportEventMenuActive {
+      display: flex;
+      width: 100%;
+      height: 39px;
+      border: 1px solid #e8390e;
+
+      .supportEventMenuText {
+        margin: auto;
+        font-size: 12px;
+        text-align: center;
+        line-height: 17px;
+        color: #e8390e;
+      }
+    }
+  }
+}
+
+//서포트 이벤트 페이지 - 게시물
+.supportEventSection {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px 26.5px 16px;
+
+  .supportEventWrapper {
+    .supportEventPanels {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      a {
+        display: flex;
+      }
+
+      .supportEventPanel {
+        margin: 0 10.25px 16.5px 10.25px;
+        width: 162.5px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+        .supportEventPanelImage {
+          display: block;
+          width: 100%;
+          height: 162.5px;
+        }
+
+        .supportEventPanelDesc {
+          padding: 16.5px 14px 22.5px 14px;
+
+          .supportEventPanelTitle {
+            margin-bottom: 6px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #2f2f2f;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: bold;
+          }
+          .supportEventPanelDate {
+            font-size: 10px;
+            line-height: 11px;
+            color: #707070;
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+//서포트 이벤트 페이지 - 자세히
+.supportEventDetailSection {
+  padding: 10px 15px 26.5px 15px;
+
+  .supportEventDetailWrapper {
+    margin: 0 auto;
+
+    .supportEventDetailTitle {
+      margin-bottom: 5px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #2f2f2f;
+      font-family: "Nanum Myeongjo", serif;
+      font-weight: bold;
+    }
+
+    .supportEventDetailDate {
+      font-size: 10px;
+      line-height: 11px;
+      color: #707070;
+      font-family: "Nanum Myeongjo", serif;
+      font-weight: 400;
+    }
+
+    .supportEventDetailHorizen {
+      margin: 11px 0 20.5px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .supportEventDetailImage {
+      display: block;
+      margin-bottom: 20px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .supportEventDetailDesc {
+      margin-bottom: 25.5px;
+      font-size: 12px;
+      line-height: 24px;
     }
   }
 }

@@ -6,6 +6,7 @@ import Banner from "../banner/Banner";
 import SupportUnderconstruction from './SupportUnderconstruction';
 import SupportGiveaway from './SupportGiveaway';
 import SupportKakao from './SupportKakao';
+import SupportEvent from './SupportEvent';
 
 function SupportCaseRenderer({ subject }) {
     switch (subject) {
@@ -18,7 +19,7 @@ function SupportCaseRenderer({ subject }) {
         case "kakaotalk-friends":
             return <SupportKakao />
         case "events":
-            return <React.Fragment />;
+            return <SupportEvent />;
         default:
             return <React.Fragment />;
     }
