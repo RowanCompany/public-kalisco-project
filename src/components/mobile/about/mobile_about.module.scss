@@ -1,3 +1,4 @@
+//어바웃 메인 페이지
 .aboutMainSection {
   position: relative;
   top: 0;
@@ -72,5 +73,114 @@
 
   .aboutMenuBackground {
     width: 100%;
+  }
+}
+
+//어바웃 사업소개 페이지
+.aboutBusinessSection {
+  position: relative;
+  width: 100%;
+
+  .aboutBusinessWrapper {
+    .aboutBusinessTitle {
+      padding: 127px 23px 45px 23px;
+
+      .aboutBusinessTitleText {
+        font-size: 24px;
+        line-height: 31px;
+        color: #333333;
+        font-family: "Nanum Myeongjo", serif;
+        font-weight: 400;
+      }
+    }
+
+    .aboutBusinessIntros {
+      .aboutBusinessIntro {
+        position: relative;
+
+        .aboutBusinessIntroFrame {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
+          opacity: 0.5;
+          transition: all 300ms;
+
+          .aboutBusinessIntroWrapper {
+            padding: 10px;
+            height: calc(100% - 20px);
+
+            .aboutBusinessIntroContent {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              border: 1px solid #ffffff;
+
+              .aboutBusinessIntroLogo {
+                margin: auto;
+
+                .aboutBusinessIntroLogoImg {
+                  margin-bottom: 11.68px;
+                }
+                .aboutBusinessIntroLogoText {
+                  font-size: 16px;
+                  line-height: 31px;
+                  letter-spacing: -0.32px;
+                  font-family: "Nanum Myeongjo", serif;
+                  font-weight: 400;
+                  color: #ffffff;
+                }
+              }
+            }
+
+            .aboutBusinessIntroContentActive {
+              width: 100%;
+              height: 100%;
+              border: 1px solid #ffffff;
+
+              .aboutBusinessIntroContentWrapper {
+                padding: 20px;
+
+                .aboutBusinessIntroTitle {
+                  font-size: 16px;
+                  line-height: 20px;
+                  letter-spacing: -0.32px;
+                  font-family: "Nanum Myeongjo", serif;
+                  font-weight: 400;
+                  color: #ffffff;
+                  text-align: right;
+                }
+
+                .aboutBusinessIntroDescBig {
+                  font-size: 16px;
+                  line-height: 16px;
+                  letter-spacing: -0.32px;
+                  font-family: "Nanum Myeongjo", serif;
+                  font-weight: 400;
+                  color: #ffffff;
+                  text-align: left;
+                }
+
+                .aboutBusinessIntroDesc {
+                  font-size: 11px;
+                  line-height: 16px;
+                  letter-spacing: -0.24px;
+                  font-family: "Nanum Myeongjo", serif;
+                  font-weight: 400;
+                  color: #ffffff;
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+
+        .aboutBusinessIntroBackground {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }
