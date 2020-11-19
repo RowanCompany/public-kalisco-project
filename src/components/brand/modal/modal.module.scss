@@ -1,3 +1,39 @@
+.overlayWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 400;
+}
+
+.contentWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    outline: none;
+    width: 640px;
+    height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.16);
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    border: none;
+
+    img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
 .closeButtonWrapper {
     padding-bottom: 33px;
     display: flex;
@@ -79,7 +115,6 @@
     font-size: 15px;
     line-height: 19px;
     color: #2f2f2f;
-    letter-spacing: 0;
     letter-spacing: -0.3px;
     padding-top: 65px;
     text-align: center;
@@ -89,4 +124,20 @@
     background-color: #f4f4f4;
     padding: 30px;
     text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contentWrapper {
+        width: calc(100% - 40px);
+        height: 70%;
+        overflow-y: auto;
+    }
+
+    .brandDescription {
+        padding-top: 30px;
+        font-size: 12px;
+        line-height: 19px;
+        letter-spacing: -0.24px;
+        word-break: keep-all;
+    }
 }

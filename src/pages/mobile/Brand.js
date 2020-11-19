@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "../../components/mobile/nav/MobileNav";
 import Footer from "../../components/mobile/footer/Footer";
 import { Route, Switch } from "react-router-dom";
-import BrandList from "../../components/mobile/brand/BrandLIst";
+import BrandList from "../../components/mobile/brand/BrandList";
 
 export default function Brand({ match }) {
   return (
