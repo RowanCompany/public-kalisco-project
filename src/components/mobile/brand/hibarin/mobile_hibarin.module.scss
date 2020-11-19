@@ -1,0 +1,58 @@
+.storySection {
+  padding-top: 20px;
+  padding-bottom: 70px;
+  position: relative;
+
+  .storyImageWrapper {
+    position: relative;
+    height: 240px;
+    padding-bottom: 40px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .storyDescriptionWrapper {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .storyDescriptionSubTitle {
+      font-size: 16px;
+      font-family: 'Nanum Myeongjo', serif;
+      letter-spacing: 0;
+      margin-bottom: 8px;
+      color: #707070;
+      font-weight: 400;
+    }
+
+    .storyDescriptionTitle {
+      font-size: 24px;
+      font-family: 'Nanum Myeongjo', serif;
+      color: #517e71;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+      word-break: keep-all;
+    }
+
+    .storyDescriptionDivider {
+      height: 90px;
+      width: 2px;
+      margin-left: 4px;
+      background-color: #517E71;
+    }
+
+    .storyDescription {
+      padding-top: 10px;
+      font-size: 16px;
+      font-family: 'Nanum Myeongjo', serif;
+      letter-spacing: 0;
+      color: #707070;
+      line-height: 24px;
+    }
+  }
+}

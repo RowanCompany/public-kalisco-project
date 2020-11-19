@@ -6,7 +6,7 @@ import tacobellLogo from "../../../static/svg/logo-tacobell-2.svg";
 import ModalProvider from "../../brand/modal/modal-provider";
 import BrandModal from "../../brand/modal/BrandModal";
 import CentralKitchenCircle from "./circle/CentralKitchenCircle";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ReperkCircle from "./circle/ReperkCircle";
 
 function useQuery() {
@@ -35,7 +35,8 @@ export default function BrandList() {
               <div className={styles.brandCircleDescription}>사보텐</div>
             </div>
           </div>
-          <div
+          <Link
+            to="/brand/hibarin/story"
             className={`${styles.brandCircle} ${styles.hibarin} animate__animated animate__rotateIn`}
           >
             <div className={styles.brandCircleContent}>
@@ -44,7 +45,7 @@ export default function BrandList() {
               </div>
               <div className={styles.brandCircleDescription}>히바린</div>
             </div>
-          </div>
+          </Link>
           <a
             href="https://koreatacobell.com/"
             target="_blank"

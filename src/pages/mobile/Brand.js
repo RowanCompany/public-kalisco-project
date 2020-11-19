@@ -1,8 +1,9 @@
 import React from "react";
 import Nav from "../../components/mobile/nav/MobileNav";
 import Footer from "../../components/mobile/footer/Footer";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import BrandList from "../../components/mobile/brand/BrandList";
+import HibarinContent from "../../components/mobile/brand/hibarin/HibarinContent";
 
 export default function Brand({ match }) {
   return (
@@ -11,10 +12,16 @@ export default function Brand({ match }) {
       <Switch>
         <Route path={`${match.path}/saboten/:subject/:menu`} />
         <Route path={`${match.path}/saboten/:subject`} />
-        <Route path={`${match.path}/saboten`} />
+        <Route path={`${match.path}/saboten`}>
+          <Redirect to="/brand/saboten/story" />
+        </Route>
         <Route path={`${match.path}/hibarin/:subject/:menu`} />
-        <Route path={`${match.path}/hibarin/:subject`} />
-        <Route path={`${match.path}/hibarin`} />
+        <Route path={`${match.path}/hibarin/:subject`}>
+          <HibarinContent match={match} />
+        </Route>
+        <Route path={`${match.path}/hibarin`}>
+          <Redirect to="/brand/hibarin/story" />
+        </Route>
         <Route path={match.path} component={BrandList} />
       </Switch>
       <Footer />
