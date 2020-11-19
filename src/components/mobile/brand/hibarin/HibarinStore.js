@@ -71,6 +71,16 @@ export default function HibarinStore() {
           <br />
           지도로 더욱 쉽고 빠르게 찾아보아요
         </div>
+        <div className={styles.mapStoreLinkWrapper}>
+          <a
+            className={styles.mapStoreLink}
+            href="https://map.naver.com/v5/search/%ED%9E%88%EB%B0%94%EB%A6%B0?placeSearchOption=fromNxList=true%26noredirect=1%26entry=pll&amp;c=14135529.7255359,4513992.1748852,13,0,0,0,dh"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            히바린 매장찾기
+          </a>
+        </div>
       </div>
     </section>
   );
