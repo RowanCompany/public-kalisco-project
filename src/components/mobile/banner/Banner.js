@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./mobile_banner.module.scss";
 import { Link } from "react-router-dom";
 
-export default function Banner({ image, links, title }) {
+export default function Banner({ image, links, title, altLinks }) {
   const pathname = window.location.pathname;
   const isScrollable = pathname.includes("supports");
   const isBgDark = pathname.includes("supports");
+  console.log(altLinks, pathname);
 
   return (
     <div className={styles.bannerWrapper}>
@@ -29,7 +30,13 @@ export default function Banner({ image, links, title }) {
                 <li
                   className={`${styles.bannerNavigation} ${
                     pathname.includes(d.link) ? styles.active : ""
-                  } ${isScrollable ? styles.scrollableNavigation : ""}`}
+                  } ${isScrollable ? styles.scrollableNavigation : ""} ${
+                    altLinks &&
+                    altLinks.includes(d.link) &&
+                    altLinks.includes(pathname)
+                      ? styles.active
+                      : ""
+                  }`}
                   key={i}
                 >
                   <Link to={d.link} className={styles.bannerNavigationLink}>
