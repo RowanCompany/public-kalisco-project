@@ -4,6 +4,7 @@ import Footer from "../../components/mobile/footer/Footer";
 import { Route, Switch, Redirect } from "react-router-dom";
 import BrandList from "../../components/mobile/brand/BrandList";
 import HibarinContent from "../../components/mobile/brand/hibarin/HibarinContent";
+import Fab from "../../components/brand/fab/Fab";
 
 export default function Brand({ match }) {
   return (
@@ -25,6 +26,7 @@ export default function Brand({ match }) {
         <Route path={match.path} component={BrandList} />
       </Switch>
       <Footer />
+      <Fab subject="hibarin" />
     </>
   );
 }

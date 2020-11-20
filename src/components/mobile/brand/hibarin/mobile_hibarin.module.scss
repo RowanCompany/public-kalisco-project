@@ -142,3 +142,59 @@
     }
   }
 }
+
+.newMenuSection {
+  position: relative;
+  padding: 40px 20px 50px;
+
+  .newMenuTitle {
+    font-family: 'Nanum Myeongjo', serif;
+    color: #2F2F2F;
+    font-size: 24px;
+    letter-spacing: 0;
+    font-weight: 500;
+    margin-bottom: 26px;
+    font-style: italic;
+  }
+}
+
+.specialSection {
+  position: relative;
+  background-image: url("../../../../static/images/mobile/img-hibarin-special-back@2x.png");
+  background-size: cover;
+  padding: 46px 20px 51px;
+
+  .specialTitle {
+    font-family: 'Nanum Myeongjo', serif;
+    color: #2F2F2F;
+    font-size: 24px;
+    letter-spacing: 0;
+    font-weight: 500;
+    margin-bottom: 26px;
+    font-style: italic;
+  }
+
+  .specialMenuWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FFFFFF;
+
+    > div, > a {
+      flex: 0 0 33.333333%;
+      width: 100%;
+      max-width: 33.333333%;
+
+      img {
+        transition: opacity 250ms;
+        opacity: 0.34;
+      }
+
+      &:hover, &:focus {
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
