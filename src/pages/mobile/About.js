@@ -5,19 +5,18 @@ import Footer from "../../components/mobile/footer/Footer";
 
 import AboutMain from "../../components/mobile/about/About";
 import AboutContent from "../../components/mobile/about/AboutContent";
+import Fab from "../../components/brand/fab/Fab";
 
 export default function About({ match }) {
-    return (
-        <>
-            <Nav />
-            <Switch>
-                <Route
-                    path={`${match.path}/:subject`}                    
-                    component={AboutContent}
-                />
-                <Route path={match.path} component={AboutMain} />
-            </Switch>
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Nav />
+      <Switch>
+        <Route path={`${match.path}/:subject`} component={AboutContent} />
+        <Route path={match.path} component={AboutMain} />
+      </Switch>
+      <Footer />
+      <Fab />
+    </>
+  );
 }

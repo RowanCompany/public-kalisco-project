@@ -3,6 +3,7 @@ import Nav from "../../components/mobile/nav/MobileNav";
 import Footer from "../../components/mobile/footer/Footer";
 import { Redirect, Route, Switch } from "react-router-dom";
 import HrContent from "../../components/mobile/hr/HrContent";
+import Fab from "../../components/brand/fab/Fab";
 
 export default function HR({ match }) {
   return (
@@ -15,6 +16,7 @@ export default function HR({ match }) {
         </Route>
       </Switch>
       <Footer />
+      <Fab />
     </>
   );
 }
