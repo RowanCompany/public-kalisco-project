@@ -1,3 +1,218 @@
+.storySection {
+  padding: 48px 20px 62px;
+  position: relative;
+  background-color: #151515;
+
+  .storyBrandTitle {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 28px;
+    letter-spacing: 0.84px;
+    color: #C70017;
+    font-weight: 500;
+  }
+
+  .storyBrandSince {
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.48px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 28px;
+  }
+
+  .storyMainImageWrapper {
+    position: relative;
+    height: 240px;
+    margin-bottom: 12px;
+  }
+
+  .storyDivider {
+    width: 2px;
+    background-color: #C70017;
+    height: 88px;
+    margin: 26px 0;
+
+    &.storyMainDivider {
+      position: absolute;
+      left: 20px;
+      bottom: -80px;
+      margin: 12px 0;
+    }
+  }
+
+  .storyMainDescription {
+    color: #FFFFFF;
+    padding: 70px 20px 84px;
+    font-size: 14px;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 0;
+    line-height: 22px;
+    word-break: keep-all;
+  }
+
+  .storyBrandDescription {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0;
+
+    > b {
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+
+  .historyTimelineWrapper {
+    margin-bottom: 48px;
+
+    .historyTimelineTitle {
+      font-family: "Nanum Myeongjo", serif;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 0;
+      margin-bottom: 27px;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 0 auto;
+      padding-bottom: 27px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        background-color: #c70017;
+      }
+
+      ul {
+        li {
+          flex-direction: row;
+          //margin-bottom: 50px;
+          list-style-type: none;
+          display: flex;
+          align-items: flex-start;
+
+          .content {
+            width: 50%;
+
+            .timelineContentWrapper {
+              color: #ffffff;
+              font-size: 12px;
+              font-family: "Nanum Myeongjo", serif;
+              letter-spacing: 0;
+              line-height: 18px;
+              display: flex;
+              word-break: keep-all;
+
+              &.contentLeft {
+                justify-content: flex-end;
+                text-align: right;
+
+                .timelineContentDescriptionWrapper {
+                  //margin-right: 30px;
+                }
+              }
+
+              &.contentRight {
+                justify-content: flex-start;
+                text-align: left;
+
+                .timelineContentDescriptionWrapper {
+                  //margin-left: 30px;
+                }
+              }
+
+              .timelineContentNumber {
+                font-size: 21px;
+                font-weight: 300;
+                color: #c70017;
+                font-style: italic;
+                line-height: 1.2;
+                margin-bottom: 16px;
+              }
+            }
+          }
+
+          .date {
+            width: 50%;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .point {
+      min-width: 1px;
+      height: 1px;
+      //background-color: #ffffff;
+      border-radius: 100%;
+      z-index: 2;
+      //border: 7px solid #dddddd;
+      position: relative;
+      left: 1px;
+      align-self: flex-start;
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+  }
+
+  .storyCheeseKatsuImageWrapper {
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .storyRecipeMainDescription {
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: 'Nanum Myeongjo', serif;
+    letter-spacing: 0;
+    margin-bottom: 60px;
+    line-height: 22px;
+  }
+
+  .storyRecipeBoxWrapper {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.storyRecipeBoxWrapper {
+  position: relative;
+  background-color: #151515;
+
+  .storyRecipeBoxImageWrapper {
+    height: 255px;
+    margin-bottom: 20px;
+  }
+
+  .storyRecipeTitle {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Nanum Myeongjo', serif;
+    line-height: 18px;
+  }
+
+  .storyRecipeDescription {
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-family: 'Nanum Myeongjo', serif;
+  }
+}
+
 .storeSection {
   position: relative;
 
