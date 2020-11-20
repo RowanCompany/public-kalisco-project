@@ -184,3 +184,122 @@
     }
   }
 }
+
+//어바웃 연혁 페이지
+.aboutHistorySection {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  .aboutHistoryWrapper {
+    padding: 120px 20px 0 20px;
+
+    .aboutHistoryTitle {
+      margin-bottom: 55px;
+      font-size: 24px;
+      line-height: 31px;
+      font-family: "Nanum Myeongjo", serif;
+      font-weight: 800;
+      font-style: italic;
+      text-align: center;
+      color: #2f2f2f;
+    }
+
+    .aboutHistoryTimeLine {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+
+      .aboutHistoryList {
+        margin: 0 0 50px 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      .aboutHistoryListItem {
+        margin: 0 0 43px 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .aboutHistoryDesc {
+        width: 50%;
+        .aboutHistoryDescImg {
+          margin-bottom: 18px;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+        .aboutHistoryDescTitle {
+          margin-bottom: 10px;
+          font-size: 12px;
+          line-height: 18px;
+          color: #2f2f2f;
+          font-family: "Nanum Myeongjo", serif;
+          font-weight: 400;
+        }
+        .aboutHistoryDescYear {
+          margin-bottom: 5px;
+          font-size: 12px;
+          line-height: 13px;
+          color: #e8390e;
+          font-family: "Nanum Myeongjo", serif;
+          font-weight: 400;
+        }
+        .aboutHistoryDescSub {
+          font-size: 12px;
+          line-height: 18px;
+          color: #707070;
+          font-family: "Nanum Myeongjo", serif;
+          font-weight: 400;
+        }
+      }
+
+      .aboutHistoryPoint {
+        min-width: 20px;
+        height: 20px;
+        background-color: #ffffff;
+        border-radius: 100%;
+        z-index: 2;
+        transition: all 1s;
+        border: 7px solid #dddddd;
+        position: relative;
+        left: 1px;
+        align-self: flex-start;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .aboutHistoryDate {
+        width: 50%;
+        font-size: 16px;
+        line-height: 21px;
+        color: #2f2f2f;
+        font-family: "Nanum Myeongjo", serif;
+        font-style: italic;
+        font-weight: 830;
+        text-align: left;
+      }
+      .aboutHistoryDateRight {
+        width: 50%;
+        font-size: 16px;
+        line-height: 21px;
+        color: #2f2f2f;
+        font-family: "Nanum Myeongjo", serif;
+        font-style: italic;
+        font-weight: 830;
+        text-align: right;
+      }
+    }
+
+    .aboutHistoryTimeLine::before {
+      content: "";
+      position: absolute;
+      height: calc(100% - 70px);
+      width: 1px;
+      left: 50%;
+      background-color: #dddddd;
+    }
+  }
+}
