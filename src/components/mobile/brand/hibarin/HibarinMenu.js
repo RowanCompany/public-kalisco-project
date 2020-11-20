@@ -90,12 +90,16 @@ export default function HibarinMenu({ subject }) {
               <img src={katsuImage} alt="katsu" className="img-fill" />
             </div>
           </Link>
-          <div>
-            <img src={noodleImage} alt="noodle" className="img-fill" />
-          </div>
-          <div>
-            <img src={sideImage} alt="side" className="img-fill" />
-          </div>
+          <Link to={`/brand/hibarin/${subject}/friends`}>
+            <div>
+              <img src={noodleImage} alt="noodle" className="img-fill" />
+            </div>
+          </Link>
+          <Link to={`/brand/hibarin/${subject}/drink`}>
+            <div>
+              <img src={sideImage} alt="side" className="img-fill" />
+            </div>
+          </Link>
         </div>
       </section>
     </>
