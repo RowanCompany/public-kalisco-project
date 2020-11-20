@@ -8,6 +8,7 @@ import BrandModal from "../../brand/modal/BrandModal";
 import CentralKitchenCircle from "./circle/CentralKitchenCircle";
 import { Link, useLocation } from "react-router-dom";
 import ReperkCircle from "./circle/ReperkCircle";
+import Fab from "../../brand/fab/Fab";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -66,6 +67,7 @@ export default function BrandList() {
         </div>
       </section>
       <BrandModal />
+      <Fab />
     </ModalProvider>
   );
 }

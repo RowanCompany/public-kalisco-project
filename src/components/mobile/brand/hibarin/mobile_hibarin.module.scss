@@ -198,3 +198,200 @@
     }
   }
 }
+
+.menuNavigatorWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0;
+
+  .menuNavigator {
+    flex: 0 0 calc(33.333333% - 2px);
+    width: 100%;
+    max-width: calc(33.333333% - 2px);
+    text-align: center;
+    border: 1px solid #EEEEEE;
+    padding: 12px 0;
+
+    &.menuNavigatorActive {
+      border-color: #557B70;
+
+      > a {
+        color: #557B70;
+      }
+    }
+
+    > a {
+      color: #707070;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+}
+
+.menuTableSection {
+  position: relative;
+
+  .bannerImageWrapper {
+    height: 270px;
+    margin-bottom: 60px;
+  }
+
+  .menuTableWrapper {
+    position: relative;
+    padding: 0 70px;
+    margin-bottom: 50px;
+
+    .menuTable {
+      position: relative;
+
+      .menuNumber {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0;
+        color: #707070;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      .menuImageWrapper {
+        position: relative;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .menuEnTitle {
+        font-family: 'Nanum Myeongjo', serif;
+        color: #707070;
+        font-size: 12px;
+        letter-spacing: 0;
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: 12px;
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      .menuTitle {
+        font-size: 12px;
+        font-family: 'Nanum Myeongjo', serif;
+        letter-spacing: 0;
+        color: #2F2F2F;
+        font-weight: 400;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      .menuDescription {
+        font-size: 10px;
+        font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+        line-height: 12px;
+        color: #707070;
+        margin-bottom: 8px;
+        text-align: left;
+        word-break: keep-all;
+      }
+
+      .menuPrice {
+        font-size: 16px;
+        line-height: 21px;
+        font-family: 'Nanum Myeongjo', serif;
+        color: #2F2F2F;
+        letter-spacing: 0;
+        text-align: left;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+.sideMenuSection {
+  margin: 0 20px 70px;
+  padding: 26px 20px;
+  position: relative;
+  border-top: 1px solid #2F2F2F;
+  border-bottom: 1px solid #2F2F2F;
+
+  .sideMenuFlexWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+
+    .sideMenuEnTitle {
+      font-size: 12px;
+      font-family: 'Nanum Myeongjo', serif;
+      color: #707070;
+      letter-spacing: 0;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    .sideMenuTitle {
+      font-family: 'Nanum Myeongjo', serif;
+      font-size: 12px;
+      color: #2F2F2F;
+      letter-spacing: 0;
+    }
+
+    .sideMenuPrice {
+      font-size: 16px;
+      color: #2F2F2F;
+      letter-spacing: 0;
+      font-family: 'Nanum Myeongjo', serif;
+      font-style: italic;
+    }
+  }
+}
+
+.drinkMenuSection {
+  margin: 0 20px 70px;
+  padding: 26px 20px;
+  position: relative;
+  border-top: 1px solid #2F2F2F;
+  border-bottom: 1px solid #2F2F2F;
+
+  .drinkMenuFlexWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+
+    .drinkMenuEnTitle {
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
+      letter-spacing: 0;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .drinkMenuTitle {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 12px;
+      color: #000;
+      letter-spacing: 0;
+    }
+
+    .drinkMenuPrice {
+      font-size: 16px;
+      color: #000;
+      letter-spacing: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+  }
+}

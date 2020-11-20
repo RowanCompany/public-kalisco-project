@@ -44,7 +44,7 @@ export default function BrandBanner({ image, titleLogo, url }) {
               <Link
                 to={`${brandNavigationLink}/menu`}
                 className={`${styles.bannerNavigationLink} ${
-                  `${brandNavigationLink}/menu` === url
+                  url.includes(`${brandNavigationLink}/menu`)
                     ? styles.bannerNavigationLinkActive
                     : ""
                 } ${brandStyle}`}
