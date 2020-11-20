@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from "react";
 import Footer from "../../components/Footer";
 import Nav from "../../components/nav/Nav";
 //import ContactComponent from "../../components/contact/Contact";
-import ContactAuth from "../../components/contact/ContactAuth";
+import ContactComponent from "../../components/contact/Contact";
 import { useRouteMatch, Route, Switch } from "react-router-dom";
 import { useMobileCheck } from "../../utils/mobile";
 import MobileContactComponent from "../mobile/Contact";
@@ -12,7 +12,7 @@ function DesktopContactComponent({ match }) {
     <>
       <Nav />
       {/*<ContactComponent />*/}
-      <ContactAuth />
+      <ContactComponent />
       <Footer />
     </>
   );
@@ -33,6 +33,7 @@ function Contact() {
   }, []);
 
   const match = useRouteMatch();
+  console.log("here");
   return (
       useMobileCheck(width) ? <DesktopContactComponent match={match} /> : <MobileContactComponent match={match} />
   );

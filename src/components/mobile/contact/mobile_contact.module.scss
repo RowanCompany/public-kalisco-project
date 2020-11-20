@@ -1,0 +1,281 @@
+.contactAuthSection {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  .contectAuthWrapper {
+    padding: 50px 30px 38px 30px;
+
+    .contactAuthTitle {
+      margin-bottom: 22px;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+      color: #2f2f2f;
+      font-family: "Nanum Myeongjo", serif;
+      font-weight: 400;
+    }
+
+    .contactAuthSub {
+      margin-bottom: 32px;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #2f2f2f;
+    }
+
+    .contactAuthDesc {
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #2f2f2f;
+      font-weight: bold;
+    }
+
+    .contactAuthConfirmTitle {
+      margin-bottom: 30px;
+      padding: 15px 0;
+      width: 100%;
+      background-color: #f6f6f6;
+      border-top: 2px solid #e8390e;
+
+      .contactAuthConfirmTitleText {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #2f2f2f;
+        font-weight: bold;
+      }
+    }
+
+    .contactAuthConfirmDesc {
+      margin-bottom: 32px;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #2f2f2f;
+    }
+
+    .contactAuthConfirmButton {
+      padding: 21px 0;
+      width: 100%;
+      background-color: #ffffff;
+      border: 2px solid #dddddd;
+      border-radius: 6px;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #2f2f2f;
+      font-weight: bold;
+    }
+  }
+}
+
+* {
+  outline: none;
+}
+.contactMailSection {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  .contactMailWrapper {
+    padding: 20px;
+
+    .contactMailTitle {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 27px;
+      text-align: left;
+      color: #2f2f2f;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .contactMailForm {
+      padding: 27px 20px 30px 20px;
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+
+      .contactMailFormItem {
+        .contactMailLabel {
+          display: block;
+          margin-bottom: 4px;
+          font-size: 16px;
+          line-height: 20px;
+          text-align: left;
+          color: #5f6374;
+          font-weight: 600;
+        }
+
+        .contactMailInputs {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 20px;
+
+          .contactMailInput {
+            display: block;
+            padding: 7px 0;
+            width: 100%;
+            background-color: #ffffff;
+            border: 1px solid #e8eaef;
+            text-indent: 10px;
+            font-size: 12px;
+            line-height: 20px;
+
+            &.title {
+              border: 0;
+              border-bottom: 1px solid #e8eaef;
+            }
+          }
+
+          .contactMailSelect {
+            display: block;
+            padding: 7px 0;
+            width: 100%;
+            background-color: #ffffff;
+            border: 1px solid #e8eaef;
+            text-indent: 10px;
+            font-size: 12px;
+            line-height: 20px;
+
+            &.phone {
+              min-width: 70px;
+              margin-right: 6px;
+            }
+
+            &.brand {
+              min-width: 50%;
+              margin-right: 6px;
+            }
+          }
+          .contactMailTextareaBox {
+            margin-bottom: 20px;
+            padding: 11px;
+            width: calc(100% - 22px);
+            background-color: #ffffff;
+            border: 1px solid #e8eaef;
+
+            .contactMailTextarea {
+              display: block;
+              width: 100%;
+              border: 0;
+              font-size: 12px;
+              line-height: 20px;
+              text-align: left;
+              resize: none;
+            }
+
+            .contactMailTextareaCount {
+              font-size: 12px;
+              line-height: 19px;
+              color: #5f6374;
+              text-align: right;
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+
+      .contactMailTermTitle {
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0;
+        color: #5f6374;
+      }
+
+      .contactMailTerm {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: ms -ms-autohiding-scrollbar;
+        white-space: nowrap;
+
+        .contactMailTermTable {
+          width: 100%;
+          border: 0;
+          border-collapse: collapse;
+
+          .contactMailTermColumn {
+            padding: 8px;
+            width: 850px;
+            border: 1px solid #e8eaef;
+            color: #272d48;
+            font-size: 13px;
+            line-height: normal;
+
+            &.title {
+              width: 200px;
+              font-size: 14px;
+              text-align: center;
+              font-weight: bolder;
+            }
+          }
+        }
+      }
+
+      .contactMailTermWarning {
+        margin-bottom: 30px;
+        .contactMailTermWarningText {
+          margin: 4px 0 8px;
+          font-size: 14px;
+          text-align: center;
+          line-height: 1.25;
+        }
+
+        .contactMailTermWarningAgree {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+
+          .contactMailTermWarningAgreeGroup {
+            display: flex;
+            flex-direction: row;
+
+            .contactMailTermWarningAgreeRadio {
+              display: block;
+              margin: auto 0 auto 0.45rem;
+              padding: 0;
+              box-sizing: border-box;
+            }
+            .contactMailTermWarningAgreeText {
+              display: block;
+              margin: auto 0;
+              font-size: 12px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .contactMailFormButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .contactMailFormButton {
+          margin-right: 18px;
+          padding: 5px 20px;
+          width: 97px;
+          min-width: 97px;
+          background-color: #dddddd;
+          border: 0;
+          border-radius: 22px;
+          font-size: 16px;
+          line-height: 38px;
+          text-align: center;
+          color: #ffffff;
+
+          &.complete {
+            margin-right: 0;
+            background-color: #e8390e;
+          }
+        }
+      }
+    }
+  }
+}
