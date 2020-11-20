@@ -18,7 +18,7 @@ function Faq() {
           <form>
             <div className={styles.searchFormWrapper}>
               <div className={styles.searchFormTitle}>FAQ</div>
-              <div className={styles.searchFormInputWrapper}>
+              {/* <div className={styles.searchFormInputWrapper}>
                 <div>
                   <label className="d-inline-block">
                     <input type="text" className={styles.searchFormInput} />
@@ -29,7 +29,7 @@ function Faq() {
                     Search
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </form>
           <div>

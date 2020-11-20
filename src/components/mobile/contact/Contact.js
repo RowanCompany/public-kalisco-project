@@ -5,13 +5,19 @@ import Banner from "../banner/Banner";
 
 import ContactAuth from "./ContactAuth";
 import ContactMail from "./ContactMail";
+import ContactFaq from "./ContactFaq";
+import ContactNotice from "./ContactNotice";
 
 function ContactCaseRenderer({ subject }) {
     switch (subject) {
         case "contact": 
             return <ContactAuth />;
         case "mail":
-            return <ContactMail />
+            return <ContactMail />;
+        case "faq":
+            return <ContactFaq />;
+        case "notices":
+            return <ContactNotice />;
         default:
             return <React.Fragment />;
     }

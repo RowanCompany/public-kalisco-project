@@ -17,7 +17,7 @@ function Notice() {
           <form>
             <div className={styles.searchFormWrapper}>
               <div className={styles.searchFormTitle}>공지사항</div>
-              <div className={styles.searchFormInputWrapper}>
+              {/* <div className={styles.searchFormInputWrapper}>
                 <div>
                   <label className="d-inline-block">
                     <input type="text" className={styles.searchFormInput} />
@@ -28,7 +28,7 @@ function Notice() {
                     Search
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
           </form>
           <div>

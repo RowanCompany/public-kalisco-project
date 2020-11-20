@@ -1,3 +1,4 @@
+//고객응대 본인인증 페이지
 .contactAuthSection {
   position: relative;
   top: 0;
@@ -72,6 +73,7 @@
   }
 }
 
+//고객응대 메일 페이지
 * {
   outline: none;
 }
@@ -277,5 +279,85 @@
         }
       }
     }
+  }
+}
+
+//고객응대 FAQ 페이지
+.contactFaqSection {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  .contactFaqWrapper {
+    padding: 20px;
+
+    .contactFaqTitle {
+      margin-bottom: 21.5px;
+      font-size: 20px;
+      line-height: 27px;
+      letter-spacing: -0.4px;
+      color: #2f2f2f;
+      text-align: left;
+      font-weight: 600;
+    }
+  }
+}
+
+//고객응대 공지사항 페이지
+
+//고객응대 공통
+.cardHeaderWrapper {
+  display: flex;
+  align-items: center;
+
+  .cardHeaderNum {
+    margin-right: 12px;
+    font-size: 12px;
+    line-height: 23px;
+    text-align: left;
+    color: #2f2f2f;
+  }
+
+  .cardHeaderCategory {
+    font-size: 12px;
+    line-height: 23px;
+    text-align: left;
+    color: #2f2f2f;
+    white-space: nowrap;
+  }
+
+  .cardHeaderMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 16px;
+
+    .cardHeaderTitle {
+      margin-bottom: 2px;
+      font-size: 12px;
+      line-height: 17px;
+      text-align: left;
+      color: #2f2f2f;
+      word-break: keep-all;
+    }
+  }
+
+  .cardHeaderSideWrapper {
+    .cardHeaderSideDate {
+      font-size: 10px;
+      line-height: 14px;
+      color: #707070;
+      opacity: 0.5;
+    }
+  }
+}
+.cardDescWrapper {
+  padding: 10px 20px 10px 20px !important;
+
+  .cardDescText {
+    font-size: 12px;
+    line-height: 21px;
+    color: #2f2f2f;
+    word-break: keep-all;
   }
 }
