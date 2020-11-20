@@ -53,7 +53,7 @@ export default function SupportContent() {
 
     return (
         <>
-            <Banner title="support" image={BannerImage} links={links} />
+            <Banner title="Support" image={BannerImage} links={links} />
             <SupportCaseRenderer subject={subject} />
         </>
     );

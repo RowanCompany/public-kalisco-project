@@ -42,7 +42,7 @@ export default function ContactContent() {
 
     return (
         <>
-            <Banner title="contact" image={BannerImage} links={links} />
+            <Banner title="고객소통" image={BannerImage} links={links} />
             <ContactCaseRenderer subject={subject} />
         </>
     );
