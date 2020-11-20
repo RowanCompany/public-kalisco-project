@@ -5,13 +5,14 @@ import BannerImage from "../../../../static/images/mobile/img-hibarin-top@2x.png
 import BannerLogoIcon from "../../../../static/svg/mobile/hibarin-logo-header-w.svg";
 import HibarinStory from "./HibarinStory";
 import HibarinStore from "./HibarinStore";
+import HibarinMenu from "./HibarinMenu";
 
 function HibarinCaseRenderer({ subject }) {
   switch (subject) {
     case "story":
       return <HibarinStory />;
-    /*case "menu":
-      return <div>hi</div>;*/
+    case "menu":
+      return <HibarinMenu subject={subject} />;
     case "store":
       return <HibarinStore />;
     case "news-and-events":
