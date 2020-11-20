@@ -26,7 +26,8 @@ export default function BrandList() {
     <ModalProvider>
       <section className={styles.brandListSection}>
         <div className={styles.brandListFlexWrapper}>
-          <div
+          <Link
+            to="/brand/saboten/story"
             className={`${styles.brandCircle} ${styles.saboten} animate__animated animate__rotateIn`}
           >
             <div className={styles.brandCircleContent}>
@@ -35,7 +36,7 @@ export default function BrandList() {
               </div>
               <div className={styles.brandCircleDescription}>사보텐</div>
             </div>
-          </div>
+          </Link>
           <Link
             to="/brand/hibarin/story"
             className={`${styles.brandCircle} ${styles.hibarin} animate__animated animate__rotateIn`}

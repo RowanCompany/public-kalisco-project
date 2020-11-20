@@ -6,6 +6,7 @@ import BrandList from "../../components/mobile/brand/BrandList";
 import HibarinContent from "../../components/mobile/brand/hibarin/HibarinContent";
 import Fab from "../../components/brand/fab/Fab";
 import HibarinMenuContent from "../../components/mobile/brand/hibarin/HibarinMenuContent";
+import SabotenContent from "../../components/mobile/brand/saboten/SabotenContent";
 
 export default function Brand({ match }) {
   return (
@@ -13,7 +14,10 @@ export default function Brand({ match }) {
       <Nav />
       <Switch>
         <Route path={`${match.path}/saboten/:subject/:menu`} />
-        <Route path={`${match.path}/saboten/:subject`} />
+        <Route path={`${match.path}/saboten/:subject`}>
+          <SabotenContent />
+          <Fab subject="saboten" />
+        </Route>
         <Route path={`${match.path}/saboten`}>
           <Redirect to="/brand/saboten/story" />
         </Route>
@@ -22,7 +26,7 @@ export default function Brand({ match }) {
           component={HibarinMenuContent}
         />
         <Route path={`${match.path}/hibarin/:subject`}>
-          <HibarinContent match={match} />
+          <HibarinContent />
           <Fab subject="hibarin" />
         </Route>
         <Route path={`${match.path}/hibarin`}>

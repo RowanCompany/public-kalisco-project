@@ -1,0 +1,85 @@
+.storeSection {
+  position: relative;
+
+  .storePanelWrapper {
+    position: relative;
+
+    .storePanelImageWrapper {
+      height: 128px;
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .storePanelDescriptionWrapper {
+      position: relative;
+      padding: 26px 30px;
+
+      .storePanelTitle {
+        font-family: 'Nanum Myeongjo', serif;
+        font-size: 16px;
+        color: #333333;
+        letter-spacing: 0;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .storePanelDescription {
+        font-size: 12px;
+        line-height: 22px;
+        color: #333333;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-family: 'Nanum Myeongjo', serif;
+      }
+    }
+  }
+
+  .mapWrapper {
+    padding-top: 60px;
+    position: relative;
+
+    .mapTitle {
+      margin: 20px 0;
+      font-size: 16px;
+      font-family: 'Nanum Myeongjo', serif;
+      font-weight: bold;
+      color: #2F2F2F;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    .mapDescription {
+      color: #2F2F2F;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+      font-family: 'Nanum Myeongjo', serif;
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .mapStoreLinkWrapper {
+      padding: 0 70px;
+      margin-bottom: 40px;
+
+      .mapStoreLink {
+        display: inline-block;
+        width: 100%;
+        padding: 21px 0;
+        text-align: center;
+        background-color: rgba(232, 57, 14, 0.9);
+        color: rgba(255, 255, 255, 0.8);
+        font-family: 'Nanum Myeongjo', serif;
+        font-size: 14px;
+        letter-spacing: 0;
+        font-weight: 400;
+        border-radius: 8px;
+        box-shadow: 0 3px 0 rgba(#000, 0.32);
+      }
+    }
+  }
+}
