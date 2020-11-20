@@ -22,6 +22,10 @@
       justify-content: center;
       box-sizing: border-box;
       padding-top: 60px;
+
+      &.sabotenBannerLogoWrapper {
+        background-color: rgba(0, 0, 0, 0.39);
+      }
     }
   }
 

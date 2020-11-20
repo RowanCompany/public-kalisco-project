@@ -20,7 +20,11 @@ export default function BrandBanner({ image, titleLogo, url }) {
   return (
     <div className={styles.bannerWrapper}>
       <div className={styles.bannerImageWrapper}>
-        <div className={styles.bannerLogoWrapper}>
+        <div
+          className={`${styles.bannerLogoWrapper} ${
+            brandSegment === "saboten" ? styles.sabotenBannerLogoWrapper : ""
+          }`}
+        >
           <img src={titleLogo} alt="title logo" width="100px" height="20px" />
         </div>
         <img src={image} alt="banner" />
