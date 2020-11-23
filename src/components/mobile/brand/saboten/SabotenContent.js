@@ -5,13 +5,14 @@ import BannerImage from "../../../../static/images/mobile/img-saboten-p-banner@2
 import BannerLogoIcon from "../../../../static/svg/mobile/banner-logo-saboten.svg";
 import SabotenStore from "./SabotenStore";
 import SabotenStory from "./SabotenStory";
+import SabotenMenu from "./SabotenMenu";
 
 function SabotenCaseRenderer({ subject }) {
   switch (subject) {
     case "story":
       return <SabotenStory />;
-    /*case "menu":
-      return <HibarinMenu subject={subject} />;*/
+    case "menu":
+      return <SabotenMenu />;
     case "store":
       return <SabotenStore />;
     case "news-and-events":
