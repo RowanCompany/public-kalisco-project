@@ -373,3 +373,46 @@
     position: relative;
   }
 }
+
+.menuNavigatorWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 20px 0 0;
+
+  .menuNavigator {
+    flex: 0 0 calc(25% - 2px);
+    width: 100%;
+    max-width: calc(25% - 2px);
+    text-align: center;
+    border: 1px solid #EEEEEE;
+    padding: 12px 0;
+
+    &.menuNavigatorActive {
+      border-color: #C70017;
+
+      > a {
+        color: #C70017;
+      }
+    }
+
+    > a {
+      color: #707070;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+}
+
+.menuDetailSection {
+  position: relative;
+  padding-top: 50px;
+  background-color: #151515;
+  background-image: url(../../../../static/images/img-p-saboten-background-1.png);
+  background-size: cover;
+}

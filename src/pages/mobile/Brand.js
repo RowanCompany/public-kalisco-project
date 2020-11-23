@@ -7,13 +7,17 @@ import HibarinContent from "../../components/mobile/brand/hibarin/HibarinContent
 import Fab from "../../components/brand/fab/Fab";
 import HibarinMenuContent from "../../components/mobile/brand/hibarin/HibarinMenuContent";
 import SabotenContent from "../../components/mobile/brand/saboten/SabotenContent";
+import SabotenMenuContent from "../../components/mobile/brand/saboten/SabotenMenuContent";
 
 export default function Brand({ match }) {
   return (
     <>
       <Nav />
       <Switch>
-        <Route path={`${match.path}/saboten/:subject/:menu`} />
+        <Route
+          path={`${match.path}/saboten/:subject/:menu`}
+          component={SabotenMenuContent}
+        />
         <Route path={`${match.path}/saboten/:subject`}>
           <SabotenContent />
           <Fab subject="saboten" />

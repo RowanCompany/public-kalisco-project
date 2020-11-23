@@ -7,22 +7,22 @@ export default function SabotenMenuNavigator({ category }) {
     {
       text: "Katsu",
       type: "katsu",
-      link: "/brand/hibarin/menu/katsu",
+      link: "/brand/saboten/menu/katsu",
     },
     {
       text: "Donburi",
-      type: "friends",
-      link: "/brand/hibarin/menu/friends",
+      type: "donburi",
+      link: "/brand/saboten/menu/donburi",
     },
     {
       text: "Noodles",
-      type: "drink",
-      link: "/brand/hibarin/menu/drink",
+      type: "noodle",
+      link: "/brand/saboten/menu/noodle",
     },
     {
       text: "Side",
-      type: "drink",
-      link: "/brand/hibarin/menu/drink",
+      type: "side",
+      link: "/brand/saboten/menu/side",
     },
   ];
 
