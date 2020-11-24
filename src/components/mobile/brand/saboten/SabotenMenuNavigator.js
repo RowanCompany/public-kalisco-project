@@ -16,7 +16,7 @@ export default function SabotenMenuNavigator({ category }) {
     },
     {
       text: "Noodles",
-      type: "noodle",
+      type: "noodles",
       link: "/brand/saboten/menu/noodle",
     },
     {
