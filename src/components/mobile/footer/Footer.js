@@ -18,10 +18,10 @@ export default function Footer() {
             <div>입점제안 및 가맹문의</div>
             <div>
               <a
-                href="mailto:llimun@kalisco.co.kr"
+                href="mailto:ilil.mun@kalisco.co.kr"
                 className={styles.mobileFooterEmailLink}
               >
-                llimun@kalisco.co.kr
+                ilil.mun@kalisco.co.kr
               </a>
             </div>
           </div>
@@ -29,10 +29,10 @@ export default function Footer() {
             <div>Easy to cook(편의식) 상품구입 및 특판문의</div>
             <div>
               <a
-                href="mailto:kipal.cha@kalisco.co.kr"
+                href="mailto:hanabe@kalisco.co.kr"
                 className={styles.mobileFooterEmailLink}
               >
-                kipal.cha@kalisco.co.kr
+                hanabe@kalisco.co.kr
               </a>
             </div>
           </div>
