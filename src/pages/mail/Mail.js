@@ -33,9 +33,10 @@ function Contact() {
   }, []);
 
   const match = useRouteMatch();
-  console.log("here");
-  return (
-      useMobileCheck(width) ? <DesktopContactComponent match={match} /> : <MobileContactComponent match={match} />
+  return useMobileCheck(width) ? (
+    <DesktopContactComponent match={match} />
+  ) : (
+    <MobileContactComponent match={match} />
   );
 }
 

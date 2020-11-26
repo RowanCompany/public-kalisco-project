@@ -6,7 +6,6 @@ export default function Banner({ image, links, title, altLinks }) {
   const pathname = window.location.pathname;
   const isScrollable = pathname.includes("supports");
   const isBgDark = pathname.includes("supports");
-  console.log(altLinks, pathname);
 
   return (
     <div className={styles.bannerWrapper}>

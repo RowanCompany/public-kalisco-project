@@ -9,11 +9,13 @@ import productHome2Image from "../../../static/images/img-product-home-2-1.png";
 import { Link } from "react-router-dom";
 import naverIcon from "../../../static/svg/mobile/icon_naver.svg";
 import kakaoIcon from "../../../static/svg/mobile/icon_kakaotalk_product.svg";
+import ProductDetailNavigator from "./ProductDetailNavigator";
 
 export default function ProductHomemade() {
   return (
     <>
       <section className={styles.productSectionOne}>
+        <ProductDetailNavigator />
         <div className={styles.productCircleListWrapper}>
           <div className={styles.productCircle}>
             <div
