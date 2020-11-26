@@ -77,7 +77,7 @@ function Contact() {
           dataObject[key] = window.parseInt(value);
           break;
         case "content":
-          //dataObject[key] = value.replace(/\n/g, "<br />");
+          dataObject[key] = value.replace(/\n/g, "\r\n");
           break;
         default:
           dataObject[key] = value;
@@ -86,7 +86,8 @@ function Contact() {
     });
     const json = JSON.stringify(dataObject);
     const apiUrl =
-      "https://3nbky7tmc7.execute-api.ap-northeast-2.amazonaws.com/kalisco/api/v1";
+      //"https://3nbky7tmc7.execute-api.ap-northeast-2.amazonaws.com/kalisco/api/v1";
+      "https://8i95jcc1yf.execute-api.ap-northeast-2.amazonaws.com/v1/kalisco/voc";
     axios
       .post(apiUrl, json, {
         headers: {
