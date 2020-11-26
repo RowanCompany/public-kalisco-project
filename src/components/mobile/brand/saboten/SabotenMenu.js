@@ -98,7 +98,10 @@ export default function SabotenMenu() {
             className={`${styles.menuText} ${
               menu === "katsu" ? menuData[menu]["sectionStyle"] : ""
             }`}
-            onClick={() => setMenu("katsu")}
+            onClick={() => {
+              setMenu("katsu");
+              window.location.assign(`/brand/saboten/menu/${menu}`);
+            }}
           >
             Katsu
           </div>
@@ -106,7 +109,10 @@ export default function SabotenMenu() {
             className={`${styles.menuText} ${
               menu === "donburi" ? menuData[menu]["sectionStyle"] : ""
             }`}
-            onClick={() => setMenu("donburi")}
+            onClick={() => {
+              setMenu("donburi");
+              window.location.assign(`/brand/saboten/menu/${menu}`);
+            }}
           >
             Donburi
           </div>
@@ -114,7 +120,10 @@ export default function SabotenMenu() {
             className={`${styles.menuText} ${
               menu === "noodle" ? menuData[menu]["sectionStyle"] : ""
             }`}
-            onClick={() => setMenu("noodle")}
+            onClick={() => {
+              setMenu("noodle");
+              window.location.assign(`/brand/saboten/menu/${menu}`);
+            }}
           >
             Noodle
           </div>
@@ -122,7 +131,10 @@ export default function SabotenMenu() {
             className={`${styles.menuText} ${
               menu === "side" ? menuData[menu]["sectionStyle"] : ""
             }`}
-            onClick={() => setMenu("side")}
+            onClick={() => {
+              setMenu("side");
+              window.location.assign(`/brand/saboten/menu/${menu}`);
+            }}
           >
             Side
           </div>
