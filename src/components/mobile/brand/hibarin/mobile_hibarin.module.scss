@@ -141,6 +141,15 @@
       }
     }
   }
+
+  .storeMapImageWrapper {
+    position: relative;
+
+    .storeMapMarkerPosition {
+      position: absolute;
+      display: inline-block;
+    }
+  }
 }
 
 .newMenuSection {
