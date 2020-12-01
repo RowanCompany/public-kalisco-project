@@ -26,16 +26,16 @@ function ProductBanner({ subject }) {
                   홈메이드 제품소개
                 </Link>
               </li>
-              {/*<li className={styles.menu}>
+              <li className={styles.menu}>
                 <Link
-                  to="/products/my-own-recipe"
+                  to="/products/recipes"
                   className={`${styles.menuLink} ${
-                    subject === "my-own-recipe" ? styles.active : ""
+                    subject === "recipes" ? styles.active : ""
                   }`}
                 >
-                  나만의 레시피
+                  레시피
                 </Link>
-              </li>*/}
+              </li>
             </ul>
           </div>
         </div>

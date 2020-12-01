@@ -7,6 +7,7 @@
         "axios": "^0.20.0",
         "bootstrap": "^4.5.2",
         "intersection-observer": "^0.11.0",
+        "lodash": "^4.17.20",
         "node-sass": "^4.14.1",
         "normalize.css": "^8.0.1",
         "react": "^16.14.0",
