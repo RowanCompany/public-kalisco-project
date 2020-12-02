@@ -6,14 +6,21 @@ export default function RecipeForm() {
   const [description, setDescription] = useState("");
   const [fileName, setFileName] = useState("");
   const [ingredients, setIngredients] = useState([]);
-  const nextId = useRef(0);
+  const ingredientNextId = useRef(1);
+  const [flowDescriptions, setFlowDescriptions] = useState([]);
+  const flowDescriptionNextId = useRef(1);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(e);
+  }
 
   return (
     <section className={styles.recipeFormSection}>
       {/* TODO: props 받아서 다시 처리해야 함 */}
       <div className={styles.recipeFormTitle}>레시피 작성</div>
       <div className={styles.recipeFormPanel}>
-        <form onSubmit={(e) => e.preventDefault()} ref={formRef}>
+        <form onSubmit={handleSubmit} ref={formRef}>
           <div className={styles.formWrapper}>
             <div className={styles.formWrapper}>
               <div>
@@ -29,6 +36,41 @@ export default function RecipeForm() {
                 placeholder="제목을 입력해주세요."
                 required
               />
+            </div>
+            <div className={styles.formWrapper}>
+              <div>
+                <label htmlFor="file" className={styles.commonFormLabel}>
+                  파일첨부
+                </label>
+              </div>
+              <div className="d-flex">
+                <div>
+                  <label htmlFor="file" className={styles.fileLabel}>
+                    {fileName === "" ? "이미지파일 최대 3M" : fileName}
+                  </label>
+                </div>
+                <div>
+                  <button type="button" className={styles.fileButton}>
+                    <label htmlFor="file" className={styles.fileButtonLabel}>
+                      찾아보기
+                    </label>
+                  </button>
+                </div>
+                <input
+                  type="file"
+                  name="file"
+                  id="file"
+                  hidden
+                  accept="image/*"
+                  onInput={(e) => {
+                    if (e.target.files.length > 0) {
+                      setFileName(e.target.files[0].name);
+                    } else {
+                      setFileName("");
+                    }
+                  }}
+                />
+              </div>
             </div>
             <div className={styles.formWrapper}>
               <div>
@@ -104,7 +146,8 @@ export default function RecipeForm() {
               <button
                 type="button"
                 onClick={() => {
-                  setIngredients([...ingredients, nextId]);
+                  setIngredients([...ingredients, ingredientNextId.current]);
+                  ingredientNextId.current++;
                 }}
                 className={styles.addButton}
               >
@@ -113,7 +156,7 @@ export default function RecipeForm() {
               <div className={styles.formWrapper}>
                 {ingredients &&
                   ingredients.map((d, i) => (
-                    <div key={nextId.current} style={{ paddingTop: "20px" }}>
+                    <div key={d} style={{ paddingTop: "20px" }}>
                       <input
                         type="text"
                         name={`ingredients[${d}][title]`}
@@ -143,55 +186,50 @@ export default function RecipeForm() {
             </div>
             <div className={styles.formWrapper}>
               <div>
-                <label htmlFor="file" className={styles.commonFormLabel}>
-                  파일첨부
+                <label
+                  htmlFor="ingredients[]"
+                  className={styles.commonFormLabel}
+                >
+                  조리법
                 </label>
               </div>
-              <div className="d-flex">
-                <div>
-                  <label htmlFor="file" className={styles.fileLabel}>
-                    {fileName === "" ? "이미지파일 최대 3M" : fileName}
-                  </label>
-                </div>
-                <div>
-                  <button type="button" className={styles.fileButton}>
-                    <label htmlFor="file" className={styles.fileButtonLabel}>
-                      찾아보기
-                    </label>
-                  </button>
-                </div>
-                <input
-                  type="file"
-                  name="file"
-                  id="file"
-                  hidden
-                  accept="image/*"
-                  onInput={(e) => {
-                    if (e.target.files.length > 0) {
-                      setFileName(e.target.files[0].name);
-                    } else {
-                      setFileName("");
-                    }
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-          <div className={styles.formWrapper}>
-            <div>
-              <label htmlFor="content" className={styles.commonFormLabel}>
-                내용
-              </label>
-            </div>
-            <div className={styles.descriptionPanel}>
-              <div>
-                <textarea
-                  name="content"
-                  id="content"
-                  onInput={(e) => setDescription(e.target.value)}
-                  className={styles.description}
-                  required
-                />
+              <button
+                type="button"
+                onClick={() => {
+                  setFlowDescriptions([
+                    ...flowDescriptions,
+                    flowDescriptionNextId.current,
+                  ]);
+                  flowDescriptionNextId.current++;
+                }}
+                className={styles.addButton}
+                style={{ margin: 0 }}
+              >
+                추가
+              </button>
+              <div className={styles.formWrapper}>
+                {flowDescriptions &&
+                  flowDescriptions.map((d) => (
+                    <div key={d} className={styles.descriptionBox}>
+                      <textarea
+                        name="making_flow[]"
+                        //onInput={(e) => setDescription(e.target.value)}
+                        className={styles.description}
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setFlowDescriptions(
+                            flowDescriptions.filter((dt) => dt !== d)
+                          )
+                        }
+                        className={styles.addButton}
+                      >
+                        제거
+                      </button>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>

@@ -168,6 +168,27 @@
       }
     }
 
+    .descriptionBox {
+      display: flex;
+      padding-top: 20px;
+      align-items: flex-start;
+    }
+
+    .description {
+      width: calc(100% - 120px);
+      background-color: transparent;
+      min-height: 130px;
+      resize: none;
+      font-size: 14px;
+      padding: 16px;
+      border: 1px solid #e8eaef;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
     .termTable {
       //border: 1px solid #dddddd;
       width: 100%;
