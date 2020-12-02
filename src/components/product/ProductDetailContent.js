@@ -38,7 +38,7 @@ function ProductDetailCaseRenderer({ content, match }) {
       const { subject } = match.params;
       if (subject === "recipes") {
         switch (content) {
-          case "create":
+          case "form":
             return <RecipeForm />;
           default:
             return <Redirect to="/products/recipes" />;
