@@ -161,3 +161,351 @@
     }
   }
 }
+
+.eventAddButtonWrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: flex-end;
+
+  .eventAddButton {
+    background-color: rgba(#E8390E, 0.9);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    width: 260px;
+    padding: 19px 0;
+    text-align: center;
+    color: rgba(#FFFFFF, 0.8);
+    letter-spacing: -0.36px;
+    font-family: 'Nanum Myeongjo', serif;
+  }
+}
+
+.eventFormSection {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+  background-color: #FFFFFF;
+
+  .eventFormTitle {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0;
+    color: #2F2F2F;
+    margin-bottom: 20px;
+  }
+
+  .eventFormPanel {
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    width: 100%;
+    padding: 30px 40px;
+
+
+    .commonFormLabel {
+      display: inline-block;
+      padding-bottom: 4px;
+      font-size: 16px;
+      letter-spacing: 0;
+      color: #5f6374;
+      font-weight: 600;
+    }
+
+    .commonFormInput {
+      padding: 8px 11px;
+      border: 1px solid #e8eaef;
+      background-color: #ffffff;
+      min-height: 34px;
+      box-sizing: border-box;
+      color: #272d48;
+      display: inline-block;
+      font-size: 13px;
+      line-height: normal;
+
+      &:focus {
+        outline: none;
+      }
+
+      &.writerFormInput {
+        width: 360px;
+      }
+
+      &.multipleFormInput {
+        &:not(:last-of-type) {
+          margin-right: 30px;
+        }
+      }
+
+      &.telFormInput {
+        width: 260px;
+        height: 100%;
+
+        &:placeholder-shown {
+          color: rgba($color: #272d48, $alpha: 0.7);
+        }
+      }
+    }
+
+    .commonSelectInput {
+      background-color: #ffffff;
+      border: 1px solid #e8eaef;
+      padding: 8px 16px;
+      min-height: 34px;
+      color: #272d48;
+      font-size: 13px;
+      box-sizing: border-box;
+      display: inline-block;
+      background-clip: padding-box;
+      line-height: normal;
+
+      &.telSelectInput {
+        min-width: 170px;
+        margin-right: 10px;
+      }
+
+      &.categorySelectInput {
+        min-width: 170px;
+        margin-right: 75px;
+      }
+
+      &.categorySubInput {
+        min-width: 290px;
+      }
+    }
+
+    .titleInput {
+      padding: 8px 11px;
+      border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid #dddddd;
+      background-color: #ffffff;
+      min-height: 34px;
+      box-sizing: border-box;
+      color: #272d48;
+      display: inline-block;
+      font-size: 13px;
+      line-height: normal;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:placeholder-shown {
+        color: rgba($color: #5f6374, $alpha: 0.5);
+      }
+    }
+
+    .descriptionPanel {
+      padding: 16px;
+      border: 1px solid #e8eaef;
+
+      .description {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        min-height: 130px;
+        resize: none;
+        font-size: 14px;
+        padding: 0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .countText {
+        text-align: right;
+        letter-spacing: 0;
+        color: rgba(#5f6374, 0.5);
+        font-size: 13px;
+      }
+    }
+
+    .descriptionBox {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .description {
+      width: 100%;
+      background-color: transparent;
+      min-height: 130px;
+      resize: none;
+      font-size: 14px;
+      padding: 16px;
+      border: 1px solid #e8eaef;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .termTable {
+      //border: 1px solid #dddddd;
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      td {
+        padding: 8px;
+        border: 1px solid #e8eaef;
+        color: #272d48;
+        font-size: 13px;
+        line-height: normal;
+
+        &.tdTitle {
+          width: 20%;
+          font-size: 14px;
+          text-align: center;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .checkboxInlineGroup {
+      margin: 8px 0;
+      text-align: center;
+    }
+
+    .checkboxInline {
+      display: inline-flex;
+      align-items: center;
+      padding-left: 0;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      .checkboxInlineRadio {
+        position: static;
+        margin-top: 0;
+        margin-right: .45rem;
+        box-sizing: border-box;
+        padding: 0;
+      }
+
+      label {
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+
+    .termDescription {
+      font-size: 14px;
+      text-align: center;
+      line-height: 1.25;
+    }
+
+    .fileLabel {
+      padding: 8px 32px 8px 16px;
+      border: 1px solid #e8eaef;
+      background-color: #ffffff;
+      display: inline-block;
+      min-width: 354px;
+      margin-right: 10px;
+      color: #272d48;
+      letter-spacing: 0;
+      font-size: 13px;
+      position: relative;
+      box-sizing: border-box;
+
+      &::after {
+        content: url(../../../static/svg/paperclip.svg);
+        position: absolute;
+        right: 15px;
+      }
+    }
+
+    .fileButton {
+      border: 1px solid #e8390e;
+      padding: 8px 27px;
+      min-width: 100px;
+      text-align: center;
+      display: inline-block;
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 0;
+      color: #e8390e;
+      background-color: #ffffff;
+      cursor: pointer;
+
+      .fileButtonLabel {
+        cursor: pointer;
+      }
+    }
+
+    .formWrapper {
+      padding-bottom: 30px;
+
+      /*&:last-of-type {
+        padding-bottom: 60px;
+      }*/
+    }
+
+    .addButton {
+      border: 1px solid #e8390e;
+      padding: 8px 27px;
+      min-width: 100px;
+      text-align: center;
+      display: inline-block;
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      letter-spacing: 0;
+      color: #e8390e;
+      background-color: #ffffff;
+      cursor: pointer;
+      margin-left: 12px;
+      transition: all 250ms;
+
+      &:hover {
+        background-color: #e8390e;
+        color: #FFFFFF;
+      }
+    }
+
+    .formSubmitButtonWrapper {
+      display: flex;
+      justify-content: center;
+
+      > div {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        .resetButton {
+          border-radius: 22px;
+          background-color: #dddddd;
+          padding: 12px 34px;
+          min-width: 100px;
+          color: #ffffff;
+          font-size: 18px;
+          box-shadow: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+
+        .submitButton {
+          border-radius: 22px;
+          background-color: #e8390e;
+          padding: 12px 34px;
+          min-width: 100px;
+          color: #ffffff;
+          font-size: 18px;
+          box-shadow: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

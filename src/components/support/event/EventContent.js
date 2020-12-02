@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import EventCategoryList from "./EventCategoryList";
 import EventList from "./EventList";
-import { eventContentWrapper } from "./event.module.scss";
-import { useLocation, useRouteMatch, Route, Switch } from "react-router-dom";
+import styles, { eventContentWrapper } from "./event.module.scss";
+import {
+  useLocation,
+  useRouteMatch,
+  Route,
+  Switch,
+  Link,
+} from "react-router-dom";
 import EventDetailContent from "./EventDetailContent";
+import EventForm from "./EventForm";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -23,10 +30,24 @@ function EventContent() {
   return (
     <section className={eventContentWrapper}>
       <div className="container">
-        <EventCategoryList contentType={contentType} />
         <Switch>
-          <Route path={`${match.path}/:event`} component={EventDetailContent} />
+          <Route path={`${match.path}/admin/create`}>
+            <EventForm />
+          </Route>
+          <Route path={`${match.path}/:event`}>
+            <EventCategoryList contentType={contentType} />
+            <EventDetailContent />
+          </Route>
           <Route path={match.path}>
+            <EventCategoryList contentType={contentType} />
+            <div className={styles.eventAddButtonWrapper}>
+              <Link
+                to="/supports/events/admin/create"
+                className={styles.eventAddButton}
+              >
+                이벤트&프로모션 생성
+              </Link>
+            </div>
             <EventList type={contentType} />
           </Route>
         </Switch>
