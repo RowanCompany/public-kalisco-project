@@ -18,7 +18,7 @@ export default function RecipeForm() {
   return (
     <section className={styles.recipeFormSection}>
       {/* TODO: props 받아서 다시 처리해야 함 */}
-      <div className={styles.recipeFormTitle}>레시피 작성</div>
+      <div className={styles.recipeFormTitle}>레시피 등록/수정</div>
       <div className={styles.recipeFormPanel}>
         <form onSubmit={handleSubmit} ref={formRef}>
           <div className={styles.formWrapper}>
