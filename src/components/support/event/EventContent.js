@@ -31,7 +31,7 @@ function EventContent() {
     <section className={eventContentWrapper}>
       <div className="container">
         <Switch>
-          <Route path={`${match.path}/admin/create`}>
+          <Route path={`${match.path}/admin/form`}>
             <EventForm />
           </Route>
           <Route path={`${match.path}/:event`}>
@@ -42,7 +42,7 @@ function EventContent() {
             <EventCategoryList contentType={contentType} />
             <div className={styles.eventAddButtonWrapper}>
               <Link
-                to="/supports/events/admin/create"
+                to="/supports/events/admin/form"
                 className={styles.eventAddButton}
               >
                 이벤트&프로모션 생성

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./recipe.module.scss";
 
+// TODO: 수정 props 받아야 함
 export default function RecipeForm() {
   const formRef = useRef(null);
   const [description, setDescription] = useState("");

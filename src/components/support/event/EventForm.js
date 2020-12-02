@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./event.module.scss";
 
+// TODO: 수정 props 받아야 함
 export default function EventForm() {
   const formRef = useRef(null);
   const [fileName, setFileName] = useState("");

@@ -9,7 +9,7 @@ export default function Recipe() {
   return (
     <section className={styles.recipeSection}>
       <div className={styles.recipeFormButtonWrapper}>
-        <Link to="/products/recipes/create" className={styles.recipeFormButton}>
+        <Link to="/products/recipes/form" className={styles.recipeFormButton}>
           레시피 추가
         </Link>
       </div>
