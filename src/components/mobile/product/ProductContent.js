@@ -30,6 +30,10 @@ export default function ProductContent() {
       title: "홈페이드 제품소개",
       link: "/products/homemade",
     },
+    {
+      title: "레시피",
+      link: "/products/recipes",
+    },
   ];
 
   return (

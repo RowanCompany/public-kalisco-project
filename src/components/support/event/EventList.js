@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EventPanel from "./EventPanel";
 import { eventListWrapper } from "./event.module.scss";
 //import iconArrowDown from "../../../static/svg/icon-arrow-down.svg";
-import EventPanelData from "./EventPanelNewData";
+import axios from "axios";
+import { url } from "../../../utils/server";
 
 function EventList({ type }) {
   return (
@@ -27,13 +28,21 @@ function EventList({ type }) {
 }
 
 function ConditionalEventRenderer({ type }) {
+  const [events, setEvents] = useState([]);
+  useEffect(() => {
+    axios.get(`${url}/events`).then((res) => {
+      setEvents(res.data.data[0]);
+    });
+  }, []);
+
   switch (type) {
     case "all":
-      return EventPanelData.map((d, i) => <EventPanel key={i} {...d} />);
+      return events.map((d, i) => <EventPanel key={i} {...d} />).reverse();
     default:
-      return EventPanelData.filter((d) => d.type === type).map((d, i) => (
-        <EventPanel key={i} {...d} />
-      ));
+      return events
+        .filter((d) => d.type === type)
+        .map((d, i) => <EventPanel key={i} {...d} />)
+        .reverse();
   }
 }
 

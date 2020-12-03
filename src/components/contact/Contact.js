@@ -3,6 +3,7 @@ import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
 import storeData from "./storeData";
 import axios from "axios";
+import "formdata-polyfill";
 /*import { useLocation } from "react-router-dom";
 
 function useQuery() {

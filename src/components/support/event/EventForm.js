@@ -1,14 +1,42 @@
 import React, { useRef, useState } from "react";
 import styles from "./event.module.scss";
+import { url } from "../../../utils/server";
+import axios from "axios";
 
 // TODO: 수정 props 받아야 함
 export default function EventForm() {
   const formRef = useRef(null);
   const [fileName, setFileName] = useState("");
+  const [fileURL, setFileURL] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
+    const formData = new FormData(formRef.current);
+    formData.append("image", fileURL);
+    const dataObject = {};
+    formData.forEach((d, k) => {
+      switch (k) {
+        case "description":
+          return (dataObject[k] = d.replace(/\n/g, "<br />"));
+        default:
+          return (dataObject[k] = d);
+      }
+    });
+    const jsonString = JSON.stringify(dataObject);
+    axios
+      .post(`${url}/events`, jsonString, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => window.location.assign("/supports/events"))
+      .catch((err) => {
+        console.log(err);
+        window.alert(
+          "이벤트 작성/수정에 실패했습니다! 동일현상 지속발생시 관리자에게 문의해주세요"
+        );
+      });
   }
 
   return (
@@ -32,6 +60,29 @@ export default function EventForm() {
                 placeholder="제목을 입력해주세요."
                 required
               />
+            </div>
+            <div className={styles.formWrapper}>
+              <div>
+                <label htmlFor="type" className={styles.commonFormLabel}>
+                  카테고리
+                </label>
+              </div>
+              <select
+                name="type"
+                id="type"
+                className={`${styles.commonSelectInput} ${styles.telSelectInput}`}
+                defaultValue=""
+                required
+              >
+                <option value="" hidden disabled>
+                  선택
+                </option>
+                <option value="saboten">사보텐</option>
+                <option value="hibarin">히바린</option>
+                <option value="tacobell">타코벨</option>
+                <option value="centralkitchen">센트럴키친</option>
+                <option value="kalisco">캘리스코</option>
+              </select>
             </div>
             <div className={styles.formWrapper}>
               <div>
@@ -59,8 +110,14 @@ export default function EventForm() {
                   hidden
                   accept="image/*"
                   onInput={(e) => {
-                    if (e.target.files.length > 0) {
-                      setFileName(e.target.files[0].name);
+                    const target = e.target;
+                    if (target.files.length > 0) {
+                      setFileName(target.files[0].name);
+                      const reader = new FileReader();
+                      reader.readAsDataURL(target.files[0]);
+                      reader.onloadend = () => {
+                        setFileURL(reader.result);
+                      };
                     } else {
                       setFileName("");
                     }

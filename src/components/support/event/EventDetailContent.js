@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./event.module.scss";
-import EventPanelData from "./EventPanelNewData";
 import { useParams } from "react-router-dom";
+import { url } from "../../../utils/server";
+import axios from "axios";
+import { format } from "date-fns";
+import _ from "lodash";
 
-// TODO: 데이터 연동해야 함
 function EventDetailContent() {
-  let { event } = useParams();
-  event = window.parseInt(event);
-  const filteredItem = EventPanelData.filter((d) => d.id === event)[0];
+  const [event, setEvent] = useState({});
+  const eventId = useParams().event;
+  useEffect(() => {
+    axios
+      .get(`${url}/events/${eventId}`)
+      .then((res) => {
+        setEvent(res.data.data[0]);
+      })
+      .catch((err) => console.log(err));
+  }, [eventId]);
+
   return (
-    <div className={styles.eventDetailWrapper}>
-      <div className={styles.eventDetailTitle}>{filteredItem.title}</div>
-      <div className={styles.eventDetailDate}>{filteredItem.createdAt}</div>
-      <div className={styles.eventDetailNavigatorWrapper}>
-        {/*<div
+    !_.isEmpty(event) && (
+      <div className={styles.eventDetailWrapper}>
+        <div className={styles.eventDetailTitle}>{event.title}</div>
+        <div className={styles.eventDetailDate}>
+          {format(new Date(event["created_at"]), "yyyy-MM-dd")}
+        </div>
+        <div className={styles.eventDetailNavigatorWrapper}>
+          {/*<div
           className={`${styles.eventDetailNavigator} ${styles.disabled}`}
           style={{ paddingRight: "15px" }}
         >
@@ -31,15 +44,25 @@ function EventDetailContent() {
             <RightArrow />
           </div>
         </div>*/}
-      </div>
-      <div className={styles.eventDetailContentWrapper}>
-        <div>
-          <img src={filteredItem.image} alt="event temp" />
         </div>
-        <div style={{ paddingTop: "50px" }}>{filteredItem.description}</div>
-      </div>
-      <div className={styles.eventDetailPostNavigatorWrapper}>
-        {/*<div className={styles.eventDetailPostNavigator}>
+        <div className={styles.eventDetailContentWrapper}>
+          {event.image && (
+            <div>
+              <img src={event.image} alt={event.title} />
+            </div>
+          )}
+          <div style={{ paddingTop: "50px" }}>
+            {event.description &&
+              event.description.split("<br />").map((d, i) => (
+                <React.Fragment key={i}>
+                  {d}
+                  <br />
+                </React.Fragment>
+              ))}
+          </div>
+        </div>
+        <div className={styles.eventDetailPostNavigatorWrapper}>
+          {/*<div className={styles.eventDetailPostNavigator}>
           <div>
             <img src={upArrow} alt="Up Arrow" />
           </div>
@@ -57,8 +80,9 @@ function EventDetailContent() {
             사보텐 벤또 출시!
           </div>
         </div>*/}
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
