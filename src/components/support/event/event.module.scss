@@ -180,6 +180,38 @@
     color: rgba(#FFFFFF, 0.8);
     letter-spacing: -0.36px;
     font-family: 'Nanum Myeongjo', serif;
+    border: none;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.eventEditButtonWrapper {
+  position: relative;
+  max-width: 914px;
+  margin: 0 auto;
+  padding-top: 60px;
+  display: flex;
+  justify-content: flex-end;
+
+  .eventEditButton {
+    background-color: rgba(#E8390E, 0.9);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    width: 260px;
+    padding: 19px 0;
+    text-align: center;
+    color: rgba(#FFFFFF, 0.8);
+    letter-spacing: -0.36px;
+    font-family: 'Nanum Myeongjo', serif;
+    border: none;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 

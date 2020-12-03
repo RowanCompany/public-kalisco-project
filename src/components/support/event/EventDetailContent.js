@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./event.module.scss";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { url } from "../../../utils/server";
 import axios from "axios";
 import { format } from "date-fns";
@@ -17,6 +17,26 @@ function EventDetailContent() {
       })
       .catch((err) => console.log(err));
   }, [eventId]);
+
+  function handleEventRemove(e) {
+    e.preventDefault();
+    if (
+      window.confirm(
+        "정말 해당 게시물을 삭제하시겠습니까? 다시는 되돌릴 수 없습니다."
+      )
+    ) {
+      axios
+        .delete(`${url}/events/${eventId}`)
+        .then(() => window.location.assign("/supports/events"))
+        .catch((err) => {
+          console.error(err);
+          window.alert(
+            "게시물 삭제에 실패했습니다, 동일현상 지속발생시 관리자에게 문의해주세요."
+          );
+          // window.location.reload();
+        });
+    }
+  }
 
   return (
     !_.isEmpty(event) && (
@@ -80,6 +100,21 @@ function EventDetailContent() {
             사보텐 벤또 출시!
           </div>
         </div>*/}
+        </div>
+        <div className={styles.eventEditButtonWrapper}>
+          <Link
+            to={`/supports/events/admin/form/${event.id}`}
+            className={styles.eventEditButton}
+          >
+            이벤트&프로모션 수정
+          </Link>
+          <button
+            type="button"
+            className={styles.eventEditButton}
+            onClick={handleEventRemove}
+          >
+            이벤트&프로모션 삭제
+          </button>
         </div>
       </div>
     )

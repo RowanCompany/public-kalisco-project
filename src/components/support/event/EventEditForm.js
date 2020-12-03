@@ -8,6 +8,24 @@ export default function EventForm() {
   const formRef = useRef(null);
   const [fileName, setFileName] = useState("");
   const [fileURL, setFileURL] = useState("");
+  const { eventId } = useParams();
+  const [title, setTitle] = useState("");
+  //const
+
+  useEffect(() => {
+    if (typeof eventId !== undefined) {
+      axios
+        .get(`${url}/events/${eventId}`)
+        .then((res) => {
+          const data = res.data.data[0];
+          if (data.image) {
+            setFileURL(data.image);
+          }
+          setTitle(data.title);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [eventId]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -24,7 +42,7 @@ export default function EventForm() {
     });
     const jsonString = JSON.stringify(dataObject);
     axios
-      .post(`${url}/events`, jsonString, {
+      .put(`${url}/events/${eventId}`, jsonString, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -34,14 +52,14 @@ export default function EventForm() {
       .catch((err) => {
         console.log(err);
         window.alert(
-          "이벤트 작성에 실패했습니다! 동일현상 지속발생시 관리자에게 문의해주세요"
+          "이벤트 수정에 실패했습니다! 동일현상 지속발생시 관리자에게 문의해주세요"
         );
       });
   }
 
   return (
     <section className={styles.eventFormSection}>
-      <div className={styles.eventFormTitle}>이벤트 작성</div>
+      <div className={styles.eventFormTitle}>이벤트 수정</div>
       <div className={styles.eventFormPanel}>
         <form onSubmit={handleSubmit} ref={formRef}>
           <div className={styles.formWrapper}>
@@ -58,6 +76,7 @@ export default function EventForm() {
                 className={styles.titleInput}
                 placeholder="제목을 입력해주세요."
                 required
+                value={title}
               />
             </div>
             <div className={styles.formWrapper}>

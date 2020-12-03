@@ -31,6 +31,9 @@ function EventContent() {
     <section className={eventContentWrapper}>
       <div className="container">
         <Switch>
+          <Route path={`${match.path}/admin/form/:eventId`}>
+            <EventForm />
+          </Route>
           <Route path={`${match.path}/admin/form`}>
             <EventForm />
           </Route>
