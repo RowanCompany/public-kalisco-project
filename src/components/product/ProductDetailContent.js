@@ -37,12 +37,12 @@ function ProductDetailCaseRenderer({ content, match }) {
     default:
       const { subject } = match.params;
       if (subject === "recipes") {
-        switch (content) {
+        /*switch (content) {
           case "form":
             return <RecipeForm />;
           default:
             return <Redirect to="/products/recipes" />;
-        }
+        }*/
       }
       return <Redirect to="/products/homemade/katsu" />;
   }
