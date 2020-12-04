@@ -10,6 +10,7 @@ import {
   Link,
 } from "react-router-dom";
 import EventDetailContent from "./EventDetailContent";
+import EventEditForm from "./EventEditForm";
 import EventForm from "./EventForm";
 
 function useQuery() {
@@ -32,7 +33,7 @@ function EventContent() {
       <div className="container">
         <Switch>
           <Route path={`${match.path}/admin/form/:eventId`}>
-            <EventForm />
+            <EventEditForm />
           </Route>
           <Route path={`${match.path}/admin/form`}>
             <EventForm />

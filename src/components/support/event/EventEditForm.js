@@ -4,13 +4,15 @@ import { url } from "../../../utils/server";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+// TODO: Admin Valid 추가
 export default function EventForm() {
   const formRef = useRef(null);
   const [fileName, setFileName] = useState("");
   const [fileURL, setFileURL] = useState("");
   const { eventId } = useParams();
   const [title, setTitle] = useState("");
-  //const
+  const [type, setType] = useState("");
+  const [description, setDescription] = useState("");
 
   useEffect(() => {
     if (typeof eventId !== undefined) {
@@ -22,6 +24,8 @@ export default function EventForm() {
             setFileURL(data.image);
           }
           setTitle(data.title);
+          setType(data.type);
+          setDescription(data.description.trim().replaceAll("<br />", "\n"));
         })
         .catch((err) => console.log(err));
     }
@@ -76,7 +80,7 @@ export default function EventForm() {
                 className={styles.titleInput}
                 placeholder="제목을 입력해주세요."
                 required
-                value={title}
+                defaultValue={title}
               />
             </div>
             <div className={styles.formWrapper}>
@@ -89,8 +93,9 @@ export default function EventForm() {
                 name="type"
                 id="type"
                 className={`${styles.commonSelectInput} ${styles.telSelectInput}`}
-                defaultValue=""
                 required
+                onChange={(e) => setType(e.target.value)}
+                value={type}
               >
                 <option value="" hidden disabled>
                   선택
@@ -155,6 +160,7 @@ export default function EventForm() {
                   id="description"
                   className={styles.description}
                   required
+                  defaultValue={description}
                 />
               </div>
             </div>
