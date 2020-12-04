@@ -45,11 +45,13 @@ export default function EventForm() {
       }
     });
     const jsonString = JSON.stringify(dataObject);
+    const authToken = localStorage.getItem("authToken");
     axios
       .put(`${url}/events/${eventId}`, jsonString, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
+          Authorization: `Bearer ${authToken}`,
         },
       })
       .then((res) => window.location.assign("/supports/events"))

@@ -8,6 +8,7 @@ import _ from "lodash";
 
 function EventDetailContent() {
   const [event, setEvent] = useState({});
+  const [authorized, setAuthorized] = useState(false);
   const eventId = useParams().event;
   useEffect(() => {
     axios
@@ -18,15 +19,44 @@ function EventDetailContent() {
       .catch((err) => console.log(err));
   }, [eventId]);
 
+  useEffect(() => {
+    const authToken = localStorage.getItem("authToken");
+    axios
+      .post(
+        `${url}/admin/valid`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      )
+      .then((res) => {
+        const status = res.data.status;
+        if (status === "OK") {
+          setAuthorized(true);
+        } else {
+          setAuthorized(false);
+          return Promise().reject("Not validated");
+        }
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   function handleEventRemove(e) {
     e.preventDefault();
+    const authToken = localStorage.getItem("authToken");
     if (
       window.confirm(
         "정말 해당 게시물을 삭제하시겠습니까? 다시는 되돌릴 수 없습니다."
       )
     ) {
       axios
-        .delete(`${url}/events/${eventId}`)
+        .delete(`${url}/events/${eventId}`, {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        })
         .then(() => window.location.assign("/supports/events"))
         .catch((err) => {
           console.error(err);
@@ -101,21 +131,23 @@ function EventDetailContent() {
           </div>
         </div>*/}
         </div>
-        <div className={styles.eventEditButtonWrapper}>
-          <Link
-            to={`/supports/events/admin/form/${event.id}`}
-            className={styles.eventEditButton}
-          >
-            이벤트&프로모션 수정
-          </Link>
-          <button
-            type="button"
-            className={styles.eventEditButton}
-            onClick={handleEventRemove}
-          >
-            이벤트&프로모션 삭제
-          </button>
-        </div>
+        {authorized && (
+          <div className={styles.eventEditButtonWrapper}>
+            <Link
+              to={`/supports/events/admin/form/${event.id}`}
+              className={styles.eventEditButton}
+            >
+              이벤트&프로모션 수정
+            </Link>
+            <button
+              type="button"
+              className={styles.eventEditButton}
+              onClick={handleEventRemove}
+            >
+              이벤트&프로모션 삭제
+            </button>
+          </div>
+        )}
       </div>
     )
   );
