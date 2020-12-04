@@ -10,6 +10,8 @@ import ProductKatsu from "./ProductKatsu";
 import ProductSauce from "./ProductSauce";
 import ProductSauceDetail from "./ProductSauceDetail";
 import RecipeForm from "./recipe/RecipeForm";
+import RecipeDetailContent from "./recipe/RecipeDetailContent";
+import RecipeEditForm from "./recipe/RecipeEditForm";
 
 function ProductDetailContent() {
   const { content } = useParams();
@@ -23,26 +25,35 @@ function ProductDetailCaseRenderer({ content, match }) {
       return <ProductKatsu content={content} />;
     case "sauce":
       return (
-        <>
-          <Switch>
-            <Route path={`${match.path}/:sauce`}>
-              <ProductSauceDetail content={content} />
-            </Route>
-            <Route path={match.path}>
-              <ProductSauce content={content} />
-            </Route>
-          </Switch>
-        </>
+        <Switch>
+          <Route path={`${match.path}/:sauce`}>
+            <ProductSauceDetail content={content} />
+          </Route>
+          <Route path={match.path}>
+            <ProductSauce content={content} />
+          </Route>
+        </Switch>
       );
     default:
       const { subject } = match.params;
       if (subject === "recipes") {
-        /*switch (content) {
-          case "form":
-            return <RecipeForm />;
+        switch (content) {
+          case "admin":
+            return (
+              <Switch>
+                <Route
+                  path={`${match.path}/form/:recipeId`}
+                  component={RecipeEditForm}
+                />
+                <Route path={`${match.path}/form`} component={RecipeForm} />
+                <Route>
+                  <Redirect to="/products/recipes" />
+                </Route>
+              </Switch>
+            );
           default:
-            return <Redirect to="/products/recipes" />;
-        }*/
+            return <RecipeDetailContent />;
+        }
       }
       return <Redirect to="/products/homemade/katsu" />;
   }

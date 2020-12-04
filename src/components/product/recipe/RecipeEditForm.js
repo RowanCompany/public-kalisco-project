@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./recipe.module.scss";
 import _ from "lodash";
 import axios from "axios";
 import { url } from "../../../utils/server";
+import { useParams } from "react-router-dom";
 
-export default function RecipeForm() {
+export default function RecipeEditForm() {
   const formRef = useRef(null);
   const [fileName, setFileName] = useState("");
   const [fileURL, setFileURL] = useState("");
@@ -13,6 +14,33 @@ export default function RecipeForm() {
   const [flowDescriptions, setFlowDescriptions] = useState([]);
   const flowDescriptionNextId = useRef(1);
   const makingFlowFormNextId = useRef(1);
+  const { recipeId } = useParams();
+  const [title, setTitle] = useState("");
+  const [titleDescription, setTitleDescription] = useState("");
+  const [cookingTime, setCookingTime] = useState("");
+  const [difficulty, setDifficulty] = useState("");
+  const [tempIngredients, setTempIngredients] = useState([]);
+  const [tempMakingFlow, setTempMakingFlow] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${url}/recipes/${recipeId}`).then((res) => {
+      const data = res.data.data[0];
+      setTitle(data.title);
+      setTitleDescription(data.title_description);
+      setCookingTime(data.cooking_time);
+      setDifficulty(data.difficulty);
+      setTempIngredients(data.ingredients);
+      setTempMakingFlow(data.making_flow);
+    });
+  }, [recipeId]);
+
+  useEffect(() => {
+    ingredientNextId.current = tempIngredients.length;
+  }, [tempIngredients]);
+
+  useEffect(() => {
+    makingFlowFormNextId.current = tempMakingFlow.length;
+  }, [tempMakingFlow]);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -48,10 +76,6 @@ export default function RecipeForm() {
             );
             dataObject["ingredients"][tempIndex][bracketMatchedArray[1][1]] = d;
           }
-          //console.log(bracketMatchedArray[0][1]);
-          /*dataObject["ingredients"].push({
-            [i]: d,
-          });*/
         }
       } else {
         dataObject[i] = d;
@@ -65,11 +89,10 @@ export default function RecipeForm() {
     dataObject["making_flow"].forEach((d, i) => {
       dataObject["making_flow"][i]["seq"] = i + 1;
     });
-    //dataObject["description"] = " ";
     const jsonString = JSON.stringify(dataObject);
     const authToken = localStorage.getItem("authToken");
     axios
-      .post(`${url}/recipes`, jsonString, {
+      .put(`${url}/recipes/${recipeId}`, jsonString, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
@@ -82,14 +105,14 @@ export default function RecipeForm() {
       .catch((err) => {
         console.log(err);
         window.alert(
-          "레시피 작성에 실패했습니다! 동일현상 지속발생시 관리자에게 문의해주세요"
+          "레시피 수정에 실패했습니다! 동일현상 지속발생시 관리자에게 문의해주세요"
         );
       });
   }
 
   return (
     <section className={styles.recipeFormSection}>
-      <div className={styles.recipeFormTitle}>레시피 등록</div>
+      <div className={styles.recipeFormTitle}>레시피 수정</div>
       <div className={styles.recipeFormPanel}>
         <form onSubmit={handleSubmit} ref={formRef}>
           <div className={styles.formWrapper}>
@@ -106,6 +129,7 @@ export default function RecipeForm() {
                 className={styles.titleInput}
                 placeholder="제목을 입력해주세요."
                 required
+                defaultValue={title}
               />
             </div>
             <div className={styles.formWrapper}>
@@ -163,6 +187,7 @@ export default function RecipeForm() {
                 name="title_description"
                 id="title_description"
                 required
+                defaultValue={titleDescription}
                 className={`${styles.commonFormInput} ${styles.writerFormInput}`}
               />
             </div>
@@ -180,6 +205,7 @@ export default function RecipeForm() {
                 name="cooking_time"
                 id="cooking_time"
                 required
+                defaultValue={cookingTime}
                 className={`${styles.commonFormInput} ${styles.writerFormInput}`}
               />
             </div>
@@ -194,7 +220,8 @@ export default function RecipeForm() {
                 id="difficulty"
                 className={`${styles.commonSelectInput} ${styles.telSelectInput}`}
                 required
-                defaultValue=""
+                value={difficulty}
+                onChange={(e) => setDifficulty(e.target.value)}
               >
                 <option value="" hidden disabled>
                   선택
@@ -214,6 +241,9 @@ export default function RecipeForm() {
                 name="ingredients[0][title]"
                 required
                 placeholder="재료 입력"
+                defaultValue={
+                  tempIngredients.length > 0 ? tempIngredients[0].title : ""
+                }
                 className={`${styles.commonFormInput} ${styles.multipleFormInput}`}
               />
               <input
@@ -221,6 +251,11 @@ export default function RecipeForm() {
                 name="ingredients[0][description]"
                 required
                 placeholder="재료 갯수 입력"
+                defaultValue={
+                  tempIngredients.length > 0
+                    ? tempIngredients[0].description
+                    : ""
+                }
                 className={`${styles.commonFormInput} ${styles.multipleFormInput}`}
               />
               <button
@@ -234,6 +269,38 @@ export default function RecipeForm() {
                 추가
               </button>
               <div className={styles.formWrapper}>
+                {tempIngredients.length > 1 &&
+                  _.drop(tempIngredients).map((d, i) => (
+                    <div key={d.seq} style={{ paddingTop: "20px" }}>
+                      <input
+                        type="text"
+                        name={`ingredients[${d.seq - 1}][title]`}
+                        required
+                        placeholder="재료 입력"
+                        defaultValue={d.title}
+                        className={`${styles.commonFormInput} ${styles.multipleFormInput}`}
+                      />
+                      <input
+                        type="text"
+                        name={`ingredients[${d.seq - 1}][description]`}
+                        required
+                        placeholder="재료 갯수 입력"
+                        defaultValue={d.description}
+                        className={`${styles.commonFormInput} ${styles.multipleFormInput}`}
+                      />
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setTempIngredients(
+                            tempIngredients.filter((dt) => dt.seq !== d.seq)
+                          )
+                        }
+                        className={styles.addButton}
+                      >
+                        제거
+                      </button>
+                    </div>
+                  ))}
                 {ingredients &&
                   ingredients.map((d) => (
                     <div key={d} style={{ paddingTop: "20px" }}>
@@ -277,15 +344,19 @@ export default function RecipeForm() {
                 <textarea
                   name="making_flow[]"
                   className={styles.description}
+                  defaultValue={
+                    tempMakingFlow.length > 0
+                      ? tempMakingFlow[0].description
+                      : ""
+                  }
                   required
                 />
                 <button
                   type="button"
                   onClick={() => {
-                    setFlowDescriptions([
-                      ...flowDescriptions,
-                      flowDescriptionNextId.current,
-                    ]);
+                    setFlowDescriptions(
+                      flowDescriptions.concat(flowDescriptionNextId.current)
+                    );
                     flowDescriptionNextId.current++;
                   }}
                   className={styles.addButton}
@@ -294,6 +365,29 @@ export default function RecipeForm() {
                 </button>
               </div>
               <div className={styles.formWrapper}>
+                {tempMakingFlow.length > 1 &&
+                  _.drop(tempMakingFlow).map((d) => (
+                    <div key={d.seq} className={styles.descriptionBox}>
+                      <textarea
+                        name="making_flow[]"
+                        //onInput={(e) => setDescription(e.target.value)}
+                        className={styles.description}
+                        required
+                        defaultValue={d.description.replaceAll("<br />", "\n")}
+                      />
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setTempMakingFlow(
+                            tempMakingFlow.filter((dt) => dt.seq !== d.seq)
+                          )
+                        }
+                        className={styles.addButton}
+                      >
+                        제거
+                      </button>
+                    </div>
+                  ))}
                 {flowDescriptions &&
                   flowDescriptions.map((d) => (
                     <div key={d} className={styles.descriptionBox}>

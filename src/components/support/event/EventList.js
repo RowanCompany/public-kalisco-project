@@ -10,7 +10,7 @@ function EventList({ type }) {
     <>
       <div className={eventListWrapper}>
         {/* {EventPanelData &&
-          EventPanelData.map((d, i) => <EventPanel key={i} {...d} />)} */}
+          EventPanelData.map((d, i) => <RecipePanel key={i} {...d} />)} */}
         <ConditionalEventRenderer type={type} />
       </div>
       {/* <div className={eventLoadMoreWrapper}>
