@@ -31,14 +31,17 @@ export default function RecipeForm() {
           makingFlowFormNextId.current++;
         } else {
           const bracketRegex = new RegExp(/\[(.*?)\]/g);
-          const bracketMatchedArray = [...i.matchAll(bracketRegex)];
+          const bracketMatchedArray = [...i.match(bracketRegex)];
+          const parameterTitle = bracketMatchedArray[1]
+            .replace("[", "")
+            .replace("]", "");
           const existIngredientCollection = _.find(dataObject["ingredients"], [
             "tempId",
             bracketMatchedArray[0][1],
           ]);
           if (!existIngredientCollection) {
             dataObject["ingredients"].push({
-              [bracketMatchedArray[1][1]]: d,
+              [parameterTitle]: d,
               tempId: bracketMatchedArray[0][1],
             });
           } else {
@@ -46,12 +49,8 @@ export default function RecipeForm() {
               dataObject["ingredients"],
               (p) => p.tempId === bracketMatchedArray[0][1]
             );
-            dataObject["ingredients"][tempIndex][bracketMatchedArray[1][1]] = d;
+            dataObject["ingredients"][tempIndex][parameterTitle] = d;
           }
-          //console.log(bracketMatchedArray[0][1]);
-          /*dataObject["ingredients"].push({
-            [i]: d,
-          });*/
         }
       } else {
         dataObject[i] = d;
@@ -65,7 +64,6 @@ export default function RecipeForm() {
     dataObject["making_flow"].forEach((d, i) => {
       dataObject["making_flow"][i]["seq"] = i + 1;
     });
-    //dataObject["description"] = " ";
     const jsonString = JSON.stringify(dataObject);
     const authToken = localStorage.getItem("authToken");
     axios
@@ -132,6 +130,7 @@ export default function RecipeForm() {
                   name="file"
                   id="file"
                   hidden
+                  required
                   accept="image/*"
                   onInput={(e) => {
                     const target = e.target;
