@@ -98,7 +98,7 @@ function EventDetailContent() {
         <div className={styles.eventDetailContentWrapper}>
           {event.image && (
             <div>
-              <img src={event.image} alt={event.title} />
+              <img src={event.image} alt={event.title} className="img-fill" />
             </div>
           )}
           <div style={{ paddingTop: "50px" }}>
