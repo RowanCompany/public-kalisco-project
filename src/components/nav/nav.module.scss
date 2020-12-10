@@ -27,7 +27,6 @@
                 line-height: 20px;
                 font-weight: 400;
                 letter-spacing: 0;
-                //color: #e8390e;
                 color: #707070;
 
                 >div {
@@ -42,11 +41,14 @@
                     line-height: 20px;
                     font-weight: 400;
                     letter-spacing: 0;
-                    //color: #e8390e;
                     color: #707070;
                     text-decoration: none;
                     transition: color 200ms;
                     cursor: pointer;
+
+                    &:not(:last-child) {
+                        margin-right: 16px;
+                    }
 
                     &:hover {
                         color: #e8390e;
