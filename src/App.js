@@ -12,7 +12,10 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Notice from "./pages/contact/Notice";
 import Faq from "./pages/contact/Faq";
-import Login from "./components/login/Login";
+import AdminLogin from "./components/login/admin/AdminLogin";
+import Login from "./pages/login/Login";
+import Agreement from "./components/register/Agreement";
+import Register from "./components/register/Register";
 
 // TODO: Suspense 도입 고려
 function App() {
@@ -31,7 +34,11 @@ function App() {
         <Route path="/mail" component={Mail} />
         <Route path="/faq" component={Faq} />
         <Route path="/notices" component={Notice} />
-        <Route path="/admin/login" component={Login} />
+        <Route path="/agreement" component={Agreement} />
+        <Route path="/register" component={Register} />
+        {/*<Route path="/register/final" component={Agreement} />*/}
+        <Route path="/login" component={Login} />
+        <Route path="/admin/login" component={AdminLogin} />
         <Route>
           <Redirect to="/" />
         </Route>

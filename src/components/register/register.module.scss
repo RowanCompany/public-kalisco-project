@@ -1,0 +1,174 @@
+.registerBannerWrapper {
+  background-image: url("../../static/images/login-gradient-or.png");
+  background-size: cover;
+  box-sizing: border-box;
+  padding-top: 183px;
+  padding-bottom: 87px;
+  text-align: center;
+  font-size: 40px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 600;
+}
+
+.registerSection {
+  background-color: #F4F4F4;
+  padding: 100px 0;
+  position: relative;
+
+  .registerBox {
+    border: 1px solid #B2B8C9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 20px #00000014;
+    max-width: 820px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 85px;
+    box-sizing: content-box;
+
+    .allAgreementWrapper {
+      display: flex;
+      align-items: center;
+      padding-bottom: 30px;
+
+      .allAgreementText {
+        font-size: 12px;
+        letter-spacing: 0;
+        color: rgba(#5f6374, 0.5);
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left: 10px;
+      }
+    }
+
+    .agreementText {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Noto Sans KR', sans-serif;
+      letter-spacing: 0;
+      color: #5f6374;
+    }
+
+    .agreementDescriptionText {
+      font-size: 14px;
+      line-height: 1.25;
+      color: #5f6374;
+      font-family: 'Noto Sans KR', sans-serif;
+      letter-spacing: 0;
+      padding-top: 6px;
+      //padding-bottom: 11px;
+    }
+
+    .agreementWrapper {
+      display: flex;
+      align-items: center;
+      padding-bottom: 11px;
+
+      &.radioWrapper {
+        padding-bottom: 25px;
+      }
+
+      .agreementText {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Noto Sans KR', sans-serif;
+        letter-spacing: 0;
+        color: #5f6374;
+      }
+    }
+
+    .agreementRadioText {
+      font-size: 14px;
+      color: #2f2f2f;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin-left: 13px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    .termTable {
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      th {
+        padding: 8px;
+        border: 1px solid #e8eaef;
+        color: #272d48;
+        font-size: 13px;
+        line-height: normal;
+
+        .tdTitle {
+          width: 20%;
+          font-size: 14px;
+          text-align: center;
+          font-weight: bolder;
+        }
+      }
+
+      td {
+        padding: 8px;
+        border: 1px solid #e8eaef;
+        color: #272d48;
+        font-size: 13px;
+        line-height: normal;
+        word-break: keep-all;
+
+        &.tdTitle {
+          width: 20%;
+          font-size: 14px;
+          text-align: center;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .checkboxAgreementBox {
+      border: 1px solid #E8EAEF;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px;
+      background-color: #FFFFFF;
+      margin-bottom: 60px;
+    }
+
+    .agreementDescriptionBox {
+      border: 1px solid #E8EAEF;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px;
+      background-color: #FFFFFF;
+      overflow-y: auto;
+      height: 125px;
+      font-size: 12px;
+      color: #5f6374;
+      line-height: 20px;
+      font-family: 'Noto Sans KR', sans-serif;
+      margin-bottom: 10px;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    .registerButtonWrapper {
+      text-align: center;
+
+      .registerNextButton {
+        border-radius: 22px;
+        background-color: #E8390E;
+        border: none;
+        padding: 11px 20px;
+        min-width: 100px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
