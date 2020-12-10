@@ -145,9 +145,19 @@ function Nav() {
         <li>
           <div>
             <Link
+              to="/login"
+              className={`${styles.navLink} ${
+                currentPathRef.current.includes("login") ? styles.active : ""
+              }`}
+              onMouseEnter={() => setCurrentHovered("contact")}
+            >
+              로그인
+            </Link>
+            <Link
               to="/contact"
               className={`${styles.navLink} ${
                 currentPathRef.current.includes("contact") ||
+                currentPathRef.current.includes("mail") ||
                 currentPathRef.current.includes("notices") ||
                 currentPathRef.current.includes("faq")
                   ? styles.active
