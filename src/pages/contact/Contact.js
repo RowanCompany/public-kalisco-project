@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/nav/Nav";
 //import ContactComponent from "../../components/contact/Contact";
 import ContactAuth from "../../components/contact/ContactAuth";
-import { useRouteMatch, Route, Switch } from "react-router-dom";
+import { useRouteMatch } from "react-router-dom";
 import { useMobileCheck } from "../../utils/mobile";
 import MobileContactComponent from "../mobile/Contact";
 
@@ -33,8 +33,10 @@ function Contact() {
   }, []);
 
   const match = useRouteMatch();
-  return (
-      useMobileCheck(width) ? <DesktopContactComponent match={match} /> : <MobileContactComponent match={match} />
+  return useMobileCheck(width) ? (
+    <DesktopContactComponent match={match} />
+  ) : (
+    <MobileContactComponent match={match} />
   );
 }
 
