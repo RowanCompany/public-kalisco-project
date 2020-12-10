@@ -170,5 +170,93 @@
         cursor: pointer;
       }
     }
+
+    .requireText {
+      text-align: right;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: #5f6374;
+      font-family: "Noto Sans KR", sans-serif;
+      margin-bottom: 60px;
+
+      > span {
+        color: #E8390E;
+      }
+    }
+
+    .registerFormWrapper {
+      display: flex;
+      align-items: center;
+
+      .registerFormLabel {
+
+      }
+
+      .registerCommonInput {
+        background: #FFFFFF 0 0 no-repeat padding-box;
+        border: 1px solid #E8EAEF;
+        padding: 8px 11px;
+      }
+    }
   }
+
+  .contactAuthTitleBox {
+    background-color: #f6f6f6;
+    border-top: 2px solid #e8390e;
+    width: 600px;
+    margin: 0 auto 40px;
+    padding: 16px 0;
+    text-align: center;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    color: #2f2f2f;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .contactAuthBoxDescription {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    letter-spacing: 0;
+    color: #2f2f2f;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .contactAuthButtonWrapper {
+    padding-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    width: 600px;
+    margin: 0 auto;
+
+    .contactAuthWhiteButton {
+      transition: all 300ms;
+      background-color: #ffffff;
+      border: 2px solid #dddddd;
+      border-radius: 6px;
+      padding: 18px 0;
+      width: 320px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: #333333;
+
+
+      &:hover {
+        border: 2px solid #e8390e;
+        background: #FFE9E3 0 0 no-repeat padding-box;
+        color: #e8390e;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+
 }

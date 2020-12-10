@@ -3,8 +3,6 @@ import styles from "./register.module.scss";
 import Nav from "../nav/Nav";
 import Footer from "../Footer";
 import terms from "./terms.json";
-import { CRM_URL } from "../../utils/server";
-import "whatwg-fetch";
 
 export default function Agreement() {
   const [term, setTerm] = useState(null);
@@ -16,6 +14,7 @@ export default function Agreement() {
   const [marketingEmailAllowed, setMarketingEmailAllowed] = useState(false);
   const [marketingSMSAllowed, setMarketingSMSAllowed] = useState(false);
   const [marketingPushAllowed, setMarketingPushAllowed] = useState(false);
+  const [advertisingAllowed, setAdvertisingAllowed] = useState(false);
 
   function handleNextRegisterStep(e) {
     e.preventDefault();
@@ -27,63 +26,25 @@ export default function Agreement() {
       INTEGRATED_YN: "Y",
       USE_TERMS_YN: "Y",
       PRIVACY_YN: "Y",
-    };
-  }
-  /*useEffect(() => {
-    const dateObject = new Date();
-    const year = dateObject.getFullYear();
-    const month = dateObject.getMonth() + 1;
-    const day = dateObject.getDate();
-    const CRM_API_KEY = year * month * day + (year + month + day);
-    const CRM_OBJECT = {
-      ID: "ghtest123422223323",
-      NAME: "테스트",
-      PASS: "1234",
-      TEL_NO: "021231234",
-      HP_NO: "01012341234",
-      EMAIL: "ghtest1234@test.com",
-      USERCI:
-        "MC0GCCqGSIb3DQIJAyEAPaDm2E1L7S0jJFIb/0WHzWwrqbhcokSrwC4p96salwM=",
-      INTEGRATED_YN: "N",
-      USE_TERMS_YN: "N",
-      PRIVACY_YN: "N",
-      MARKETING_YN: "N",
-      ADVERTISING_YN: "N",
+      MARKETING_YN:
+        marketingEmailAllowed || marketingSMSAllowed || marketingPushAllowed
+          ? "Y"
+          : "N",
+      ADVERTISING_YN: advertisingAllowed ? "Y" : "N",
       POINT_YN: "N",
-      THIRD_PARTY_YN: "N",
-      HP_YN: "N",
-      SMS_YN: "N",
-      EMAIL_YN: "N",
-      BIRTHDAY: "20000101",
-      SEX: "1",
+      THIRD_PARTY_YN: "Y",
+      HP_YN: marketingPushAllowed ? "Y" : "N",
+      SMS_YN: marketingSMSAllowed ? "Y" : "N",
+      EMAIL_YN: marketingEmailAllowed ? "Y" : "N",
       SYSTEM_GBN: "A1_MEMBER",
+      SEX: "1",
     };
-
-    const CRM_PARAMS = new URLSearchParams();
-    CRM_PARAMS.append("GUBUN", "MEMBER_REGISTER");
-    CRM_PARAMS.append("ISJSONPARA", "Y");
-    CRM_PARAMS.append("KEY", CRM_API_KEY);
-    window
-      .fetch(`${CRM_URL}/Homepage?${CRM_PARAMS.toString()}`, {
-        method: "POST",
-        headers: {
-          Accept: "*!/!*",
-          "Content-Type": "application/json",
-          Connection: "keep-alive",
-          "Accept-Encoding": "gzip, deflate, br",
-        },
-        referrer: "",
-        cache: "no-cache",
-        body: JSON.stringify(CRM_OBJECT),
-      })
-      .then((res) => {
-        return res.json();
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => err);
-  }, []);*/
+    window.sessionStorage.setItem(
+      "tempAgreementData",
+      JSON.stringify(tempAgreementInformation)
+    );
+    window.location.assign("/register");
+  }
 
   useEffect(() => {
     if (isTempAllAgreeInitialMount.current) {
@@ -92,6 +53,7 @@ export default function Agreement() {
       setMarketingEmailAllowed(tempAllAgree);
       setMarketingSMSAllowed(tempAllAgree);
       setMarketingPushAllowed(tempAllAgree);
+      setAdvertisingAllowed(tempAllAgree);
     }
   }, [tempAllAgree]);
 
@@ -277,6 +239,10 @@ export default function Agreement() {
             <br />
             귀하는 마케팅 활동을 거부할 권리가 있으며 거부시에는 이용 목적에
             따른 혜택에 제한이 있을 수 있습니다
+            <br />
+            <span style={{ paddingTop: "16px", display: "inline-block" }}>
+              ※ 선택항목은 동의하지 않아도 회원가입이 가능합니다.
+            </span>
           </div>
           <div
             className={styles.agreementWrapper}
@@ -342,6 +308,21 @@ export default function Agreement() {
                 className={styles.agreementRadioText}
               >
                 마케팅 푸시 수신
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="marketing_push"
+                id="marketing_push"
+                onChange={() => setAdvertisingAllowed(!advertisingAllowed)}
+                checked={advertisingAllowed}
+              />
+              <label
+                htmlFor="marketing_push"
+                className={styles.agreementRadioText}
+              >
+                맞춤형 광고 동의
               </label>
             </div>
           </div>
