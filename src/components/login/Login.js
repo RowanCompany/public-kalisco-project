@@ -1,66 +1,17 @@
-import React, { useEffect, useRef } from "react";
-import Nav from "../nav/Nav";
-import Footer from "../Footer";
+import React, { useRef } from "react";
 import styles from "./login.module.scss";
 import loginIcon from "../../static/svg/icon-loginman.svg";
-import axios from "axios";
-import { url } from "../../utils/server";
-//import { useMobileCheck } from "../../utils/mobile";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const formRef = useRef(null);
+
   function handleSubmit(e) {
     e.preventDefault();
-    const formData = new FormData(formRef.current);
-    const dataObject = {};
-    formData.forEach((d, k) => (dataObject[k] = d));
-    const jsonString = JSON.stringify(dataObject);
-    axios
-      .post(`${url}/admin/signin`, jsonString, {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      })
-      .then((res) => {
-        const data = res.data;
-        localStorage.setItem("authToken", data.accessToken);
-        window.location.assign("/");
-      })
-      .catch((err) => {
-        console.log(err);
-        window.alert(
-          "관리자 로그인에 실패했습니다! 동일현상 지속발생시 관리자에게 문의해주세요"
-        );
-      });
   }
-
-  useEffect(() => {
-    const authToken = localStorage.getItem("authToken");
-    axios
-      .post(
-        `${url}/admin/valid`,
-        {},
-        {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        }
-      )
-      .then((res) => {
-        const status = res.data.status;
-        if (status === "OK") {
-          window.location.assign("/");
-        } else {
-          return Promise().reject("Not validated");
-        }
-      })
-      .catch((err) => console.error(err));
-  }, []);
 
   return (
     <>
-      <Nav />
       <form onSubmit={(e) => handleSubmit(e)} ref={formRef}>
         <div className={styles.loginWrapper}>
           <div className={styles.loginPanel}>
@@ -69,7 +20,7 @@ export default function Login() {
                 <img src={loginIcon} alt="login icon" />
               </div>
             </div>
-            <div className={styles.loginTitle}>관리자 로그인</div>
+            <div className={styles.loginTitle}>로그인</div>
             <div className={styles.loginFormWrapper}>
               <div className={styles.loginFormPanel}>
                 <div>
@@ -115,10 +66,18 @@ export default function Login() {
                 </button>
               </div>
             </div>
+            <div className={styles.otherLinkWrapper}>
+              <div className={styles.otherLink}>아이디 찾기</div>
+              <div className={styles.otherLink}>비밀번호 찾기</div>
+              <div className={styles.otherLink}>
+                <Link to="/agreement" className={styles.otherLink}>
+                  회원가입
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </form>
-      <Footer />
     </>
   );
 }
