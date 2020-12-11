@@ -3,65 +3,8 @@ import styles from "./register.module.scss";
 import Nav from "../nav/Nav";
 import Footer from "../Footer";
 import axios from "axios";
-//import { CRM_URL } from "../../utils/server";
-//import "whatwg-fetch";
 
 export default function Register() {
-  /*useEffect(() => {
-    const dateObject = new Date();
-    const year = dateObject.getFullYear();
-    const month = dateObject.getMonth() + 1;
-    const day = dateObject.getDate();
-    const CRM_API_KEY = year * month * day + (year + month + day);
-    const CRM_OBJECT = {
-      ID: "ghtest123422223323",
-      NAME: "테스트",
-      PASS: "1234",
-      TEL_NO: "021231234",
-      HP_NO: "01012341234",
-      EMAIL: "ghtest1234@test.com",
-      USERCI:
-        "MC0GCCqGSIb3DQIJAyEAPaDm2E1L7S0jJFIb/0WHzWwrqbhcokSrwC4p96salwM=",
-      INTEGRATED_YN: "N",
-      USE_TERMS_YN: "N",
-      PRIVACY_YN: "N",
-      MARKETING_YN: "N",
-      ADVERTISING_YN: "N",
-      POINT_YN: "N",
-      THIRD_PARTY_YN: "N",
-      HP_YN: "N",
-      SMS_YN: "N",
-      EMAIL_YN: "N",
-      BIRTHDAY: "20000101",
-      SEX: "1",
-      SYSTEM_GBN: "A1_MEMBER",
-    };
-
-    const CRM_PARAMS = new URLSearchParams();
-    CRM_PARAMS.append("GUBUN", "MEMBER_REGISTER");
-    CRM_PARAMS.append("ISJSONPARA", "Y");
-    CRM_PARAMS.append("KEY", CRM_API_KEY);
-    window
-      .fetch(`${CRM_URL}/Homepage?${CRM_PARAMS.toString()}`, {
-        method: "POST",
-        headers: {
-          Accept: "*!/!*",
-          "Content-Type": "application/json",
-          Connection: "keep-alive",
-          "Accept-Encoding": "gzip, deflate, br",
-        },
-        referrer: "",
-        cache: "no-cache",
-        body: JSON.stringify(CRM_OBJECT),
-      })
-      .then((res) => {
-        return res.json();
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => err);
-  }, []);*/
   function handleCellPhoneAuthentication() {
     axios
       .post(

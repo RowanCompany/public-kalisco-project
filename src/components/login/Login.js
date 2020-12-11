@@ -1,14 +1,62 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "./login.module.scss";
 import loginIcon from "../../static/svg/icon-loginman.svg";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { url } from "../../utils/server";
 
 export default function Login() {
   const formRef = useRef(null);
 
   function handleSubmit(e) {
     e.preventDefault();
+    const formData = new FormData(formRef.current);
+    const dataObject = {};
+    formData.forEach((d, k) => (dataObject[k] = d));
+    const jsonString = JSON.stringify(dataObject);
+    axios
+      .post(`${url}/user/signin`, jsonString, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        const data = res.data;
+        const accessToken = data.accessToken;
+        localStorage.setItem("userAuthToken", accessToken);
+        window.location.assign("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        window.alert(
+          "관리자 로그인에 실패했습니다! 동일현상 지속발생시 관리자에게 문의해주세요"
+        );
+      });
   }
+
+  useEffect(() => {
+    const authToken = localStorage.getItem("userAuthToken");
+    axios
+      .post(
+        `${url}/user/valid`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        }
+      )
+      .then((res) => {
+        const status = res.data.status;
+        if (status === "OK") {
+          window.location.assign("/");
+        } else {
+          return Promise().reject("Not validated");
+        }
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <>

@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../static/svg/logo-header-or.svg";
 import styles from "./nav.module.scss";
 import SubNavData from "./SubNavData";
+import axios from "axios";
+import { url } from "../../utils/server";
 
 function ConditionalLinkRenderer({ link, title, alternativeLink }, ref) {
   if (link && link.includes("http")) {
@@ -45,6 +47,28 @@ function Nav() {
   const location = useLocation();
   const currentPathRef = useRef(location.pathname);
   const [currentHovered, setCurrentHovered] = useState("");
+
+  function handleSignOut(e) {
+    e.preventDefault();
+    const authToken = window.localStorage.getItem("userAuthToken");
+
+    axios
+      .delete(`${url}/user/signout`, {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      })
+      .then((res) => {
+        const status = res.data.status;
+        if (status === "OK") {
+          window.localStorage.removeItem("userAuthToken");
+          window.location.assign("/");
+        } else {
+          return Promise().reject("Not validated");
+        }
+      })
+      .catch((err) => console.error(err));
+  }
 
   return (
     <nav className={styles.homeNav} onMouseLeave={() => setCurrentHovered("")}>
@@ -144,15 +168,26 @@ function Nav() {
                 </li> */}
         <li>
           <div>
-            <Link
-              to="/login"
-              className={`${styles.navLink} ${
-                currentPathRef.current.includes("login") ? styles.active : ""
-              }`}
-              onMouseEnter={() => setCurrentHovered("contact")}
-            >
-              로그인
-            </Link>
+            {window.localStorage.getItem("userAuthToken") ? (
+              <div
+                className={styles.navLink}
+                style={{ display: "inline-block" }}
+                onClick={handleSignOut}
+              >
+                로그아웃
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className={`${styles.navLink} ${
+                  currentPathRef.current.includes("login") ? styles.active : ""
+                }`}
+                onMouseEnter={() => setCurrentHovered("contact")}
+              >
+                로그인
+              </Link>
+            )}
+
             <Link
               to="/contact"
               className={`${styles.navLink} ${

@@ -187,16 +187,52 @@
     .registerFormWrapper {
       display: flex;
       align-items: center;
+      margin-bottom: 20px;
 
       .registerFormLabel {
+        font-weight: 600;
+        font-size: 16px;
+        color: #5f6374;
+        letter-spacing: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        white-space: nowrap;
+        width: 15%;
 
+        > b {
+          color: #E8390E;
+        }
       }
 
-      .registerCommonInput {
-        background: #FFFFFF 0 0 no-repeat padding-box;
-        border: 1px solid #E8EAEF;
-        padding: 8px 11px;
+      .registerCommonInputWrapper {
+        margin-left: 40px;
+
+        .registerCommonInput {
+          background: #FFFFFF 0 0 no-repeat padding-box;
+          border: 1px solid #E8EAEF;
+          padding: 8px 11px;
+          font-size: 13px;
+          color: #5f6374;
+          width: 360px;
+
+          &::placeholder {
+            color: rgba(#5f6374, 0.5);
+          }
+        }
       }
+    }
+
+    .registerSubmitButton {
+      width: 260px;
+      background: #E8390E 0 0 no-repeat padding-box;
+      border-radius: 22px;
+      padding: 12px 0;
+      border: none;
+      cursor: pointer;
+      color: #FFFFFF;
+      margin-top: 60px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0;
     }
   }
 
@@ -257,6 +293,4 @@
       }
     }
   }
-
-
 }
