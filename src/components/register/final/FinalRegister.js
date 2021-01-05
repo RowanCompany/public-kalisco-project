@@ -60,8 +60,8 @@ export default function FinalRegister() {
               return res.json();
             })
             .then((response) => {
-              const resultNumber = response.return;
-              if (resultNumber === "1") {
+              const resultLength = response.list ? response.list.length : 0;
+              if (resultLength > 0) {
                 window.alert("이미 동일한 정보의 회원이 있습니다!");
                 window.location.assign("/login");
               }

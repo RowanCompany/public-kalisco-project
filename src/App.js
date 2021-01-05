@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomePage from "./pages/home/HomePage";
 import About from "./pages/about/About";
 import Supports from "./pages/supports/Supports";
@@ -20,6 +20,18 @@ import FinalRegister from "./components/register/final/FinalRegister";
 
 // TODO: Suspense 도입 고려
 function App() {
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    const search = window.location.search;
+    const params = new URLSearchParams(search);
+    const encodeData = params.get("EncodeData");
+    if (pathname !== "/register/final" && pathname !== "/register") {
+      window.sessionStorage.removeItem("tempRegisterCellphoneData");
+    } else if (!encodeData && pathname === "/register") {
+      window.sessionStorage.removeItem("tempRegisterCellphoneData");
+    }
+  }, []);
+
   return (
     <BrowserRouter forceRefresh={true}>
       <ScrollToTop />
