@@ -10,6 +10,12 @@ export default function FinalRegister() {
   const formRef = useRef(null);
   const cellphoneDataRef = useRef(null);
   const [cellphoneNumber, setCellphoneNumber] = useState("");
+  const [name, setName] = useState("");
+  const dateObject = new Date();
+  const year = dateObject.getFullYear();
+  const month = dateObject.getMonth() + 1;
+  const day = dateObject.getDate();
+  const CRM_API_KEY = year * month * day + (year + month + day);
 
   useEffect(() => {
     const authData = sessionStorage.getItem("tempRegisterCellphoneData");
@@ -30,8 +36,43 @@ export default function FinalRegister() {
           sessionStorage.removeItem("tempRegisterCellphoneData");
           window.location.assign("/agreement");
         } else {
+          const CRM_PARAMS = new URLSearchParams();
+          CRM_PARAMS.append("GUBUN", "ID_SEARCH");
+          CRM_PARAMS.append("ISJSONPARA", "Y");
+          CRM_PARAMS.append("KEY", CRM_API_KEY.toString());
+
+          window
+            .fetch(`${CRM_URL}/Homepage?${CRM_PARAMS.toString()}`, {
+              method: "POST",
+              headers: {
+                Accept: "*/*",
+                "Content-Type": "application/json",
+                Connection: "keep-alive",
+                "Accept-Encoding": "gzip, deflate, br",
+              },
+              referrer: "",
+              cache: "no-cache",
+              body: JSON.stringify({
+                USERCI: data["sDupInfo"],
+              }),
+            })
+            .then((res) => {
+              return res.json();
+            })
+            .then((response) => {
+              const resultNumber = response.return;
+              if (resultNumber === "1") {
+                window.alert("이미 동일한 정보의 회원이 있습니다!");
+                window.location.assign("/login");
+              }
+            })
+            .catch((err) =>
+              window.alert("회원가입에 실패했습니다, 다시 시도해주세요!")
+            );
+
           cellphoneDataRef.current = data;
-          setCellphoneNumber(data.sMobileNo);
+          setCellphoneNumber(data["sMobileNo"]);
+          setName(sName);
         }
       });
   }, []);
@@ -48,16 +89,10 @@ export default function FinalRegister() {
       BIRTHDAY: cellphoneDataRef.current.sBirthDate,
     };
     data.forEach((d, i) => (totalData[i] = d));
-
-    const dateObject = new Date();
-    const year = dateObject.getFullYear();
-    const month = dateObject.getMonth() + 1;
-    const day = dateObject.getDate();
-    const CRM_API_KEY = year * month * day + (year + month + day);
     const CRM_PARAMS = new URLSearchParams();
     CRM_PARAMS.append("GUBUN", "MEMBER_REGISTER");
     CRM_PARAMS.append("ISJSONPARA", "Y");
-    CRM_PARAMS.append("KEY", CRM_API_KEY);
+    CRM_PARAMS.append("KEY", CRM_API_KEY.toString());
     window
       .fetch(`${CRM_URL}/Homepage?${CRM_PARAMS.toString()}`, {
         method: "POST",
@@ -141,6 +176,8 @@ export default function FinalRegister() {
                   name="NAME"
                   id="name"
                   required
+                  readOnly
+                  value={name}
                   className={styles.registerCommonInput}
                 />
               </div>
