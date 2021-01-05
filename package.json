@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {
         "animate.css": "^4.1.0",
-        "axios": "^0.20.0",
+        "axios": "^0.21.1",
         "bootstrap": "^4.5.2",
         "date-fns": "^2.16.1",
         "formdata-polyfill": "^3.0.20",
