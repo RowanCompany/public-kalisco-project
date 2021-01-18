@@ -3,6 +3,7 @@ import Nav from "../../components/nav/Nav";
 import Footer from "../../components/Footer";
 import { useMobileCheck } from "../../utils/mobile";
 import LoginComponent from "../../components/login/Login";
+import MobileLoginComponent from "../mobile/Login";
 
 function DesktopLoginComponent() {
   return (
@@ -28,5 +29,9 @@ export default function Login() {
     };
   }, []);
 
-  return useMobileCheck(width) ? <DesktopLoginComponent /> : <React.Fragment />;
+  return useMobileCheck(width) ? (
+    <DesktopLoginComponent />
+  ) : (
+    <MobileLoginComponent />
+  );
 }

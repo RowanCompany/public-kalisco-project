@@ -15,7 +15,7 @@ import Faq from "./pages/contact/Faq";
 import AdminLogin from "./components/login/admin/AdminLogin";
 import Login from "./pages/login/Login";
 import Agreement from "./components/register/Agreement";
-import Register from "./components/register/Register";
+import RegisterPage from "./pages/register/Register";
 import FinalRegister from "./components/register/final/FinalRegister";
 
 // TODO: Suspense 도입 고려
@@ -49,7 +49,7 @@ function App() {
         <Route path="/notices" component={Notice} />
         <Route path="/agreement" component={Agreement} />
         <Route path="/register/final" component={FinalRegister} />
-        <Route path="/register" component={Register} />
+        <Route path="/register" component={RegisterPage} />
         <Route path="/login" component={Login} />
         <Route path="/admin/login" component={AdminLogin} />
         <Route>

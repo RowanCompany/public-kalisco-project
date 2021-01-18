@@ -1,0 +1,167 @@
+.loginWrapper {
+  background-image: url("../../../static/images/login-gradient-o@2x.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 158px 20px 66px;
+  box-sizing: border-box;
+
+  .loginPanel {
+    position: relative;
+    width: 600px;
+    min-height: 600px;
+    background-color: rgba(#FFFFFF, 0.78);
+    border-radius: 32px;
+
+    .loginIconWrapper {
+      position: absolute;
+      top: -30px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+
+      .loginIcon {
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background-color: rgba(#E8390E, 0.58);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > img {
+          width: 24px;
+          height: 26px;
+        }
+      }
+    }
+
+    .loginTitle {
+      padding-top: 72px;
+      text-align: center;
+      font-family: 'Noto Sans KR', sans-serif;
+      letter-spacing: 0;
+      font-size: 30px;
+      font-weight: bold;
+      color: #5F6374;
+      padding-bottom: 22px;
+    }
+
+    .loginFormWrapper {
+      padding-left: 125px;
+      padding-right: 125px;
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+
+      @media only screen and (max-width: 1200px) {
+        & {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      .loginFormPanel {
+        padding-bottom: 22px;
+
+        .loginInputLabel {
+          font-family: 'Noto Sans KR', sans-serif;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0;
+          color: #5F6374;
+          line-height: 40px;
+          margin-bottom: 4px;
+        }
+
+        .loginInputWrapper {
+          position: relative;
+          width: 100%;
+          box-sizing: border-box;
+
+          .loginInput {
+            width: 100%;
+            border: 1px solid #E8EAEF;
+            background-color: #FFFFFF;
+            padding: 8px 11px;
+            box-sizing: border-box;
+            font-size: 13px;
+            letter-spacing: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #5F6374;
+
+            &::placeholder {
+              opacity: 0.5;
+            }
+          }
+        }
+
+        .loginValidationText {
+          margin-top: 5px;
+          letter-spacing: 0;
+          color: #DE3D3D;
+          font-size: 12px;
+          font-family: "Noto Sans KR", sans-serif;
+        }
+      }
+
+      .loginButtonWrapper {
+        padding-top: 20px;
+        text-align: center;
+
+        .loginButton {
+          width: 260px;
+          border-radius: 22px;
+          background-color: #E8390E;
+          border: none;
+          outline: none;
+          padding: 12px;
+          cursor: pointer;
+          color: #FFFFFF;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: 'Noto Sans KR', sans-serif;
+          letter-spacing: 0;
+
+          @media only screen and (max-width: 1200px) {
+            & {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .otherLinkWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 70px;
+      box-sizing: border-box;
+      position: relative;
+
+      .otherLink {
+        position: relative;
+        font-size: 14px;
+        letter-spacing: 0;
+        color: #5F6374;
+        text-decoration: none;
+
+        &:not(:last-child) {
+          &:after {
+            content: "|";
+            padding: 0 16px;
+            height: inherit;
+            font-size: 14px;
+            letter-spacing: 0;
+            color: #5F6374;
+          }
+        }
+      }
+    }
+  }
+}
