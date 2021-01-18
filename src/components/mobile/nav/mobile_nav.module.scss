@@ -114,6 +114,10 @@
       color: #707070;
       text-decoration: none;
       font-family: 'Noto Sans KR', sans-serif;
+
+      &:not(:last-child) {
+        margin-right: 18px;
+      }
     }
   }
 }

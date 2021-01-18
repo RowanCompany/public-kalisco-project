@@ -59,6 +59,9 @@ export default function MobileNav() {
           </div>
           <div className={styles.mobileOverlayFooter}>
             <div>
+              <Link to="/login" className={styles.mobileOverlayFooterLink}>
+                로그인
+              </Link>
               <Link to="/contact" className={styles.mobileOverlayFooterLink}>
                 고객소통
               </Link>
