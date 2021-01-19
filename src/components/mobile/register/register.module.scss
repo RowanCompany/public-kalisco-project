@@ -1,0 +1,298 @@
+.registerBannerWrapper {
+  background-image: url("../../../static/images/mobile/login-gradient-o@2x.png");
+  background-size: cover;
+  box-sizing: border-box;
+  padding-top: 104px;
+  padding-bottom: 35px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.85;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.registerSection {
+  background-color: #F4F4F4;
+  padding: 20px;
+  position: relative;
+
+  .registerBox {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 25px 20px;
+    box-sizing: border-box;
+
+    .allAgreementWrapper {
+      display: flex;
+      align-items: center;
+      padding-bottom: 30px;
+
+      .allAgreementText {
+        font-size: 12px;
+        letter-spacing: 0;
+        color: rgba(#5f6374, 0.5);
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left: 10px;
+      }
+    }
+
+    .agreementText {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Noto Sans KR', sans-serif;
+      letter-spacing: 0;
+      color: #2f2f2f;
+      word-break: keep-all;
+    }
+
+    .agreementDescriptionText {
+      font-size: 14px;
+      line-height: 1.25;
+      color: #5f6374;
+      font-family: 'Noto Sans KR', sans-serif;
+      letter-spacing: 0;
+      padding-top: 6px;
+      //padding-bottom: 11px;
+    }
+
+    .agreementWrapper {
+      display: flex;
+      align-items: center;
+      padding-bottom: 11px;
+
+      &.radioWrapper {
+        padding-bottom: 25px;
+      }
+
+      .agreementText {
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Noto Sans KR', sans-serif;
+        letter-spacing: 0;
+        color: #2f2f2f;
+        word-break: keep-all;
+      }
+    }
+
+    .agreementRadioText {
+      font-size: 12px;
+      color: #2f2f2f;
+      font-weight: 400;
+      letter-spacing: 0;
+      margin-left: 13px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+
+    .termTable {
+      width: 100%;
+      border-spacing: 0;
+      border-collapse: collapse;
+
+      th {
+        padding: 8px;
+        border: 1px solid #e8eaef;
+        color: #272d48;
+        font-size: 13px;
+        line-height: normal;
+
+        .tdTitle {
+          width: 20%;
+          font-size: 12px;
+          text-align: center;
+          font-weight: bolder;
+        }
+      }
+
+      td {
+        padding: 8px;
+        border: 1px solid #e8eaef;
+        color: #272d48;
+        font-size: 12px;
+        line-height: normal;
+        word-break: keep-all;
+
+        &.tdTitle {
+          width: 20%;
+          font-size: 12px;
+          text-align: center;
+          font-weight: bolder;
+        }
+      }
+    }
+
+    .checkboxAgreementBox {
+      border: 1px solid #E8EAEF;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px;
+      background-color: #FFFFFF;
+      margin-bottom: 60px;
+    }
+
+    .agreementDescriptionBox {
+      border: 1px solid #E8EAEF;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 16px;
+      background-color: #FFFFFF;
+      overflow-y: auto;
+      height: 125px;
+      font-size: 12px;
+      color: #5f6374;
+      line-height: 20px;
+      font-family: 'Noto Sans KR', sans-serif;
+      margin-bottom: 10px;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+
+    .registerButtonWrapper {
+      text-align: center;
+
+      .registerNextButton {
+        border-radius: 22px;
+        background-color: #E8390E;
+        border: none;
+        padding: 11px 20px;
+        min-width: 100px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0;
+        cursor: pointer;
+      }
+    }
+
+    .requireText {
+      text-align: right;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: #5f6374;
+      font-family: "Noto Sans KR", sans-serif;
+      margin-bottom: 60px;
+
+      > span {
+        color: #E8390E;
+      }
+    }
+
+    .registerFormWrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      .registerFormLabel {
+        font-weight: 600;
+        font-size: 16px;
+        color: #5f6374;
+        letter-spacing: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        white-space: nowrap;
+        width: 15%;
+
+        > b {
+          color: #E8390E;
+        }
+      }
+
+      .registerCommonInputWrapper {
+        margin-left: 40px;
+
+        .registerCommonInput {
+          background: #FFFFFF 0 0 no-repeat padding-box;
+          border: 1px solid #E8EAEF;
+          padding: 8px 11px;
+          font-size: 13px;
+          color: #5f6374;
+          width: 360px;
+
+          &::placeholder {
+            color: rgba(#5f6374, 0.5);
+          }
+        }
+      }
+    }
+
+    .registerSubmitButton {
+      width: 260px;
+      background: #E8390E 0 0 no-repeat padding-box;
+      border-radius: 22px;
+      padding: 12px 0;
+      border: none;
+      cursor: pointer;
+      color: #FFFFFF;
+      margin-top: 60px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+  }
+
+  .contactAuthTitleBox {
+    background-color: #f6f6f6;
+    border-top: 2px solid #e8390e;
+    width: 600px;
+    margin: 0 auto 40px;
+    padding: 16px 0;
+    text-align: center;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    color: #2f2f2f;
+    letter-spacing: 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .contactAuthBoxDescription {
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    letter-spacing: 0;
+    color: #2f2f2f;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .contactAuthButtonWrapper {
+    padding-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    width: 600px;
+    margin: 0 auto;
+
+    .contactAuthWhiteButton {
+      transition: all 300ms;
+      background-color: #ffffff;
+      border: 2px solid #dddddd;
+      border-radius: 6px;
+      padding: 18px 0;
+      width: 320px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 24px;
+      color: #333333;
+
+
+      &:hover {
+        border: 2px solid #e8390e;
+        background: #FFE9E3 0 0 no-repeat padding-box;
+        color: #e8390e;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

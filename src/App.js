@@ -14,7 +14,7 @@ import Notice from "./pages/contact/Notice";
 import Faq from "./pages/contact/Faq";
 import AdminLogin from "./components/login/admin/AdminLogin";
 import Login from "./pages/login/Login";
-import Agreement from "./components/register/Agreement";
+import Agreement from "./pages/register/Agreement";
 import RegisterPage from "./pages/register/Register";
 import FinalRegister from "./components/register/final/FinalRegister";
 
