@@ -35,7 +35,6 @@ export default function Agreement() {
       SMS_YN: marketingSMSAllowed ? "Y" : "N",
       EMAIL_YN: marketingEmailAllowed ? "Y" : "N",
       SYSTEM_GBN: "A1_MEMBER",
-      SEX: "1",
     };
     window.sessionStorage.setItem(
       "tempAgreementData",

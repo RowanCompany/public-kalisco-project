@@ -218,6 +218,29 @@
             color: rgba(#5f6374, 0.5);
           }
         }
+
+        &.inlineInputRootWrapper {
+          display: flex;
+
+          .inlineInputWrapper {
+            display: flex;
+            align-items: center;
+            flex-basis: auto;
+
+            &:not(:last-child) {
+              margin-right: 1rem;
+            }
+
+            .inlineInputLabel {
+              display: block;
+              margin-left: 6px;
+            }
+
+            .registerCommonInput {
+              width: auto;
+            }
+          }
+        }
       }
     }
 

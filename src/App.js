@@ -16,7 +16,7 @@ import AdminLogin from "./components/login/admin/AdminLogin";
 import Login from "./pages/login/Login";
 import Agreement from "./pages/register/Agreement";
 import RegisterPage from "./pages/register/Register";
-import FinalRegister from "./components/register/final/FinalRegister";
+import FinalRegister from "./pages/register/FinalRegister";
 
 // TODO: Suspense 도입 고려
 function App() {

@@ -10,7 +10,7 @@ export default function Register() {
       .post(
         "https://qlog2z6ai2.execute-api.ap-northeast-2.amazonaws.com/kalisco/v1/id/check/encode",
         {
-          environment: "server",
+          environment: "local",
           code: "1",
         }
       )

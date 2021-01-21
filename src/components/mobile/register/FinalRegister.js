@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import Nav from "../../nav/Nav";
-import Footer from "../../Footer";
-import styles from "../register.module.scss";
-import axios from "axios";
+import styles from "./register.module.scss";
 import { CRM_URL } from "../../../utils/server";
-import "whatwg-fetch";
+import axios from "axios";
 
 export default function FinalRegister() {
   const formRef = useRef(null);
@@ -127,7 +124,6 @@ export default function FinalRegister() {
 
   return (
     <>
-      <Nav />
       <div className={styles.registerBannerWrapper}>회원가입 양식 작성</div>
       <section className={styles.registerSection}>
         <form ref={formRef} onSubmit={handleSubmit}>
@@ -271,7 +267,6 @@ export default function FinalRegister() {
           </div>
         </form>
       </section>
-      <Footer />
     </>
   );
 }

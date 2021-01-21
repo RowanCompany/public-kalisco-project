@@ -1,9 +1,9 @@
 import React, { useLayoutEffect, useState } from "react";
 import { useMobileCheck } from "../../utils/mobile";
-import DesktopAgreement from "../../components/register/Agreement";
-import MobileAgreement from "../../pages/mobile/Agreement";
+import FinalRegister from "../../components/register/final/FinalRegister";
+import MobileFinalRegister from "../mobile/FinalRegister";
 
-export default function AgreementPage() {
+export default function FinalRegisterPage() {
   const [width, setWidth] = useState(window.innerWidth);
   useLayoutEffect(() => {
     window.addEventListener("resize", (e) => {
@@ -17,5 +17,5 @@ export default function AgreementPage() {
     };
   }, []);
 
-  return useMobileCheck(width) ? <DesktopAgreement /> : <MobileAgreement />;
+  return useMobileCheck(width) ? <FinalRegister /> : <MobileFinalRegister />;
 }

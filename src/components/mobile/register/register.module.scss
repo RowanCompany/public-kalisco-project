@@ -187,8 +187,8 @@
     }
 
     .registerFormWrapper {
-      display: flex;
-      align-items: center;
+      /*display: flex;
+      align-items: center; */
       margin-bottom: 20px;
 
       .registerFormLabel {
@@ -198,7 +198,9 @@
         letter-spacing: 0;
         font-family: 'Noto Sans KR', sans-serif;
         white-space: nowrap;
-        width: 15%;
+        //width: 15%;
+        display: block;
+        margin-bottom: 6px;
 
         > b {
           color: #E8390E;
@@ -206,7 +208,8 @@
       }
 
       .registerCommonInputWrapper {
-        margin-left: 40px;
+        width: 100%;
+        position: relative;
 
         .registerCommonInput {
           background: #FFFFFF 0 0 no-repeat padding-box;
@@ -214,10 +217,35 @@
           padding: 8px 11px;
           font-size: 13px;
           color: #5f6374;
-          width: 360px;
+          width: 100%;
+          display: inline-block;
+          box-sizing: border-box;
 
           &::placeholder {
             color: rgba(#5f6374, 0.5);
+          }
+        }
+
+        &.inlineInputRootWrapper {
+          display: flex;
+
+          .inlineInputWrapper {
+            display: flex;
+            align-items: center;
+            flex-basis: auto;
+
+            &:not(:last-child) {
+              margin-right: 1rem;
+            }
+
+            .inlineInputLabel {
+              display: block;
+              margin-left: 6px;
+            }
+
+            .registerCommonInput {
+              width: auto;
+            }
           }
         }
       }
