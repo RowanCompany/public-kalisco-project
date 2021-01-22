@@ -8,6 +8,7 @@ export default function FinalRegister() {
   const cellphoneDataRef = useRef(null);
   const [cellphoneNumber, setCellphoneNumber] = useState("");
   const [name, setName] = useState("");
+  const [gender, setGender] = useState("1");
   const dateObject = new Date();
   const year = dateObject.getFullYear();
   const month = dateObject.getMonth() + 1;
@@ -70,6 +71,7 @@ export default function FinalRegister() {
           cellphoneDataRef.current = data;
           setCellphoneNumber(data["sMobileNo"]);
           setName(sName);
+          setGender(data["sGender"]);
         }
       });
   }, []);
@@ -192,7 +194,8 @@ export default function FinalRegister() {
                     id="sex1"
                     value="1"
                     required
-                    defaultChecked
+                    defaultChecked={window.parseInt(gender) === 1}
+                    onChange={() => setGender("1")}
                     className={styles.registerCommonInput}
                   />
                   <label htmlFor="sex1" className={styles.inlineInputLabel}>
@@ -206,6 +209,8 @@ export default function FinalRegister() {
                     id="sex2"
                     value="2"
                     required
+                    defaultChecked={window.parseInt(gender) === 2}
+                    onChange={() => setGender("2")}
                     className={styles.registerCommonInput}
                   />
                   <label htmlFor="sex2" className={styles.inlineInputLabel}>
