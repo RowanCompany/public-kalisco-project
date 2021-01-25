@@ -79,7 +79,7 @@ export default function FinalRegister() {
   function handleSubmit(e) {
     e.preventDefault();
     const agreementData = JSON.parse(
-      window.sessionStorage.getItem("tempAgreementData")
+      window.localStorage.getItem("tempAgreementData")
     );
     const data = new FormData(formRef.current);
     const totalData = {
@@ -111,7 +111,7 @@ export default function FinalRegister() {
       .then((response) => {
         if (Number(response.return) === 1) {
           window.alert("회원가입이 완료되었습니다!");
-          window.sessionStorage.removeItem("tempAgreementData");
+          window.localStorage.removeItem("tempAgreementData");
           window.sessionStorage.removeItem("tempRegisterCellphoneData");
           window.location.assign("/");
         } else {

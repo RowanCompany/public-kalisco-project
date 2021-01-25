@@ -36,7 +36,7 @@ export default function Agreement() {
       EMAIL_YN: marketingEmailAllowed ? "Y" : "N",
       SYSTEM_GBN: "A1_MEMBER",
     };
-    window.sessionStorage.setItem(
+    window.localStorage.setItem(
       "tempAgreementData",
       JSON.stringify(tempAgreementInformation)
     );

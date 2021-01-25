@@ -6,10 +6,34 @@ import styles from "./mobile_nav.module.scss";
 import MobileNavData from "./MobileNavData";
 import MobileNavList from "./MobileNavList";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { url } from "../../../utils/server";
 
 export default function MobileNav() {
   const [menuOverlay, setMenuOverlay] = useState(false);
   const overlayNodeRef = useRef(null);
+
+  function handleSignOut(e) {
+    e.preventDefault();
+    const authToken = window.localStorage.getItem("userAuthToken");
+
+    axios
+      .delete(`${url}/user/signout`, {
+        headers: {
+          Authorization: `Bearer ${authToken}`,
+        },
+      })
+      .then((res) => {
+        const status = res.data.status;
+        if (status === "OK") {
+          window.localStorage.removeItem("userAuthToken");
+          window.location.assign("/");
+        } else {
+          return Promise().reject("Not validated");
+        }
+      })
+      .catch((err) => console.error(err));
+  }
 
   return (
     <>
@@ -59,9 +83,18 @@ export default function MobileNav() {
           </div>
           <div className={styles.mobileOverlayFooter}>
             <div>
-              <Link to="/login" className={styles.mobileOverlayFooterLink}>
-                로그인
-              </Link>
+              {window.localStorage.getItem("userAuthToken") ? (
+                <span
+                  className={styles.mobileOverlayFooterLink}
+                  onClick={handleSignOut}
+                >
+                  로그아웃
+                </span>
+              ) : (
+                <Link to="/login" className={styles.mobileOverlayFooterLink}>
+                  로그인
+                </Link>
+              )}
               <Link to="/contact" className={styles.mobileOverlayFooterLink}>
                 고객소통
               </Link>
