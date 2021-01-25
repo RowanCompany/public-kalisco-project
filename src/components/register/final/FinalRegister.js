@@ -213,8 +213,8 @@ export default function FinalRegister() {
                     id="sex2"
                     value="2"
                     required
-                    defaultChecked={window.parseInt(gender) === 2}
-                    onChange={() => setGender("2")}
+                    defaultChecked={window.parseInt(gender) === 0}
+                    onChange={() => setGender("0")}
                     className={styles.registerCommonInput}
                   />
                   <label htmlFor="sex2" className={styles.inlineInputLabel}>
