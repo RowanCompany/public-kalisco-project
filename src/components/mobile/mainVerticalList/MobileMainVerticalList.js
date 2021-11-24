@@ -290,10 +290,10 @@ export default function MobileMainVerticalList({ rootHeight }) {
                     <div>입점제안 및 가맹문의</div>
                     <div>
                       <a
-                        href="mailto:llimun@kalisco.co.kr"
+                        href="mailto:chulkyun.jung@kalisco.co.kr"
                         className={styles.mobileFooterEmailLink}
                       >
-                        llimun@kalisco.co.kr
+                        chulkyun.jung@kalisco.co.kr
                       </a>
                     </div>
                   </div>
@@ -301,10 +301,10 @@ export default function MobileMainVerticalList({ rootHeight }) {
                     <div>Easy to cook(편의식) 상품구입 및 특판문의</div>
                     <div>
                       <a
-                        href="mailto:kipal.cha@kalisco.co.kr"
+                        href="mailto:heonchan.kim@kalisco.co.kr"
                         className={styles.mobileFooterEmailLink}
                       >
-                        kipal.cha@kalisco.co.kr
+                        heonchan.kim@kalisco.co.kr
                       </a>
                     </div>
                   </div>
@@ -312,7 +312,7 @@ export default function MobileMainVerticalList({ rootHeight }) {
               </div>
               <div>
                 <div>캘리스코 고객센터 : 1833-4550</div>
-                <div>(평일 09:00 ~ 18시, 공휴일 휴무)</div>
+                <div>(평일 09:00 ~ 18:00, 공휴일 휴무)</div>
               </div>
               <div>COPYRIGHT © 2020 KALISCO. ALL RIGHTS RESERVED.</div>
             </footer>

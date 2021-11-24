@@ -20,7 +20,7 @@ function Footer() {
           </div>
           <div>서울시 강남구 역삼로 115 2층 (우)06243</div>
           <div style={{ paddingBottom: "30px" }}>
-            사업자등록번호 211-88-32153 | 대표이사 구지은
+            사업자등록번호 211-88-32153 | 대표이사 구명진
           </div>
           <div>COPYRIGHT © 2020 KALISCO. ALL RIGHTS RESERVED.</div>
         </div>
@@ -28,7 +28,7 @@ function Footer() {
           <div>입점제안 및 가맹문의</div>
           <div>
             <a href="mailto:ilil.mun@kalisco.co.kr" className="sitemap-text">
-              ilil.mun@kalisco.co.kr
+              chulkyun.jung@kalisco.co.kr
             </a>
           </div>
         </div>
@@ -36,7 +36,7 @@ function Footer() {
           <div>Easy to cook(편의식) 상품구입 및 특판문의</div>
           <div>
             <a href="mailto:hanabe@kalisco.co.kr" className="sitemap-text">
-              hanabe@kalisco.co.kr
+              heonchan.kim@kalisco.co.kr
             </a>
           </div>
         </div>
@@ -44,7 +44,7 @@ function Footer() {
           <div>
             캘리스코 고객센터 : 1833-4550
             <br />
-            (평일 09:00 ~ 18시, 공휴일 휴무)
+            (평일 09:00 ~ 18:00, 공휴일 휴무)
           </div>
         </div>
       </div>

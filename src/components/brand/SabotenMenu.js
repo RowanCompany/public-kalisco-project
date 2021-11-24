@@ -10,10 +10,11 @@ import sabotenImage3 from "../../static/images/img-saboten-event-3.jpg";
 import sabotenImage4 from "../../static/images/img-saboten-event-4.jpg";
 //import sabotenImage5 from "../../static/images/img-saboten-event-5.jpg";
 import textOrdinaryImage from "../../static/images/text-saboten-ordinary.png";
-import katsuImage from "../../static/images/img-saboten-menu2-1.jpg";
-import donburiImage from "../../static/images/img-saboten-menu2-2.jpg";
+import katsuImage from "../../static/images/update/카츠1@2x.png"; // import katsuImage from "../../static/images/img-saboten-menu2-1.jpg";
+import katsu2Image from "../../static/images/update/카츠2@2x.png";
+import riceImage from "../../static/images/update/라이스정식1@2x.png"; //import donburiImage from "../../static/images/img-saboten-menu2-2.jpg";
 import noodleImage from "../../static/images/img-saboten-menu2-3.jpg";
-import sideImage from "../../static/images/img-saboten-menu2-4.jpg";
+import sideImage from "../../static/images/update/side menu@2x.png"; //import sideImage from "../../static/images/img-saboten-menu2-4.jpg";
 //import sabotenBackground from "../../static/images/img-p-saboten-background.png";
 
 import { Link } from "react-router-dom";
@@ -29,9 +30,13 @@ function SabotenMenu({ subject }) {
       sectionStyle: styles.katsuSection,
       image: katsuImage,
     },
+    katsu2: {
+      sectionStyle: styles.katsu2Section,
+      image: katsu2Image,
+    },
     donburi: {
       sectionStyle: styles.donburiSection,
-      image: donburiImage,
+      image: riceImage,
     },
     noodle: {
       sectionStyle: styles.noodleSection,
@@ -140,7 +145,25 @@ function SabotenMenu({ subject }) {
                     menu === "katsu" && styles.menuListTitleActive
                   }`}
                 >
-                  Katsu
+                  Authentic Katsu Set
+                </div>
+              </Link>
+            </div>
+            <div className={styles.MenuListFlexWrapper}>
+              <div
+                className={`${styles.menuBorderLine} ${styles.katsu2BorderLine}`}
+              />
+              <Link
+                onMouseEnter={() => setMenu("katsu2")}
+                className={styles.menuListLinkWrapper}
+                to={`/brand/saboten/${subject}/katsu2`}
+              >
+                <div
+                  className={`${styles.menuListTitle} ${
+                    menu === "katsu2" && styles.menuListTitleActive
+                  }`}
+                >
+                  Special Katsu Set
                 </div>
               </Link>
             </div>
@@ -158,7 +181,8 @@ function SabotenMenu({ subject }) {
                     menu === "donburi" && styles.menuListTitleActive
                   }`}
                 >
-                  Donburi
+                  Rice Set
+                  {/* Donburi */}
                 </div>
               </Link>
             </div>
@@ -176,7 +200,7 @@ function SabotenMenu({ subject }) {
                     menu === "noodle" && styles.menuListTitleActive
                   }`}
                 >
-                  Noodle
+                  Noodle Set
                 </div>
               </Link>
             </div>
@@ -194,7 +218,7 @@ function SabotenMenu({ subject }) {
                     menu === "side" && styles.menuListTitleActive
                   }`}
                 >
-                  Side
+                  Side Menu
                 </div>
               </Link>
             </div>

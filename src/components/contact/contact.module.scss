@@ -466,4 +466,20 @@
       }
     }
   }
+
+}
+
+.checkbox{
+  display: block;
+  margin: auto 0;
+  margin-right: 1.0rem;
+}
+
+.label{
+  display: block;
+  margin: auto 0;
+  margin-right: 1.0rem;
+}
+.label:last-child{
+  margin-right: 0;
 }

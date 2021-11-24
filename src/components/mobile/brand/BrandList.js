@@ -61,7 +61,7 @@ export default function BrandList() {
               <div className={styles.brandCircleDescription}>타코벨</div>
             </div>
           </a>
-          <CentralKitchenCircle parameter={parameter} />
+          {/* <CentralKitchenCircle parameter={parameter} /> */}
           <ReperkCircle parameter={parameter} />
           {/*<div className={`${styles.brandCircle} ${styles.centralKitchen}`}></div>
         <div className={`${styles.brandCircle} ${styles.reperk}`}></div>*/}

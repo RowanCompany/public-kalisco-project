@@ -15,22 +15,27 @@ function HibarinMenuContent() {
   const params = useParams();
   const categoryData = [
     {
-      text: "Katsu",
+      text: "Authentic Katsu Set",
       type: "katsu",
       link: "/brand/saboten/menu/katsu",
     },
     {
-      text: "Donburi",
-      type: "donburi",
-      link: "/brand/saboten/menu/donburi",
+      text: "Special Katsu Set",
+      type: "katsu2",
+      link: "/brand/saboten/menu/katsu2",
     },
     {
-      text: "Noodles",
+      text: "Rice Set",
+      type: "rice",
+      link: "/brand/saboten/menu/rice",
+    },
+    {
+      text: "Noodles Set",
       type: "noodles",
       link: "/brand/saboten/menu/noodles",
     },
     {
-      text: "Side",
+      text: "Side Menu",
       type: "side",
       link: "/brand/saboten/menu/side",
     },

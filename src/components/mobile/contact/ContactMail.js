@@ -1,18 +1,230 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
 import axios from "axios";
 
-import storeData from "./storeData";
-
 import styles from "./mobile_contact.module.scss";
+
+import 'react-datepicker/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import { ko } from "date-fns/esm/locale";
+import DatePicker from "react-datepicker";
+
+const CustomInput = React.forwardRef((props, ref) => (
+  <input
+      ref={ref}
+      id="date"
+      name="date"
+      className={`${styles.contactMailInput} ${styles.telFormInput}`}
+      onClick={props.onClick}
+      value={props.value}
+      type="text"
+      readOnly={true}
+  />
+));
+
+async function saveDbData(data){
+
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth() + 1;
+  var date = today.getDate();
+
+  var key = year * month * date + (year + month + date);
+
+  var param = {
+    COMP_CD: "C0002",                                                                                  //회사코드(C0002 고정값)
+    STOR_CD: "",                                                                                       //매장코드(FNB코드와 동일)
+    REG_DT: year + ((month >= 10) ? month : '0'+month) + ((date >= 10) ? date : '0'+date),             //등록일자
+    REG_TP: "0",                                                                                       //접수처(0: 홈페이지, 1: 매장)
+    BRAND_CD: "",                                                                                      //브랜드코드(FNB코드와 동일)
+    VISIT_DT: "",                                                                                      //방문일자
+    CUST_NM: "",                                                                                       //고객명
+    EMAIL: "",                                                                                         //이메일
+    HP: "",                                                                                            //전화
+    TITLE: "",                                                                                         //제목
+    CONTENT: "",                                                                                       //내용
+    CLAIM_TP: "",                                                                                      //유형(0: 서비스, 1:메뉴, 2:위생, 3: 기타)
+    ANSWER_TP: ""                                                                                      //답변수단(EMAIL, HP)
+  };
+
+  data.forEach((value, key) => {
+    switch (key) {
+      case "brand":
+        param.BRAND_CD = value;
+        break;
+      case "store":
+        param.STOR_CD = value;
+        break;
+      case "date":
+        param.VISIT_DT = value.split('-')[0] + value.split('-')[1] + value.split('-')[2];
+        break;
+      case "name":
+        param.CUST_NM = value;
+        break;
+      case "email":
+        param.EMAIL = value;
+        break;
+      case "tel":
+        param.HP = value;
+        break;
+      case "title":
+        param.TITLE = value;
+        break;
+      case "content":
+        param.CONTENT = value;
+        break;
+      case "sub_type":
+        switch(value) {
+          case "서비스":
+            param.CLAIM_TP = "0";
+            break;
+          case "메뉴":
+            param.CLAIM_TP = "1";
+            break;
+          case "위생":
+            param.CLAIM_TP = "2";
+            break;
+          case "기타":
+            param.CLAIM_TP = "3";
+            break;
+          default:
+            break;
+        }
+        break;
+      case "ANSWER_TP":
+        param.ANSWER_TP = value;
+        break;
+      default:
+        break;
+    }
+  });
+
+  const apiUrl = 
+    "https://api.kalisco.co.kr/OuterApi?KEY="+key+"&GUBUN=01&ISJSONPARA=Y";
+    //"http://outerpos-test.imtsoft.me/OuterApi?KEY="+key+"&GUBUN=01&ISJSONPARA=Y";
+
+  const json = {list:[param]};
+
+  console.log(json);
+
+  var result = await axios
+      .post(apiUrl, json, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
+
+  return result.data.RETURN;
+
+}
+
+const get_brands = async () => {
+
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth() + 1;
+  var date = today.getDate();
+
+  var key = year * month * date + (year + month + date);
+
+  var url = 'https://api.kalisco.co.kr/OuterApi/getMaster?KEY='+key+'&GUBUN=BRAND&ISJSONPARA=Y';
+  //var url = 'http://outerpos-test.imtsoft.me/OuterApi/getMaster?KEY='+key+'&GUBUN=BRAND&ISJSONPARA=Y';
+
+  try {
+    const result = await axios.get(url);
+    if(result.status === 200){
+      if(result.data.LIST.length > 0){
+        return result.data.LIST;
+      }
+      return null;
+    }else{
+      return null;
+    }
+  } catch (error) {
+    return null;
+  }
+
+}
+
+const get_stores = async (brand) => {
+
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth() + 1;
+  var date = today.getDate();
+
+  var key = year * month * date + (year + month + date);
+
+  var url = 'https://api.kalisco.co.kr/OuterApi/getMaster?KEY='+key+'&GUBUN=STORE&BRAND='+brand+'&ISJSONPARA=Y';
+  //var url = 'http://outerpos-test.imtsoft.me/OuterApi/getMaster?KEY='+key+'&GUBUN=STORE&BRAND='+brand+'&ISJSONPARA=Y';
+
+  try {
+    const result = await axios.get(url);
+    if(result.status === 200){
+      if(result.data.LIST.length > 0){
+        return result.data.LIST;
+      }
+      return null;
+    }else{
+      return null;
+    }
+  } catch (error) {
+    return null;
+  }
+
+}
 
 export default function ContactMail() {
   const [description, setDescription] = useState("");
   const textLength = useMemo(() => description.length, [description]);
+  const [brands, setBrands] = useState(null);
   const [brand, setBrand] = useState("");
+  const [stores, setStores] = useState(null);
+  const [store, setStore] = useState("");
   const formRef = useRef(null);
   const [countryNumber, setCountryNumber] = useState("+82");
   const [telNumber, setTelNumber] = useState("");
   const [name, setName] = useState("");
+
+  const ref= React.createRef();
+  const [startDate, setStartDate] = useState(new Date());
+
+  useEffect(() => {
+    async function fetchBrand() {
+      var result = await get_brands();
+      setBrands(result);
+    }
+    fetchBrand();
+  },[]);
+
+  function change_brand(brand){
+    setBrand(brand);
+    async function fetchStore() {
+      var result = await get_stores(brand);
+      setStores(result);
+    }
+    fetchStore();
+  }
+
+  function get_brand(code){
+    if(code !== undefined){
+      for(var i=0; i<brands.length; i++){
+        if(code === brands[i].BRAND_CD){
+          return brands[i].BRAND_NM;
+        }
+      }
+    }
+  }
+
+  function get_store(code){
+    if(code !== undefined){
+      for(var i=0; i<stores.length; i++){
+        if(code === stores[i].STOR_CD){
+          return stores[i].STOR_NM;
+        }
+      }
+    }
+  }
 
   useEffect(() => {
     const authData = sessionStorage.getItem("tempAuthData");
@@ -39,7 +251,7 @@ export default function ContactMail() {
       });
   }, []);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(formRef.current);
     data.append("phone", countryNumber + telNumber);
@@ -54,6 +266,12 @@ export default function ContactMail() {
         case "code":
           dataObject[key] = window.parseInt(value);
           break;
+        case "brand":
+          dataObject[key] = get_brand(value);
+          break;
+        case "store":
+          dataObject[key] = get_store(value);
+          break;
         case "content":
           dataObject[key] = value.replace(/\n/g, "\r\n");
           break;
@@ -62,9 +280,17 @@ export default function ContactMail() {
           break;
       }
     });
+
+    //IMT DB 저장
+    if(await saveDbData(data) !== "1"){
+      window.alert("메일 발송에 실패했습니다, 관리자에게 문의해주세요.");
+      return false;
+    }
+
     const json = JSON.stringify(dataObject);
     const apiUrl =
-      //"https://3nbky7tmc7.execute-api.ap-northeast-2.amazonaws.com/kalisco/api/v1";
+      //"https://c66ph3esdh.execute-api.ap-northeast-2.amazonaws.com/v1/test/sns";
+      // "https://3nbky7tmc7.execute-api.ap-northeast-2.amazonaws.com/kalisco/api/v1";
       "https://8i95jcc1yf.execute-api.ap-northeast-2.amazonaws.com/v1/kalisco/voc";
     axios
       .post(apiUrl, json, {
@@ -82,6 +308,16 @@ export default function ContactMail() {
         window.alert("메일 발송에 실패했습니다, 관리자에게 문의해주세요.");
         return false;
       });
+
+  }
+
+  const handleContentLimit = (value) => {
+    var pattern=/[\']/gi
+    if(pattern.test(value)){
+      return alert("작은 따옴표는 입력하실 수 없습니다.");
+    }else{
+      setDescription(value);
+    }
   }
 
   return (
@@ -151,6 +387,25 @@ export default function ContactMail() {
                 </div>
               </div>
               <div className={styles.contactMailFormItem}>
+                    <label
+                        htmlFor="sub_type"
+                        className={styles.contactMailLabel}
+                      >
+                        방문일자
+                    </label>
+                    <div className={styles.contactMailInputs}>
+                      <DatePicker
+                        locale = {ko}
+                        selected={startDate}
+                        onChange={date => setStartDate(date)} 
+                        dateFormat="yyyy-MM-dd"
+                        customInput = {
+                          <CustomInput ref={ref} />
+                        }
+                      />
+                    </div>
+              </div>
+              <div className={styles.contactMailFormItem}>
                 <label htmlFor="sub_type" className={styles.contactMailLabel}>
                   유형
                 </label>
@@ -172,6 +427,24 @@ export default function ContactMail() {
                   </select>
                 </div>
               </div>
+              <div className={styles.contactMailFormItem} style={{marginBottom: '15px'}}>
+                <div>
+                  <div>
+                    <label
+                      htmlFor="answer"
+                      className={styles.contactMailLabel}
+                    >
+                      답변수단
+                    </label>
+                  </div>
+                  <div className="position-relative d-flex">
+                    <input id="email_answer" name="ANSWER_TP" className={styles.checkbox} type="radio" value="EMAIL" />
+                    <label htmlFor="email_answer" className={styles.label}>Mail</label>
+                    <input id="phone_answer" name="ANSWER_TP" className={styles.checkbox} type="radio" value="HP" />
+                    <label htmlFor="phone_answer" className={styles.label}>전화</label>
+                  </div>
+                </div>
+              </div>
               <div className={styles.contactMailFormItem}>
                 <div className="d-flex">
                   <div>
@@ -180,26 +453,27 @@ export default function ContactMail() {
                     </label>
                     <div className={styles.contactMailInputs}>
                       <select
-                        name="code"
-                        id="code"
+                        name="brand"
+                        id="brand"
                         className={`${styles.contactMailSelect} ${styles.brand}`}
                         defaultValue={brand}
-                        onChange={(e) => setBrand(e.target.value)}
+                        onChange={(e) => change_brand(e.target.value)}
                         required
                       >
                         <option value="" hidden disabled>
                           선택
                         </option>
-                        <option value="101">캘리스코</option>
-                        <option value="102">사보텐</option>
-                        <option value="103">히바린</option>
-                        <option value="104">타코벨</option>
-                        <option value="105">센트럴키친</option>
-                        <option value="106">reperk</option>
+                        {brands &&
+                            brands.map((d, i) => (
+                              <option value={d.BRAND_CD} key={i}>
+                                {d.BRAND_NM}
+                              </option>
+                            ))}
                       </select>
                     </div>
                   </div>
-                  {storeData[brand] && (
+                  {/* {storeData[brand] && ( */}
+                  {stores && (
                     <div>
                       <label
                         htmlFor="store"
@@ -213,15 +487,16 @@ export default function ContactMail() {
                           id="store"
                           className={styles.contactMailSelect}
                           defaultValue=""
+                          onChange={(e) => setStore(e.target.value)}
                           required
                         >
                           <option value="" hidden disabled>
                             선택
                           </option>
-                          {storeData[brand] &&
-                            storeData[brand].map((d, i) => (
-                              <option value={d.title} key={i}>
-                                {d.title}
+                          {stores &&
+                            stores.map((d, i) => (
+                              <option value={d.STOR_CD} key={i}>
+                                {d.STOR_NM}
                               </option>
                             ))}
                         </select>
@@ -255,13 +530,15 @@ export default function ContactMail() {
                       className={styles.contactMailTextarea}
                       name="content"
                       id="content"
-                      placeholder="2000자 이내로 내용을 입력해주세요."
-                      onInput={(e) => setDescription(e.target.value)}
-                      maxLength={2000}
+                      placeholder="600자 이내로 내용을 입력해주세요."
+                      // onInput={(e) => setDescription(e.target.value)}
+                      value={description}
+                      onInput={(e) => handleContentLimit(e.target.value)}
+                      maxLength={600}
                       required
                     />
                     <div className={styles.contactMailTextareaCount}>
-                      {textLength} / 2,000
+                      {textLength} / 600
                     </div>
                   </div>
                 </div>

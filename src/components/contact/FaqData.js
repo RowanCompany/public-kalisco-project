@@ -17,21 +17,21 @@ const FaqData = [
     description:
       "아래 메일로 문의 주시면 담당자가 순차적으로 검토 후, 친절하게 안내 드리겠습니다.\n" +
       "\n" +
-      "* 입점제안 및 가맹문의 : llimun@kalisco.co.kr",
+      "* 입점제안 및 가맹문의 : chulkyun.jung@kalisco.co.kr",
   },
   {
     question: "Easy to cook(편의식)제품에 대한 문의는 어떻게 하나요?",
     description:
       "아래 메일로 문의 주시면 담당자가 순차적으로 확인 후, 친절하게 안내 드리겠습니다.\n" +
       "\n" +
-      "* Easy to cook(편의식) 상품구입 및 특판문의 : kipal.cha@kalisco.co.kr",
+      "* Easy to cook(편의식) 상품구입 및 특판문의 : heonchan.kim@kalisco.co.kr",
   },
   {
     question: "상품구입 및 특판 관련 문의는 어떻게 하나요?",
     description:
       "아래 메일로 문의 주시면 담당자가 순차적으로 확인 후, 친절하게 안내 드리겠습니다.\n" +
       "\n" +
-      "* Easy to cook(편의식) 상품구입 및 특판문의 : kipal.cha@kalisco.co.kr",
+      "* Easy to cook(편의식) 상품구입 및 특판문의 : heonchan.kim@kalisco.co.kr",
   },
   {
     question: "마케팅 제안 및 문의는 어떻게 하나요?",

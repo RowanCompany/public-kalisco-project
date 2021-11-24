@@ -21,7 +21,7 @@ export default function Footer() {
                 href="mailto:ilil.mun@kalisco.co.kr"
                 className={styles.mobileFooterEmailLink}
               >
-                ilil.mun@kalisco.co.kr
+                chulkyun.jung@kalisco.co.kr
               </a>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function Footer() {
                 href="mailto:hanabe@kalisco.co.kr"
                 className={styles.mobileFooterEmailLink}
               >
-                hanabe@kalisco.co.kr
+                heonchan.kim@kalisco.co.kr
               </a>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function Footer() {
       </div>
       <div>
         <div>캘리스코 고객센터 : 1833-4550</div>
-        <div>(평일 09:00 ~ 18시, 공휴일 휴무)</div>
+        <div>(평일 09:00 ~ 18:00, 공휴일 휴무)</div>
       </div>
       <div>COPYRIGHT © 2020 KALISCO. ALL RIGHTS RESERVED.</div>
     </footer>

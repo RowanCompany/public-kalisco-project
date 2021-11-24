@@ -250,6 +250,16 @@
         font-weight: 400;
         font-family: 'Nanum Myeongjo', serif;
       }
+
+      .storePanelAddress {
+        margin-top: 10px;
+        font-size: 8px;
+        line-height: 22px;
+        color: #333333;
+        letter-spacing: 0;
+        font-weight: 400;
+        font-family: 'Nanum Myeongjo', serif;
+      }
     }
   }
 
@@ -391,9 +401,9 @@
   padding: 20px 0 0;
 
   .menuNavigator {
-    flex: 0 0 calc(25% - 2px);
+    flex: 0 0 calc(20% - 2px);
     width: 100%;
-    max-width: calc(25% - 2px);
+    max-width: calc(20% - 2px);
     text-align: center;
     border: 1px solid #EEEEEE;
     padding: 12px 0;

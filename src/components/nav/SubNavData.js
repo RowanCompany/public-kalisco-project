@@ -24,10 +24,10 @@ export default {
       title: "타코벨",
       link: "http://koreatacobell.com/",
     },
-    {
-      title: "센트럴키친",
-      link: "/brand?modal=centralkitchen",
-    },
+    // {
+    //   title: "센트럴키친",
+    //   link: "/brand?modal=centralkitchen",
+    // },
     {
       title: "리퍼크",
       link: "/brand?modal=reperk",

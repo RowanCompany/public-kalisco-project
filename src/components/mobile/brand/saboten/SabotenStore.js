@@ -16,11 +16,12 @@ export default function HibarinStore() {
           <img src={greenStoreImage} alt="green" />
         </div>
         <div className={styles.storePanelDescriptionWrapper}>
-          <div className={styles.storePanelTitle}>그린 신세계 마산점</div>
+          <div className={styles.storePanelTitle}>신세계 마산점</div>
           <div className={styles.storePanelDescription}>
-            기존 사보텐의 레드 이미지를 탈피하여
-            <br />
-            새로운 그린 사보텐으로 재단장한 매장입니다.
+            신세계마산점의 깔끔한 인테리어와<br />언제나 맛있는 정통 카츠를 즐겨보세요.
+          </div>
+          <div className={styles.storePanelAddress}>
+            - 주소 : 경상남도 창원시 마산합포구 합포로 251 신세계백화점 마산점 B1
           </div>
         </div>
       </div>
@@ -29,15 +30,12 @@ export default function HibarinStore() {
           <img src={newredStoreImage} alt="new red" />
         </div>
         <div className={styles.storePanelDescriptionWrapper}>
-          <div className={styles.storePanelTitle}>뉴레드 고양 스타필드점</div>
+          <div className={styles.storePanelTitle}>고양 스타필드점</div>
           <div className={styles.storePanelDescription}>
-            뉴레드 사보텐으로 다시 돌아왔습니다.
-            <br />
-            Reserve 매장인 고양 스타필드점에서
-            <br />
-            새로운 사보텐의 볼거리와
-            <br />
-            다양한 시그니처 메뉴를 만나보세요.
+            Reserve 매장인 고양 스타필드점에서<br />사보텐의 정통과 다양한 시그니처 메뉴를 만나보세요.
+          </div>
+          <div className={styles.storePanelAddress}>
+            - 주소 : 경기 고양시 덕양구 고양대로 1995 1층
           </div>
         </div>
       </div>

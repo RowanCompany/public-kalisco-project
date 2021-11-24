@@ -5,14 +5,19 @@ import { Link } from "react-router-dom";
 export default function SabotenMenuNavigator({ category }) {
   const categoryData = [
     {
-      text: "Katsu",
+      text: "Authentic Katsu",
       type: "katsu",
       link: "/brand/saboten/menu/katsu",
     },
     {
-      text: "Donburi",
-      type: "donburi",
-      link: "/brand/saboten/menu/donburi",
+      text: "Special Katsu",
+      type: "katsu2",
+      link: "/brand/saboten/menu/katsu2",
+    },
+    {
+      text: "Rice",
+      type: "rice",
+      link: "/brand/saboten/menu/rice",
     },
     {
       text: "Noodles",

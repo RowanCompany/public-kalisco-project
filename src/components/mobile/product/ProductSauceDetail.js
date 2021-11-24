@@ -23,6 +23,7 @@ export default function ProductSauceDetail({ content }) {
   const { sauce } = useParams();
   const sauceData = {
     donkatsu: {
+      sale: true,
       firstImage: imgKatsu1,
       secondImage: imgKatsu2,
       recipeImage: imgKatsuRec,
@@ -69,6 +70,7 @@ export default function ProductSauceDetail({ content }) {
       ),
     },
     sesame: {
+      sale: true,
       firstImage: imgSesame1,
       secondImage: imgSesame2,
       recipeImage: imgSesameRec,
@@ -112,6 +114,7 @@ export default function ProductSauceDetail({ content }) {
       ),
     },
     citron: {
+      sale: true,
       firstImage: imgCitron1,
       secondImage: imgCitron2,
       firstTitle: "[20주년 에디션] 사보텐 유자소스 210g",
@@ -165,6 +168,7 @@ export default function ProductSauceDetail({ content }) {
       recipeImage: imgCitronRec,
     },
     "rice-bowl": {
+      sale: false,
       firstImage: imgRice1,
       secondImage: imgRice2,
       firstTitle: "[20주년 에디션] 사보텐 일식 덮밥 소스 (셰프의 만능 치트키)",
@@ -173,7 +177,8 @@ export default function ProductSauceDetail({ content }) {
       kakaoStoreLink: "https://store.kakao.com/sabotenkorea/products/68160101",
       priceText: (
         <>
-          <b>4,500</b>원(VAT포함)
+          {/* <b>4,500</b>원(VAT포함) */}
+          판매 종료
         </>
       ),
       firstDescription: (
@@ -202,6 +207,7 @@ export default function ProductSauceDetail({ content }) {
       //recipeImage: imgCitronRec,
     },
     curry: {
+      sale: true,
       firstImage: imgCurry1,
       secondImage: imgCurry2,
       firstTitle: "커리소스",
@@ -290,7 +296,7 @@ export default function ProductSauceDetail({ content }) {
                     className={styles.naverStoreButton}
                   >
                     <img src={naverIcon} alt="naver" />
-                    네이버 스토어에서 구매하기
+                    네이버 스토어에서 {(sauceData[sauce]["sale"] == true ? '구매하기' : '판매 준비중')}
                   </a>
                   <a
                     href={sauceData[sauce]["kakaoStoreLink"]}
@@ -299,7 +305,7 @@ export default function ProductSauceDetail({ content }) {
                     className={styles.kakaoStoreButton}
                   >
                     <img src={kakaotalkIcon} alt="kakaotalk" />
-                    카카오 스토어에서 구매하기
+                    카카오 스토어에서 {(sauceData[sauce]["sale"] == true ? '구매하기' : '판매 준비중')}
                   </a>
                 </div>
               ) : (

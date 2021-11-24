@@ -6,7 +6,8 @@ import sabotenImage2 from "../../../../static/images/img-saboten-event-2.jpg";
 import sabotenImage3 from "../../../../static/images/img-saboten-event-3.jpg";
 import sabotenImage4 from "../../../../static/images/img-saboten-event-4.jpg";
 import katsuImage from "../../../../static/images/img-saboten-menu2-1.jpg";
-import donburiImage from "../../../../static/images/img-saboten-menu2-2.jpg";
+import katsu2Image from "../../../../static/images/img-saboten-menu2-1.jpg";
+import riceImage from "../../../../static/images/img-saboten-menu2-2.jpg";
 import noodleImage from "../../../../static/images/img-saboten-menu2-3.jpg";
 import sideImage from "../../../../static/images/img-saboten-menu2-4.jpg";
 import { Link } from "react-router-dom";
@@ -18,9 +19,13 @@ export default function SabotenMenu() {
       sectionStyle: styles.menuActive,
       image: katsuImage,
     },
-    donburi: {
+    katsu2: {
       sectionStyle: styles.menuActive,
-      image: donburiImage,
+      image: katsu2Image,
+    },
+    rice: {
+      sectionStyle: styles.menuActive,
+      image: riceImage,
     },
     noodle: {
       sectionStyle: styles.menuActive,
@@ -100,21 +105,32 @@ export default function SabotenMenu() {
             }`}
             onClick={() => {
               setMenu("katsu");
-              window.location.assign(`/brand/saboten/menu/${menu}`);
+              window.location.assign(`/brand/saboten/menu/katsu`);
             }}
           >
-            Katsu
+            Authentic Katsu Set
           </div>
           <div
             className={`${styles.menuText} ${
-              menu === "donburi" ? menuData[menu]["sectionStyle"] : ""
+              menu === "katsu2" ? menuData[menu]["sectionStyle"] : ""
             }`}
             onClick={() => {
-              setMenu("donburi");
-              window.location.assign(`/brand/saboten/menu/${menu}`);
+              setMenu("katsu2");
+              window.location.assign(`/brand/saboten/menu/katsu2`);
             }}
           >
-            Donburi
+            Special Katsu Set
+          </div>
+          <div
+            className={`${styles.menuText} ${
+              menu === "rice" ? menuData[menu]["sectionStyle"] : ""
+            }`}
+            onClick={() => {
+              setMenu("rice");
+              window.location.assign(`/brand/saboten/menu/rice`);
+            }}
+          >
+            Rice Set
           </div>
           <div
             className={`${styles.menuText} ${
@@ -122,10 +138,10 @@ export default function SabotenMenu() {
             }`}
             onClick={() => {
               setMenu("noodle");
-              window.location.assign(`/brand/saboten/menu/${menu}`);
+              window.location.assign(`/brand/saboten/menu/noodle`);
             }}
           >
-            Noodle
+            Noodle Set
           </div>
           <div
             className={`${styles.menuText} ${
@@ -133,10 +149,10 @@ export default function SabotenMenu() {
             }`}
             onClick={() => {
               setMenu("side");
-              window.location.assign(`/brand/saboten/menu/${menu}`);
+              window.location.assign(`/brand/saboten/menu/side`);
             }}
           >
-            Side
+            Side Menu
           </div>
         </div>
         <Link to={`/brand/saboten/menu/${menu}`}>

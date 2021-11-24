@@ -299,14 +299,15 @@
     min-height: 1px;
 
     &.katsuBorderLine,
-    &.noodleBorderLine {
+    &.donburiBorderLine,
+    &.sideBorderLine {
       width: 80%;
       max-width: 540px;
       margin-right: 38px;
     }
 
-    &.donburiBorderLine,
-    &.sideBorderLine {
+    &.katsu2BorderLine,
+    &.noodleBorderLine {
       width: 85%;
       max-width: 617px;
       margin-right: 40px;
@@ -314,7 +315,7 @@
   }
 
   .menuListTitle {
-    font-size: 40px;
+    font-size: 35px;
     line-height: 64px;
     color: #ffffff;
     letter-spacing: 1.2px;
@@ -328,6 +329,7 @@
       &::after {
         content: " ";
         width: 8px;
+        min-width: 8px;
         height: 8px;
         border-radius: 100%;
         margin-left: 5px;
@@ -340,6 +342,22 @@
     background-color: #191919;
 
     .katsuBorderLine {
+      border-top: 1px solid #ffffff;
+    }
+
+    .menuListTitleActive {
+      color: #ffffff;
+
+      &::after {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  &.katsu2Section {
+    background-color: #191919;
+
+    .katsu2BorderLine {
       border-top: 1px solid #ffffff;
     }
 

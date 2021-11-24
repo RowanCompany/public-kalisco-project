@@ -56,7 +56,7 @@ function BrandList() {
               </div>
               <div className="brand-title">타코벨</div>
             </a>
-            <CentralCircle parameter={parameter} />
+            {/* <CentralCircle parameter={parameter} /> */}
             <ReperkCircle parameter={parameter} />
           </div>
         </div>

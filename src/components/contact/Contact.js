@@ -1,42 +1,233 @@
 import React, { useState, useMemo, useRef, useEffect } from "react";
 import ContactBanner from "./ContactBanner";
 import styles from "./contact.module.scss";
-import storeData from "./storeData";
 import axios from "axios";
 import "formdata-polyfill";
-/*import { useLocation } from "react-router-dom";
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}*/
+import 'react-datepicker/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import { ko } from "date-fns/esm/locale";
+import DatePicker from "react-datepicker";
+
+const CustomInput = React.forwardRef((props, ref) => (
+  <input
+      ref={ref}
+      id="date"
+      name="date"
+      className={`${styles.commonFormInput} ${styles.telFormInput}`}
+      onClick={props.onClick}
+      value={props.value}
+      type="text"
+      readOnly={true}
+  />
+));
+
+async function saveDbData(data){
+
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth() + 1;
+  var date = today.getDate();
+
+  var key = year * month * date + (year + month + date);
+
+  var param = {
+    COMP_CD: "C0002",                                                                                  //회사코드(C0002 고정값)
+    STOR_CD: "",                                                                                       //매장코드(FNB코드와 동일)
+    REG_DT: year + ((month >= 10) ? month : '0'+month) + ((date >= 10) ? date : '0'+date),             //등록일자
+    REG_TP: "0",                                                                                       //접수처(0: 홈페이지, 1: 매장)
+    BRAND_CD: "",                                                                                      //브랜드코드(FNB코드와 동일)
+    VISIT_DT: "",                                                                                      //방문일자
+    CUST_NM: "",                                                                                       //고객명
+    EMAIL: "",                                                                                         //이메일
+    HP: "",                                                                                            //전화
+    TITLE: "",                                                                                         //제목
+    CONTENT: "",                                                                                       //내용
+    CLAIM_TP: "",                                                                                      //유형(0: 서비스, 1:메뉴, 2:위생, 3: 기타)
+    ANSWER_TP: ""                                                                                      //답변수단(EMAIL, HP)
+  };
+
+  data.forEach((value, key) => {
+    switch (key) {
+      case "brand":
+        param.BRAND_CD = value;
+        break;
+      case "store":
+        param.STOR_CD = value;
+        break;
+      case "date":
+        param.VISIT_DT = value.split('-')[0] + value.split('-')[1] + value.split('-')[2];
+        break;
+      case "name":
+        param.CUST_NM = value;
+        break;
+      case "email":
+        param.EMAIL = value;
+        break;
+      case "tel":
+        param.HP = value;
+        break;
+      case "title":
+        param.TITLE = value;
+        break;
+      case "content":
+        param.CONTENT = value;
+        break;
+      case "sub_type":
+        switch(value) {
+          case "서비스":
+            param.CLAIM_TP = "0";
+            break;
+          case "메뉴":
+            param.CLAIM_TP = "1";
+            break;
+          case "위생":
+            param.CLAIM_TP = "2";
+            break;
+          case "기타":
+            param.CLAIM_TP = "3";
+            break;
+          default:
+            break;
+        }
+        break;
+      case "ANSWER_TP":
+        param.ANSWER_TP = value;
+        break;
+      default:
+        break;
+    }
+  });
+
+  const apiUrl = 
+    "https://api.kalisco.co.kr/OuterApi?KEY="+key+"&GUBUN=01&ISJSONPARA=Y";
+    //"http://outerpos-test.imtsoft.me/OuterApi?KEY="+key+"&GUBUN=01&ISJSONPARA=Y";
+
+  const json = {list:[param]};
+  
+  console.log(json);
+
+  var result = await axios
+      .post(apiUrl, json, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
+
+  return result.data.RETURN;
+
+}
+
+const get_brands = async () => {
+
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth() + 1;
+  var date = today.getDate();
+
+  var key = year * month * date + (year + month + date);
+
+  var url = 'https://api.kalisco.co.kr/OuterApi/getMaster?KEY='+key+'&GUBUN=BRAND&ISJSONPARA=Y';
+  //var url = 'http://outerpos-test.imtsoft.me/OuterApi/getMaster?KEY='+key+'&GUBUN=BRAND&ISJSONPARA=Y';
+
+  try {
+    const result = await axios.get(url);
+    if(result.status === 200){
+      if(result.data.LIST.length > 0){
+        return result.data.LIST;
+      }
+      return null;
+    }else{
+      return null;
+    }
+  } catch (error) {
+    return null;
+  }
+
+}
+
+const get_stores = async (brand) => {
+
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth() + 1;
+  var date = today.getDate();
+
+  var key = year * month * date + (year + month + date);
+
+  var url = 'https://api.kalisco.co.kr/OuterApi/getMaster?KEY='+key+'&GUBUN=STORE&BRAND='+brand+'&ISJSONPARA=Y';
+  //var url = 'http://outerpos-test.imtsoft.me/OuterApi/getMaster?KEY='+key+'&GUBUN=STORE&BRAND='+brand+'&ISJSONPARA=Y';
+
+  try {
+    const result = await axios.get(url);
+    if(result.status === 200){
+      if(result.data.LIST.length > 0){
+        return result.data.LIST;
+      }
+      return null;
+    }else{
+      return null;
+    }
+  } catch (error) {
+    return null;
+  }
+
+}
 
 function Contact() {
+
+  const ref= React.createRef();
+  const [startDate, setStartDate] = useState(new Date());
+
   const [description, setDescription] = useState("");
   const textLength = useMemo(() => description.length, [description]);
-  //const [category, setCategory] = useState("");
+  const [brands, setBrands] = useState(null);
   const [brand, setBrand] = useState("");
+  const [stores, setStores] = useState(null);
+  const [store, setStore] = useState("");
   const formRef = useRef(null);
   const [countryNumber, setCountryNumber] = useState("+82");
   const [telNumber, setTelNumber] = useState("");
   const [name, setName] = useState("");
-
-  /*let query = useQuery();
-  const querySubject = query.get("subject");
+  
   useEffect(() => {
-    if (querySubject) {
-      switch (querySubject) {
-        case "saboten":
-          setBrand(102);
-          break;
-        case "hibarin":
-          setBrand(103);
-          break;
-        default:
-          break;
+    async function fetchBrand() {
+      var result = await get_brands();
+      setBrands(result);
+    }
+    fetchBrand();
+  }, []);
+
+  function change_brand(brand){
+    setBrand(brand);
+    async function fetchStore() {
+      var result = await get_stores(brand);
+      setStores(result);
+    }
+    fetchStore();
+  }
+
+  function get_brand(code){
+    if(code !== undefined){
+      for(var i=0; i<brands.length; i++){
+        if(code === brands[i].BRAND_CD){
+          return brands[i].BRAND_NM;
+        }
       }
     }
-    return () => setBrand("");
-  }, [querySubject]);*/
+  }
+
+  function get_store(code){
+    if(code !== undefined){
+      for(var i=0; i<stores.length; i++){
+        if(code === stores[i].STOR_CD){
+          return stores[i].STOR_NM;
+        }
+      }
+    }
+  }
+
   useEffect(() => {
     const authData = sessionStorage.getItem("tempAuthData");
     if (!authData) {
@@ -62,9 +253,11 @@ function Contact() {
       });
   }, []);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
+
     event.preventDefault();
     const data = new FormData(formRef.current);
+    
     data.append("phone", countryNumber + telNumber);
     const term = window.parseInt(data.get("term"));
     if (term === 2) {
@@ -77,6 +270,12 @@ function Contact() {
         case "code":
           dataObject[key] = window.parseInt(value);
           break;
+        case "brand":
+          dataObject[key] = get_brand(value);
+          break;
+        case "store":
+          dataObject[key] = get_store(value);
+          break;
         case "content":
           dataObject[key] = value.replace(/\n/g, "\r\n");
           break;
@@ -85,9 +284,17 @@ function Contact() {
           break;
       }
     });
+
+    //IMT DB 저장
+    if(await saveDbData(data) !== "1"){
+      window.alert("메일 발송에 실패했습니다, 관리자에게 문의해주세요.");
+      return false;
+    }
+
     const json = JSON.stringify(dataObject);
     const apiUrl =
-      //"https://3nbky7tmc7.execute-api.ap-northeast-2.amazonaws.com/kalisco/api/v1";
+      //"https://c66ph3esdh.execute-api.ap-northeast-2.amazonaws.com/v1/test/sns";
+      // "https://3nbky7tmc7.execute-api.ap-northeast-2.amazonaws.com/kalisco/api/v1";
       "https://8i95jcc1yf.execute-api.ap-northeast-2.amazonaws.com/v1/kalisco/voc";
     axios
       .post(apiUrl, json, {
@@ -107,6 +314,15 @@ function Contact() {
       });
   }
 
+  const handleContentLimit = (value) => {
+    var pattern=/[\']/gi
+    if(pattern.test(value)){
+      return alert("작은 따옴표는 입력하실 수 없습니다.");
+    }else{
+      setDescription(value);
+    }
+  }
+
   return (
     <>
       <ContactBanner subject="contact" />
@@ -114,7 +330,6 @@ function Contact() {
         <div className="container">
           <div className={styles.contactTitle}>문의 작성</div>
           <div className={styles.contactFormPanel}>
-            {/* <form encType="multipart/form-data"> */}
             <form onSubmit={(e) => handleSubmit(e)} ref={formRef}>
               <div className={styles.formWrapper}>
                 <div>
@@ -182,31 +397,27 @@ function Contact() {
               </div>
               <div className={styles.formWrapper}>
                 <div className="d-flex">
-                  {/*<div>
+                  <div style={{marginRight: '10px'}}>
                     <div>
-                      <label htmlFor="type" className={styles.commonFormLabel}>
-                        분류
+                      <label
+                        htmlFor="sub_type"
+                        className={styles.commonFormLabel}
+                      >
+                        방문일자
                       </label>
                     </div>
-                    <div>
-                      <select
-                        name="type"
-                        id="type"
-                        className={`${styles.commonSelectInput} ${styles.categorySelectInput}`}
-                        defaultValue=""
-                        required
-                        onChange={(e) => setCategory(e.target.value)}
-                      >
-                        <option value="" hidden disabled>
-                          선택
-                        </option>
-                        <option value="칭찬">칭찬</option>
-                        <option value="불만">불만</option>
-                        <option value="문의">문의</option>
-                        <option value="기타">기타</option>
-                      </select>
+                    <div className="position-relative">
+                      <DatePicker
+                        locale = {ko}
+                        selected={startDate}
+                        onChange={date => setStartDate(date)} 
+                        dateFormat="yyyy-MM-dd"
+                        customInput = {
+                          <CustomInput ref={ref} />
+                        }
+                      />
                     </div>
-                  </div>*/}
+                  </div>
                   <div>
                     <div>
                       <label
@@ -234,35 +445,24 @@ function Contact() {
                       </select>
                     </div>
                   </div>
-                  {/*{category && (
-                    <div>
-                      <div>
-                        <label
-                          htmlFor="sub_type"
-                          className={styles.commonFormLabel}
-                        >
-                          유형
-                        </label>
-                      </div>
-                      <div className="position-relative">
-                        <select
-                          name="sub_type"
-                          id="sub_type"
-                          className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
-                          defaultValue=""
-                          required
-                        >
-                          <option value="" hidden disabled>
-                            선택
-                          </option>
-                          <option value="서비스">서비스</option>
-                          <option value="메뉴">메뉴</option>
-                          <option value="위생">위생</option>
-                          <option value="기타">기타</option>
-                        </select>
-                      </div>
-                    </div>
-                  )}*/}
+                </div>
+              </div>
+              <div className={styles.formWrapper}>
+                <div>
+                  <div>
+                    <label
+                      htmlFor="answer"
+                      className={styles.commonFormLabel}
+                    >
+                      답변수단
+                    </label>
+                  </div>
+                  <div className="position-relative d-flex">
+                    <input id="email_answer" name="ANSWER_TP" className={styles.checkbox} type="radio" value="EMAIL" />
+                    <label htmlFor="email_answer" className={styles.label}>Mail</label>
+                    <input id="phone_answer" name="ANSWER_TP" className={styles.checkbox} type="radio" value="HP" />
+                    <label htmlFor="phone_answer" className={styles.label}>전화</label>
+                  </div>
                 </div>
               </div>
               <div className={styles.formWrapper}>
@@ -274,27 +474,27 @@ function Contact() {
                       </label>
                     </div>
                     <div>
-                      <select
-                        name="code"
-                        id="code"
+                    <select
+                        name="brand"
+                        id="brand"
                         className={`${styles.commonSelectInput} ${styles.categorySelectInput}`}
                         defaultValue={brand}
-                        onChange={(e) => setBrand(e.target.value)}
+                        onChange={(e) => change_brand(e.target.value)}
                         required
                       >
                         <option value="" hidden disabled>
                           선택
                         </option>
-                        <option value="101">캘리스코</option>
-                        <option value="102">사보텐</option>
-                        <option value="103">히바린</option>
-                        <option value="104">타코벨</option>
-                        <option value="105">센트럴키친</option>
-                        <option value="106">reperk</option>
+                        {brands &&
+                            brands.map((d, i) => (
+                              <option value={d.BRAND_CD} key={i}>
+                                {d.BRAND_NM}
+                              </option>
+                            ))}
                       </select>
                     </div>
                   </div>
-                  {storeData[brand] && (
+                  {stores && (
                     <div>
                       <div>
                         <label
@@ -310,15 +510,16 @@ function Contact() {
                           id="store"
                           className={`${styles.commonSelectInput} ${styles.categorySubInput}`}
                           defaultValue=""
+                          onChange={(e) => setStore(e.target.value)}
                           required
                         >
                           <option value="" hidden disabled>
                             선택
                           </option>
-                          {storeData[brand] &&
-                            storeData[brand].map((d, i) => (
-                              <option value={d.title} key={i}>
-                                {d.title}
+                          {stores &&
+                            stores.map((d, i) => (
+                              <option value={d.STOR_CD} key={i}>
+                                {d.STOR_NM}
                               </option>
                             ))}
                         </select>
@@ -353,14 +554,16 @@ function Contact() {
                     <textarea
                       name="content"
                       id="content"
-                      placeholder="2000자 이내로 내용을 입력해주세요."
-                      onInput={(e) => setDescription(e.target.value)}
-                      maxLength={2000}
+                      placeholder="600자 이내로 내용을 입력해주세요."
+                      value={description}
+                      onInput={(e) => handleContentLimit(e.target.value)}
+                      // onClick={handleContentLimit}
+                      maxLength={600}
                       className={styles.description}
                       required
                     />
                   </div>
-                  <div className={styles.countText}>{textLength} / 2,000</div>
+                  <div className={styles.countText}>{textLength} / 600</div>
                 </div>
               </div>
               <div className={styles.formWrapper}>
@@ -443,59 +646,6 @@ function Contact() {
                   </div>
                 </div>
               </div>
-              {/* <div className={styles.formWrapper}>
-                                <div>
-                                    <label
-                                        htmlFor="file"
-                                        className={styles.commonFormLabel}
-                                    >
-                                        파일첨부
-                                    </label>
-                                </div>
-                                <div className="d-flex">
-                                    <div>
-                                        <label
-                                            htmlFor="file"
-                                            className={styles.fileLabel}
-                                        >
-                                            {fileName === ""
-                                                ? "이미지파일 최대 20M"
-                                                : fileName}
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <button
-                                            type="button"
-                                            className={styles.fileButton}
-                                        >
-                                            <label
-                                                htmlFor="file"
-                                                className={
-                                                    styles.fileButtonLabel
-                                                }
-                                            >
-                                                찾아보기
-                                            </label>
-                                        </button>
-                                    </div>
-                                    <input
-                                        type="file"
-                                        name="file"
-                                        id="file"
-                                        hidden
-                                        accept="image/*"
-                                        onInput={(e) => {
-                                            if (e.target.files.length > 0) {
-                                                setFileName(
-                                                    e.target.files[0].name
-                                                );
-                                            } else {
-                                                setFileName("");
-                                            }
-                                        }}
-                                    />
-                                </div>
-                            </div> */}
               <div className={styles.formSubitButtonWrapper}>
                 <div>
                   <button type="reset" className={styles.resetButton}>

@@ -23,6 +23,7 @@ function ProductSauceDetail({ content }) {
   const { sauce } = useParams();
   const sauceData = {
     donkatsu: {
+      sale: true,
       firstImage: imgKatsu1,
       secondImage: imgKatsu2,
       recipeImage: imgKatsuRec,
@@ -69,6 +70,7 @@ function ProductSauceDetail({ content }) {
       ),
     },
     sesame: {
+      sale: true,
       firstImage: imgSesame1,
       secondImage: imgSesame2,
       recipeImage: imgSesameRec,
@@ -112,6 +114,7 @@ function ProductSauceDetail({ content }) {
       ),
     },
     citron: {
+      sale: true,
       firstImage: imgCitron1,
       secondImage: imgCitron2,
       firstTitle: "[20주년 에디션] 사보텐 유자소스 210g",
@@ -158,6 +161,7 @@ function ProductSauceDetail({ content }) {
       recipeImage: imgCitronRec,
     },
     "rice-bowl": {
+      sale: false,
       firstImage: imgRice1,
       secondImage: imgRice2,
       firstTitle: "[20주년 에디션] 사보텐 일식 덮밥 소스 (셰프의 만능 치트키)",
@@ -166,7 +170,8 @@ function ProductSauceDetail({ content }) {
       kakaoStoreLink: "https://store.kakao.com/sabotenkorea/products/68160101",
       priceText: (
         <>
-          <b>4,500</b>원(VAT포함)
+          {/* <b>4,500</b>원(VAT포함) */}
+          판매 종료
         </>
       ),
       firstDescription: (
@@ -195,6 +200,7 @@ function ProductSauceDetail({ content }) {
       //recipeImage: imgCitronRec,
     },
     curry: {
+      sale: true,
       firstImage: imgCurry1,
       secondImage: imgCurry2,
       firstTitle: "커리소스",
@@ -282,21 +288,23 @@ function ProductSauceDetail({ content }) {
                     <div className={styles.storeButtonWrapper}>
                       <a
                         href={sauceData[sauce]["naverStoreLink"]}
+                        // href={(sauceData[sauce]["sale"]) == true ? sauceData[sauce]["naverStoreLink"] : ""}
                         rel="noopener noreferrer"
                         target="_blank"
                         className={styles.naverStoreButton}
                       >
                         <img src={naverIcon} alt="naver" />
-                        네이버 스토어에서 구매하기
+                        {(sauceData[sauce]["sale"] == true ? '네이버 스토어에서 구매하기' : '판매 준비중')}
                       </a>
                       <a
                         href={sauceData[sauce]["kakaoStoreLink"]}
+                        // href={(sauceData[sauce]["sale"]) == true ? sauceData[sauce]["kakaoStoreLink"] : ""}
                         rel="noopener noreferrer"
                         target="_blank"
                         className={styles.kakaoStoreButton}
                       >
                         <img src={kakaotalkIcon} alt="kakaotalk" />
-                        카카오 스토어에서 구매하기
+                        {(sauceData[sauce]["sale"] == true ? '카카오 스토어에서 구매하기' : '판매 준비중')}
                       </a>
                     </div>
                   ) : (
