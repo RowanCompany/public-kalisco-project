@@ -19,6 +19,7 @@ import RegisterPage from "./pages/register/Register";
 import FinalRegister from "./pages/register/FinalRegister";
 
 // TODO: Suspense 도입 고려
+
 function App() {
   useEffect(() => {
     const pathname = window.location.pathname;
