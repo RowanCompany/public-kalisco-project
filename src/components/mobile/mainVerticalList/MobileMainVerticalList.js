@@ -282,7 +282,7 @@ export default function MobileMainVerticalList({ rootHeight }) {
               </div>
               <div>
                 <div>서울시 강남구 역삼로 115 2층 (우)06243</div>
-                <div>사업자등록번호 211-88-32153 | 대표이사 구지은</div>
+                <div>사업자등록번호 211-88-32153 | 대표이사 장규형</div>
               </div>
               <div>
                 <div className={styles.mobileFooterEmailWrapper}>
