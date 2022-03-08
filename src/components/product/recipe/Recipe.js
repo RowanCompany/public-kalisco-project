@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 //import EventPanelData from "../../support/event/EventPanelNewData";
 import RecipePanel from "./RecipePanel";
-import styles, { eventListWrapper } from "./panel.module.scss";
+import styles from "./panel.module.scss";
 import { Link } from "react-router-dom";
 import { url } from "../../../utils/server";
 import axios from "axios";
@@ -49,7 +49,7 @@ export default function Recipe() {
           </Link>
         </div>
       )}
-      <div className={eventListWrapper}>
+      <div className={styles.eventListWrapper}>
         <div className={styles.gridWrapper}>
           {recipes.length > 0 &&
             recipes.map((d, i) => <RecipePanel key={i} {...d} />)}

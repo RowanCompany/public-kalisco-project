@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CategoryLink from "../../categoryButton/CategoryLink";
-import { eventCategoryListWrapper } from "./event.module.scss";
+import styles from "./event.module.scss";
 
 function EventCategoryList({ contentType }) {
   const data = [
@@ -44,7 +44,7 @@ function EventCategoryList({ contentType }) {
   useEffect(() => setType(contentType), [contentType]);
 
   return (
-    <div className={eventCategoryListWrapper}>
+    <div className={styles.eventCategoryListWrapper}>
       {data.map((d, i) => (
         <CategoryLink
           key={i}

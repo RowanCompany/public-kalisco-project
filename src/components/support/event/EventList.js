@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import EventPanel from "./EventPanel";
-import { eventListWrapper } from "./event.module.scss";
+import styles from "./event.module.scss";
 //import iconArrowDown from "../../../static/svg/icon-arrow-down.svg";
 import axios from "axios";
 import { url } from "../../../utils/server";
@@ -8,7 +8,7 @@ import { url } from "../../../utils/server";
 function EventList({ type }) {
   return (
     <>
-      <div className={eventListWrapper}>
+      <div className={styles.eventListWrapper}>
         {/* {EventPanelData &&
           EventPanelData.map((d, i) => <RecipePanel key={i} {...d} />)} */}
         <ConditionalEventRenderer type={type} />

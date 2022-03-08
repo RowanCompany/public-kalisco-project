@@ -1,6 +1,6 @@
 import React from "react";
 import SupportPanel from "./SupportPanel";
-import { panelListWrapper } from "./panel.module.scss";
+import styles from "./panel.module.scss";
 import iconMembership from "../../../static/svg/icon-membership.svg";
 import iconCreditCard from "../../../static/svg/icon-credit-card.svg";
 import iconKakao from "../../../static/svg/icon-kakao.svg";
@@ -37,7 +37,7 @@ function SupportPanelList() {
     ];
     return (
         <div className="container">
-            <div className={panelListWrapper}>
+            <div className={styles.panelListWrapper}>
                 {data.map((d, i) => (
                     <SupportPanel key={i} {...d} />
                 ))}

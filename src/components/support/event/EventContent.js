@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import EventCategoryList from "./EventCategoryList";
 import EventList from "./EventList";
-import styles, { eventContentWrapper } from "./event.module.scss";
+import styles from "./event.module.scss";
 import {
   useLocation,
   useRouteMatch,
@@ -57,7 +57,7 @@ function EventContent() {
   }, []);
 
   return (
-    <section className={eventContentWrapper}>
+    <section className={styles.eventContentWrapper}>
       <div className="container">
         <Switch>
           <Route path={`${match.path}/admin/form/:eventId`}>
